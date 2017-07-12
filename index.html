@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="title" content="">
+    <meta name="author" content="">
+    <meta name="Copyright" content="">
+    <!-- <meta name="description" content=""> -->
+    <!-- 让IE浏览器用最高级内核渲染页面 还有用 Chrome 框架的页面用webkit 内核
+    <!-- ================================================== -->
+    <meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge">
+    <!-- IOS6全屏 Chrome高版本全屏-->
+    <!-- ================================================== -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <!-- 让360双核浏览器用webkit内核渲染页面-->
+    <!-- ================================================== -->
+    <meta name="renderer" content="webkit">
+    <!-- Mobile Specific Metas
+   ================================================== -->
+    <!-- !!!注意 minimal-ui 是IOS7.1的新属性，最小化浏览器UI -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/swiper-3.3.1.min.css">
+    <script src="js/jquery-1.12.2.min.js"></script>
+    <script src="js/swiper-3.3.1.jquery.min.js"></script>
+    <script src="js/public.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/index.js"></script>
+    <script type="text/javascript" src="js/angular1.3.1.js"></script>
+    <title>首页</title>
+</head>
+<body id="index" ng-controller="abroad_view">
+<!--头部-->
+<section class="relative">
+    <div class="bg_b header_nav pd_lr5 flex-container">
+        <i class="icon-list-ul nav_icon color_f"></i>
+        <a href="/"><img src="images/logo.png" style="height: 1.6rem;" alt=""></a>
+        <a href="tel:4001816180"><img src="images/tel.png" style="height: 1.4rem;" alt=""></a>
+    </div>
+    <!--导航栏列表-->
+    <div class="nav_wrap">
+        <ul class="nav_list_item_1">
+            <li class="on">
+                <a href="#" class="flex-container">
+                    <div class="nav_wrap1 flex-container">
+                        <div class="nav_icon_header inm"><img src="images/nav_icon_1.png" alt=""></div>
+                        <span class="nav_tit_1">精品留学服务</span>
+                    </div>
+                    <i class="icon-angle-right nav_crow_r"></i>
+                </a>
+                <dl class="nav_wrap2">
+                    <dt><a href="#">一站式留学服务</a></dt>
+                    <dt><a href="paperwork.html">高端文书写作</a></dt>
+                    <dt><a href="diy.html">半DIY申请</a></dt>
+                    <dt><a href="intermediary.html">英澳零中介</a></dt>
+                    <dt><a href="background_ts.html">背景提升</a></dt>
+                    <dt><a href="test.html">留学考试</a></dt>
+                    <dt><a href="#">留学测试</a></dt>
+                </dl>
+            </li>
+            <li>
+                <a class="flex-container" href="mall.html">
+                    <div class="nav_wrap1 flex-container">
+                        <div class="nav_icon_header inm"><img src="images/nav_icon_2.png" alt=""></div>
+                        <span class="nav_tit_1">留学商城</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a class="flex-container" href="case.html">
+                    <div class="nav_wrap1 flex-container">
+                        <div class="nav_icon_header inm"><img src="images/nav_icon_3.png" alt=""></div>
+                        <span class="nav_tit_1">看案例</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a class="flex-container" href="school.html">
+                    <div class="nav_wrap1 flex-container">
+                        <div class="nav_icon_header inm"><img src="images/nav_icon_4.png" alt=""></div>
+                        <span class="nav_tit_1">查院校</span>
+                    </div>
+                    <i class="icon-angle-right nav_crow_r"></i>
+                </a>
+                <dl class="nav_wrap2">
+                    <dt><a href="#">一站式留学服务2</a></dt>
+                    <dt><a href="#">高端文书写作</a></dt>
+                    <dt><a href="#">半DIY申请</a></dt>
+                    <dt><a href="#">英澳零中介</a></dt>
+                    <dt><a href="#">背景提升</a></dt>
+                    <dt><a href="#">留学考试</a></dt>
+                    <dt><a href="#">留学测试</a></dt>
+                </dl>
+            </li>
+            <li class="flex-container">
+                <a class="flex-container" href="strategy.html">
+                    <div class="nav_wrap1 flex-container">
+                        <div class="nav_icon_header inm"><img src="images/nav_icon_5.png" alt=""></div>
+                        <span class="nav_tit_1">寻攻略</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a class="flex-container" href="question.html">
+                    <div class="nav_wrap1 flex-container">
+                        <div class="nav_icon_header inm"><img src="images/nav_icon_6.png" alt=""></div>
+                        <span class="nav_tit_1">问问题</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a class="flex-container" href="connoisseur.html">
+                    <div class="nav_wrap1 flex-container">
+                        <div class="nav_icon_header inm"><img src="images/nav_icon_7.png" alt=""></div>
+                        <span class="nav_tit_1">找行家</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a class="flex-container" href="bonus.html">
+                    <div class="nav_wrap1 flex-container">
+                        <div class="nav_icon_header inm"><img src="images/nav_icon_8.png" alt=""></div>
+                        <span class="nav_tit_1">留学奖金</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a class="flex-container" href="#">
+                    <div class="nav_wrap1 flex-container">
+                        <div class="nav_icon_header inm"><img src="images/nav_icon_9.png" alt=""></div>
+                        <span class="nav_tit_1">联系我们</span>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>
+<!--banner-->
+<section class="mg_b5" style="overflow: hidden;">
+    <div class="swiper-container-1 banner-wrap relative">
+        <ul class="swiper-wrapper">
+            <li class="swiper-slide banner"><a href="#"><img src="images/banner-1.png" alt=""></a></li>
+            <li class="swiper-slide banner"><a href="#"><img src="images/banner-1.png" alt=""></a></li>
+            <li class="swiper-slide banner"><a href="#"><img src="images/banner-1.png" alt=""></a></li>
+        </ul>
+        <div class="baner-page swiper-pagination"></div>
+    </div>
+</section>
+<!--版块栏目&问答-->
+<section class="mg_b5">
+    <div class="bk_tit bg_f  flex-container">
+        <div>
+            <i class="icon_tit"><img src="images/icon_t1.png" style="height: 0.8rem" alt=""></i>
+            <span class="big_tit">留学Q&A，职业导师在线解答</span>
+            <span class="small_tit"></span>
+        </div>
+        <a class="more" href="question.html">more></a>
+    </div>
+    <div class="bg_f pd_lr5">
+        <ul class="question_list">
+            <li ng-repeat="question in question">
+                <span class="question_tag">问</span>
+                <div class="int question_text_wrap">
+                    <div class="question_name ellipsis">{{question.question}}</div>
+                    <div class="question_info">
+                        <span>{{question.addTime}}</span>
+                        <span><i class="icon-eye-open color_y"></i> 浏览次数：<strong class="color_y">{{question.browse}}次</strong></span>
+                    </div>
+                </div>
+                <a class="question_btn inm" href="qa-details.html?id={{question.id}}">查看回答</a>
+            </li>
+        </ul>
+        <div class="tm question_btn2_wrap">
+            <a class="inm question_btn2"
+               href="mqqwpa://im/chat?chat_type=wpa&uin=1746295647&version=1&src_type=web&web_src=http://m.haishiit.com/">
+                <img src="images/icon_q.png" style="height: 1rem;margin-right: 0.5rem" alt="">在线提问</a>
+        </div>
+    </div>
+</section>
+<!--留学精品服务-->
+<section class="mg_b5">
+    <div class="bk_tit bg_f  flex-container">
+        <div>
+            <i class="icon_tit"><img src="images/icon_t2.png" style="height: 0.7rem" alt=""></i>
+            <span class="big_tit">留学精品服务</span>
+            <span class="small_tit"></span>
+        </div>
+        <a class="more" href="#">more></a>
+    </div>
+    <div class="service_wrap bg_f">
+        <div class="s1_wrap flex-container">
+            <div class="color_f bg_y tm service_1">
+                <a class="" href="intermediary.html">
+                    <img src="images/service_1.png" style="width: 2.1rem;margin-right: 0.7rem;" alt="">
+                    <span class="service_name">全套英澳零中介服务</span>
+                </a>
+            </div>
+            <div class="color_f bg_b tm service_2">
+                <a class="" href="paperwork.html">
+                    <img src="images/service_2.png" style="width: 2rem;margin-right: 0.2rem;" alt="">
+                    <span class="service_name inm">高端文书<br>写作</span>
+                </a>
+            </div>
+        </div>
+        <div class="s2_wrap clearfix">
+            <div class="bg_b fl service_3 tm">
+                <a class="" href="#">
+                    <img src="images/service_3.png" style="width: 2.6rem;margin: 0.75rem 0;" alt="">
+                    <p class="service_name">美国top30&<br>英国G5名校申<br>请服务</p>
+                </a>
+            </div>
+            <div class="service_4 tm fr">
+                <div class="flex-container" style="justify-content: space-between;margin-bottom:0.4rem;">
+                    <div class="bg_y s4_top tm">
+                        <a href="#">
+                            <span class="service_name inm">职业留学<br>在线课程</span>
+                            <img src="images/service_4.png" style="width: 1.8rem;" alt="">
+
+                        </a>
+                    </div>
+                    <div class="bg_y s4_top tm">
+                        <a href="#">
+                            <img src="images/service_5.png" style="width: 1.8rem;" alt="">
+                            <span class="service_name inm">实习就业<br>项目</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="s4_bottom bg_g">
+                    <a href="diy.html">
+                        <img src="images/service_6.png" style="width: 2.6rem;margin-right: 1rem;" alt="">
+                        <span class="inm service_name">半DIY留学服务<br>（选校+文书+签证）</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--留学选校-->
+<section class="mg_b5">
+    <div class="bk_tit bg_f  flex-container">
+        <div>
+            <i class="icon_tit"><img src="images/icon_t3.png" style="height: 0.8rem" alt=""></i>
+            <span class="big_tit" style="color: #468ed1;">智能留学选校&nbsp;&nbsp;/</span>
+            <span class="small_tit">300+海外学校详细介绍</span>
+        </div>
+        <a class="more" href="school.html">more></a>
+    </div>
+    <div class="pd_lr5 bg_f" style="overflow: hidden;">
+        <!--选项卡-->
+        <div class="tab_check_wrap ">
+            <span class="on">美国</span>
+            <span>英国</span>
+            <span>加拿大</span>
+            <span>澳洲</span>
+            <span>新加坡</span>
+            <span>香港</span>
+        </div>
+        <div class="school-wrap">
+            <div class="item_wrap">
+                <div class="school_item">
+                    <ul class="sc_list clearfix">
+                        <li ng-repeat="item1 in item1">
+                            <div class="sc_img"><img src="{{http2}}{{item1.image}}" alt=""></div>
+                            <p class="sc_name">{{item1.name}}</p>
+                            <p class="views_count">已有<strong class="color_y">{{item1.viewCount}}</strong>人关注</p>
+                            <a class="more" href="#">更多</a>
+                        </li>
+                    </ul>
+                    <div class="tm bm_wrap">
+                        <a class="big_more color_f" href="#">查看更多美国院校</a>
+                    </div>
+                </div>
+                <div class="school_item">
+                    <ul class="sc_list clearfix">
+                        <li ng-repeat="item2 in item2">
+                            <div class="sc_img"><img src="{{http2}}{{item2.image}}" alt=""></div>
+                            <p class="sc_name">{{item2.name}}</p>
+                            <p class="views_count">已有<strong class="color_y">{{item2.viewCount}}</strong>人关注</p>
+                            <a class="more" href="#">更多</a>
+                        </li>
+                    </ul>
+                    <div class="tm bm_wrap">
+                        <a class="big_more color_f" href="#">查看更多英国院校</a>
+                    </div>
+                </div>
+                <div class="school_item">
+                    <ul class="sc_list clearfix">
+                        <li ng-repeat="item3 in item3">
+                            <div class="sc_img"><img src="{{http2}}{{item3.image}}" alt=""></div>
+                            <p class="sc_name">{{item3.name}}</p>
+                            <p class="views_count">已有<strong class="color_y">{{item3.viewCount}}</strong>人关注</p>
+                            <a class="more" href="#">更多</a>
+                        </li>
+                    </ul>
+                    <div class="tm bm_wrap">
+                        <a class="big_more color_f" href="#">查看更多加拿大院校</a>
+                    </div>
+                </div>
+                <div class="school_item">
+                    <ul class="sc_list clearfix">
+                        <li ng-repeat="item4 in item4">
+                            <div class="sc_img"><img src="{{http2}}{{item4.image}}" alt=""></div>
+                            <p class="sc_name">{{item4.name}}</p>
+                            <p class="views_count">已有<strong class="color_y">{{item4.viewCount}}</strong>人关注</p>
+                            <a class="more" href="#">更多</a>
+                        </li>
+                    </ul>
+                    <div class="tm bm_wrap">
+                        <a class="big_more color_f" href="#">查看更多澳洲院校</a>
+                    </div>
+                </div>
+                <div class="school_item">
+                    <ul class="sc_list clearfix">
+                        <li ng-repeat="item5 in item5">
+                            <div class="sc_img"><img src="{{http2}}{{item5.image}}" alt=""></div>
+                            <p class="sc_name">{{item5.name}}</p>
+                            <p class="views_count">已有<strong class="color_y">{{item5.viewCount}}</strong>人关注</p>
+                            <a class="more" href="#">更多</a>
+                        </li>
+                    </ul>
+                    <div class="tm bm_wrap">
+                        <a class="big_more color_f" href="#">查看更多新加坡院校</a>
+                    </div>
+                </div>
+                <div class="school_item">
+                    <ul class="sc_list clearfix">
+                        <li ng-repeat="item6 in item6">
+                            <div class="sc_img"><img src="{{http2}}{{item6.image}}" alt=""></div>
+                            <p class="sc_name">{{item6.name}}</p>
+                            <p class="views_count">已有<strong class="color_y">{{item6.viewCount}}</strong>人关注</p>
+                            <a class="more" href="#">更多</a>
+                        </li>
+                    </ul>
+                    <div class="tm bm_wrap">
+                        <a class="big_more color_f" href="#">查看更多香港院校</a>
+                    </div>
+                </div>
+            </div>
+            <div class="sc_ranks clearfix">
+                <div class="sc_adImg fl"><a href="#"><img src="images/news_1.png" alt=""></a></div>
+                <div class="fr">
+                    <ul class="scRank-list">
+                        <li><a href="#"><i class="icon-circle point"></i>U.S.NEWS美国综合大学排名</a></li>
+                        <li><a href="#"><i class="icon-circle point"></i>TIMES英国大学排名 </a></li>
+                        <li><a href="#"><i class="icon-circle point"></i>QS世界大学排名</a></li>
+                        <li><a href="#"><i class="icon-circle point"></i>TIMES澳洲大学排名</a></li>
+                    </ul>
+                    <div class="tr sc_rank_more"><a href="#">查看更多></a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--学员案例-->
+<section style="margin-bottom: 0.7rem;">
+    <div class="bk_tit bg_f  flex-container">
+        <div class="ellipsis">
+            <i class="icon_tit"><img src="images/icon_t4.png" style="height: 0.8rem" alt=""></i>
+            <span class="big_tit" style="color: #468ed1;">明星学员有话说&nbsp;&nbsp;/</span>
+            <span class="small_tit">看看学姐学长如何申请到Dream Offer！</span>
+        </div>
+    </div>
+    <div class="bg_f case_wrap">
+        <ul class="case_list tm">
+            <li ng-repeat="case in case">
+                <div class="user_head_img"><img src="{{http}}{{case.image}}" alt=""></div>
+                <div class="case-info">
+                    <p class="tm u_name ellipsis">{{case.cnName}}</p>
+                    <p class="ellipsis-2">录取院校：<br>法国Essec MBA</p>
+                    <p class="ellipsis-2">硬件条件：<br>GMAT700,托福100</p>
+                    <p class="ellipsis">录取专业：MBA</p>
+                </div>
+            </li>
+        </ul>
+        <div class="tm bm_wrap">
+            <a class="big_more color_f" href="case.html">查看更多案例</a>
+        </div>
+    </div>
+</section>
+<!--留取信息-->
+<section class="user_data">
+    <div class="bg_f">
+        <div class="tm ud_text">
+            <p>截至目前为止，已经有超过<strong class="light">20000</strong>名学生体验到<br>雷哥网留学服务</p>
+            <img src="images/num_1.png" style="height: 2rem;margin: 0.6rem 0;" alt="">
+        </div>
+        <div class="form_wrap ">
+            <div class="form_ud clearfix">
+                <div class="row">
+                    <span class="form_name">我想申请的国家</span>
+                    <input class="form_int" type="text">
+                </div>
+                <div class="row">
+                    <span class="form_name">我想申请的专业</span>
+                    <input class="form_int" type="text">
+                </div>
+                <div class="row">
+                    <span class="form_name">目前在读年级</span>
+                    <input class="form_int" type="text">
+                </div>
+                <div class="row">
+                    <span class="form_name"><i class="light">*</i>请输入手机号</span>
+                    <input class="form_int" type="text">
+                </div>
+            </div>
+            <div class="tm form_btn_wrap">
+                <input class="form_btn" type="button" value="免费获取留学方案">
+            </div>
+        </div>
+    </div>
+</section>
+<!--备案信息-->
+<section class="cr_wrap">
+    <div class="tm copyRight">©2017 gmatonline.cn All Rights Reserved 京ICP备15001182号-1<br>京公网安备11010802017681 免责声明</div>
+</section>
+<!--footer-->
+<footer>
+    <ul class="ftnav_list flex-container">
+        <li class="on">
+            <a href="index.html">
+                <div>
+                    <img src="images/icon_ft_1.png" style="height: 1.1rem" alt="">
+                    <span>首页</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="tel:4001816180">
+                <div>
+                    <img src="images/icon_ft_2.png" style="height: 1.1rem" alt="">
+                    <span>拨打电话</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="mqqwpa://im/chat?chat_type=wpa&uin=1746295647&version=1&src_type=web&web_src=http://m.haishiit.com/">
+                <div>
+                    <img src="images/icon_ft_3.png" style="height: 1.1rem" alt="">
+                    <span>在线咨询</span>
+                </div>
+            </a>
+        </li>
+    </ul>
+</footer>
+</body>
+<script>
+    var mySwiper = new Swiper('.swiper-container-1', {
+        loop: true,
+        observer: true,
+        autoplay: 2000,
+        observeParents: true,
+        paginationClickable: true,
+        pagination: '.baner-page'
+    });
+    $(".tab_check_wrap span").click(function () {
+        $(this).addClass("on").siblings("span").removeClass("on");
+        var num = $(this).index();
+        $(".school_item").eq(num).show().siblings("div.school_item").hide();
+    })
+</script>
+</html>

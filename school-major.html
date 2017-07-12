@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="title" content="">
+    <meta name="author" content="">
+    <meta name="Copyright" content="">
+    <!-- <meta name="description" content=""> -->
+    <!-- 让IE浏览器用最高级内核渲染页面 还有用 Chrome 框架的页面用webkit 内核
+    <!-- ================================================== -->
+    <meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge">
+    <!-- IOS6全屏 Chrome高版本全屏-->
+    <!-- ================================================== -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <!-- 让360双核浏览器用webkit内核渲染页面-->
+    <!-- ================================================== -->
+    <meta name="renderer" content="webkit">
+    <!-- Mobile Specific Metas
+   ================================================== -->
+    <!-- !!!注意 minimal-ui 是IOS7.1的新属性，最小化浏览器UI -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/school-detail.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/swiper-3.3.1.min.css">
+    <script src="js/jquery-1.12.2.min.js"></script>
+    <script src="js/swiper-3.3.1.jquery.min.js"></script>
+    <script src="js/school-detail.js"></script>
+    <script src="js/common.js"></script>
+    <title>专业详情页</title>
+</head>
+<body>
+<!--头部-->
+<section class="relative">
+    <div class="bg_b header_nav pd_lr5 flex-container">
+        <i class="icon-list-ul nav_icon color_f"></i>
+        <a href="/"><img src="images/logo.png" style="height: 1.6rem;" alt=""></a>
+        <a href="tel:4001816180"><img src="images/tel.png" style="height: 1.4rem;" alt=""></a>
+    </div>
+    <!--导航栏列表-->
+    <div class="nav_wrap">
+        <ul class="nav_list_item_1">
+            <li class="on">
+                <a href="#" class="flex-container">
+                    <div class="nav_wrap1 flex-container">
+                        <div class="nav_icon_header inm"><img src="images/nav_icon_1.png" alt=""></div>
+                        <span class="nav_tit_1">精品留学服务</span>
+                    </div>
+                    <i class="icon-angle-right nav_crow_r"></i>
+                </a>
+                <dl class="nav_wrap2">
+                    <dt><a href="#">一站式留学服务</a></dt>
+                    <dt><a href="#">高端文书写作</a></dt>
+                    <dt><a href="#">半DIY申请</a></dt>
+                    <dt><a href="#">英澳零中介</a></dt>
+                    <dt><a href="#">背景提升</a></dt>
+                    <dt><a href="#">留学考试</a></dt>
+                    <dt><a href="#">留学测试</a></dt>
+                </dl>
+            </li>
+            <li>
+                <a class="flex-container" href="#">
+                    <div class="nav_wrap1 flex-container">
+                        <div class="nav_icon_header inm"><img src="images/nav_icon_2.png" alt=""></div>
+                        <span class="nav_tit_1">留学商城</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a class="flex-container" href="#">
+                    <div class="nav_wrap1 flex-container">
+                        <div class="nav_icon_header inm"><img src="images/nav_icon_3.png" alt=""></div>
+                        <span class="nav_tit_1">看案例</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a class="flex-container" href="#">
+                    <div class="nav_wrap1 flex-container">
+                        <div class="nav_icon_header inm"><img src="images/nav_icon_4.png" alt=""></div>
+                        <span class="nav_tit_1">查院校</span>
+                    </div>
+                    <i class="icon-angle-right nav_crow_r"></i>
+                </a>
+                <dl class="nav_wrap2">
+                    <dt><a href="#">一站式留学服务2</a></dt>
+                    <dt><a href="#">高端文书写作</a></dt>
+                    <dt><a href="#">半DIY申请</a></dt>
+                    <dt><a href="#">英澳零中介</a></dt>
+                    <dt><a href="#">背景提升</a></dt>
+                    <dt><a href="#">留学考试</a></dt>
+                    <dt><a href="#">留学测试</a></dt>
+                </dl>
+            </li>
+            <li class="flex-container">
+                <a class="flex-container" href="#">
+                    <div class="nav_wrap1 flex-container">
+                        <div class="nav_icon_header inm"><img src="images/nav_icon_5.png" alt=""></div>
+                        <span class="nav_tit_1">寻攻略</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a class="flex-container" href="#">
+                    <div class="nav_wrap1 flex-container">
+                        <div class="nav_icon_header inm"><img src="images/nav_icon_6.png" alt=""></div>
+                        <span class="nav_tit_1">问问题</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a class="flex-container" href="#">
+                    <div class="nav_wrap1 flex-container">
+                        <div class="nav_icon_header inm"><img src="images/nav_icon_7.png" alt=""></div>
+                        <span class="nav_tit_1">找行家</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a class="flex-container" href="#">
+                    <div class="nav_wrap1 flex-container">
+                        <div class="nav_icon_header inm"><img src="images/nav_icon_8.png" alt=""></div>
+                        <span class="nav_tit_1">留学奖金</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a class="flex-container" href="#">
+                    <div class="nav_wrap1 flex-container">
+                        <div class="nav_icon_header inm"><img src="images/nav_icon_9.png" alt=""></div>
+                        <span class="nav_tit_1">联系我们</span>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>
+<div class="banner">
+    <img src="images/an-img/school-1.png" alt="banner"/>
+</div>
+<div class="school-info">
+    <div class="com-auto">
+        <div class="info-left">
+            <h4>香港大学</h4>
+            <ul>
+                <li>University of Hong Kong</li>
+                <li>所在地：</li>
+                <li>地理位置：中国香港</li>
+                <li>官网：<a href="http://www.hku.hk/">http://www.hku.hk/</a></li>
+                <li>学校排名1</li>
+                <li>
+                    <a href="#">录取几率免费评估</a>
+                </li>
+            </ul>
+        </div>
+        <div class="info-right">
+            <img src="images/an-img/school-2.png" alt="学校图标"/>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<!--基本情况-->
+<div class="basic">
+    <div class="com-title">
+        <img src="images/an-img/major-1.png" alt="图标"/>
+        <span>基本情况</span>
+    </div>
+    <div class="basic-con">
+        <ul>
+            <li>
+                <p class="ellipsis">项目名称（Project name）</p>
+                <p class="ellipsis">Mechanical Engineering(机械工程)</p>
+            </li>
+            <li>
+                <p class="ellipsis">项目地址（Project site）</p>
+                <p class="ellipsis">https://gradadmissions.stanford.edu/progra...</p>
+            </li>
+            <li>
+                <p class="ellipsis">项目日期（Project period）</p>
+                <p class="ellipsis">秋季</p>
+            </li>
+            <li>
+                <p class="ellipsis">截止日期（As of the date）</p>
+                <p class="ellipsis">12月8日</p>
+            </li>
+        </ul>
+    </div>
+</div>
+<!--申请要求-->
+<div class="apply-request">
+    <div class="com-title">
+        <img src="images/an-img/major-2.png" alt="图标"/>
+        <span>申请要求</span>
+    </div>
+    <div class="request-con">
+        <ul>
+            <li>
+                <span>GPA</span>
+                <b>3.0</b>
+            </li>
+            <li>
+                <span>雅思</span>
+                <b>不接受</b>
+            </li>
+            <li>
+                <span>GRE</span>
+                <b>Required</b>
+            </li>
+            <li>
+                <span>工作年限</span>
+                <b></b>
+            </li>
+            <li>
+                <span>托福</span>
+                <b>100</b>
+            </li>
+            <li>
+                <span>GMAT</span>
+                <b></b>
+            </li>
+            <li>
+                <span>学位</span>
+                <b>硕士</b>
+            </li>
+            <li>
+                <span>学费</span>
+                <b>$50,424</b>
+            </li>
+        </ul>
+    </div>
+</div>
+<!--申请说明-->
+<div class="apply">
+    <div class="com-title">
+        <img src="images/an-img/major-3.png" alt="图标"/>
+        <span>申请说明</span>
+    </div>
+    <div class="s-info-det02">
+        <div class="com-auto">
+            <p>
+                斯坦福大学机械工程系（Department of Mechanical Engineering，缩写ME）研究生招收MS与PhD学生，要求申请者本科毕业，拥有工程学、物理等专业背景。要求学生递交GRE成绩，但并无最低GRE、GPA等分数要求。博士生可申请TA/RA或Fellowship奖学金。
+                专业设置
+                该系主要分以下五个专业方向，分别是：
+                生物医学（Biomedicine）
+                计算工程（Computational Engineering）
+                设计（Design）
+                能源（Energy）
+                多尺度工程（Multi-Scale Engineering）
+            </p>
+        </div>
+    </div>
+</div>
+
+<!--参考链接-->
+<div class="apply">
+    <div class="com-title">
+        <img src="images/an-img/major-4.png" alt="图标"/>
+        <span>参考链接</span>
+    </div>
+    <div class="s-info-det02">
+        <div class="com-auto">
+            <p>
+                Admissions Frequently Asked Questions：
+                Admissions Frequently Asked Qu
+                Financial Aid：Financial Aid
+            </p>
+        </div>
+    </div>
+</div>
+
+<!--发表吐槽-->
+<div class="complain mb02">
+    <div class="com-title">
+        <img src="images/an-img/school-icon04.png" alt="图标"/>
+        <span>发表吐槽</span>
+        <div class="right-side" onclick="bigReply(this)">
+            <span>总回复</span>
+        </div>
+    </div>
+    <div class="complain-text">
+        <div class="comment-show">
+            <ul>
+                <li>
+                    <div class="comment-left">
+                        <div class="comment-thumb">
+                            <img src="images/an-img/question-3.png" alt="用户头像"/>
+                        </div>
+                        <p>Talia</p>
+                    </div>
+                    <div class="comment-right">
+                        <ul>
+                            <li>
+                                <div class="c-top">
+                                    此后短短数十年内便一跃成为一所世界顶级大学。
+                                    此后短短数十年内便一跃成为一所世界顶级大学。
+                                </div>
+                                 <div class="c-bot">
+                                     <span>2017.3.9 11:38</span>
+                                     <img src="images/an-img/school-commet.png" alt="评论图标" onclick="secondReply(this)"/>
+                                 </div>
+                            </li>
+                            <li>
+                                <div class="c-top">
+                                   <span class="blue">Techer</span>回复<span class="blue">Talia</span>：世界顶级大学！
+                                </div>
+                                <div class="c-bot">
+                                    <span>2017.3.9 11:38</span>
+                                    <img src="images/an-img/school-commet.png" alt="评论图标" onclick="threeReply(this)"/>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="moreReply" onclick="seeMoreRe(this)">
+                        查看<span class="blue">teacher</span>等回复
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="com-auto">
+            <textarea placeholder="发表你的评论..." id="lastText"></textarea>
+            <input type="button" value="提交" onclick="subComment(this)" data-type="1" id="subBtn"/>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+<!--本周热门院校-->
+<div class="hotSchool mb">
+    <div class="com-title border">
+        <img src="images/an-img/school-icon03.png" alt="图标"/>
+        <span>本周热门院校</span>
+        <div class="right-side">
+            <img src="images/an-img/school-reload.png" alt="换一批图标"/>
+            <span>换一批</span>
+        </div>
+    </div>
+    <div class="hot-con">
+        <ul>
+            <li>
+                <a href="#">
+                    <div class="hot-c-left">
+                        <h4>纽约大学</h4>
+                        <p>New York University</p>
+                        <p>学校排名：32</p>
+                        <p>位于：New York（纽约州）</p>
+                        <p>查看更多该校信息&gt;&gt;</p>
+                    </div>
+                    <div class="hot-c-right">
+                        <div class="sch-thumb">
+                            <img src="images/an-img/school-big.png" alt="学校图标"/>
+                        </div>
+                        <p>已有356人评估</p>
+                    </div>
+                    <div class="clearfix"></div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="hot-c-left">
+                        <h4>纽约大学</h4>
+                        <p>New York University</p>
+                        <p>学校排名：32</p>
+                        <p>位于：New York（纽约州）</p>
+                        <p>查看更多该校信息&gt;&gt;</p>
+                    </div>
+                    <div class="hot-c-right">
+                        <div class="sch-thumb">
+                            <img src="images/an-img/school-big.png" alt="学校图标"/>
+                        </div>
+                        <p>已有356人评估</p>
+                    </div>
+                    <div class="clearfix"></div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="hot-c-left">
+                        <h4>纽约大学</h4>
+                        <p>New York University</p>
+                        <p>学校排名：32</p>
+                        <p>位于：New York（纽约州）</p>
+                        <p>查看更多该校信息&gt;&gt;</p>
+                    </div>
+                    <div class="hot-c-right">
+                        <div class="sch-thumb">
+                            <img src="images/an-img/school-big.png" alt="学校图标"/>
+                        </div>
+                        <p>已有356人评估</p>
+                    </div>
+                    <div class="clearfix"></div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!--备案信息-->
+<section class="cr_wrap back-w">
+    <div class="tm copyRight">©2017 gmatonline.cn All Rights Reserved 京ICP备15001182号-1<br>京公网安备11010802017681 免责声明</div>
+</section>
+<!--footer-->
+<footer>
+    <ul class="ftnav_list flex-container">
+        <li class="on">
+            <a href="#">
+                <div>
+                    <img src="images/icon_ft_1.png" style="height: 1.1rem" alt="">
+                    <span>首页</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <div>
+                    <img src="images/icon_ft_2.png" style="height: 1.1rem" alt="">
+                    <span>拨打电话</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <div>
+                    <img src="images/icon_ft_3.png" style="height: 1.1rem" alt="">
+                    <span>在线咨询</span>
+                </div>
+            </a>
+        </li>
+    </ul>
+</footer>
+</body>
+</html>

@@ -1,0 +1,182 @@
+.order_btn {
+    display: inline-block;
+    vertical-align: middle;
+    height: 1.4rem;
+    line-height: 1.4rem;
+    padding: 0 0.8rem;
+    background: #ad0d14;
+    font-size: 0.7rem;
+    color: #ffffff;
+    text-align: center;
+}
+
+.pay-away {
+    padding-bottom: 0.4rem;
+}
+
+.pay-away li {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    color: #363636;
+    font-size: 0.7rem;
+    height: 1.6rem;
+    text-align: center;
+    line-height: 1.6rem;
+    width: 44%;
+    margin: 0.2rem 0;
+    border: 1px solid #468ed1;
+}
+
+.pay-away li.on .true_img {
+    display: block;
+}
+
+.true_img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: none;
+}
+
+.order_img {
+    width: 4.5rem;
+    height: 3.4rem;
+}
+
+.order_img img {
+    width: 100%;
+    height: 100%;
+}
+
+.order_text {
+    width: 12rem;
+    font-size: 0.7rem;
+    color: #363636;
+}
+
+.country {
+    color: #999999;
+}
+
+.od_left {
+    width: 11rem;
+}
+
+.ld_int_wrap {
+    color: #363636;
+    padding: 0.3rem 0;
+    font-size: 0.6rem;
+}
+
+#ld {
+    margin-right: 0.2rem;
+    vertical-align: middle;
+}
+
+.ld_int {
+    outline: none;
+    width: 2.4rem;
+    height: 0.7rem;
+    vertical-align: middle;
+    margin: 0 0.2rem;
+    background: #ffffff;
+    border: 1px solid #ababab;
+}
+
+.ld_num {
+    color: #666666;
+    padding-top: 0.2rem;
+    font-size: 0.6rem;
+}
+
+.ld_num p:first-child {
+    margin-bottom: 0.2rem;
+}
+
+.order_price {
+    padding: 0.4rem 0;
+    font-size: 0.7rem;
+}
+
+.order_sp_list li {
+    margin-bottom: 0.5rem;
+}
+
+.adr_list li {
+    position: relative;
+    height: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.adr_list li.on {
+    border: 1px solid #468ed1;
+}
+
+.adr_list li.on .true_img {
+    display: block;
+}
+
+.adr_info {
+    color: #363636;
+    padding-left: 0.4rem;
+    padding-right: 1.5rem;
+    font-size: 0.6rem;
+}
+
+.adr_info p {
+    width: 33.3%;
+    line-height: 1.6rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.new_adr_wrap {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 99;
+}
+
+.new_adr_int {
+    color: #666666;
+    font-size: 0.7rem;
+    width: 85%;
+    margin: 30% auto 0;
+}
+
+.adrint_tit {
+    padding: 0.4rem 0.6rem;
+    background: #f0f0f0;
+}
+
+.adrint_wrap {
+    padding: 0.3rem 0.6rem;
+}
+
+.adrint_name {
+    padding: 0.2rem;
+}
+
+.new_adr_input {
+    outline: none;
+    height: 1rem;
+    width: 9rem;
+    font-size: 0.6rem;
+    padding: 0 0.2rem;
+    border: 1px solid #bbbbbb;
+}
+.row_city select{
+    outline: none;
+    width: 3rem;
+    height: 1rem;
+    color: #666666;
+    font-size: 0.6rem;
+    border: 1px solid #bbbbbb;
+    padding: 0 0.3rem;
+}

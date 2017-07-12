@@ -1,0 +1,91 @@
+.jp_bk_de {
+    font-size: 0.5rem;
+    color: #ffffff;
+    width: 4.5rem;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 0.7rem;
+}
+
+.jp_bk_icon {
+    width: 3rem;
+    height: 3rem;
+    margin: auto;
+}
+
+.jp_bk_icon img {
+    width: 100%;
+    height: 100%;
+}
+
+.jp_bk_bt li {
+    width: 31%;
+    height: 6.25rem;
+    border-radius: 0.2rem;
+}
+
+.jp_bk_bt .jp_bk_icon {
+    margin: 0.4rem auto 0.2rem;
+}
+
+.jp_bk_bt .jp_bk_de {
+    margin: auto;
+    width: 4.5rem;
+}
+
+.jp_tp_left {
+    width: 31%;
+    height: 100%;
+    border-radius: 0.2rem;
+}
+
+.jp_tp_left .jp_bk_icon {
+    margin: 0.7rem auto;
+}
+
+.jp_br_bt .jp_bk_icon {
+    margin: 0.1rem auto 0;
+}
+
+.jp_tp_right {
+    width: 65.5%;
+    height: 100%;
+}
+
+.jp_br_bt_item {
+    width: 47.5%;
+    height: 100%;
+    border-radius: 0.2rem;
+}
+
+.jp_br_tp {
+    border-radius: 0.2rem;
+    margin-bottom: 5%;
+}
+
+.jp_br_tp, .jp_br_bt {
+    height: 47%;
+}
+
+.jp_br_tp .jp_bk_de {
+    width: 6.5rem;
+}
+
+.jp_bk_tp {
+    height: 9.75rem;
+    margin-bottom: 0.6rem;
+}
+
+.jpbk_wrap {
+    padding: 0 0.5rem 0.8rem;
+}
+#jp_study .case-info p:nth-child(2){
+    padding-bottom: 0.2rem;
+}
+#jp_study .case-info .sde{
+    color: #1f77c8;
+    display: block;
+    margin-top: 0.2rem;
+    text-align: center;
+    font-size: 0.5rem;
+}

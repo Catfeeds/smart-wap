@@ -1,0 +1,84 @@
+.pt_list {
+    padding: 0.5rem;
+    overflow: hidden;
+}
+
+.pt_list li {
+    overflow: hidden;
+    background: #f0f0f0;
+    border-radius: 0.2rem;
+    height: 4.4rem;
+    margin-bottom: 0.3rem;
+}
+
+.pt_list .pt_img {
+    width: 6.7rem;
+    height: 4.4rem;
+    margin-right: 0.8rem;
+}
+
+.pt_tit {
+    color: #2d2c2c;
+    padding: 0.2rem 0;
+    font-size: 0.5rem;
+}
+
+.pt_de {
+    font-size: 0.4rem;
+    color: #2d2c2c;
+    /*height: 1.2rem;*/
+    margin-bottom: 0.2rem;
+}
+
+.pt_info_wrap {
+    max-width: 9.5rem;
+}
+
+.pt_user_info_list {
+    padding: 0.5rem;
+}
+
+.pt_user_info_list li {
+    background: #f2f2f2;
+    height: 4.5rem;
+    margin-bottom: 0.4rem;
+}
+
+.pt_head {
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%;
+    margin-bottom: 0.2rem;
+}
+
+.pt_head img {
+    width: 100%;
+    height: 100%;
+}
+
+.pt_username {
+    font-size: 0.6rem;
+    color: #fecd28;
+}
+
+.pt_school_name {
+    color: #4c8fe0;
+    font-size: 0.6rem;
+    margin: 0.2rem 0;
+}
+
+.pt_user_intra {
+    color: #5b5b5b;
+    font-size: 0.6rem;
+}
+
+.ptimg_wrap {
+    text-align: center;
+    margin-left: 0.3rem;
+    padding: 0.2rem 0.4rem 0;
+}
+
+.ptin_wrap {
+    padding-right: 3%;
+    width: 70%;
+}

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="title" content="">
+    <meta name="author" content="">
+    <meta name="Copyright" content="">
+    <!-- <meta name="description" content=""> -->
+    <!-- 让IE浏览器用最高级内核渲染页面 还有用 Chrome 框架的页面用webkit 内核
+    <!-- ================================================== -->
+    <meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge">
+    <!-- IOS6全屏 Chrome高版本全屏-->
+    <!-- ================================================== -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <!-- 让360双核浏览器用webkit内核渲染页面-->
+    <!-- ================================================== -->
+    <meta name="renderer" content="webkit">
+    <!-- Mobile Specific Metas
+   ================================================== -->
+    <!-- !!!注意 minimal-ui 是IOS7.1的新属性，最小化浏览器UI -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/content_details.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/swiper-3.3.1.min.css">
+    <script src="js/jquery-1.12.2.min.js"></script>
+    <script src="js/swiper-3.3.1.jquery.min.js"></script>
+    <script src="js/common.js"></script>
+    <title>内容详情</title>
+</head>
+<body id="content_details">
+<!--头部-->
+<section class="relative">
+    <div class="bg_b header_nav pd_lr5 flex-container">
+        <i class="icon-list-ul nav_icon color_f"></i>
+        <a href="/"><img src="images/logo.png" style="height: 1.6rem;" alt=""></a>
+        <a href="tel:4001816180"><img src="images/tel.png" style="height: 1.4rem;" alt=""></a>
+    </div>
+    <!--导航栏列表-->
+    <div class="nav_wrap">
+        <ul class="nav_list_item_1">
+            <li class="on">
+                <a href="#" class="flex-container">
+                    <div class="nav_wrap1 flex-container">
+                        <div class="nav_icon_header inm"><img src="images/nav_icon_1.png" alt=""></div>
+                        <span class="nav_tit_1">精品留学服务</span>
+                    </div>
+                    <i class="icon-angle-right nav_crow_r"></i>
+                </a>
+                <dl class="nav_wrap2">
+                    <dt><a href="#">一站式留学服务</a></dt>
+                    <dt><a href="#">高端文书写作</a></dt>
+                    <dt><a href="#">半DIY申请</a></dt>
+                    <dt><a href="#">英澳零中介</a></dt>
+                    <dt><a href="#">背景提升</a></dt>
+                    <dt><a href="#">留学考试</a></dt>
+                    <dt><a href="#">留学测试</a></dt>
+                </dl>
+            </li>
+            <li>
+                <a class="flex-container" href="#">
+                    <div class="nav_wrap1 flex-container">
+                        <div class="nav_icon_header inm"><img src="images/nav_icon_2.png" alt=""></div>
+                        <span class="nav_tit_1">留学商城</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a class="flex-container" href="#">
+                    <div class="nav_wrap1 flex-container">
+                        <div class="nav_icon_header inm"><img src="images/nav_icon_3.png" alt=""></div>
+                        <span class="nav_tit_1">看案例</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a class="flex-container" href="#">
+                    <div class="nav_wrap1 flex-container">
+                        <div class="nav_icon_header inm"><img src="images/nav_icon_4.png" alt=""></div>
+                        <span class="nav_tit_1">查院校</span>
+                    </div>
+                    <i class="icon-angle-right nav_crow_r"></i>
+                </a>
+                <dl class="nav_wrap2">
+                    <dt><a href="#">一站式留学服务2</a></dt>
+                    <dt><a href="#">高端文书写作</a></dt>
+                    <dt><a href="#">半DIY申请</a></dt>
+                    <dt><a href="#">英澳零中介</a></dt>
+                    <dt><a href="#">背景提升</a></dt>
+                    <dt><a href="#">留学考试</a></dt>
+                    <dt><a href="#">留学测试</a></dt>
+                </dl>
+            </li>
+            <li class="flex-container">
+                <a class="flex-container" href="#">
+                    <div class="nav_wrap1 flex-container">
+                        <div class="nav_icon_header inm"><img src="images/nav_icon_5.png" alt=""></div>
+                        <span class="nav_tit_1">寻攻略</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a class="flex-container" href="#">
+                    <div class="nav_wrap1 flex-container">
+                        <div class="nav_icon_header inm"><img src="images/nav_icon_6.png" alt=""></div>
+                        <span class="nav_tit_1">问问题</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a class="flex-container" href="#">
+                    <div class="nav_wrap1 flex-container">
+                        <div class="nav_icon_header inm"><img src="images/nav_icon_7.png" alt=""></div>
+                        <span class="nav_tit_1">找行家</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a class="flex-container" href="#">
+                    <div class="nav_wrap1 flex-container">
+                        <div class="nav_icon_header inm"><img src="images/nav_icon_8.png" alt=""></div>
+                        <span class="nav_tit_1">留学奖金</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a class="flex-container" href="#">
+                    <div class="nav_wrap1 flex-container">
+                        <div class="nav_icon_header inm"><img src="images/nav_icon_9.png" alt=""></div>
+                        <span class="nav_tit_1">联系我们</span>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>
+<!--内容详情-->
+<section class="mg_b5">
+    <div class="bg_f pd_lr5">
+        <div class="dec_tit_wrap tm">
+            <h1>金融专业申请条件全解析</h1>
+            <p>来源：2017-05-09 13:57:02</p>
+        </div>
+        <div class="de_content">
+            金融专业申请条件全解析
+
+            1.美国金融硕士院校大扒皮<br>
+            2.申请注意事项与小技巧<br>
+            3.如何成功申请名校奖学金<br>
+            4.金融案例大讲解<br>
+            5.如何利用校内资源成功就业
+        </div>
+    </div>
+</section>
+<!--热销排行榜-->
+<section class="mg_b5">
+    <div class="bk_tit2 bg_f flex-container"><span class="big_tit">热销排行榜</span></div>
+    <ul class="pd_lr75 bg_f rank_list clearfix">
+        <li><i class="icon-circle"></i><a class="ellipsis" href="#">美国TOP20名校高端文书</a></li>
+        <li><i class="icon-circle"></i><a class="ellipsis" href="#">美国TOP20名校高端文书</a></li>
+        <li><i class="icon-circle"></i><a class="ellipsis" href="#">美国TOP20名校高端文书</a></li>
+        <li><i class="icon-circle"></i><a class="ellipsis" href="#">美国TOP20名校高端文书</a></li>
+    </ul>
+</section>
+<!--你可能感兴趣的学校-->
+<section class="mg_b5">
+    <div class="bk_tit2 bg_f flex-container"><span class="big_tit">你可能感兴趣的学校</span></div>
+    <div class="bg_f pd_lr75">
+        <table class="clearfix maybe_sc">
+            <tr>
+                <td class="tl">芝加哥大学</td>
+                <td class="tm color_b">排名综排<span class="rank_num">3</span></td>
+                <td class="tr"><i class="icon-eye-open color_b"></i>5216人查看</td>
+            </tr>
+            <tr>
+                <td class="tl">芝加哥大学</td>
+                <td class="tm color_b">排名综排<span class="rank_num">3</span></td>
+                <td class="tr"><i class="icon-eye-open color_b"></i>5216人查看</td>
+            </tr>
+            <tr>
+                <td class="tl">芝加哥大学</td>
+                <td class="tm color_b">排名综排<span class="rank_num">3</span></td>
+                <td class="tr"><i class="icon-eye-open color_b"></i>5216人查看</td>
+            </tr>
+        </table>
+    </div>
+</section>
+<!--备案信息-->
+<section class="cr_wrap">
+    <div class="tm copyRight">©2017 gmatonline.cn All Rights Reserved 京ICP备15001182号-1<br>京公网安备11010802017681 免责声明</div>
+</section>
+<!--footer-->
+<footer>
+    <ul class="ftnav_list flex-container">
+        <li>
+            <a href="#">
+                <div>
+                    <img src="images/icon_ft_1.png" style="height: 1.1rem" alt="">
+                    <span>首页</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="tel:4001816180">
+                <div>
+                    <img src="images/icon_ft_2.png" style="height: 1.1rem" alt="">
+                    <span>拨打电话</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="mqqwpa://im/chat?chat_type=wpa&uin=1746295647&version=1&src_type=web&web_src=http://m.haishiit.com/">
+                <div>
+                    <img src="images/icon_ft_3.png" style="height: 1.1rem" alt="">
+                    <span>在线咨询</span>
+                </div>
+            </a>
+        </li>
+    </ul>
+</footer>
+</body>
+</html>

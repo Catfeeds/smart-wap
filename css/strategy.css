@@ -1,0 +1,93 @@
+.today{
+    width: 100%;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+.today img{
+    height: 50px;
+    margin-left: 5%;
+}
+.today ul{
+    margin-top: 10px;
+}
+.today ul li{
+    width: 90%;
+    margin: 0 auto;
+    background-color: #f0f0f0;
+    padding: 8px 20px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    margin-bottom: 5px;
+}
+.today ul li h4{
+    font-size: 0.9rem;
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+.today ul li p{
+    font-size: 0.8rem;
+    color: #676767;
+}
+.plan{
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+.plan-title{
+    padding: 5px 0;
+    border-bottom: 1px #c1bbbb solid;
+    position: relative;
+}
+.plan-title.kaoshi{
+    background-color: #f0f0f0;
+    padding-top: 8px;
+}
+.plan-title img{
+    margin-left: 6%;
+    height: 20px;
+}
+.plan-right{
+    position: absolute;
+    right: 5%;
+    bottom:0;
+}
+.plan-right ul li{
+    font-size: 0.8rem;
+    float: left;
+    padding: 5px 8px;
+}
+.plan-right ul li.on{
+    background-color: #ffffff;
+}
+.plan-right ul li:last-child{
+    padding: 5px 0;
+}
+.plan-right ul li:last-child a{
+    color: #5095d3;
+}
+.plan-con ul{
+    margin-top: 10px;
+    padding-bottom: 10px;
+}
+.plan-con ul li{
+    width: 90%;
+    margin: 0 auto;
+    background-color: #f0f0f0;
+    padding: 8px 20px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+.plan-con ul li h4{
+    font-size: 0.85rem;
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+.plan-con ul li p{
+    font-size: 0.8rem;
+    color: #676767;
+}

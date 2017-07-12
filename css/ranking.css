@@ -1,0 +1,160 @@
+.rankType{
+    width: 100%;
+    background-color: #ffffff;
+    margin-top: 10px;
+}
+.rankType h4{
+    font-size: 1rem;
+    margin-left: 5%;
+    margin-bottom: 10px;
+    padding-top: 5px;
+    font-weight: normal;
+}
+.rankType h4.rmat{
+    margin-top: 10px;
+}
+.rankType ul{
+    margin-left: 5%;
+}
+.rankType ul:after{
+    content: '';
+    height: 0;
+    display: block;
+    clear: both;
+    overflow: hidden;
+}
+.rankType ul li{
+    width: 31%;
+    margin-bottom: 8px;
+    float: left;
+    background-color: #478fd1;
+    border-radius: 5px;
+    margin-right: 2%;
+    font-size: 0.6rem;
+    text-align: center;
+}
+.rankType ul li.type{
+    min-height: 52px;
+}
+.rankType ul li.on{
+    background-color: #324a60;
+}
+.rankType ul li:nth-child(3n){
+    margin-right: 0;
+}
+.rankType ul li a{
+    display: block;
+    color: #ffffff;
+    padding: 10px 0;
+}
+.schoolList{
+    width: 100%;
+    background-color: #ffffff;
+    margin-top: 10px;
+    padding: 10px 0;
+}
+.s-l-con{
+    width: 90%;
+    margin: 0 auto;
+}
+.s-l-con ul li{
+    background-color: #f0f0f0;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+.s-c-left{
+    float: left;
+    color: #ffffff;
+    font-size: 0.9rem;
+    position: relative;
+    background-color: #478fd1;
+    border-radius: 5px;
+    padding: 2px 5px;
+    margin-top: 10px;
+    margin-left:2%;
+}
+.s-c-left img{
+    position: absolute;
+    right: -9px;
+    top: 50%;
+    margin-top: -11%;
+}
+.s-c-center{
+    width: 43%;
+    float: left;
+    margin-left: 5%;
+    margin-top: 5px;
+}
+.s-c-center h4{
+   font-size: 0.8rem;
+    font-weight: normal;
+}
+.s-c-center p{
+    font-size: 0.7rem;
+    color: #525252;
+}
+.s-c-right{
+    width: 30%;
+    float: left;
+    text-align: right;
+}
+.s-c-right a{
+    background-color: #478fd1;
+    color: #ffffff;
+    font-size: 0.8rem;
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+.s-c-right p{
+    font-size: 0.6rem;
+}
+.s-c-right p span{
+    color: #ffc402;
+}
+.successCase{
+    width: 100%;
+    background-color: #ffffff;
+    padding: 10px 0 20px 0;
+    margin: 10px 0 20px 0;
+}
+.success-title{
+    padding-left: 5%;
+    font-size: 0.9rem;
+    padding-bottom: 8px;
+    border-bottom: 1px #dedbdb solid;
+ }
+.success-con{
+    width: 90%;
+    margin: 0 auto;
+}
+.success-con ul:after{
+    content: '';
+    height: 0;
+    display: block;
+    clear: both;
+    overflow: hidden;
+}
+.success-con ul li{
+    width: 49%;
+    float: left;
+    margin-top: 10px;
+    margin-right: 2%;
+}
+.success-con ul li:nth-child(even){
+    margin-right: 0;
+}
+.success-con ul li span{
+    float: left;
+    color: #99bc37;
+    margin-right: 5px;
+}
+.success-con ul li a{
+    font-size: 0.8rem;
+}
+.success-con>a{
+    color: #478fd1;
+    font-size: 0.6rem;
+    float: right;
+    text-decoration: underline;
+    margin-top: 10px;
+}

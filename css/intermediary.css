@@ -1,0 +1,138 @@
+.intermediary_list {
+    padding: 0.5rem 1.8rem;
+}
+
+.intermediary_list li {
+    width: 4rem;
+    height: 4.75rem;
+    text-align: center;
+    overflow: hidden;
+    -webkit-border-radius: 0.2rem;
+    -moz-border-radius: 0.2rem;
+    border-radius: 0.2rem;
+}
+
+.intermediary_list li:nth-child(1) {
+    background: #0183bd;
+}
+
+.intermediary_list li:nth-child(2) {
+    background: #98bc36;
+}
+
+.intermediary_list li:nth-child(3) {
+    background: #ffc400;
+}
+
+.it_name {
+    color: #fff;
+    font-size: 0.5rem;
+}
+
+.it_service_icon {
+    width: 2rem;
+    height: 2rem;
+    text-align: center;
+    overflow: hidden;
+    margin: 0.4rem auto;
+}
+
+.advantage_list {
+    padding: 0.5rem 1.8rem;
+}
+
+.advantage_list li {
+    padding: 0.3rem 0;
+    margin-bottom: 0.3rem;
+    background: #f0f0f0;
+}
+
+.advantage_list .it_num_bg {
+    width: 2rem;
+    height: 2rem;
+    color: #fff;
+    line-height: 2rem;
+    text-align: center;
+    font-size: 0.8rem;
+    margin-right: 0.4rem;
+    margin-left: 0.8rem;
+    background: url("../images/it_bg_1.png") no-repeat 0 0;
+    background-size: cover;
+}
+
+.advantage_tit {
+    font-size: 0.5rem;
+    margin-bottom: 0.1rem;
+    color: #363636;
+}
+
+.advantage_de-wrap {
+    max-width: 11.5rem;
+}
+
+.advantage_de {
+    font-size: 0.4rem;
+    height: 1.8rem;
+    color: #5b5b5b;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+.ot_text_wrap{
+    height: 2rem;
+    color: #ffffff;
+    max-width: 11rem;
+    margin-top: -0.4rem;
+}
+.ot_tit{
+    font-size: 0.5rem;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 0.2rem;
+}
+.ot-de{
+    font-size: 0.4rem;
+    line-height: 0.7rem;
+    display: inline-block;
+    vertical-align: middle;
+}
+.our_advantage_list{
+    overflow: hidden;
+    padding: 0.5rem 1.8rem 0;
+}
+.our_advantage_list li{
+    height: 2rem;
+    -webkit-border-radius: 0.2rem;
+    -moz-border-radius: 0.2rem;
+    border-radius: 0.2rem;
+    padding-left: 2rem;
+    line-height: 2rem;
+    background: #cccccc;
+    margin-bottom: 0.5rem;
+    overflow: hidden;
+}
+.od_img{
+    width: 1.4rem;
+    margin-right: 0.6rem;
+    text-align: center;
+    line-height: 1.5rem;
+    height: 2rem;
+    overflow: hidden;
+}
+.our_advantage_list li.on{
+    background: #0183bd;
+}
+.od_btn{
+    color: #fff;
+    height: 1rem;
+    width: 7rem;
+    line-height: 1rem;
+    -webkit-border-radius: 0.2rem;
+    -moz-border-radius: 0.2rem;
+    border-radius: 0.2rem;
+    font-size: 0.5rem;
+    background:#0183bd ;
+}

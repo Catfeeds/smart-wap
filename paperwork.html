@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="title" content="">
+    <meta name="author" content="">
+    <meta name="Copyright" content="">
+    <!-- <meta name="description" content=""> -->
+    <!-- 让IE浏览器用最高级内核渲染页面 还有用 Chrome 框架的页面用webkit 内核
+    <!-- ================================================== -->
+    <meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge">
+    <!-- IOS6全屏 Chrome高版本全屏-->
+    <!-- ================================================== -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <!-- 让360双核浏览器用webkit内核渲染页面-->
+    <!-- ================================================== -->
+    <meta name="renderer" content="webkit">
+    <!-- Mobile Specific Metas
+   ================================================== -->
+    <!-- !!!注意 minimal-ui 是IOS7.1的新属性，最小化浏览器UI -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/paperwork.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/swiper-3.3.1.min.css">
+    <script src="js/jquery-1.12.2.min.js"></script>
+    <script src="js/swiper-3.3.1.jquery.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/paperwork.js"></script>
+    <script src="js/angular1.3.1.js"></script>
+    <title>文书</title>
+</head>
+<body id="paperwork" ng-controller="abroad_view">
+<!--头部-->
+<section class="relative">
+    <div class="bg_b header_nav pd_lr5 flex-container">
+        <i class="icon-list-ul nav_icon color_f"></i>
+        <a href="/"><img src="images/logo.png" style="height: 1.6rem;" alt=""></a>
+        <a href="tel:4001816180"><img src="images/tel.png" style="height: 1.4rem;" alt=""></a>
+    </div>
+    <!--导航栏列表-->
+    <div class="nav_wrap">
+        <ul class="nav_list_item_1">
+            <li class="on">
+                <a href="#" class="flex-container">
+                    <div class="nav_wrap1 flex-container">
+                        <div class="nav_icon_header inm"><img src="images/nav_icon_1.png" alt=""></div>
+                        <span class="nav_tit_1">精品留学服务</span>
+                    </div>
+                    <i class="icon-angle-right nav_crow_r"></i>
+                </a>
+                <dl class="nav_wrap2">
+                    <dt><a href="#">一站式留学服务</a></dt>
+                    <dt><a href="#">高端文书写作</a></dt>
+                    <dt><a href="#">半DIY申请</a></dt>
+                    <dt><a href="#">英澳零中介</a></dt>
+                    <dt><a href="#">背景提升</a></dt>
+                    <dt><a href="#">留学考试</a></dt>
+                    <dt><a href="#">留学测试</a></dt>
+                </dl>
+            </li>
+            <li>
+                <a class="flex-container" href="#">
+                    <div class="nav_wrap1 flex-container">
+                        <div class="nav_icon_header inm"><img src="images/nav_icon_2.png" alt=""></div>
+                        <span class="nav_tit_1">留学商城</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a class="flex-container" href="#">
+                    <div class="nav_wrap1 flex-container">
+                        <div class="nav_icon_header inm"><img src="images/nav_icon_3.png" alt=""></div>
+                        <span class="nav_tit_1">看案例</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a class="flex-container" href="#">
+                    <div class="nav_wrap1 flex-container">
+                        <div class="nav_icon_header inm"><img src="images/nav_icon_4.png" alt=""></div>
+                        <span class="nav_tit_1">查院校</span>
+                    </div>
+                    <i class="icon-angle-right nav_crow_r"></i>
+                </a>
+                <dl class="nav_wrap2">
+                    <dt><a href="#">一站式留学服务2</a></dt>
+                    <dt><a href="#">高端文书写作</a></dt>
+                    <dt><a href="#">半DIY申请</a></dt>
+                    <dt><a href="#">英澳零中介</a></dt>
+                    <dt><a href="#">背景提升</a></dt>
+                    <dt><a href="#">留学考试</a></dt>
+                    <dt><a href="#">留学测试</a></dt>
+                </dl>
+            </li>
+            <li class="flex-container">
+                <a class="flex-container" href="#">
+                    <div class="nav_wrap1 flex-container">
+                        <div class="nav_icon_header inm"><img src="images/nav_icon_5.png" alt=""></div>
+                        <span class="nav_tit_1">寻攻略</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a class="flex-container" href="#">
+                    <div class="nav_wrap1 flex-container">
+                        <div class="nav_icon_header inm"><img src="images/nav_icon_6.png" alt=""></div>
+                        <span class="nav_tit_1">问问题</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a class="flex-container" href="#">
+                    <div class="nav_wrap1 flex-container">
+                        <div class="nav_icon_header inm"><img src="images/nav_icon_7.png" alt=""></div>
+                        <span class="nav_tit_1">找行家</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a class="flex-container" href="#">
+                    <div class="nav_wrap1 flex-container">
+                        <div class="nav_icon_header inm"><img src="images/nav_icon_8.png" alt=""></div>
+                        <span class="nav_tit_1">留学奖金</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a class="flex-container" href="#">
+                    <div class="nav_wrap1 flex-container">
+                        <div class="nav_icon_header inm"><img src="images/nav_icon_9.png" alt=""></div>
+                        <span class="nav_tit_1">联系我们</span>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>
+<!--广告位-->
+<section class="ad mg_b5">
+    <a href="jp_study.html"><img src="images/pad_1.png" alt=""></a>
+</section>
+<!--文书创作流程-->
+<section class="mg_b5">
+    <div class="bk_tit2 bg_f  flex-container">
+        <div>
+            <i class="icon_tit"><img src="images/pt1_icon.png" style="height: 0.9rem" alt=""></i>
+            <span class="big_tit">不一样的文书创作流程</span>
+        </div>
+    </div>
+    <div class="ad bg_f" style="padding:0 0.5rem 0.5rem;"><img src="images/step_1.png" alt=""></div>
+</section>
+<!--文书推荐-->
+<section class="mg_b5">
+    <div class="bk_tit2 bg_f flex-container">
+        <div>
+            <i class="icon_tit"><img src="images/pt2_icon.png" style="height: 0.9rem" alt=""></i>
+            <span class="big_tit">文书推荐</span>
+        </div>
+        <a href="javascript:void(0);" onclick="changeWshu(this)" data-page="2"><img src="images/Refresh.png" style="width: 3rem;" alt=""></a>
+    </div>
+    <ul class="pt_list bg_f" id="wenshu">
+        <li ng-repeat="wenshuT in wenshu">
+            <a href="#">
+                <div class="pt_img fl"><img src="http://www.smartapply.cn{{wenshuT.image}}" alt=""></div>
+                <div class="fl pt_info_wrap">
+                    <p class="pt_tit ellipsis">{{wenshuT.name}}</p>
+                    <p class="pt_de ellipsis-2">{{wenshuT.answer}}</p>
+                    <a class="mall_btn inm tm" href="#">查看详情</a>
+                </div>
+            </a>
+        </li>
+    </ul>
+</section>
+<!--她们怎么说-->
+<section class="mg_b5">
+    <div class="bk_tit2 bg_f flex-container">
+        <div>
+            <i class="icon_tit"><img src="images/pt3_icon.png" style="height: 0.9rem" alt=""></i>
+            <span class="big_tit">她们怎么说</span>
+        </div>
+        <a class="more" href="#">more></a>
+    </div>
+    <ul class="pt_user_info_list bg_f">
+        <li class="flex-container">
+            <div class="ptimg_wrap">
+                <div class="pt_head"><img src="images/pt-head.png" alt=""></div>
+                <p class="pt_username ellipsis">Liu.YD</p>
+            </div>
+            <div class="ptin_wrap">
+                <p class="ellipsis pt_school_name">National University of Singapore</p>
+                <p class="pt_user_intra ellipsis-3">我是在加拿大读的，老师给我写的文书非常对我的胃口，她我对于北美洲的喜爱和在北美生活的各种见闻和…</p>
+            </div>
+        </li>
+        <li class="flex-container">
+            <div class="ptimg_wrap">
+                <div class="pt_head"><img src="images/pt-head.png" alt=""></div>
+                <p class="pt_username ellipsis">Liu.YD</p>
+            </div>
+            <div class="ptin_wrap">
+                <p class="ellipsis pt_school_name">National University of Singapore</p>
+                <p class="pt_user_intra ellipsis-3">我是在加拿大读的，老师给我写的文书非常对我的胃口，她我对于北美洲的喜爱和在北美生活的各种见闻和…</p>
+            </div>
+        </li>
+        <li class="flex-container">
+            <div class="ptimg_wrap">
+                <div class="pt_head"><img src="images/pt-head.png" alt=""></div>
+                <p class="pt_username ellipsis">Liu.YD</p>
+            </div>
+            <div class="ptin_wrap">
+                <p class="ellipsis pt_school_name">National University of Singapore</p>
+                <p class="pt_user_intra ellipsis-3">我是在加拿大读的，老师给我写的文书非常对我的胃口，她我对于北美洲的喜爱和在北美生活的各种见闻和…</p>
+            </div>
+        </li>
+    </ul>
+</section>
+<!--购买流程-->
+<section class="mg_b5">
+    <div class="bk_tit2 bg_f flex-container">
+        <div>
+            <i class="icon_tit"><img src="images/pt4_icon.png" style="height: 1rem" alt=""></i>
+            <span class="big_tit">购买流程</span>
+        </div>
+    </div>
+    <div class="ad bg_f tm" style="padding:0.5rem;"><img src="images/step_2.png" alt=""></div>
+</section>
+<!--我们的优势-->
+<section class="mg_b5">
+    <div class="bk_tit2 bg_f flex-container">
+        <div>
+            <i class="icon_tit"><img src="images/pt5_icon.png" style="height: 0.9rem" alt=""></i>
+            <span class="big_tit">我们的优势</span>
+        </div>
+    </div>
+    <div class="ad bg_f tm" style="padding:0.5rem"><img src="images/step_3.png" alt=""></div>
+</section>
+<!--备案信息-->
+<section class="cr_wrap">
+    <div class="tm copyRight">©2017 gmatonline.cn All Rights Reserved 京ICP备15001182号-1<br>京公网安备11010802017681 免责声明</div>
+</section>
+<!--footer-->
+<footer>
+    <ul class="ftnav_list flex-container">
+        <li class="on">
+            <a href="#">
+                <div>
+                    <img src="images/icon_ft_1.png" style="height: 1.1rem" alt="">
+                    <span>首页</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <div>
+                    <img src="images/icon_ft_2.png" style="height: 1.1rem" alt="">
+                    <span>拨打电话</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <div>
+                    <img src="images/icon_ft_3.png" style="height: 1.1rem" alt="">
+                    <span>在线咨询</span>
+                </div>
+            </a>
+        </li>
+    </ul>
+</footer>
+</body>
+</html>

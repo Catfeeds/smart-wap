@@ -1,0 +1,143 @@
+.ys_de {
+    color: #fff;
+    margin:auto;
+    font-size: 0.6rem;
+}
+
+.ys_5 {
+    height: 4rem;
+    line-height: 4rem;
+}
+.ys_twrap{
+    height: 8.2rem;
+    margin-bottom: 0.25rem;
+}
+.ys_5 .ys_de {
+    margin-right: 1rem;
+    line-height: normal;
+}
+.ys_left{
+    width: 36%;
+    height: 100%;
+    margin-right: 0.25rem;
+}
+.ys_right{
+    height: 100%;
+    width: 62%;
+}
+.ys_rt{
+    margin-bottom: 0.2rem;
+}
+.ys_rb{
+    line-height: 4rem;
+}
+.ys_rt,.ys_rb{
+    height: 4rem;
+}
+.rt_cr{
+    width: 48.8%;
+    height: 100%;
+}
+.rt_cr img{
+    margin: 0.1rem 0;
+}
+.rt_cr:nth-child(1){
+    margin-right: 0.25rem;
+}
+.sub1_wrap{
+    margin-left: 0.8rem;
+    max-width: 11rem;
+}
+.sub_tit{
+    font-size: 0.7rem;
+    margin-bottom: 0.3rem;
+    color: #303030;
+}
+.sub_de{
+    font-size: 0.5rem;
+    color: #5b5b5b;
+    margin-bottom: 0.3rem;
+}
+.sub1_href{
+    width: 5rem;
+    height: 1.25rem;
+    border-radius: 0.2rem;
+    line-height: 1.25rem;
+    font-size: 0.5rem;
+    color: #fff;
+    background: #468ed1;
+}
+.sub1{
+    padding: 0.5rem 0;
+    margin-bottom: 0.4rem;
+}
+.sub_info_de{
+    font-size: 0.5rem;
+    color: #5b5b5b;
+    max-width: 14.5rem;
+    margin-left: 0.2rem;
+}
+.gds_num{
+    font-size: 0.6rem;
+    color: #ffffff;
+    width: 0.9rem;
+    line-height: 0.9rem;
+    height: 0.9rem;
+    text-align: center;
+    background: #98bc36;
+    border-radius: 50%;
+}
+.gds_list li{
+    padding: 0.3rem 0;
+}
+.sub1_info_wrap{
+    margin-bottom: 0.7rem;
+}
+.sub1_info_wrap .sub_tit{
+    padding: 0.5rem 0 0.3rem;
+}
+.zy_left{
+    position: relative;
+    width: 8.5rem;
+    height: 9rem;
+}
+.zy_img{
+    width: 100%;
+    height: 100%;
+}
+.zy_right{
+    width: 8.5rem;
+}
+.zy_right li{
+    position: relative;
+    height: 4.25rem;
+    margin-bottom: 0.6rem;
+}
+.zy_right li:last-child{
+    margin-bottom: 0;
+}
+.zy_name{
+    position: absolute;
+    left: 0;
+    bottom: 4px;
+    width: 100%;
+    color: #ffffff;
+    font-size: 0.6rem;
+}
+.xy_wrap{
+    padding: 0.8rem 0.5rem;
+}
+.zy_select{
+    color: #fff;
+    font-size: 0.6rem;
+    background: #5197d9;
+    -webkit-appearance: menulist;
+    outline: none;
+    border: none;
+    width: 5rem;
+    padding: 0 0.3rem;
+    -webkit-border-radius: 0.2rem;
+    -moz-border-radius: 0.2rem;
+    border-radius: 0.2rem;
+    height: 1.5rem;
+}

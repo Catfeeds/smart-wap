@@ -1,0 +1,109 @@
+.remove_report {
+    font-size: 0.6rem;
+}
+
+.cn_img {
+    width: 5.2rem;
+    height: 3.8rem;
+}
+
+.sp_name {
+    color: #333333;
+    font-size: 0.7rem;
+    line-height: 0.9rem;
+    height: 1.8rem;
+    text-align: justify;
+}
+
+.cn_info {
+    width: 10rem;
+}
+
+.sp_data {
+    padding: 0.2rem 0 0;
+    font-size: 0.5rem;
+}
+
+.sp_price {
+    font-size: 0.7rem;
+    display: inline-block;
+    vertical-align: middle;
+    width: 3rem;
+}
+
+.sp_num_wrap {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 0.75rem;
+    border: 1px solid #a0a0a0;
+    background: #f0f0f0;
+}
+
+.sp_num_int {
+    border: none;
+    border-left: 1px solid #a0a0a0;
+    border-right: 1px solid #a0a0a0;
+    outline: none;
+    width: 2.2rem;
+    font-size: 0.75rem;
+    text-align: center;
+    height: 0.8rem;
+    line-height: 0.8rem;
+    background: #f0f0f0;
+}
+
+.sp_num_btn {
+    height: 0.8rem;
+    width: 0.8rem;
+    line-height: 0.8rem;
+    text-align: center;
+}
+
+.sp_handle {
+    padding: 0.4rem 0;
+}
+
+.spList li {
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.spList li:first-child {
+    border-top: 1px solid #f0f0f0;
+}
+
+.settlement_wrap {
+    padding: 0.4rem 0 0.7rem;
+    font-size: 0.6rem;
+}
+
+.all_check input[type=checkbox] {
+    vertical-align: middle;
+    margin-right: 0.4rem;
+}
+
+.settlement_btn {
+    outline: none;
+    border: none;
+    width: 4.5rem;
+    height: 1.5rem;
+    text-align: center;
+    background: #d8000a;
+    color: #ffffff;
+    line-height: 1.5rem;
+    border-radius: 0.1rem;
+}
+
+.numing_wrpa {
+    padding-right: 0.5rem;
+    vertical-align: middle;
+}
+
+#settlement .big_tit {
+    /*padding-bottom: 0.2rem;*/
+    /*border-bottom: 2px solid #468ed1;*/
+}
+
+.sp_check:checked {
+    background-color: #468ed1;
+}

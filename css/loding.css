@@ -1,0 +1,48 @@
+#loding {
+    background: url("../images/loding_bg.png") no-repeat 0 0;
+    background-size: cover;
+}
+.sign_wrap{
+    padding-top: 7rem;
+    width: 15rem;
+    margin: 0 auto;
+}
+.cur_tit{
+    font-size: 0.9rem;
+    color: #fff;
+    margin-bottom: 3rem;
+}
+.loding_row {
+    padding: 0.3rem 0.6rem;
+    margin-bottom: 0.8rem;
+    border-bottom: 1px solid #c8d5d8;
+}
+.sign_int::-webkit-input-placeholder {
+    color: #ffffff;
+    font-size: 0.7rem;
+}
+
+.sign_int {
+    color: #ffffff;
+    width: 12.5rem;
+    height: 1.5rem;
+    text-align: center;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+.sign_btn{
+    width: 84%;
+    outline: none;
+    border: none;
+    color: #468ed1;
+    height: 2rem;
+    border-radius: 1rem;
+    font-size: 0.8rem;
+    background: #ffffff;
+    margin: 2rem 0 1.2rem;
+}
+.other_handle a{
+    color: #ffffff;
+    font-size: 0.6rem;
+}

@@ -1,0 +1,234 @@
+.teacherInfo{
+    width: 100%;
+    padding: 15px 0;
+    background: url("../images/an-img/teacher-bg.png") no-repeat;
+    background-size: 100% 100%;
+}
+.info-left{
+    width: 5rem;
+    height: 6rem;
+    float: left;
+}
+.info-left img{
+    width: 100%;
+    height: 100%;
+}
+.info-right{
+    width: 67%;
+    float: left;
+    color: #ffffff;
+    margin-left: 3%;
+}
+.info-right h4 b{
+    border: 1px #ffffff solid;
+    font-size: 0.6rem;
+    padding: 0 3px;
+}
+.info-right p{
+    font-size: 0.9rem;
+}
+.info-right ul:after{
+    content: '';
+    height: 0;
+    clear: both;
+    overflow: hidden;
+    display: block;
+}
+.info-right ul{
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+.info-right ul li{
+    width: 30%;
+    border-radius: 50%;
+    float: left;
+    border: 1px #ffffff solid;
+    margin-right: 3%;
+    font-size: 0.6rem;
+    text-align: center;
+}
+.info-right ul li p{
+    width: 80%;
+    margin: 0 auto;
+    font-size: 0.6rem;
+    border-bottom: 1px #ffffff solid;
+    padding-top: 5%;
+}
+.info-right ul li:last-child{
+    margin-right: 0;
+}
+.info-right a{
+    width: 50%;
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 2px 0;
+    color: #399bc4;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+.person{
+    color: #ffffff;
+}
+.person h4{
+    font-size: 1rem;
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+.person p{
+    font-size: 0.8rem;
+    text-indent: 2em;
+}
+.serviceCase{
+    width: 100%;
+    background-color: #ffffff;
+    margin-top: 10px;
+    padding: 10px 0 20px 0;
+}
+.serviceCase h4{
+    color: #478fd1;
+    font-size: 1rem;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+.serviceCase>div>ul>li{
+    margin-bottom: 10px;
+}
+.case-left{
+    width: 5rem;
+    height: 5.5rem;
+    float: left;
+    text-align: center;
+}
+.case-left img{
+    width: 60%;
+    height: 61%;
+}
+.case-right{
+    width: 70%;
+    border: 1px #cdcdcd solid;
+    float: left;
+    padding: 10px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    font-size: 0.8rem;
+    word-wrap: break-word;
+}
+.case-right ul li{
+    margin-bottom: 5px;
+}
+.case-right ul li:not(:first-child){
+    color: #757575;
+}
+.answerBox{
+    background-color: #ffffff;
+    margin-top: 10px;
+}
+#moreId{
+    height: 230px;
+    overflow: hidden;
+}
+.answerBox a.botMore{
+    width: 40%;
+    display: block;
+    border-radius:10px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #5095d3;
+    color: #ffffff;
+    font-size: 1rem;
+    padding: 5px 0;
+    margin-top: 10px;
+}
+.answerBox h4{
+    color: #478fd1;
+    font-size: 1rem;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+.answerBox ul li{
+    background-color: #ededed;
+    padding: 10px 0;
+}
+.answer-left{
+    width: 4rem;
+    height: 4rem;
+    float: left;
+    border-radius: 50%;
+    margin-left: 2%;
+}
+.answer-left img{
+    width: 100%;
+    height: 100%;
+}
+.answer-right{
+    width: 65%;
+    float: left;
+    margin-left: 5%;
+}
+.answer-right h4{
+    color: #454545;
+    font-size: 0.9rem;
+    margin: 0;
+}
+.answer-right p{
+    color: #676767;
+    font-size: 0.8rem;
+}
+.answer-right span{
+    font-size: 0.6rem;
+    color: #676767;
+}
+.answer-right a.more{
+    color: #478fd1;
+    font-size: 0.6rem;
+    text-decoration: underline;
+    font-style: italic;
+    float: right;
+    position: relative;
+    top: 5px;
+}
+.interestSchool{
+    width: 100%;
+    margin: 15px 0;
+    padding: 10px 0;
+    background-color: #ffffff;
+}
+.interestSchool h4{
+    font-size: 1rem;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+.interestSchool table{
+    width: 100%;
+    border: 1px #c7c7c7 solid;
+    border-collapse:collapse;
+    font-size: 0.9rem;
+}
+.interestSchool table tr td,
+.interestSchool table tr th{
+    padding: 8px 0;
+    text-align: center;
+}
+.interestSchool table tr th{
+    font-weight: normal;
+    position: relative;
+}
+.interestSchool table tr:first-child{
+    background-color: #f0f0f0;
+    border-bottom: 1px #c7c7c7 solid;
+}
+.interestSchool table tr:not(:last-child){
+    border-bottom: 1px #dedbdb solid;
+}
+.interestSchool table tr td{
+    color: #676767;
+}
+.interestSchool table tr th span{
+    position: absolute;
+    right: 0;
+    top: 2px;
+    color: #979797;
+    font-size: 1.2rem;
+}

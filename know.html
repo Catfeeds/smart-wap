@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="title" content="">
+    <meta name="author" content="">
+    <meta name="Copyright" content="">
+    <!-- <meta name="description" content=""> -->
+    <!-- 让IE浏览器用最高级内核渲染页面 还有用 Chrome 框架的页面用webkit 内核
+    <!-- ================================================== -->
+    <meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge">
+    <!-- IOS6全屏 Chrome高版本全屏-->
+    <!-- ================================================== -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <!-- 让360双核浏览器用webkit内核渲染页面-->
+    <!-- ================================================== -->
+    <meta name="renderer" content="webkit">
+    <!-- Mobile Specific Metas
+   ================================================== -->
+    <!-- !!!注意 minimal-ui 是IOS7.1的新属性，最小化浏览器UI -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/know.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/swiper-3.3.1.min.css">
+    <script src="js/jquery-1.12.2.min.js"></script>
+    <script src="js/swiper-3.3.1.jquery.min.js"></script>
+    <script src="js/idangerous.swiper.min.js"></script>
+    <script src="js/common.js"></script>
+    <title>知识库</title>
+</head>
+<body>
+<!--头部-->
+<section class="relative">
+    <div class="bg_b header_nav pd_lr5 flex-container">
+        <i class="icon-list-ul nav_icon color_f"></i>
+        <a href="/"><img src="images/logo.png" style="height: 1.6rem;" alt=""></a>
+        <a href="tel:4001816180"><img src="images/tel.png" style="height: 1.4rem;" alt=""></a>
+    </div>
+    <!--导航栏列表-->
+    <div class="nav_wrap">
+        <ul class="nav_list_item_1">
+            <li class="on">
+                <a href="#" class="flex-container">
+                    <div class="nav_wrap1 flex-container">
+                        <div class="nav_icon_header inm"><img src="images/nav_icon_1.png" alt=""></div>
+                        <span class="nav_tit_1">精品留学服务</span>
+                    </div>
+                    <i class="icon-angle-right nav_crow_r"></i>
+                </a>
+                <dl class="nav_wrap2">
+                    <dt><a href="#">一站式留学服务</a></dt>
+                    <dt><a href="#">高端文书写作</a></dt>
+                    <dt><a href="#">半DIY申请</a></dt>
+                    <dt><a href="#">英澳零中介</a></dt>
+                    <dt><a href="#">背景提升</a></dt>
+                    <dt><a href="#">留学考试</a></dt>
+                    <dt><a href="#">留学测试</a></dt>
+                </dl>
+            </li>
+            <li>
+                <a class="flex-container" href="#">
+                    <div class="nav_wrap1 flex-container">
+                        <div class="nav_icon_header inm"><img src="images/nav_icon_2.png" alt=""></div>
+                        <span class="nav_tit_1">留学商城</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a class="flex-container" href="#">
+                    <div class="nav_wrap1 flex-container">
+                        <div class="nav_icon_header inm"><img src="images/nav_icon_3.png" alt=""></div>
+                        <span class="nav_tit_1">看案例</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a class="flex-container" href="#">
+                    <div class="nav_wrap1 flex-container">
+                        <div class="nav_icon_header inm"><img src="images/nav_icon_4.png" alt=""></div>
+                        <span class="nav_tit_1">查院校</span>
+                    </div>
+                    <i class="icon-angle-right nav_crow_r"></i>
+                </a>
+                <dl class="nav_wrap2">
+                    <dt><a href="#">一站式留学服务2</a></dt>
+                    <dt><a href="#">高端文书写作</a></dt>
+                    <dt><a href="#">半DIY申请</a></dt>
+                    <dt><a href="#">英澳零中介</a></dt>
+                    <dt><a href="#">背景提升</a></dt>
+                    <dt><a href="#">留学考试</a></dt>
+                    <dt><a href="#">留学测试</a></dt>
+                </dl>
+            </li>
+            <li class="flex-container">
+                <a class="flex-container" href="#">
+                    <div class="nav_wrap1 flex-container">
+                        <div class="nav_icon_header inm"><img src="images/nav_icon_5.png" alt=""></div>
+                        <span class="nav_tit_1">寻攻略</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a class="flex-container" href="#">
+                    <div class="nav_wrap1 flex-container">
+                        <div class="nav_icon_header inm"><img src="images/nav_icon_6.png" alt=""></div>
+                        <span class="nav_tit_1">问问题</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a class="flex-container" href="#">
+                    <div class="nav_wrap1 flex-container">
+                        <div class="nav_icon_header inm"><img src="images/nav_icon_7.png" alt=""></div>
+                        <span class="nav_tit_1">找行家</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a class="flex-container" href="#">
+                    <div class="nav_wrap1 flex-container">
+                        <div class="nav_icon_header inm"><img src="images/nav_icon_8.png" alt=""></div>
+                        <span class="nav_tit_1">留学奖金</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a class="flex-container" href="#">
+                    <div class="nav_wrap1 flex-container">
+                        <div class="nav_icon_header inm"><img src="images/nav_icon_9.png" alt=""></div>
+                        <span class="nav_tit_1">联系我们</span>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>
+<div class="knowBanner">
+    <img src="images/an-img/know-banner.png" alt="banner"/>
+</div>
+<!--留学小百科-->
+<div class="cyclopedia">
+    <div class="com-auto">
+        <img src="images/an-img/know-icon01.png" alt="icon"/>
+        <span>留学小百科</span>
+        <p>
+            留学申请是一个长期的过程。从决定出国留学，到真正开始着手准备，准备申请材料，进行语言考试，写文书，拿到offer后的签证申请，行前准备和心理准备，需要考虑到整个留学流程的方方面面。
+        </p>
+    </div>
+</div>
+<div class="cycloTab">
+    <div class="wrap">
+        <div class="tabs">
+            <span class="part active"><a href="#" hidefocus="true" >申请前</a></span>
+            <span class="part"><a href="#" hidefocus="true">申请中</a></span>
+            <span class="part"><a href="#" hidefocus="true">申请后</a></span>
+        </div>
+
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide swiper-slide-visible swiper-slide-active">
+                    <div class="content-slide">
+                        <ul>
+                            <li>
+                                <h4>大学排名</h4>
+                                <div class="right-blue" onclick="slideToggle(this)"></div>
+                                <ul>
+                                    <li><a href="#">THE排名</a></li>
+                                    <li><a href="#">QS排名</a></li>
+                                    <li><a href="#">CGU大学排名</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h4>专业排名</h4>
+                                <div class="right-blue" onclick="slideToggle(this)"></div>
+                                <ul>
+                                    <li><a href="#">THE排名</a></li>
+                                    <li><a href="#">QS排名</a></li>
+                                    <li><a href="#">CGU大学排名</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h4>教育体制和院校分布</h4>
+                                <div class="right-blue" onclick="slideToggle(this)"></div>
+                                <ul>
+                                    <li><a href="#">THE排名</a></li>
+                                    <li><a href="#">QS排名</a></li>
+                                    <li><a href="#">CGU大学排名</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h4>教育体制和院校分布</h4>
+                                <div class="right-blue" onclick="slideToggle(this)"></div>
+                                <ul>
+                                    <li><a href="#">THE排名</a></li>
+                                    <li><a href="#">QS排名</a></li>
+                                    <li><a href="#">CGU大学排名</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h4>教育体制和院校分布</h4>
+                                <div class="right-blue" onclick="slideToggle(this)"></div>
+                                <ul>
+                                    <li><a href="#">THE排名</a></li>
+                                    <li><a href="#">QS排名</a></li>
+                                    <li><a href="#">CGU大学排名</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h4>教育体制和院校分布</h4>
+                                <div class="right-blue" onclick="slideToggle(this)"></div>
+                                <ul>
+                                    <li><a href="#">THE排名</a></li>
+                                    <li><a href="#">QS排名</a></li>
+                                    <li><a href="#">CGU大学排名</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="content-slide">
+                        <ul>
+                            <li>
+                                <h4>大学排名</h4>
+                                <div class="right-blue" onclick="slideToggle(this)"></div>
+                                <ul>
+                                    <li><a href="#">THE排名</a></li>
+                                    <li><a href="#">QS排名</a></li>
+                                    <li><a href="#">CGU大学排名</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h4>专业排名</h4>
+                                <div class="right-blue" onclick="slideToggle(this)"></div>
+                                <ul>
+                                    <li><a href="#">THE排名</a></li>
+                                    <li><a href="#">QS排名</a></li>
+                                    <li><a href="#">CGU大学排名</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h4>教育体制和院校分布</h4>
+                                <div class="right-blue" onclick="slideToggle(this)"></div>
+                                <ul>
+                                    <li><a href="#">THE排名</a></li>
+                                    <li><a href="#">QS排名</a></li>
+                                    <li><a href="#">CGU大学排名</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h4>教育体制和院校分布</h4>
+                                <div class="right-blue" onclick="slideToggle(this)"></div>
+                                <ul>
+                                    <li><a href="#">THE排名</a></li>
+                                    <li><a href="#">QS排名</a></li>
+                                    <li><a href="#">CGU大学排名</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h4>教育体制和院校分布</h4>
+                                <div class="right-blue" onclick="slideToggle(this)"></div>
+                                <ul>
+                                    <li><a href="#">THE排名</a></li>
+                                    <li><a href="#">QS排名</a></li>
+                                    <li><a href="#">CGU大学排名</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h4>教育体制和院校分布</h4>
+                                <div class="right-blue" onclick="slideToggle(this)"></div>
+                                <ul>
+                                    <li><a href="#">THE排名</a></li>
+                                    <li><a href="#">QS排名</a></li>
+                                    <li><a href="#">CGU大学排名</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="content-slide">
+                        <ul>
+                            <li>
+                                <h4>大学排名</h4>
+                                <div class="right-blue" onclick="slideToggle(this)"></div>
+                                <ul>
+                                    <li><a href="#">THE排名</a></li>
+                                    <li><a href="#">QS排名</a></li>
+                                    <li><a href="#">CGU大学排名</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h4>专业排名</h4>
+                                <div class="right-blue" onclick="slideToggle(this)"></div>
+                                <ul>
+                                    <li><a href="#">THE排名</a></li>
+                                    <li><a href="#">QS排名</a></li>
+                                    <li><a href="#">CGU大学排名</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h4>教育体制和院校分布</h4>
+                                <div class="right-blue" onclick="slideToggle(this)"></div>
+                                <ul>
+                                    <li><a href="#">THE排名</a></li>
+                                    <li><a href="#">QS排名</a></li>
+                                    <li><a href="#">CGU大学排名</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h4>教育体制和院校分布</h4>
+                                <div class="right-blue" onclick="slideToggle(this)"></div>
+                                <ul>
+                                    <li><a href="#">THE排名</a></li>
+                                    <li><a href="#">QS排名</a></li>
+                                    <li><a href="#">CGU大学排名</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h4>教育体制和院校分布</h4>
+                                <div class="right-blue" onclick="slideToggle(this)"></div>
+                                <ul>
+                                    <li><a href="#">THE排名</a></li>
+                                    <li><a href="#">QS排名</a></li>
+                                    <li><a href="#">CGU大学排名</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h4>教育体制和院校分布</h4>
+                                <div class="right-blue" onclick="slideToggle(this)"></div>
+                                <ul>
+                                    <li><a href="#">THE排名</a></li>
+                                    <li><a href="#">QS排名</a></li>
+                                    <li><a href="#">CGU大学排名</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--申请项目视频解析-->
+<div class="oculographic">
+    <div class="com-title border">
+        <img src="images/an-img/know-icon02.png" alt="图标"/>
+        <span>申请项目视频解析</span>
+    </div>
+    <div class="oculo-con">
+    <div class="com-blue-title">
+        <div class="blue-con">
+            <span>金融</span>
+        </div>
+    </div>
+    <div class="video-con">
+        <ul>
+            <li>
+                <div class="thub-course">
+                    <img src="images/an-img/know-poster.png" alt="课程图片"/>
+                </div>
+                <div class="video-info">
+                    <h4 class="ellipsis-2">GMAT语法之代词风险金融难点案例解析</h4>
+                    <div class="blue-font">
+                        <p>
+                            <img src="images/an-img/know-time.png" alt="icon"/>
+                            <span>课程时长</span><br>
+                            <span class="grey-font">1课时</span>
+                        </p>
+                        <p>
+                            <img src="images/an-img/know-eye.png" alt="icon"/>
+                            <span>浏览</span><br>
+                            <span class="grey-font">345</span>
+                        </p>
+                    </div>
+                    <div class="course-btn">
+                        <a href="#">详情</a>
+                        <a href="#">购买</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="thub-course">
+                    <img src="images/an-img/know-poster.png" alt="课程图片"/>
+                </div>
+                <div class="video-info">
+                    <h4 class="ellipsis-2">GMAT语法之代词风险金融难点案例解析</h4>
+                    <div class="blue-font">
+                        <p>
+                            <img src="images/an-img/know-time.png" alt="icon"/>
+                            <span>课程时长</span><br>
+                            <span class="grey-font">1课时</span>
+                        </p>
+                        <p>
+                            <img src="images/an-img/know-eye.png" alt="icon"/>
+                            <span>浏览</span><br>
+                            <span class="grey-font">345</span>
+                        </p>
+                    </div>
+                    <div class="course-btn">
+                        <a href="#">详情</a>
+                        <a href="#">购买</a>
+                    </div>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+    <!--会计-->
+    <div class="com-blue-title">
+        <div class="blue-con border">
+            <span>会计</span>
+        </div>
+        <div class="blue-line"></div>
+    </div>
+    <div class="video-con">
+        <ul>
+            <li>
+                <div class="thub-course">
+                    <img src="images/an-img/know-poster.png" alt="课程图片"/>
+                </div>
+                <div class="video-info">
+                    <h4 class="ellipsis-2">GMAT语法之代词风险金融难点案例解析</h4>
+                    <div class="blue-font">
+                        <p>
+                            <img src="images/an-img/know-time.png" alt="icon"/>
+                            <span>课程时长</span><br>
+                            <span class="grey-font">1课时</span>
+                        </p>
+                        <p>
+                            <img src="images/an-img/know-eye.png" alt="icon"/>
+                            <span>浏览</span><br>
+                            <span class="grey-font">345</span>
+                        </p>
+                    </div>
+                    <div class="course-btn">
+                        <a href="#">详情</a>
+                        <a href="#">购买</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="thub-course">
+                    <img src="images/an-img/know-poster.png" alt="课程图片"/>
+                </div>
+                <div class="video-info">
+                    <h4 class="ellipsis-2">GMAT语法之代词风险金融难点案例解析</h4>
+                    <div class="blue-font">
+                        <p>
+                            <img src="images/an-img/know-time.png" alt="icon"/>
+                            <span>课程时长</span><br>
+                            <span class="grey-font">1课时</span>
+                        </p>
+                        <p>
+                            <img src="images/an-img/know-eye.png" alt="icon"/>
+                            <span>浏览</span><br>
+                            <span class="grey-font">345</span>
+                        </p>
+                    </div>
+                    <div class="course-btn">
+                        <a href="#">详情</a>
+                        <a href="#">购买</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--商务-->
+    <div class="com-blue-title">
+        <div class="blue-con border">
+            <span>商务</span>
+        </div>
+        <div class="blue-line"></div>
+    </div>
+    <div class="video-con">
+        <ul>
+            <li>
+                <div class="thub-course">
+                    <img src="images/an-img/know-poster.png" alt="课程图片"/>
+                </div>
+                <div class="video-info">
+                    <h4 class="ellipsis-2">GMAT语法之代词风险金融难点案例解析</h4>
+                    <div class="blue-font">
+                        <p>
+                            <img src="images/an-img/know-time.png" alt="icon"/>
+                            <span>课程时长</span><br>
+                            <span class="grey-font">1课时</span>
+                        </p>
+                        <p>
+                            <img src="images/an-img/know-eye.png" alt="icon"/>
+                            <span>浏览</span><br>
+                            <span class="grey-font">345</span>
+                        </p>
+                    </div>
+                    <div class="course-btn">
+                        <a href="#">详情</a>
+                        <a href="#">购买</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="thub-course">
+                    <img src="images/an-img/know-poster.png" alt="课程图片"/>
+                </div>
+                <div class="video-info">
+                    <h4 class="ellipsis-2">GMAT语法之代词风险金融难点案例解析</h4>
+                    <div class="blue-font">
+                        <p>
+                            <img src="images/an-img/know-time.png" alt="icon"/>
+                            <span>课程时长</span><br>
+                            <span class="grey-font">1课时</span>
+                        </p>
+                        <p>
+                            <img src="images/an-img/know-eye.png" alt="icon"/>
+                            <span>浏览</span><br>
+                            <span class="grey-font">345</span>
+                        </p>
+                    </div>
+                    <div class="course-btn">
+                        <a href="#">详情</a>
+                        <a href="#">购买</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--商场营销-->
+    <div class="com-blue-title">
+        <div class="blue-con border">
+            <span>商场营销</span>
+        </div>
+        <div class="blue-line"></div>
+    </div>
+    <div class="video-con">
+        <ul>
+            <li>
+                <div class="thub-course">
+                    <img src="images/an-img/know-poster.png" alt="课程图片"/>
+                </div>
+                <div class="video-info">
+                    <h4 class="ellipsis-2">GMAT语法之代词风险金融难点案例解析</h4>
+                    <div class="blue-font">
+                        <p>
+                            <img src="images/an-img/know-time.png" alt="icon"/>
+                            <span>课程时长</span><br>
+                            <span class="grey-font">1课时</span>
+                        </p>
+                        <p>
+                            <img src="images/an-img/know-eye.png" alt="icon"/>
+                            <span>浏览</span><br>
+                            <span class="grey-font">345</span>
+                        </p>
+                    </div>
+                    <div class="course-btn">
+                        <a href="#">详情</a>
+                        <a href="#">购买</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="thub-course">
+                    <img src="images/an-img/know-poster.png" alt="课程图片"/>
+                </div>
+                <div class="video-info">
+                    <h4 class="ellipsis-2">GMAT语法之代词风险金融难点案例解析</h4>
+                    <div class="blue-font">
+                        <p>
+                            <img src="images/an-img/know-time.png" alt="icon"/>
+                            <span>课程时长</span><br>
+                            <span class="grey-font">1课时</span>
+                        </p>
+                        <p>
+                            <img src="images/an-img/know-eye.png" alt="icon"/>
+                            <span>浏览</span><br>
+                            <span class="grey-font">345</span>
+                        </p>
+                    </div>
+                    <div class="course-btn">
+                        <a href="#">详情</a>
+                        <a href="#">购买</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    </div>
+</div>
+<!--备案信息-->
+<section class="cr_wrap back-w">
+    <div class="tm copyRight">©2017 gmatonline.cn All Rights Reserved 京ICP备15001182号-1<br>京公网安备11010802017681 免责声明</div>
+</section>
+<!--footer-->
+<footer>
+    <ul class="ftnav_list flex-container">
+        <li class="on">
+            <a href="#">
+                <div>
+                    <img src="images/icon_ft_1.png" style="height: 1.1rem" alt="">
+                    <span>首页</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <div>
+                    <img src="images/icon_ft_2.png" style="height: 1.1rem" alt="">
+                    <span>拨打电话</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <div>
+                    <img src="images/icon_ft_3.png" style="height: 1.1rem" alt="">
+                    <span>在线咨询</span>
+                </div>
+            </a>
+        </li>
+    </ul>
+</footer>
+</body>
+<script type="text/javascript">
+    $(function() {
+
+        var tabsSwiper;
+        tabsSwiper = new Swiper('.swiper-container', {
+            speed : 500,
+            onSlideChangeStart : function() {
+                $(".tabs .active").removeClass('active');
+                $(".tabs span").eq(tabsSwiper.activeIndex).addClass('active');
+            }
+        });
+
+        $(".tabs span").on('touchstart mousedown', function(e) {
+            e.preventDefault();
+            $(".tabs .active").removeClass('active');
+            $(this).addClass('active');
+            tabsSwiper.swipeTo($(this).index());
+
+        });
+
+        $(".tabs span").click(function(e) {
+            e.preventDefault();
+        });
+
+
+    });//end
+    function slideToggle(o){
+       if($(o).hasClass("on")){
+           $(o).removeClass("on");
+           $(o).siblings("ul").slideUp();
+       }else{
+           $(o).addClass("on");
+           $(o).siblings("ul").slideDown();
+       }
+    }
+</script>
+</html>

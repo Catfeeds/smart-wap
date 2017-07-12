@@ -1,0 +1,21 @@
+.ac_btn{
+    width: 5rem;
+    height: 1.4rem;
+    line-height: 1.4rem;
+    font-size: 0.7rem;
+    text-align: center;
+    color: #ffffff;
+    border-radius: 0.2rem;
+    background: #015892;
+}
+.ac_info{
+    width: 8.5rem;
+}
+.ac_info p{
+    color: #242424;
+    font-size: 0.7rem;
+    text-align: justify;
+}
+.ac_info .ac-de{
+    padding: 0.4rem 0;
+}
