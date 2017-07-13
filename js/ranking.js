@@ -19,7 +19,11 @@ $(function(){
             return $sce.trustAsHtml(content);
         }
     });
-
+    myApp.filter('suan', function () {
+        return function (content) {
+            return Math.round((content)*10/3+5);
+        }
+    });
     //通过模块生成调用控制器
     myApp.controller("abroad_view", ["$scope", "$http", "$sce", function ($scope, $http, $sce) {
         $scope.toggle = {
