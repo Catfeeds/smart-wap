@@ -16,10 +16,10 @@
 }
 .course-info h4{
     font-weight: normal;
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 .course-info span{
-    font-size: 0.8rem;
+    font-size: 0.7rem;
 }
 .course-info span.red{
     color: red;
@@ -76,6 +76,7 @@
 .productDetail{
     width: 100%;
     min-height: 200px;
+    padding-bottom: 0.75rem;
     background-color: #ffffff;
     margin-top: 10px;
 }
@@ -83,6 +84,12 @@
     padding: 10px 0 10px 5%;
     font-size: 0.9rem;
     border-bottom: 1px #f2f0f0 solid;
+}
+.pt_text{
+    padding: 0.75rem;
+    max-height: 15rem;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 .evaluate{
     background-color: #ffffff;
@@ -94,7 +101,7 @@
     font-size: 1rem;
     position: absolute;
     right: 5%;
-    top: 25px;
+    top: 35px;
 }
 .evaluate p span{
     color: red;
@@ -109,6 +116,7 @@
 .evaluate ul li{
     width: 30%;
     height: 20px;
+    margin-bottom: 0.3rem;
     line-height: 20px;
     float: left;
     text-align: center;
@@ -149,10 +157,10 @@
     margin-right: 5%;
 }
 .wrap{margin:0 auto;text-align: right;background-color: #ffffff;margin-bottom: 30px}
-.tabs{text-align: center;display: inline-block;margin-right: 5%}
-.tabs .part{display:block;float:left;color:#fff;text-align:center;height: 20px;font-size: 0.8rem}
+.tabs{text-align: center;display: inline-block;margin-right: 5%;height:1rem;padding-top: 0.4rem;}
+.tabs .part{display:block;float:left;color:#fff;text-align:center;font-size: 0.7rem}
 .tabs .part:first-child{}
-.tabs a{display:block;color:#000000;text-align:center;margin:0 auto;text-decoration:none;padding: 5px;font-size: 0.9rem}
+.tabs a{display:block;color:#000000;text-align:center;margin:0 auto;text-decoration:none;padding:0.2rem 0.3rem;font-size: 0.7rem}
 .tabs span.active a{background-color: #f0f0f0;color: #659dd5;
 }
 .swiper-slide{width:100%;background:none;color:#373737;height: auto!important;}
@@ -170,18 +178,20 @@
     border-radius: 50%;
     float: left;
     margin-left: 8%;
+    overflow: hidden;
 }
 .evaluate-left img{
     width: 100%;
     height: 100%;
 }
 .evaluate-right{
-    width: 60%;
+    width: 74%;
     float: left;
     margin-left: 5%;
     text-align: left;
 }
 .evaluate-right p,.evaluate-right span{
     color: #676767;
-    font-size: 0.8rem;
+    text-align: justify;
+    font-size: 0.6rem;
 }

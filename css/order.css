@@ -60,7 +60,7 @@
 }
 
 .od_left {
-    width: 11rem;
+    width: 10.4rem;
 }
 
 .ld_int_wrap {
@@ -107,13 +107,15 @@
     position: relative;
     height: 1.4rem;
     margin-bottom: 0.5rem;
+    border: 1px solid transparent;
 }
-
+.adr_list li img.true_img{
+    display: none;
+}
 .adr_list li.on {
     border: 1px solid #468ed1;
 }
-
-.adr_list li.on .true_img {
+.adr_list li.on img.true_img {
     display: block;
 }
 
@@ -130,6 +132,12 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+}
+.adr_info p:first-child{
+    width: 25%;
+}
+.adr_info p:nth-child(2){
+    width: 38%;
 }
 
 .new_adr_wrap {

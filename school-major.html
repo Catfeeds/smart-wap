@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" ng-app="myApp">
 <head>
     <meta charset="UTF-8">
     <meta name="keywords" content="">
@@ -30,11 +30,13 @@
     <link rel="stylesheet" href="css/swiper-3.3.1.min.css">
     <script src="js/jquery-1.12.2.min.js"></script>
     <script src="js/swiper-3.3.1.jquery.min.js"></script>
-    <script src="js/school-detail.js"></script>
+    <script src="js/school-major.js"></script>
+    <script src="js/public.js"></script>
     <script src="js/common.js"></script>
+    <script src="js/angular1.3.1.js"></script>
     <title>专业详情页</title>
 </head>
-<body>
+<body ng-controller="abroad_view">
 <!--头部-->
 <section class="relative">
     <div class="bg_b header_nav pd_lr5 flex-container">
@@ -146,15 +148,15 @@
 <div class="school-info">
     <div class="com-auto">
         <div class="info-left">
-            <h4>香港大学</h4>
+            <h4>{{school.name}}</h4>
             <ul>
-                <li>University of Hong Kong</li>
-                <li>所在地：</li>
-                <li>地理位置：中国香港</li>
-                <li>官网：<a href="http://www.hku.hk/">http://www.hku.hk/</a></li>
-                <li>学校排名1</li>
+                <li>{{school.title}}</li>
+                <li>所在地：{{school.answer}}</li>
+                <li>地理位置：{{school.alternatives}}</li>
+                <li>官网：<a href="{{school.listeningFile}}">{{school.listeningFile}}</a></li>
+                <li>学校排名{{school.article}}</li>
                 <li>
-                    <a href="#">录取几率免费评估</a>
+                    <a href="test.html">录取几率免费评估</a>
                 </li>
             </ul>
         </div>
@@ -174,19 +176,19 @@
         <ul>
             <li>
                 <p class="ellipsis">项目名称（Project name）</p>
-                <p class="ellipsis">Mechanical Engineering(机械工程)</p>
+                <p class="ellipsis">{{major.title}}</p>
             </li>
             <li>
                 <p class="ellipsis">项目地址（Project site）</p>
-                <p class="ellipsis">https://gradadmissions.stanford.edu/progra...</p>
+                <p class="ellipsis"><a style="font-size: 0.7rem;color:#5dc3f8;" href="{{major.url}}">{{major.url}}</a></p>
             </li>
             <li>
                 <p class="ellipsis">项目日期（Project period）</p>
-                <p class="ellipsis">秋季</p>
+                <p class="ellipsis">{{major.admissionTime}}</p>
             </li>
             <li>
                 <p class="ellipsis">截止日期（As of the date）</p>
-                <p class="ellipsis">12月8日</p>
+                <p class="ellipsis">{{major.deadline}}</p>
             </li>
         </ul>
     </div>
@@ -201,15 +203,15 @@
         <ul>
             <li>
                 <span>GPA</span>
-                <b>3.0</b>
+                <b>{{major.system}}</b>
             </li>
             <li>
                 <span>雅思</span>
-                <b>不接受</b>
+                <b>{{major.price}}</b>
             </li>
             <li>
                 <span>GRE</span>
-                <b>Required</b>
+                <b>{{major.duration}}</b>
             </li>
             <li>
                 <span>工作年限</span>
@@ -217,19 +219,19 @@
             </li>
             <li>
                 <span>托福</span>
-                <b>100</b>
+                <b>{{major.speak}}</b>
             </li>
             <li>
                 <span>GMAT</span>
-                <b></b>
+                <b>{{major.answer}}</b>
             </li>
             <li>
                 <span>学位</span>
-                <b>硕士</b>
+                <b>{{major.numbering}}</b>
             </li>
             <li>
                 <span>学费</span>
-                <b>$50,424</b>
+                <b>{{major.tuition}}</b>
             </li>
         </ul>
     </div>
@@ -241,16 +243,9 @@
         <span>申请说明</span>
     </div>
     <div class="s-info-det02">
-        <div class="com-auto">
+        <div class="com-auto" ng-bind-html="major.performance | trustHtml">
             <p>
-                斯坦福大学机械工程系（Department of Mechanical Engineering，缩写ME）研究生招收MS与PhD学生，要求申请者本科毕业，拥有工程学、物理等专业背景。要求学生递交GRE成绩，但并无最低GRE、GPA等分数要求。博士生可申请TA/RA或Fellowship奖学金。
-                专业设置
-                该系主要分以下五个专业方向，分别是：
-                生物医学（Biomedicine）
-                计算工程（Computational Engineering）
-                设计（Design）
-                能源（Energy）
-                多尺度工程（Multi-Scale Engineering）
+
             </p>
         </div>
     </div>
@@ -264,11 +259,7 @@
     </div>
     <div class="s-info-det02">
         <div class="com-auto">
-            <p>
-                Admissions Frequently Asked Questions：
-                Admissions Frequently Asked Qu
-                Financial Aid：Financial Aid
-            </p>
+            <a ng-repeat="link in link" href="{{link.url}}">{{link.name}}{{link.title}}</a>
         </div>
     </div>
 </div>
@@ -341,60 +332,25 @@
     </div>
     <div class="hot-con">
         <ul>
-            <li>
-                <a href="#">
+            <li ng-repeat="hot in hot">
+                <a href="school-detail.html?id={{hot.id}}">
                     <div class="hot-c-left">
-                        <h4>纽约大学</h4>
-                        <p>New York University</p>
-                        <p>学校排名：32</p>
-                        <p>位于：New York（纽约州）</p>
+                        <h4>{{hot.name}}</h4>
+                        <p>{{hot.title}}</p>
+                        <p>学校排名：{{hot.rank}}</p>
+                        <p>位于：{{hot.place}}</p>
                         <p>查看更多该校信息&gt;&gt;</p>
                     </div>
                     <div class="hot-c-right">
                         <div class="sch-thumb">
-                            <img src="images/an-img/school-big.png" alt="学校图标"/>
+                            <img src="http://schools.smartapply.cn{{hot.image}}" alt="学校图标"/>
                         </div>
                         <p>已有356人评估</p>
                     </div>
                     <div class="clearfix"></div>
                 </a>
             </li>
-            <li>
-                <a href="#">
-                    <div class="hot-c-left">
-                        <h4>纽约大学</h4>
-                        <p>New York University</p>
-                        <p>学校排名：32</p>
-                        <p>位于：New York（纽约州）</p>
-                        <p>查看更多该校信息&gt;&gt;</p>
-                    </div>
-                    <div class="hot-c-right">
-                        <div class="sch-thumb">
-                            <img src="images/an-img/school-big.png" alt="学校图标"/>
-                        </div>
-                        <p>已有356人评估</p>
-                    </div>
-                    <div class="clearfix"></div>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <div class="hot-c-left">
-                        <h4>纽约大学</h4>
-                        <p>New York University</p>
-                        <p>学校排名：32</p>
-                        <p>位于：New York（纽约州）</p>
-                        <p>查看更多该校信息&gt;&gt;</p>
-                    </div>
-                    <div class="hot-c-right">
-                        <div class="sch-thumb">
-                            <img src="images/an-img/school-big.png" alt="学校图标"/>
-                        </div>
-                        <p>已有356人评估</p>
-                    </div>
-                    <div class="clearfix"></div>
-                </a>
-            </li>
+
         </ul>
     </div>
 </div>
@@ -405,8 +361,8 @@
 <!--footer-->
 <footer>
     <ul class="ftnav_list flex-container">
-        <li class="on">
-            <a href="#">
+        <li>
+            <a href="index.html">
                 <div>
                     <img src="images/icon_ft_1.png" style="height: 1.1rem" alt="">
                     <span>首页</span>
@@ -414,7 +370,7 @@
             </a>
         </li>
         <li>
-            <a href="#">
+            <a href="tel:4001816180">
                 <div>
                     <img src="images/icon_ft_2.png" style="height: 1.1rem" alt="">
                     <span>拨打电话</span>
@@ -422,7 +378,7 @@
             </a>
         </li>
         <li>
-            <a href="#">
+            <a href="mqqwpa://im/chat?chat_type=wpa&uin=1746295647&version=1&src_type=web&web_src=http://m.haishiit.com/">
                 <div>
                     <img src="images/icon_ft_3.png" style="height: 1.1rem" alt="">
                     <span>在线咨询</span>

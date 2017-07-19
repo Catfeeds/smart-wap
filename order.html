@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="myApp">
 <head>
     <meta charset="UTF-8">
     <meta name="keywords" content="">
@@ -33,9 +33,12 @@
     <script src="js/Area.js"></script>
     <script src="js/AreaData_min.js"></script>
     <script src="js/common.js"></script>
+    <script src="js/public.js"></script>
+    <script src="js/order.js"></script>
+    <script src="js/angular1.3.1.js"></script>
     <title>提交订单</title>
 </head>
-<body id="order">
+<body id="order" ng-controller="abroad_view">
 <!--头部-->
 <section class="relative">
     <div class="bg_b header_nav pd_lr5 flex-container">
@@ -151,7 +154,7 @@
         <div class="bg_f adrint_wrap">
             <div class="adrint_row">
                 <div class="adrint_name"><em class="light">*</em>收货人：</div>
-                <input class="new_adr_input" type="text">
+                <input class="new_adr_input" id="name" type="text">
             </div>
             <div class="adrint_row">
                 <div class="adrint_name"><em class="light">*</em>所在地区：</div>
@@ -165,14 +168,14 @@
             </div>
             <div class="adrint_row">
                 <div class="adrint_name"><em class="light">*</em>详细地址：</div>
-                <input class="new_adr_input" type="text">
+                <input class="new_adr_input" id="addressInt" type="text">
             </div>
             <div class="adrint_row">
                 <div class="adrint_name"><em class="light">*</em>手机号码：</div>
-                <input class="new_adr_input" type="text">
+                <input class="new_adr_input" id="phone" type="text">
             </div>
             <div class="tl" style="padding: 0.7rem 0 0.5rem;">
-                <a class="order_btn" href="javascript:;">保存收货人信息</a>
+                <a class="order_btn save_info" onclick="showAreaID();" href="javascript:;">保存收货人信息</a>
             </div>
 
         </div>
@@ -183,14 +186,14 @@
     <div class="bk_tit2 flex-container bg_f"><span class="big_tit">收货人信息</span></div>
     <div class="pd_lr75">
         <ul class="adr_list clearfix">
-            <li class="on">
-                <div class="flex-container adr_info">
-                    <p class="adr_name">Vico</p>
-                    <p class="adr">四川省 成都市</p>
-                    <p class="adr_phone">156++++++++</p>
-                </div>
-                <img class="true_img" src="images/true_1.png" style="height: 0.9rem;" alt="">
-            </li>
+            <!--<li class="on">-->
+                <!--<div class="flex-container adr_info">-->
+                    <!--<p class="adr_name">Vico</p>-->
+                    <!--<p class="adr">四川省 成都市</p>-->
+                    <!--<p class="adr_phone">156++++++++</p>-->
+                <!--</div>-->
+                <!--<img class="true_img" src="images/true_1.png" style="height: 0.9rem;" alt="">-->
+            <!--</li>-->
         </ul>
         <div class="tr" style="padding: 0.2rem 0 0.8rem;">
             <a class="order_btn add_adr" href="javascript:;">＋新增收货人</a>
@@ -212,15 +215,15 @@
     <div class="bk_tit2 flex-container bg_f"><span class="big_tit">商品详情</span></div>
     <div class="pd_lr75">
         <ul class="order_sp_list clearfix">
-            <li class="flex-container">
-                <div class="order_img"><img src="images/cn_img.png" alt=""></div>
+            <li class="flex-container" ng-repeat="list in list">
+                <div class="order_img"><img src="{{http}}{{list.image}}" alt=""></div>
                 <div class="order_text flex-container">
                     <div class="od_left">
-                        <p>美英名校半DIY留学申请计划</p>
+                        <p>{{list.contentName}}</p>
                         <p class="country">美国</p>
-                        <p class="light">￥9800</p>
+                        <p class="light">{{list.price}}</p>
                     </div>
-                    <div class="od_right">×<span class="cart_num">1</span></div>
+                    <div class="od_right">×<span class="cart_num">{{list.num}}</span></div>
                 </div>
             </li>
         </ul>
@@ -228,17 +231,17 @@
 </section>
 <section class="mg_b5 bg_f pd75">
     <div class="tr">
-        <div class="ld_int_wrap">
+        <div class="ld_int_wrap" style="display: none">
             <input id="ld" type="checkbox">
             <label for="ld"> <span class="inm">使用雷豆抵扣</span><input class="ld_int" type="button" value=""><span
                     class="inm">个</span></label>
         </div>
-        <div class="ld_num">
+        <div class="ld_num" style="display: none">
             <p>你有0个，可用0个</p>
             <p>-￥0</p>
         </div>
-        <p class="order_price">应付金额：<span class="light">￥9800</span></p>
-        <a class="order_btn" href="javascript:;">提交订单</a>
+        <p class="order_price">应付金额：<span class="light">￥{{data.totalMoney}}</span></p>
+        <a class="order_btn tj_order" href="javascript:;">提交订单</a>
     </div>
 </section>
 <!--备案信息-->
@@ -276,22 +279,4 @@
     </ul>
 </footer>
 </body>
-<script>
-    $(function () {
-        initComplexArea('seachprov', 'seachcity', 'seachdistrict', area_array, sub_array, '0', '0', '0');
-        $('.pay-away li').click(function () {
-            $(this).addClass("on").siblings("li").removeClass("on");
-        });
-        $('.add_adr').click(function(){
-            $('.new_adr_wrap').show();
-        });
-        $('.close_btn').click(function(){
-            $('.new_adr_wrap').hide();
-        });
-//        $(".new_adr_wrap").on("click",function(e){
-//            $(this).hide();
-//            e.stopPropagation();
-//        });
-    })
-</script>
 </html>

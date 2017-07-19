@@ -267,7 +267,7 @@
 <section class="bg_f mg_b5 pd_lr5">
     <ul class="flex-container micon_list">
         <li>
-            <a href="#">
+            <a href="intermediary.html">
                 <div class="micon_icon"><img src="images/micon_1.png" alt=""></div>
                 <h1 class="micon_name">英澳零中介<br>申请服务</h1>
                 <p class="micon_de">你留学，我买单最<br>高可帮你节约<br>10000RMB</p>
@@ -281,7 +281,7 @@
             </a>
         </li>
         <li>
-            <a href="#">
+            <a href="diy.html?id=2310">
                 <div class="micon_icon"><img src="images/micon_3.png" alt=""></div>
                 <h1 class="micon_name">半DIY服务</h1>
                 <p class="micon_de">申请流程全透明<br>学生全程参与<br>让你告别繁琐！</p>
@@ -302,20 +302,19 @@
     <div class="pd_lr5 bg_f">
         <div class="ad"><a href="#"><img src="images/mall_ad_1.png" alt=""></a></div>
         <ul class="flex-container mall_sub_list">
-            <li ng-repeat="IndividualChoiceT in IndividualChoice">
-                <a href="#">
+            <li ng-repeat="fullServiceT in fullService">
+                <a href="diy.html?id={{fullServiceT.id}}">
                     <div class="mall_img relative">
-                        <img src="images/mall_1.png" alt="">
-                        <div class="ani mall_top_num"><img src="http://www.smartapply.cn{{IndividualChoiceT.image}}" alt=""></div>
+                        <img src="http://www.smartapply.cn{{fullServiceT.image}}" alt="">
                     </div>
                     <div class="mall_sub_wrap">
-                        <p class="ellipsis-2 mall_sub-name">{{IndividualChoiceT.name}}</p>
+                        <p class="ellipsis-2 mall_sub-name">{{fullServiceT.name}}</p>
                         <div class="mall_price flex-container-center tm">
-                            <span class="new inb">￥{{IndividualChoiceT.price}}</span>
-                            <span class="old inb">￥{{IndividualChoiceT.originalPrice}}</span>
+                            <span class="new inb">￥{{fullServiceT.price}}</span>
+                            <span class="old inb">￥{{fullServiceT.originalPrice}}</span>
                         </div>
                         <div class="tm">
-                            <a class="mall_btn inm" href="#">查看详情</a>
+                            <a class="mall_btn inm" href="diy.html?id={{fullServiceT.id}}">查看详情</a>
                         </div>
                     </div>
                 </a>
@@ -338,19 +337,20 @@
     <div class="pd_lr5 bg_f">
         <div class="ad"><a href="#"><img src="images/mall_ad_1.png" alt=""></a></div>
         <ul class="flex-container mall_sub_list">
-            <li ng-repeat="fullServiceT in fullService">
-                <a href="#">
+            <li ng-repeat="IndividualChoiceT in IndividualChoice">
+                <a href="diy.html?id={{IndividualChoiceT.id}}">
                     <div class="mall_img relative">
-                        <img src="http://www.smartapply.cn{{fullServiceT.image}}" alt="">
+                        <img src="images/mall_1.png" alt="">
+                        <div class="ani mall_top_num"><img src="http://www.smartapply.cn{{IndividualChoiceT.image}}" alt=""></div>
                     </div>
                     <div class="mall_sub_wrap">
-                        <p class="ellipsis-2 mall_sub-name">{{fullServiceT.name}}</p>
+                        <p class="ellipsis-2 mall_sub-name">{{IndividualChoiceT.name}}</p>
                         <div class="mall_price flex-container-center tm">
-                            <span class="new inb">￥{{fullServiceT.price}}</span>
-                            <span class="old inb">￥{{fullServiceT.originalPrice}}</span>
+                            <span class="new inb">￥{{IndividualChoiceT.price}}</span>
+                            <span class="old inb">￥{{IndividualChoiceT.originalPrice}}</span>
                         </div>
                         <div class="tm">
-                            <a class="mall_btn inm" href="#">查看详情</a>
+                            <a class="mall_btn inm" href="diy.html?id={{IndividualChoiceT.id}}">查看详情</a>
                         </div>
                     </div>
                 </a>
@@ -368,20 +368,20 @@
             <span class="big_tit" style="color: #468ed1;">背景提升项目&nbsp;&nbsp;/</span>
             <span class="small_tit">先人一步，先赢一步</span>
         </div>
-        <a class="more" href="#">more></a>
+        <a class="more" href="background_ts.html">more></a>
     </div>
     <div class="pd_lr5 bg_f">
         <div class="ad"><a href="#"><img src="images/mall_ad_1.png" alt=""></a></div>
         <ul class="flex-container mall_sub_list mt_3">
             <li ng-repeat="projectT in project">
-                <a href="#">
+                <a href="content_details.html?id={{projectT.id}}">
                     <div class="mall_img relative">
                         <img src="http://www.smartapply.cn{{projectT.image}}" alt="">
                     </div>
                     <div class="mall_sub_wrap">
                         <p class="ellipsis-2 mall_sub-name tm">{{projectT.name}}</p>
                         <div class="tm">
-                            <a class="mall_btn inm" href="#">查看详情</a>
+                            <a class="mall_btn inm" href="content_details.html?id={{projectT.id}}">查看详情</a>
                         </div>
                     </div>
                 </a>
@@ -398,8 +398,8 @@
 <!--footer-->
 <footer>
     <ul class="ftnav_list flex-container">
-        <li class="on">
-            <a href="#">
+        <li>
+            <a href="index.html">
                 <div>
                     <img src="images/icon_ft_1.png" style="height: 1.1rem" alt="">
                     <span>首页</span>
@@ -407,7 +407,7 @@
             </a>
         </li>
         <li>
-            <a href="#">
+            <a href="tel:4001816180">
                 <div>
                     <img src="images/icon_ft_2.png" style="height: 1.1rem" alt="">
                     <span>拨打电话</span>
@@ -415,7 +415,7 @@
             </a>
         </li>
         <li>
-            <a href="#">
+            <a href="mqqwpa://im/chat?chat_type=wpa&uin=1746295647&version=1&src_type=web&web_src=http://m.haishiit.com/">
                 <div>
                     <img src="images/icon_ft_3.png" style="height: 1.1rem" alt="">
                     <span>在线咨询</span>

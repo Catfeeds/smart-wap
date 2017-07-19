@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" ng-app="myApp">
 <head>
     <meta charset="UTF-8">
     <meta name="keywords" content="">
@@ -33,9 +33,12 @@
     <script src="js/swiper-3.3.1.jquery.min.js"></script>
     <script src="js/idangerous.swiper.min.js"></script>
     <script src="js/common.js"></script>
+    <script src="js/public.js"></script>
+    <script src="js/diy.js"></script>
+    <script src="js/angular1.3.1.js"></script>
     <title>diy</title>
 </head>
-<body>
+<body ng-controller="abroad_view">
 <!--头部-->
 <section class="relative">
     <div class="bg_b header_nav pd_lr5 flex-container">
@@ -142,25 +145,28 @@
     </div>
 </section>
 <div class="course-img">
-    <img src="images/an-img/diy-detailimg.png" alt="课程图片"/>
+    <img src="{{http}}{{data.image}}" alt="课程图片"/>
 </div>
 <div class="course-info">
-    <h4 class="ellipsis">美英名校半DIY留学申请计划</h4>
-    <span>购买人数：<span class="red">4</span></span>
-    <span>累计评价：<span class="red">1</span></span>
-    <span>送雷豆：<span class="red">5000</span></span>
-    <p>促销价：<span class="red">￥9800</span></p>
-    <p class="oldP"><b>价格：￥9999</b> <span>商品编号：toefl2310</span></p>
+    <h4 class="ellipsis">{{data.name}}</h4>
+    <span>购买人数：<span class="red">{{data2.alternatives}}</span></span>
+    <span>累计评价：<span class="red">{{data2.article}}</span></span>
+    <span>送雷豆：<span class="red">{{data2.listeningFile}}</span></span>
+    <p>促销价：<span class="red">￥{{data.price}}</span></p>
+    <p class="oldP"><b>价格：￥{{data.originalPrice}}</b> <span>商品编号：toefl{{data.id}}</span></p>
+    <input type="hidden" id="sp_price" value="{{data.price}}">
+    <input type="hidden" id="sp_name" value="{{data.name}}">
 </div>
 <div class="buyGroup">
     <ul>
-        <li><a href="#">立即兑换</a></li>
-        <li><a href="#">加入购物车</a></li>
+        <li class="dh_btn"><a href="javascript:;">立即兑换</a></li>
+        <li class="cart_btn"><a href="javascript:;">加入购物车</a></li>
     </ul>
 </div>
 <!--商品详情-->
 <div class="productDetail">
       <div class="product-title">商品详情</div>
+    <div class="pt_text" ng-bind-html="contenttext"></div>
 </div>
 <!--累计评价-->
 <div class="evaluate">
@@ -177,7 +183,7 @@
 <div class="evaluate-toggle">
     <div class="wrap">
         <div class="tabs">
-            <span class="part active"><a href="#" hidefocus="true" >全部(1)</a></span>
+            <span class="part active"><a href="#" hidefocus="true" >全部({{data2.article}})</a></span>
             <span class="part"><a href="#" hidefocus="true">好评(1)</a></span>
             <span class="part"><a href="#" hidefocus="true">中评(0)</a></span>
             <span class="part"><a href="#" hidefocus="true">差评(0)</a></span>
@@ -188,33 +194,13 @@
                 <div class="swiper-slide swiper-slide-visible swiper-slide-active">
                     <div class="content-slide">
                         <ul>
-                            <li>
+                            <li ng-repeat="reply in reply" is-over="toggle.now">
                                 <div class="evaluate-left">
-                                    <img src="images/an-img/diy-headimg.png" alt="用户头像"/>
+                                    <img src="{{http}}{{reply.image}}" alt="用户头像"/>
                                 </div>
                                 <div class="evaluate-right">
-                                    <p>梦想不只是想想，我要行动了。</p>
-                                    <span>2016.4.17</span>
-                                </div>
-                                <div class="clearfix"></div>
-                            </li>
-                            <li>
-                                <div class="evaluate-left">
-                                    <img src="images/an-img/diy-headimg.png" alt="用户头像"/>
-                                </div>
-                                <div class="evaluate-right">
-                                    <p>梦想不只是想想，我要行动了。</p>
-                                    <span>2016.4.17</span>
-                                </div>
-                                <div class="clearfix"></div>
-                            </li>
-                            <li>
-                                <div class="evaluate-left">
-                                    <img src="images/an-img/diy-headimg.png" alt="用户头像"/>
-                                </div>
-                                <div class="evaluate-right">
-                                    <p>梦想不只是想想，我要行动了。</p>
-                                    <span>2016.4.17</span>
+                                    <p>{{reply.content}}</p>
+                                    <span>{{reply.time}}</span>
                                 </div>
                                 <div class="clearfix"></div>
                             </li>
@@ -240,6 +226,8 @@
                 <div class="swiper-slide">
                     <div class="content-slide">
                         <ul>
+
+
                             <li>
                                 <div class="evaluate-left">
                                     <img src="images/an-img/diy-headimg.png" alt="用户头像"/>
@@ -314,32 +302,4 @@
     </ul>
 </footer>
 </body>
-<script type="text/javascript">
-    $(function() {
-
-        var tabsSwiper;
-        tabsSwiper = new Swiper('.swiper-container', {
-            speed : 500,
-            onSlideChangeStart : function() {
-                $(".tabs .active").removeClass('active');
-                $(".tabs span").eq(tabsSwiper.activeIndex).addClass('active');
-            }
-        });
-
-        $(".tabs span").on('touchstart mousedown', function(e) {
-            e.preventDefault();
-            $(".tabs .active").removeClass('active');
-            $(this).addClass('active');
-            tabsSwiper.swipeTo($(this).index());
-
-        });
-
-        $(".tabs span").click(function(e) {
-            e.preventDefault();
-        });
-
-
-    });//end
-
-</script>
 </html>

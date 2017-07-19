@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="myApp">
 <head>
     <meta charset="UTF-8">
     <meta name="keywords" content="">
@@ -31,10 +31,14 @@
     <link rel="stylesheet" href="css/swiper-3.3.1.min.css">
     <script src="js/jquery-1.12.2.min.js"></script>
     <script src="js/swiper-3.3.1.jquery.min.js"></script>
+    <script src="js/idangerous.swiper.min.js"></script>
+    <script src="js/public.js"></script>
     <script src="js/common.js"></script>
+    <script src="js/strategy.js"></script>
+    <script src="js/angular1.3.1.js"></script>
     <title>寻攻略</title>
 </head>
-<body>
+<body ng-controller="abroad_view">
 <!--头部-->
 <section class="relative">
     <div class="bg_b header_nav pd_lr5 flex-container">
@@ -144,9 +148,8 @@
 <section class="mg_b5" style="overflow: hidden;">
     <div class="swiper-container-1 banner-wrap relative">
         <ul class="swiper-wrapper">
-            <li class="swiper-slide banner"><a href="#"><img src="images/an-img/strate-banner.png" alt="banner"/></a></li>
-            <li class="swiper-slide banner"><a href="#"><img src="images/an-img/strate-banner.png" alt="banner"/></a></li>
-            <li class="swiper-slide banner"><a href="#"><img src="images/an-img/strate-banner.png" alt="banner"/></a></li>
+            <li class="swiper-slide banner"><a href="#"><img src="images/an-img/strate-banner.png" alt="banner"/></a>
+            </li>
         </ul>
         <div class="baner-page swiper-pagination"></div>
     </div>
@@ -156,17 +159,11 @@
 <div class="today back-w">
     <img src="images/an-img/strate-1.png" alt="头条图标"/>
     <ul>
-        <li>
-            <h4 class="ellipsis"><a href="#">DIY好还是找中介更靠谱儿？</a></h4>
-            <p class="ellipsis-2">
-                1.提前规划留学申请到底有多重要？ 2.DIY好还是找中介优劣势对比？ 3.怎样有效地提高语言成绩？ 4.为文书...
-            </p>
-        </li>
-        <li>
-            <h4 class="ellipsis"><a href="#">金融专业申请条件全解析</a></h4>
-            <p class="ellipsis-2">
-                .美国金融硕士院校大扒皮 2、申请注意事项与小技巧 3、如何成功申请名校奖学金 4、金融案例大讲解 5.如何...
-            </p>
+        <li ng-repeat="item1 in items1.data">
+            <a href="content_details.html?id={{item1.id}}">
+                <h4 class="ellipsis">{{item1.title}}</h4>
+                <p class="ellipsis-2">{{item1.answer}}</p>
+            </a>
         </li>
     </ul>
 </div>
@@ -174,7 +171,7 @@
 <div class="plan back-w">
     <div class="plan-title">
         <img src="images/an-img/strate-2.png" alt="标题图标"/>
-        <b>留学规划</b>
+        <b>{{items5.name}}</b>
         <div class="plan-right">
             <ul>
                 <li><a href="#">More &gt;</a></li>
@@ -183,23 +180,11 @@
     </div>
     <div class="plan-con">
         <ul>
-            <li>
-                <h4 class="ellipsis"><a href="#">禁止刷分了？那么低GPA该何去何从？</a></h4>
-                <p class="ellipsis-2">
-                    大学里有一群人 他们成绩好 年年拿奖学金 江湖人称“学霸” 大学里还有一群人 由于种种原因导致成绩低甚至挂科 选择刷分来提高成绩...
-                </p>
-            </li>
-            <li>
-                <h4 class="ellipsis"><a href="#">2017英国大学住宿开放申请</a></h4>
-                <p class="ellipsis-2">
-                    2017这些英国大学住宿开放申请了，给大家整理了一些，先到先得，还不快快申请？
-                </p>
-            </li>
-            <li>
-                <h4 class="ellipsis"><a href="#">2017年全年各类雅思考试时间表及考试费用一览</a></h4>
-                <p class="ellipsis-2">
-                    雷哥网留学小申菌为大家带来最全2017年雅思考试时间表，其中包括2017年全年的雅思考试时间安排，雅思考点安排..
-                </p>
+            <li ng-repeat="item5 in items5.data">
+                <a href="content_details.html?id={{item5.id}}">
+                    <h4 class="ellipsis">{{item5.title}}</h4>
+                    <p class="ellipsis-2">{{item5.answer}}</p>
+                </a>
             </li>
         </ul>
     </div>
@@ -208,44 +193,65 @@
 <div class="plan back-w">
     <div class="plan-title kaoshi">
         <img src="images/an-img/strate-3.png" alt="标题图标"/>
-        <b>留学考试</b>
+        <b>{{items3.name}}</b>
         <div class="plan-right">
-            <ul>
-                <li class="on">托福</li>
-                <li>GMAT</li>
-                <li>留学</li>
+            <ul class="tab_item tabs">
+                <li class="part on" hidefocus="true">GMAT</li>
+                <li class="part" hidefocus="true">托福</li>
+                <li class="part" hidefocus="true">留学</li>
                 <li><a href="#">More &gt;</a></li>
             </ul>
         </div>
     </div>
     <div class="plan-con">
-        <ul>
-            <li>
-                <h4 class="ellipsis"><a href="#">禁止刷分了？那么低GPA该何去何从？</a></h4>
-                <p class="ellipsis-2">
-                    大学里有一群人 他们成绩好 年年拿奖学金 江湖人称“学霸” 大学里还有一群人 由于种种原因导致成绩低甚至挂科 选择刷分来提高成绩...
-                </p>
-            </li>
-            <li>
-                <h4 class="ellipsis"><a href="#">2017英国大学住宿开放申请</a></h4>
-                <p class="ellipsis-2">
-                    2017这些英国大学住宿开放申请了，给大家整理了一些，先到先得，还不快快申请？
-                </p>
-            </li>
-            <li>
-                <h4 class="ellipsis"><a href="#">2017年全年各类雅思考试时间表及考试费用一览</a></h4>
-                <p class="ellipsis-2">
-                    雷哥网留学小申菌为大家带来最全2017年雅思考试时间表，其中包括2017年全年的雅思考试时间安排，雅思考点安排..
-                </p>
-            </li>
-        </ul>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide swiper-slide-visible swiper-slide-active">
+                    <div class="content-slide">
+                        <ul>
+                            <li ng-repeat="item3A in items3.data.childData[0]">
+                                <a href="content_details.html?id={{item3A.id}}">
+                                    <h4 class="ellipsis">{{item3A.title}}</h4>
+                                    <p class="ellipsis-2">{{item3A.answer}}</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="content-slide">
+                        <ul>
+                            <li ng-repeat="item3B in items3.data.childData[1]" is-over="toggle.now">
+                                <a href="content_details.html?id={{item3B.id}}">
+                                    <h4 class="ellipsis">{{item3B.title}}</h4>
+                                    <p class="ellipsis-2">{{item3B.answer}}</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="content-slide">
+                        <ul>
+                            <li ng-repeat="item3C in items3.data.childData[2]">
+                                <a href="content_details.html?id={{item3C.id}}">
+                                    <h4 class="ellipsis">{{item3C.title}}</h4>
+                                    <p class="ellipsis-2">{{item3C.answer}}</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>
 <!--留学国家-->
 <div class="plan back-w">
     <div class="plan-title">
         <img src="images/an-img/strate-4.png" alt="标题图标"/>
-        <b>留学国家</b>
+        <b>{{items4.name}}</b>
         <div class="plan-right">
             <ul>
                 <li><a href="#">More &gt;</a></li>
@@ -254,23 +260,11 @@
     </div>
     <div class="plan-con">
         <ul>
-            <li>
-                <h4 class="ellipsis"><a href="#">禁止刷分了？那么低GPA该何去何从？</a></h4>
-                <p class="ellipsis-2">
-                    大学里有一群人 他们成绩好 年年拿奖学金 江湖人称“学霸” 大学里还有一群人 由于种种原因导致成绩低甚至挂科 选择刷分来提高成绩...
-                </p>
-            </li>
-            <li>
-                <h4 class="ellipsis"><a href="#">2017英国大学住宿开放申请</a></h4>
-                <p class="ellipsis-2">
-                    2017这些英国大学住宿开放申请了，给大家整理了一些，先到先得，还不快快申请？
-                </p>
-            </li>
-            <li>
-                <h4 class="ellipsis"><a href="#">2017年全年各类雅思考试时间表及考试费用一览</a></h4>
-                <p class="ellipsis-2">
-                    雷哥网留学小申菌为大家带来最全2017年雅思考试时间表，其中包括2017年全年的雅思考试时间安排，雅思考点安排..
-                </p>
+            <li ng-repeat="item4 in items4.data">
+                <a href="content_details.html?id={{item4.id}}">
+                    <h4 class="ellipsis">{{item4.title}}</h4>
+                    <p class="ellipsis-2">{{item4.answer}}</p>
+                </a>
             </li>
         </ul>
     </div>
@@ -279,7 +273,7 @@
 <div class="plan back-w">
     <div class="plan-title">
         <img src="images/an-img/strate-5.png" alt="标题图标"/>
-        <b>留学手续</b>
+        <b>{{items2.name}}</b>
         <div class="plan-right">
             <ul>
                 <li><a href="#">More &gt;</a></li>
@@ -288,23 +282,11 @@
     </div>
     <div class="plan-con">
         <ul>
-            <li>
-                <h4 class="ellipsis"><a href="#">禁止刷分了？那么低GPA该何去何从？</a></h4>
-                <p class="ellipsis-2">
-                    大学里有一群人 他们成绩好 年年拿奖学金 江湖人称“学霸” 大学里还有一群人 由于种种原因导致成绩低甚至挂科 选择刷分来提高成绩...
-                </p>
-            </li>
-            <li>
-                <h4 class="ellipsis"><a href="#">2017英国大学住宿开放申请</a></h4>
-                <p class="ellipsis-2">
-                    2017这些英国大学住宿开放申请了，给大家整理了一些，先到先得，还不快快申请？
-                </p>
-            </li>
-            <li>
-                <h4 class="ellipsis"><a href="#">2017年全年各类雅思考试时间表及考试费用一览</a></h4>
-                <p class="ellipsis-2">
-                    雷哥网留学小申菌为大家带来最全2017年雅思考试时间表，其中包括2017年全年的雅思考试时间安排，雅思考点安排..
-                </p>
+            <li ng-repeat="item2 in items2.data">
+                <a href="content_details.html?id={{item2.id}}">
+                    <h4 class="ellipsis">{{item2.title}}</h4>
+                    <p class="ellipsis-2">{{item2.answer}}</p>
+                </a>
             </li>
         </ul>
     </div>
@@ -316,8 +298,8 @@
 <!--footer-->
 <footer>
     <ul class="ftnav_list flex-container">
-        <li class="on">
-            <a href="#">
+        <li>
+            <a href="index.html">
                 <div>
                     <img src="images/icon_ft_1.png" style="height: 1.1rem" alt="">
                     <span>首页</span>
@@ -325,7 +307,7 @@
             </a>
         </li>
         <li>
-            <a href="#">
+            <a href="tel:4001816180">
                 <div>
                     <img src="images/icon_ft_2.png" style="height: 1.1rem" alt="">
                     <span>拨打电话</span>
@@ -333,7 +315,7 @@
             </a>
         </li>
         <li>
-            <a href="#">
+            <a href="mqqwpa://im/chat?chat_type=wpa&uin=1746295647&version=1&src_type=web&web_src=http://m.haishiit.com/">
                 <div>
                     <img src="images/icon_ft_3.png" style="height: 1.1rem" alt="">
                     <span>在线咨询</span>
@@ -344,18 +326,17 @@
 </footer>
 </body>
 <script>
-    var mySwiper = new Swiper('.swiper-container-1', {
-        loop: true,
-        observer: true,
-        autoplay: 2000,
-        observeParents: true,
-        paginationClickable: true,
-        pagination: '.baner-page'
-    });
-    $(".tab_check_wrap span").click(function () {
-        $(this).addClass("on").siblings("span").removeClass("on");
-        var num = $(this).index();
-        $(".school_item").eq(num).show().siblings("div.school_item").hide();
-    })
+    $(function() {
+        var mySwiper = new Swiper('.swiper-container-1', {
+            loop: true,
+            observer: true,
+            autoplay: 2000,
+            observeParents: true,
+            paginationClickable: true,
+            pagination: '.baner-page'
+        });
+
+    });//end
+
 </script>
 </html>

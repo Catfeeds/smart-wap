@@ -51,22 +51,23 @@ function subComment(o, username) {
     var val = $("#lastText").val();
     var currentT = currentTime();
     var btn = $("#subBtn");
-    var uid=sessionStorage.getItem('uid');
+    var uid=localStorage.getItem('uid');
+    var nickname=localStorage.getItem('nickname');
     if (!val) {
         alert("请输入你的评论内容！");
         return false;
     }
-    if (!replyUser) {
-        var r = confirm("您还未登录，是否跳转到登录页！");
-        if (r == true) {
-            location.href = 'login.html';
-        }
-        else {
-            return false;
-        }
-
-    }
-    $.post("http://test.school.gmatonline.cn/cn/api/add-reply",{uid:uid,pid:pid,replyUser:replyUser,content:val,contentId:contentId},function(re){
+    //if (!replyUser) {
+    //    var r = confirm("您还未登录，是否跳转到登录页！");
+    //    if (r == true) {
+    //        location.href = 'login.html';
+    //    }
+    //    else {
+    //        return false;
+    //    }
+    //
+    //}
+    $.post("http://test.school.gmatonline.cn/cn/wap-api/add-reply",{uid:uid,pid:pid,replyUser:replyUser,content:val,contentId:contentId},function(re){
 //        alert(re.message);
 //        if(re.code == 1){
     if (type == 1) {//一级回复
@@ -76,7 +77,7 @@ function subComment(o, username) {
             '<div class="comment-thumb">' +
             '<img src="images/an-img/question-3.png" alt="用户头像"/>' +
             '</div>' +
-            '<p>Anne</p>' +
+            '<p>'+nickname+'</p>' +
             '</div>' +
             '<div class="comment-right">' +
             ' <ul>' +
@@ -85,7 +86,7 @@ function subComment(o, username) {
             ' </div>' +
             ' <div class="c-bot">' +
             '<span>' + currentT + '</span>' +
-            '<img src="images/an-img/school-commet.png" alt="评论图标" onclick="secondReply(this)"/>' +
+            '<img src="images/an-img/school-commet.png" data-id="'+re.id+'" data-uid="'+re.uid+'" alt="评论图标" onclick="secondReply(this)"/>' +
             '</div>' +
             '</li>' +
             '</ul>' +
@@ -102,11 +103,11 @@ function subComment(o, username) {
         var str02 = '';
         str02 = '<li>' +
             '<div class="c-top">' +
-            '<span class="blue">Anne</span>回复<span class="blue">' + user + '</span>：' + val +
+            '<span class="blue">'+nickname+'</span>回复<span class="blue">' + user + '</span>：' + val +
             '</div>' +
             '<div class="c-bot">' +
             '<span>' + currentT + '</span>' +
-            '<img src="images/an-img/school-commet.png" alt="评论图标" onclick="threeReply(this)"/>' +
+            '<img src="images/an-img/school-commet.png" data-id="'+re.id+'" data-uid="'+re.uid+'" alt="评论图标" onclick="threeReply(this)"/>' +
             '</div>' +
             '</li>';
         $(".comment-show>ul>li").eq(index).find(".comment-right>ul").append(str02);
@@ -116,11 +117,11 @@ function subComment(o, username) {
         var str03 = '';
         str03 = '<li>' +
             '<div class="c-top">' +
-            '<span class="blue">Anne</span>回复<span class="blue">' + user03 + '</span>：' + val +
+            '<span class="blue">'+nickname+'</span>回复<span class="blue">' + user03 + '</span>：' + val +
             '</div>' +
             '<div class="c-bot">' +
             '<span>' + currentT + '</span>' +
-            '<img src="images/an-img/school-commet.png" alt="评论图标" onclick="threeReply(this)"/>' +
+            '<img src="images/an-img/school-commet.png" data-id="'+re.id+'" data-uid="'+re.uid+'" alt="评论图标" onclick="threeReply(this)"/>' +
             '</div>' +
             '</li>';
         $(".comment-show>ul>li").eq(index03).find(".comment-right>ul").append(str03);
@@ -174,6 +175,7 @@ function currentTime() {
 }
 //一级回复
 function bigReply(o, replyUser, pid) {
+    location.href='#subBtn';
     var btn = $("#subBtn");
     btn.attr("data-type", 1);
     btn.attr("data-replyUser", replyUser);
@@ -181,10 +183,13 @@ function bigReply(o, replyUser, pid) {
     $("#lastText").attr("placeholder", "发表你的评论...").val("");
 }
 //二级回复
-function secondReply(o, replyUser, pid) {
+function secondReply(o) {
+    location.href='#subBtn';
     var num = $(o).parents(".comment-right").parents("li").index();
     var username = $(o).parents(".comment-right").siblings(".comment-left").find("p").html();
     var btn = $("#subBtn");
+    var replyUser=$(o).attr('data-uid');
+    var pid=$(o).attr('data-id');
     btn.attr("data-type", 2);
     btn.attr("data-num", num);
     btn.attr("data-user", username);
@@ -194,9 +199,12 @@ function secondReply(o, replyUser, pid) {
 }
 //三级回复
 function threeReply(o, replyUser, pid) {
+    location.href='#subBtn';
     var num = $(o).parents(".comment-right").parents("li").index();
     var username = $(o).parents(".c-bot").siblings(".c-top").find("span.blue").first().html();
     var btn = $("#subBtn");
+    var replyUser=$(o).attr('data-uid');
+    var pid=$(o).attr('data-id');
     btn.attr("data-type", 3);
     btn.attr("data-num", num);
     btn.attr("data-user", username);

@@ -16,6 +16,10 @@
 .de_content {
     padding: 0.6rem 0;
     font-size: 0.6rem;
+    word-wrap: break-word;
+}
+.de_content table{
+    width: 100%!important;
 }
 
 .rank_list li {

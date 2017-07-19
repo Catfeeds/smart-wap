@@ -15,10 +15,10 @@
     margin-right: 5px;
 }
 .cyclopedia span{
-    font-size: 1rem;
+    font-size: 0.8rem;
 }
 .cyclopedia p{
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     color: #676767;
     margin-top: 10px;
     margin-left: 11%;
@@ -36,7 +36,7 @@
 .tabs{height:32px;background: #f0f0f0;width: 100%;text-align: center}
 .tabs .part{display:block;float:left;width:33%;color:#fff;text-align:center;height: 20px;}
 .tabs .part:first-child{}
-.tabs a{display:block;color:#000000;text-align:center;margin:0 auto;text-decoration:none;padding: 8px 0;font-size: 0.9rem}
+.tabs a{display:block;color:#000000;text-align:center;margin:0 auto;text-decoration:none;padding: 8px 0;font-size: 0.7rem}
 .tabs span.active a{background-color: #ffffff}
 .swiper-slide{width:100%;background:none;color:#373737;height: auto!important;}
 .swiper-wrapper{overflow: auto}
@@ -49,12 +49,12 @@
 .content-slide>ul>li h4{
     color: #6ab2f7;
     font-weight: normal;
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     margin-left: 10%;
 }
 .right-blue{
-    width: 1.2rem;
-    height: 0.7rem;
+    width: 0.8rem;
+    height: 0.4rem;
     background:url("../images/an-img/know-downJ.png") no-repeat;
     background-size: 100% 100%;
     position: absolute;
@@ -80,15 +80,17 @@
     margin: 0 auto;
 }
 .content-slide>ul>li ul li{
-    width: 50%;
-    float: left;
-    font-size: 0.7rem;
-    margin-top: 20px;
-}
-.content-slide>ul>li ul li a{
+    display: inline-block;
+    vertical-align: middle;
     padding: 5px 10px;
+    font-size: 0.7rem;
+    margin-top: 0.4rem;
+    margin-right: 0.3rem;
     background-color: #f0f0f0;
     border-radius: 5px;
+}
+.content-slide>ul>li ul li a{
+    display: block;
 }
 .oculographic{
     width: 100%;
@@ -98,7 +100,7 @@
 }
 .com-title{
     width: 100%;
-    font-size: 1rem;
+    font-size: 0.8rem;
     padding-bottom: 5px;
     position: relative;
 }
@@ -202,7 +204,7 @@
 .video-info h4{
     margin-top: 5px;
     font-weight: normal;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     color: #676767;
 }
 .blue-font{
@@ -235,11 +237,12 @@
 }
 .course-btn a{
     width:45%;
+    padding: 0.1rem 0;
     display: inline-block;
     text-align: center;
     border-radius: 5px;
     color: #ffffff;
-    font-size: 0.8rem;
+    font-size: 0.6rem;
 }
 .course-btn a:first-child{
     background-color: #029adc;

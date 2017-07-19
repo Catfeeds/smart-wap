@@ -182,20 +182,24 @@
     <div class="com-auto">
         <div class="subject">
 
-           <div ng-repeat="majorT in major">
-               <div class="subject-t">
-                   <img src="images/an-img/school-sanjiao.png" alt="三角形"/>
-                   <span>{{majorT.name}}</span>
-               </div>
-               <div class="subject-ul">
-                   <ul>
-                       <li ng-repeat="majorTin in major[$index].content">
-                           <span>{{majorTin.name}}</span><br/>
-                           <span class="ellipsis" style="display: block">{{majorTin.title}}</span>
-                       </li>
-                   </ul>
-               </div>
-           </div>
+            <div ng-repeat="majorT in major">
+                <div class="subject-t">
+                    <img src="images/an-img/school-sanjiao.png" alt="三角形"/>
+                    <span>{{majorT.name}}</span>
+                </div>
+                <div class="subject-ul">
+                    <ul>
+                        <li ng-repeat="majorTin in major[$index].content">
+                            <a href="school-major.html?id={{majorTin.id}}">
+                                <div>
+                                    <span>{{majorTin.name}}</span><br/>
+                                    <span class="ellipsis" style="display: block">{{majorTin.title}}</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
         </div>
     </div>
@@ -239,13 +243,13 @@
     <div class="com-title">
         <img src="images/an-img/school-icon04.png" alt="图标"/>
         <span>发表吐槽</span>
-        <div class="right-side" onclick="bigReply(this)">
+        <div class="right-side" onclick="bigReply(this,'',0)">
             <span>总回复</span>
         </div>
     </div>
     <div class="complain-text">
         <div class="comment-show">
-            <ul>
+            <ul class="cs_1">
                 <li ng-repeat="reply in reply">
                     <div class="comment-left">
                         <div class="comment-thumb">
@@ -254,39 +258,44 @@
                         <p class="ellipsis">{{reply.userName}}</p>
                     </div>
                     <div class="comment-right">
-                        <ul>
-                            <li>
-                                <div class="c-top">{{reply.content}}</div>
-                                 <div class="c-bot">
-                                     <span>{{reply.createTime*1000 | date:'yyyy-MM-dd hh:mm:ss'}}</span>
-                                     <img src="images/an-img/school-commet.png" alt="评论图标" onclick="secondReply(this)"/>
-                                 </div>
-                            </li>
-                            <li ng-show="reply.reply!=''" ng-repeat="reply2 in reply.reply">
-                                <div class="c-top">
-                                   <span class="blue">{{reply2.userName}}</span>回复<span class="blue">{{reply2.replyUserName}}</span>：
-                                    {{reply2.content}}
-                                </div>
-                                <div class="c-bot">
-                                    <span>{{reply2.createTime*1000 | date:'yyyy-MM-dd hh:mm:ss'}}</span>
-                                    <img src="images/an-img/school-commet.png" alt="评论图标" onclick="threeReply(this)"/>
-                                </div>
-                            </li>
-                        </ul>
+                        <ul
+                        、>
+                <li>
+                    <div class="c-top">{{reply.content}}</div>
+                    <div class="c-bot">
+                        <span>{{reply.createTime*1000 | date:'yyyy-MM-dd hh:mm:ss'}}</span>
+                        <img src="images/an-img/school-commet.png" data-id="{{reply.id}}" data-uid="{{reply.uid}}"
+                             alt="评论图标" onclick="secondReply(this)"/>
                     </div>
-                    <div class="clearfix"></div>
-                    <div class="moreReply" onclick="seeMoreRe(this)">
-                        查看<span class="blue">teacher</span>等回复
+                </li>
+                <li ng-show="reply.reply!=''" ng-repeat="reply2 in reply.reply">
+                    <div class="c-top">
+                        <span class="blue">{{reply2.userName}}</span>回复<span
+                            class="blue">{{reply2.replyUserName}}</span>：
+                        {{reply2.content}}
+                    </div>
+                    <div class="c-bot">
+                        <span>{{reply2.createTime*1000 | date:'yyyy-MM-dd hh:mm:ss'}}</span>
+                        <img src="images/an-img/school-commet.png" data-id="{{reply2.id}}" data-uid="{{reply2.uid}}"
+                             alt="评论图标" onclick="threeReply(this)"/>
                     </div>
                 </li>
             </ul>
         </div>
-        <div class="com-auto">
-            <textarea placeholder="发表你的评论..." id="lastText"></textarea>
-            <input type="button" value="提交" data-content="{{data.id}}" data-pid="0" onclick="subComment(this)" data-type="1" id="subBtn"/>
-            <div class="clearfix"></div>
+        <div class="clearfix"></div>
+        <div class="moreReply" onclick="seeMoreRe(this)">
+            查看<span class="blue">teacher</span>等回复
         </div>
+        </li>
+        </ul>
     </div>
+    <div class="com-auto">
+        <textarea placeholder="发表你的评论..." id="lastText"></textarea>
+        <input type="button" value="提交" data-content="{{data.id}}" data-pid="0" onclick="subComment(this)" data-type="1"
+               id="subBtn"/>
+        <div class="clearfix"></div>
+    </div>
+</div>
 </div>
 <!--备案信息-->
 <section class="cr_wrap back-w">
@@ -295,8 +304,8 @@
 <!--footer-->
 <footer>
     <ul class="ftnav_list flex-container">
-        <li class="on">
-            <a href="#">
+        <li>
+            <a href="index.html">
                 <div>
                     <img src="images/icon_ft_1.png" style="height: 1.1rem" alt="">
                     <span>首页</span>
@@ -304,7 +313,7 @@
             </a>
         </li>
         <li>
-            <a href="#">
+            <a href="tel:4001816180">
                 <div>
                     <img src="images/icon_ft_2.png" style="height: 1.1rem" alt="">
                     <span>拨打电话</span>
@@ -312,7 +321,7 @@
             </a>
         </li>
         <li>
-            <a href="#">
+            <a href="mqqwpa://im/chat?chat_type=wpa&uin=1746295647&version=1&src_type=web&web_src=http://m.haishiit.com/">
                 <div>
                     <img src="images/icon_ft_3.png" style="height: 1.1rem" alt="">
                     <span>在线咨询</span>

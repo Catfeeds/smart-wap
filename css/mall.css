@@ -164,6 +164,7 @@
 .mall_sub_list li {
     width: 5rem;
     background: #f0f0f0;
+    margin-bottom: 0.3rem;
 }
 
 .mall_price {

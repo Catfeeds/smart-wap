@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="myApp">
 <head>
     <meta charset="UTF-8">
     <meta name="keywords" content="">
@@ -31,9 +31,12 @@
     <script src="js/jquery-1.12.2.min.js"></script>
     <script src="js/swiper-3.3.1.jquery.min.js"></script>
     <script src="js/common.js"></script>
+    <script src="js/public.js"></script>
+    <script src="js/settlement.js"></script>
+    <script src="js/angular1.3.1.js"></script>
     <title>结算</title>
 </head>
-<body id="settlement">
+<body id="settlement" ng-controller="abroad_view">
 <!--头部-->
 <section class="relative">
     <div class="bg_b header_nav pd_lr5 flex-container">
@@ -144,18 +147,19 @@
     <div class="bk_tit2 flex-container bg_f"><span class="big_tit">全部商品</span></div>
     <div class="bg_f pd_lr75">
         <ul class="spList">
-            <li>
+            <li ng-repeat="list in list">
                 <div class="flex-container sp_handle">
-                    <input class="sp_check" name="subBox" type="checkbox" checked="checked">
-                    <span class="remove_report light">删除记录1</span>
+                    <input class="sp_check" data-checkId="{{list.sp_id}}" name="subBox" type="checkbox"
+                           checked="checked">
+                    <span class="remove_report light">删除记录</span>
                 </div>
                 <div class="flex-container sp_info_wrap">
-                    <div class="cn_img ad"><img src="images/cn_img.png" alt=""></div>
+                    <div class="cn_img ad"><img src="{{list.src}}" alt=""></div>
                     <div class="cn_info">
-                        <P class="sp_name ellipsis-2">1美英名校半DIY留学申请计划美国</P>
-                        <P class="sp_data">2017-06-07 16:13</P>
+                        <P class="sp_name ellipsis-2">{{list.name}}</P>
+                        <!--<P class="sp_data">2017-06-07 16:13</P>-->
                         <div>
-                            <span class="light sp_price">￥<span class="sp_price_num">9800</span></span>
+                            <span class="light sp_price">￥<span class="sp_price_num">{{list.price}}</span></span>
                             <div class="sp_num_wrap clearfix">
                                 <span class="sp_num_btn spnum_reduce fl">-</span>
                                 <input class="sp_num_int fl" type="button" value="1">
@@ -165,56 +169,15 @@
                     </div>
                 </div>
             </li>
-            <li>
-                <div class="flex-container sp_handle">
-                    <input class="sp_check" name="subBox" type="checkbox" checked="checked">
-                    <span class="remove_report light">删除记录1</span>
-                </div>
-                <div class="flex-container sp_info_wrap">
-                    <div class="cn_img ad"><img src="images/cn_img.png" alt=""></div>
-                    <div class="cn_info">
-                        <P class="sp_name ellipsis-2">1美英名校半DIY留学申请计划美国</P>
-                        <P class="sp_data">2017-06-07 16:13</P>
-                        <div>
-                            <span class="light sp_price">￥<span class="sp_price_num">9800</span></span>
-                            <div class="sp_num_wrap clearfix">
-                                <span class="sp_num_btn spnum_reduce fl">-</span>
-                                <input class="sp_num_int fl" type="button" value="1">
-                                <span class="sp_num_btn spnum_add fl">+</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="flex-container sp_handle">
-                    <input class="sp_check" name="subBox" type="checkbox" checked="checked">
-                    <span class="remove_report light">删除记录1</span>
-                </div>
-                <div class="flex-container sp_info_wrap">
-                    <div class="cn_img ad"><img src="images/cn_img.png" alt=""></div>
-                    <div class="cn_info">
-                        <P class="sp_name ellipsis-2">1美英名校半DIY留学申请计划美国</P>
-                        <P class="sp_data">2017-06-07 16:13</P>
-                        <div>
-                            <span class="light sp_price">￥<span class="sp_price_num">9800</span></span>
-                            <div class="sp_num_wrap clearfix">
-                                <span class="sp_num_btn spnum_reduce fl">-</span>
-                                <input class="sp_num_int fl" type="button" value="1">
-                                <span class="sp_num_btn spnum_add fl">+</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
+
         </ul>
         <div class="settlement_wrap flex-container">
             <div class="all_check">
                 <input id="all" class="sp_check" checked="checked" type="checkbox"><label for="all">全选</label>
             </div>
             <div>
-                <span class="numing_wrpa">已选<em class="light numing">2</em>件商品</span>
-                <a class="settlement_btn inm" href="#">去结算</a>
+                <span class="numing_wrpa">已选<em class="light numing">{{count}}</em>件商品</span>
+                <a class="settlement_btn inm" ng-click="pay()" href="javascript:;">去结算</a>
             </div>
         </div>
     </div>
@@ -257,8 +220,8 @@
 </body>
 <script>
     $(function () {
-//    删除商品
-        var spList_row = $('.spList li');
+        //    删除商品
+//        var spList_row = $('.spList li');
         $('.remove_report').click(function (event) {
             var et = event.target;
             $(et).parents("li").remove();
@@ -291,6 +254,13 @@
                 });
             }
         });
+
+        $(".spList input[name='subBox']").click(function () {
+            $("#all").attr('checked', false);
+           var count = $(".spList input[name='subBox']:checked").length;
+            $('.numing').html(count);
+        })
+
 
     })
 </script>

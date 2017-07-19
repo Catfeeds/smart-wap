@@ -227,8 +227,9 @@ function subLogin(name,pass){
                 setCookie('userCode',data.code);
                 setCookie('userName',data.username);
                 setCookie('uid',data.uid);
-                sessionStorage.setItem('nickname',data.nickname);
-                sessionStorage.setItem('uid',data.uid);
+                localStorage.setItem('nickname',data.nickname);
+                localStorage.setItem('userName',data.username);
+                localStorage.setItem('uid',data.uid);
                 //托福
                 $.ajax({
                     type : "post",
