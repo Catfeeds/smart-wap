@@ -58,6 +58,9 @@ body{
 .banner-wrap li img{
     width: 100%;
 }
+.header_name{
+    font-size: 0.8rem;
+}
 .flex-container {
     display: -webkit-flex; /* Safari */
     display: flex;

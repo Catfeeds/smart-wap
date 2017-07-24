@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="title" content="">
+    <meta name="author" content="">
+    <meta name="Copyright" content="">
+    <!-- <meta name="description" content=""> -->
+    <!-- 让IE浏览器用最高级内核渲染页面 还有用 Chrome 框架的页面用webkit 内核
+    <!-- ================================================== -->
+    <meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge">
+    <!-- IOS6全屏 Chrome高版本全屏-->
+    <!-- ================================================== -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <!-- 让360双核浏览器用webkit内核渲染页面-->
+    <!-- ================================================== -->
+    <meta name="renderer" content="webkit">
+    <!-- Mobile Specific Metas
+   ================================================== -->
+    <!-- !!!注意 minimal-ui 是IOS7.1的新属性，最小化浏览器UI -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/swiper-3.3.1.min.css">
+    <script src="js/jquery-1.12.2.min.js"></script>
+    <script src="js/swiper-3.3.1.jquery.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/public.js"></script>
+    <title>攻略列表</title>
+    <style>
+        .strategy_list_wrap li {
+            padding: 0.5rem;
+            background: #ffffff;
+            border-bottom: 2px solid #d5d5d5;
+        }
+        .strategy_img{
+            width: 5rem;
+            height: 4rem;
+            overflow: hidden;
+        }
+        .strategy_img img{
+            width: 100%;
+            height: 100%;
+        }
+        .strategy_info{
+            width: 69%;
+        }
+        .strategy_tit{
+            font-size: 0.65rem;
+            text-align: justify;
+        }
+        .strategy_info_text{
+            text-align: justify;
+            font-size: 0.5rem;
+            color: #777777;
+        }
+        .creatTime{
+            font-size: 0.45rem;
+            color: #afafaf;
+        }
+        .pageSize{
+            text-align: right;
+            padding:0.3rem 0.75rem 0.5rem;
+            background: #ffffff;
+        }
+        .pageSize li{
+            font-size: 0.6rem;
+            color: #468ed1;
+            background: #ffffff;
+            height: 1rem;
+            text-align: center;
+            line-height: 1rem;
+            padding: 0 0.3rem;
+            margin-right: 0.1rem;
+            display: inline-block;
+            vertical-align: middle;
+            border: 1px dashed #468ed1;
+        }
+        .pageSize li:last-child{
+            margin-right: 0;
+        }
+        .pageSize li.on{
+            color: #ffffff;
+            background: #468ed1;
+        }
+    </style>
+</head>
+<body>
+<!--头部-->
+<section class="relative">
+    <div class="bg_b header_nav pd_lr5 flex-container">
+        <a href="#"><i class="icon-angle-left nav_icon color_f"></i></a>
+        <span class="color_f header_name"> 留学国家</span>
+        <span></span>
+    </div>
+</section>
+<!--详情内容-->
+<section>
+    <ul class="strategy_list_wrap">
+        <li class="flex-container">
+            <a href="case_details.html">
+                <div class="flex-container">
+                    <div class="strategy_img"><img src="images/test_img.png" alt=""></div>
+                    <div class="strategy_info">
+                        <p class="strategy_tit ellipsis-2">TIMES排名 | 2017最新全球留学费用排行榜，最贵的不?</p>
+                        <p class="creatTime">2016.11.08</p>
+                        <p class="ellipsis-2 strategy_info_text">
+                            前不久，TIMES联合FAIRFX(旅行货币兑换公司)发布
+                            了最新的全球留学费用排行榜....
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li class="flex-container">
+            <a href="case_details.html">
+                <div class="flex-container">
+                    <div class="strategy_img"><img src="images/test_img.png" alt=""></div>
+                    <div class="strategy_info">
+                        <p class="strategy_tit ellipsis-2">TIMES排名 | 2017最新全球留学费用排行榜，最贵的不?</p>
+                        <p class="creatTime">2016.11.08</p>
+                        <p class="ellipsis-2 strategy_info_text">
+                            前不久，TIMES联合FAIRFX(旅行货币兑换公司)发布
+                            了最新的全球留学费用排行榜....
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li class="flex-container">
+            <a href="case_details.html">
+                <div class="flex-container">
+                    <div class="strategy_img"><img src="images/test_img.png" alt=""></div>
+                    <div class="strategy_info">
+                        <p class="strategy_tit ellipsis-2">TIMES排名 | 2017最新全球留学费用排行榜，最贵的不?</p>
+                        <p class="creatTime">2016.11.08</p>
+                        <p class="ellipsis-2 strategy_info_text">
+                            前不久，TIMES联合FAIRFX(旅行货币兑换公司)发布
+                            了最新的全球留学费用排行榜....
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li class="flex-container">
+            <a href="case_details.html">
+                <div class="flex-container">
+                    <div class="strategy_img"><img src="images/test_img.png" alt=""></div>
+                    <div class="strategy_info">
+                        <p class="strategy_tit ellipsis-2">TIMES排名 | 2017最新全球留学费用排行榜，最贵的不?</p>
+                        <p class="creatTime">2016.11.08</p>
+                        <p class="ellipsis-2 strategy_info_text">
+                            前不久，TIMES联合FAIRFX(旅行货币兑换公司)发布
+                            了最新的全球留学费用排行榜....
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li class="flex-container">
+            <a href="case_details.html">
+                <div class="flex-container">
+                    <div class="strategy_img"><img src="images/test_img.png" alt=""></div>
+                    <div class="strategy_info">
+                        <p class="strategy_tit ellipsis-2">TIMES排名 | 2017最新全球留学费用排行榜，最贵的不?</p>
+                        <p class="creatTime">2016.11.08</p>
+                        <p class="ellipsis-2 strategy_info_text">
+                            前不久，TIMES联合FAIRFX(旅行货币兑换公司)发布
+                            了最新的全球留学费用排行榜....
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </li>
+
+    </ul>
+    <ul class="pageSize">
+        <li class="on">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+</section>
+<!--备案信息-->
+<section class="cr_wrap">
+    <div class="tm copyRight">©2017 gmatonline.cn All Rights Reserved 京ICP备15001182号-1<br>京公网安备11010802017681 免责声明</div>
+</section>
+<!--footer-->
+<footer>
+    <ul class="ftnav_list flex-container">
+        <li>
+            <a href="index.html">
+                <div>
+                    <img src="images/icon_ft_1.png" style="height: 1.1rem" alt="">
+                    <span>首页</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="tel:4001816180">
+                <div>
+                    <img src="images/icon_ft_2.png" style="height: 1.1rem" alt="">
+                    <span>拨打电话</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="mqqwpa://im/chat?chat_type=wpa&uin=1746295647&version=1&src_type=web&web_src=http://m.haishiit.com/">
+                <div>
+                    <img src="images/icon_ft_3.png" style="height: 1.1rem" alt="">
+                    <span>在线咨询</span>
+                </div>
+            </a>
+        </li>
+    </ul>
+</footer>
+</body>
+</html>

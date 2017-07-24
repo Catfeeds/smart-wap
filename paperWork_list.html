@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="title" content="">
+    <meta name="author" content="">
+    <meta name="Copyright" content="">
+    <!-- <meta name="description" content=""> -->
+    <!-- 让IE浏览器用最高级内核渲染页面 还有用 Chrome 框架的页面用webkit 内核
+    <!-- ================================================== -->
+    <meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge">
+    <!-- IOS6全屏 Chrome高版本全屏-->
+    <!-- ================================================== -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <!-- 让360双核浏览器用webkit内核渲染页面-->
+    <!-- ================================================== -->
+    <meta name="renderer" content="webkit">
+    <!-- Mobile Specific Metas
+   ================================================== -->
+    <!-- !!!注意 minimal-ui 是IOS7.1的新属性，最小化浏览器UI -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/swiper-3.3.1.min.css">
+    <script src="js/jquery-1.12.2.min.js"></script>
+    <script src="js/swiper-3.3.1.jquery.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/public.js"></script>
+    <title>高端文书</title>
+    <style>
+        .pw_list_wrap li {
+            padding: 0.5rem;
+            background: #ffffff;
+            margin-bottom: 0.5rem;
+        }
+        .pw_img{
+            width: 5.5rem;
+            height: 5rem;
+            overflow: hidden;
+        }
+        .pw_img img{
+            width: 100%;
+            height: 100%;
+        }
+        .pw_info{
+            width: 67%;
+        }
+        .pw_tit{
+            font-size: 0.8rem;
+            text-align: justify;
+            margin-bottom: 0.2rem;
+        }
+        .pw_info_text{
+            margin-bottom: 0.2rem;
+            text-align: justify;
+            font-size: 0.5rem;
+            color: #686868;
+        }
+        .pw_new_price{
+            vertical-align: bottom;
+            font-size: 0.7rem;
+            color: #ff7200;
+        }
+        .pw_old_price{
+            vertical-align: bottom;
+            text-decoration: line-through;
+            font-size: 0.5rem;
+            color: #999999;
+        }
+        .pw_handle{
+            display: inline-block;
+            vertical-align: middle;
+            padding: 0.1rem 0.5rem;
+            border-radius: 0.3rem;
+            color: #ffffff;
+            font-size: 0.6rem;
+        }
+        .pageSize{
+            text-align: right;
+            padding:0.3rem 0.75rem 0.5rem;
+            background: #ffffff;
+        }
+        .pageSize li{
+            font-size: 0.6rem;
+            color: #468ed1;
+            background: #ffffff;
+            height: 1rem;
+            text-align: center;
+            line-height: 1rem;
+            padding: 0 0.3rem;
+            margin-right: 0.1rem;
+            display: inline-block;
+            vertical-align: middle;
+            border: 1px dashed #468ed1;
+        }
+        .pageSize li:last-child{
+            margin-right: 0;
+        }
+        .pageSize li.on{
+            color: #ffffff;
+            background: #468ed1;
+        }
+        .yc_nav{
+            display: none;
+            color: #ffffff;
+            font-size: 0.6rem;
+            padding: 0.8rem 0.5rem 0.5rem;
+            background: #468ed1;
+        }
+        .yc_row{
+            align-items: flex-start;
+            margin-bottom: 0.2rem;
+        }
+        .yc_l{
+            width:16%;
+        }
+        .yc_r{
+            width: 84%;
+        }
+        .yc_r span{
+            cursor: pointer;
+            padding: 0.1rem 0.2rem;
+            display: inline-block;
+            vertical-align: middle;
+            border-radius: 4px;
+            margin-bottom: 0.2rem;
+        }
+        .yc_r span.on{
+            background: rgba(0, 0, 0, 0.51);
+        }
+    </style>
+</head>
+<body>
+<!--头部-->
+<section class="relative">
+    <div class="bg_b header_nav pd_lr5 flex-container">
+        <a href="#"><i class="icon-angle-left nav_icon color_f"></i></a>
+        <span class="color_f header_name">高端文书</span>
+        <span class="sc_icon"><img src="images/icon_sx.png" style="height: 1rem;" alt=""></span>
+    </div>
+</section>
+<!--隐藏菜单-->
+<section class="yc_nav">
+    <div class="yc_row flex-container">
+        <div class="yc_l">服务类型:</div>
+        <div class="yc_r">
+            <span class="on">全部</span>
+            <span>半DIY</span>
+            <span>零中介</span>
+            <span>1元套餐</span>
+            <span>美国TOP30名校计划</span>
+            <span>全套留学</span>
+            <span>MBA</span>
+            <span>申请狂欢季</span>
+            <span>网申</span>
+            <span>文书</span>
+            <span>签证</span>
+        </div>
+    </div>
+    <div class="yc_row flex-container">
+        <div class="yc_l">留学目标:</div>
+        <div class="yc_r">
+            <span class="on">全部</span>
+            <span>研究生</span>
+            <span>本科</span>
+        </div>
+    </div>
+    <div class="yc_row flex-container">
+        <div class="yc_l">国家:</div>
+        <div class="yc_r">
+            <span class="on">全部</span>
+            <span>美国</span>
+            <span>英国</span>
+            <span>加拿大</span>
+            <span>澳大利亚</span>
+            <span>香港</span>
+            <span>法国</span>
+            <span>新加坡</span>
+        </div>
+    </div>
+</section>
+<!--详情内容-->
+<section>
+    <ul class="pw_list_wrap">
+        <li>
+            <a href="paperwork_details.html">
+                <div class="flex-container">
+                    <div class="pw_img"><img src="images/test_img.png" alt=""></div>
+                    <div class="pw_info">
+                        <p class="pw_tit ellipsis">美国TOP20名校高端文书</p>
+                        <p class="ellipsis-2 pw_info_text">
+                            美国留学申请全套文书，包含5所学校。由雷哥
+                            kevin亲自负责，海外Mentor团队完成文书创作。
+                        </p>
+                        <div style="line-height: 1rem;">
+                            <span class="pw_new_price">￥39000</span>
+                            <span class="pw_old_price">￥40000</span>
+                        </div>
+                        <div class="pw_handle_wrap">
+                            <a class="bg_b pw_handle" href="#">查看详情</a>
+                            <a class="bg_y pw_handle" href="#">立即咨询</a>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="paperwork_details.html">
+                <div class="flex-container">
+                    <div class="pw_img"><img src="images/test_img.png" alt=""></div>
+                    <div class="pw_info">
+                        <p class="pw_tit ellipsis">美国TOP20名校高端文书</p>
+                        <p class="ellipsis-2 pw_info_text">
+                            美国留学申请全套文书，包含5所学校。由雷哥
+                            kevin亲自负责，海外Mentor团队完成文书创作。
+                        </p>
+                        <div style="line-height: 1rem;">
+                            <span class="pw_new_price">￥39000</span>
+                            <span class="pw_old_price">￥40000</span>
+                        </div>
+                        <div class="pw_handle_wrap">
+                            <a class="bg_b pw_handle" href="#">查看详情</a>
+                            <a class="bg_y pw_handle" href="#">立即咨询</a>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </li>
+    </ul>
+    <ul class="pageSize">
+        <li class="on">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+</section>
+<!--备案信息-->
+<section class="cr_wrap">
+    <div class="tm copyRight">©2017 gmatonline.cn All Rights Reserved 京ICP备15001182号-1<br>京公网安备11010802017681 免责声明</div>
+</section>
+<!--footer-->
+<footer>
+    <ul class="ftnav_list flex-container">
+        <li>
+            <a href="index.html">
+                <div>
+                    <img src="images/icon_ft_1.png" style="height: 1.1rem" alt="">
+                    <span>首页</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="tel:4001816180">
+                <div>
+                    <img src="images/icon_ft_2.png" style="height: 1.1rem" alt="">
+                    <span>拨打电话</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="mqqwpa://im/chat?chat_type=wpa&uin=1746295647&version=1&src_type=web&web_src=http://m.haishiit.com/">
+                <div>
+                    <img src="images/icon_ft_3.png" style="height: 1.1rem" alt="">
+                    <span>在线咨询</span>
+                </div>
+            </a>
+        </li>
+    </ul>
+</footer>
+</body>
+<script>
+    $(function(){
+        $('.sc_icon').click(function(){
+            $('.yc_nav').slideToggle(300);
+        });
+        $('.yc_r span').click(function(){
+            $(this).addClass("on").siblings("span").removeClass("on");
+        })
+    })
+</script>
+</html>

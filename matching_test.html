@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="title" content="">
+    <meta name="author" content="">
+    <meta name="Copyright" content="">
+    <!-- <meta name="description" content=""> -->
+    <!-- 让IE浏览器用最高级内核渲染页面 还有用 Chrome 框架的页面用webkit 内核
+    <!-- ================================================== -->
+    <meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge">
+    <!-- IOS6全屏 Chrome高版本全屏-->
+    <!-- ================================================== -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <!-- 让360双核浏览器用webkit内核渲染页面-->
+    <!-- ================================================== -->
+    <meta name="renderer" content="webkit">
+    <!-- Mobile Specific Metas
+   ================================================== -->
+    <!-- !!!注意 minimal-ui 是IOS7.1的新属性，最小化浏览器UI -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/swiper-3.3.1.min.css">
+    <script src="js/jquery-1.12.2.min.js"></script>
+    <script src="js/swiper-3.3.1.jquery.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/public.js"></script>
+    <title>录取几率测评</title>
+    <style>
+        .school_rank_list_wrap {
+            padding: 0 0.5rem;
+        }
+
+        .school_rank_list_wrap li {
+            padding: 0.6rem 0;
+            border-bottom: 1px solid #dedede;
+        }
+
+        .school_rank_list_wrap li:last-child {
+            border-bottom: none;
+        }
+
+        .school_img {
+            width: 2.5rem;
+            height: 2.5rem;
+            overflow: hidden;
+        }
+
+        .school_img img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .school_info {
+            width: 8.8rem;
+            padding-left: 0.3rem;
+        }
+
+        .school_ch_name {
+            font-size: 0.8rem;
+            color: #3c3b3b;
+        }
+
+        .school_en_name {
+            padding: 0.2rem 0;
+            font-size: 0.6rem;
+            color: #848484;
+        }
+
+        .school_gps {
+            font-size: 0.6rem;
+            color: #5a5a5a;
+        }
+
+        .view_num {
+            color: #777777;
+            font-size: 0.6rem;
+        }
+
+        .view_num p {
+            text-align: right;
+            margin-bottom: 0.3rem;
+        }
+
+        .pro_out {
+            width: 14.3rem;
+            height: 1.1rem;
+            background: #aed2f3;
+            border-radius: 0.3rem;
+            overflow: hidden;
+        }
+
+        .pro_inner {
+            display: block;
+            width: 0%;
+            height: 100%;
+            background: #1385f0;
+        }
+
+        .pro_centum {
+            font-size: 0.6rem;
+            color: #468ed1;
+            display: block;
+            padding-bottom: 0.3rem;
+        }
+
+        .pro_centum_wrap {
+            display: inline-block;
+            vertical-align: middle;
+            margin-bottom: 0.5rem;
+        }
+
+        .mc_step_tit {
+            display: none;
+        }
+
+        .mc_step_tit:first-child {
+            display: block;
+        }
+
+        .mc_step_name {
+            color: #468ed1;
+            font-size: 0.9rem;
+            padding-left: 0.5rem;
+        }
+
+        .mc_step_tit_wrap {
+            padding: 0.5rem;
+        }
+
+        .step_row {
+            margin-bottom: 0.4rem;
+        }
+
+        .row_name_b {
+            font-size: 0.8rem;
+        }
+
+        .row_name-intra {
+            font-size: 0.6rem;
+            color: #777777;
+        }
+
+        .row_name-intra input[type=radio] {
+            margin-right: 0.1rem;
+        }
+
+        .row_name-intra label {
+            margin-right: 0.4rem;
+        }
+
+        .row_name-intra label:last-child {
+            margin-right: 0;
+        }
+
+        .step_int_wrap {
+            width: 100%;
+        }
+
+        .step_text_int {
+            border: 1px solid #c5c5c5;
+            height: 1.5rem;
+            width: 100%;
+            border-radius: 0.3rem;
+        }
+
+        .step_text_int::-webkit-input-placeholder {
+            padding-left: 2%;
+        }
+
+        .step_text_intra {
+            padding: 0 0.1rem;
+            margin-bottom: 0.4rem;
+            color: #777777;
+        }
+
+        .next_step_btn {
+            padding: 0.8rem 0;
+        }
+
+        .st_next {
+            display: inline-block;
+            vertical-align: middle;
+            line-height: 1.5rem;
+            height: 1.5rem;
+            background: #468ed1;
+            border-radius: 0.2rem;
+            width: 45%;
+            color: #ffffff;
+            font-size: 0.7rem;
+        }
+
+        .step_wrap2 {
+            display: none;
+        }
+
+        .step_wrap2:first-child {
+            display: block;
+        }
+
+        .all_step .step_wrap2:first-child {
+            display: block;
+        }
+
+        .step1_wrap {
+            padding-top: 0.9rem;
+        }
+
+        .step_row .must {
+            font-style: normal;
+            padding-right: 0.1rem;
+            vertical-align: middle;
+        }
+
+        .step_select {
+            border: 1px solid #c5c5c5;
+            height: 1.5rem;
+            width: 100%;
+            padding: 0 2%;
+            font-size: 0.6rem;
+            color: #626262;
+            -webkit-appearance: menulist;
+            border-radius: 0.3rem;
+            outline: none;
+        }
+        .success_model{
+            display: none;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.37);
+        }
+        .success_wrap{
+            position: absolute;
+            width: 15rem;
+            padding: 1rem 1rem 0;
+            background: #ffffff;
+            background-size: cover;
+            height: 18rem;
+            top: 50%;
+           left: 50%;
+            margin: -9.5rem 0 0 -8.5rem;
+        }
+        .test_sort{
+            width: 9rem;
+            position: relative;
+            height: 4rem;
+            font-size: 2.3rem;
+            color: #468ed1;
+            padding-top: 2rem;
+            margin: auto;
+        }
+        .star_bg{
+            left: 0;
+            top: 0;
+            position: absolute;
+        }
+        .test_pass{
+            font-size: 0.9rem;
+            color: #468ed1;
+            padding: 0.8rem 0;
+        }
+        .test_pass strong{
+            color: #ff6724;
+            font-weight: bold;
+        }
+        .test_hit{
+            font-size: 0.6rem;
+            color: #777777;
+        }
+        .link_index{
+            display: inline-block;
+            vertical-align: middle;
+            background: #468ed1;
+            width: 6rem;
+            height: 1.7rem;
+            line-height: 1.7rem;
+            border-radius: 0.3rem;
+            color: #ffffff;
+            font-size: 0.8rem;
+            margin-top: 1.5rem;
+        }
+        .jc_bg{
+            position: absolute;
+            width: 100%;
+            left: 0;
+            bottom: -0.9rem;
+        }
+
+    </style>
+
+</head>
+<body>
+<!--头部-->
+<section class="relative">
+    <div class="bg_b header_nav pd_lr5 flex-container">
+        <a href="javascript:history.go(-1);"><i class="icon-angle-left nav_icon color_f"></i></a>
+        <span class="color_f header_name">录取几率测评</span>
+        <span class="search_icon"></span>
+    </div>
+</section>
+<!--学校列表-->
+<section>
+    <ul class="school_rank_list_wrap bg_f mg_b5">
+        <li>
+            <a href="#">
+                <div class="flex-container">
+                    <div class="flex-container">
+                        <div class="school_img"><img src="images/school_img.png" alt=""></div>
+                        <div class="school_info">
+                            <p class="school_ch_name ellipsis">普林斯顿大学</p>
+                            <p class="school_en_name ellipsis">Princeton University</p>
+                            <div class="school_gps">
+                                <img style="height: 0.5rem;margin-right: 0.2rem;" src="images/icon-gps.png" alt="">
+                                <span>所在地区：新泽西州</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="view_num">
+                        <p>查看人数：<span class="color_b">222</span></p>
+                        <p>评论：<span class="color_b">222</span></p>
+                    </div>
+                </div>
+            </a>
+        </li>
+    </ul>
+    <div>
+        <div class="tm bg_f mc_step_tit_wrap">
+            <div class="pro_centum_wrap tl">
+                <span class="pro_centum">进度&nbsp;0%</span>
+                <div class="pro_out"><span class="pro_inner"></span></div>
+            </div>
+            <div>
+                <div class="mc_step_tit flex-container-center">
+                    <img src="images/cj_icon.png" style="height: 1rem;" alt="">
+                    <span class="mc_step_name">个人成绩</span>
+                </div>
+                <div class="mc_step_tit flex-container-center">
+                    <img src="images/sc_icon.png" style="height: 1rem;" alt="">
+                    <span class="mc_step_name">学校背景</span>
+                </div>
+            </div>
+        </div>
+        <div>
+            <!--step1-->
+            <div class="step_wrap2 step1_wrap bg_f pd_lr5">
+                <div class="step_row">
+                    <div class="step_text_intra flex-container">
+                        <span class="row_name_b">GPA:</span>
+                        <div class="row_name-intra flex-container">
+                            <label class="flex-container-center" for="point"><input id="point" checked="checked"
+                                                                                    name="point" type="radio">四分制GPA成绩，如3.0
+                            </label>
+                            <label class="flex-container-center" for="point2"><input id="point2" name="point"
+                                                                                     type="radio">平均成绩，如85</label>
+                        </div>
+                    </div>
+                    <div class="step_int_wrap">
+                        <input class="step_text_int" type="text">
+                    </div>
+
+                </div>
+                <div class="step_row">
+                    <div class="step_text_intra flex-container">
+                        <span class="row_name_b">GMAT:</span>
+                    </div>
+                    <div class="step_int_wrap">
+                        <input class="step_text_int" type="text">
+                    </div>
+
+                </div>
+                <div class="step_row">
+                    <div class="step_text_intra flex-container">
+                        <span class="row_name_b">GRE:</span>
+                    </div>
+                    <div class="step_int_wrap">
+                        <input class="step_text_int" type="text">
+                    </div>
+                </div>
+                <div class="step_row">
+                    <div class="step_text_intra flex-container">
+                        <span class="row_name_b">TOEFL:</span>
+                    </div>
+                    <div class="step_int_wrap">
+                        <input class="step_text_int" type="text">
+                    </div>
+                </div>
+                <div class="step_row">
+                    <div class="step_text_intra flex-container">
+                        <span class="row_name_b">IELTS:</span>
+                    </div>
+                    <div class="step_int_wrap">
+                        <input class="step_text_int" type="text">
+                    </div>
+                </div>
+                <div class="next_step_btn tm"><span class="st_next" data-index="1">下一步</span></div>
+            </div>
+            <!--step2-->
+            <div class="step_wrap2 bg_f pd_lr5" style="padding-top: 0.7rem;">
+                <div class="step_row">
+                    <div class="step_text_intra flex-container">
+                        <span class="row_name_b"><i class="light must">*</i>目前学历:</span>
+                    </div>
+                    <div class="step_int_wrap">
+                        <select class="step_select" name="" id="s1">
+                            <option value="0">未选择</option>
+                            <option value="0">初中</option>
+                            <option value="0">高中</option>
+                            <option value="0">专科</option>
+                            <option value="0">本科</option>
+                            <option value="0">硕士</option>
+                            <option value="0">博士</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="step_row">
+                    <div class="step_text_intra flex-container">
+                        <span class="row_name_b"><i class="light must">*</i>就读/毕业院校:</span>
+                    </div>
+                    <div class="step_int_wrap">
+                        <select class="step_select" name="" id="s2">
+                            <option value="0">未选择</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="step_row">
+                    <div class="step_text_intra flex-container">
+                        <span class="row_name_b"><i class="light must">*</i>详细填写学校名称:</span>
+                    </div>
+                    <div class="step_int_wrap">
+                        <input class="step_text_int" type="text">
+                    </div>
+                </div>
+                <div class="step_row">
+                    <div class="step_text_intra flex-container">
+                        <span class="row_name_b"><i class="light must">*</i>专业:</span>
+                    </div>
+                    <div class="step_int_wrap">
+                        <input class="step_text_int" type="text">
+                    </div>
+                </div>
+                <div class="next_step_btn tm flex-container" style="padding: 2rem 0">
+                    <span class="st_next" data-index="0">上一步</span>
+                    <span class="st_next st_tj" >提交</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--提交成功弹窗-->
+<section class="success_model">
+    <div class="success_wrap">
+        <div class="tm"><img src="images/cr_1.png" style="height: 3rem;" alt=""></div>
+        <p class="test_sort tm">
+            93分
+            <img class="star_bg" src="images/star_bg.png" style="height: 6rem;" alt="">
+        </p>
+        <p class="test_pass tm">已超过<strong>70%</strong>的测试者！</p>
+        <p class="test_hit"><strong class="light">*</strong>此报告匹配标准以近5年留学录取成功大数据作为技术支撑并不能百分之百代表实际录取结果，仅供参考。</p>
+        <div class="tm"><a class="link_index" href="index.html">返回首页</a></div>
+        <div class="jc_bg">
+            <img src="images/jc_1.png" style="height: 0.9rem;width: 100%;" alt="">
+        </div>
+    </div>
+</section>
+<!--footer-->
+<footer>
+    <ul class="ftnav_list flex-container">
+        <li>
+            <a href="index.html">
+                <div>
+                    <img src="images/icon_ft_1.png" style="height: 1.1rem" alt="">
+                    <span>首页</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="tel:4001816180">
+                <div>
+                    <img src="images/icon_ft_2.png" style="height: 1.1rem" alt="">
+                    <span>拨打电话</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="mqqwpa://im/chat?chat_type=wpa&uin=1746295647&version=1&src_type=web&web_src=http://m.haishiit.com/">
+                <div>
+                    <img src="images/icon_ft_3.png" style="height: 1.1rem" alt="">
+                    <span>在线咨询</span>
+                </div>
+            </a>
+        </li>
+    </ul>
+</footer>
+</body>
+<script>
+    $(function(){
+        $('.next_step_btn span').not('.st_tj').click(function(){
+            var num=$(this).attr('data-index');
+            if(num==1){
+                $('.pro_inner').stop(true).animate({"width":"50%"},200)
+            }
+            else {
+                $('.pro_inner').stop(true).animate({"width":"0%"},200)
+            }
+            $('.mc_step_tit').eq(num).show().siblings('.mc_step_tit').hide();
+            $('.step_wrap2').eq(num).show().siblings('.step_wrap2').hide();
+        });
+        $('.st_tj').click(function(){
+            $('.pro_inner').stop(true).animate({"width":"100%"},200);
+            $('.success_model').fadeIn();
+        });
+        $('.success_model').click(function(){
+            $(this).fadeOut();
+        })
+    })
+</script>
+</html>
