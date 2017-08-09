@@ -38,10 +38,10 @@ $(function () {
                     observeParents: true,
                     onSlideChangeStart : function() {
                         $(".tabs .on").removeClass('on');
-                        $(".tabs li").eq(tabsSwiper.activeIndex).addClass('on');
+                        $(".tabs li:not(.list_more)").eq(tabsSwiper.activeIndex).addClass('on');
                     }
                 });
-                $(".tabs li").on('touchstart mousedown', function(e) {
+                $(".tabs li:not(.list_more)").on('touchstart mousedown', function(e) {
                     e.preventDefault();
                     $(".tabs .active").removeClass('on');
                     $(this).addClass('on');
@@ -49,7 +49,7 @@ $(function () {
 
                 });
 
-                $(".tabs li").click(function(e) {
+                $(".tabs li:not(.list_more)").click(function(e) {
                     e.preventDefault();
                 });
 

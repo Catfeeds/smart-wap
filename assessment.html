@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="myApp">
 <head>
     <meta charset="UTF-8">
     <meta name="keywords" content="">
@@ -26,174 +26,107 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/matching.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/swiper-3.3.1.min.css">
     <script src="js/jquery-1.12.2.min.js"></script>
     <script src="js/swiper-3.3.1.jquery.min.js"></script>
     <script src="js/common.js"></script>
     <script src="js/public.js"></script>
+    <script src="js/assessment.js"></script>
+    <script src="js/angular1.3.1.js"></script>
     <title>选校评估</title>
     <style>
-        .as_bg {
-            height: 8.2rem;
-            background: url("images/as_bg.png") no-repeat 0 0;
-            background-size: cover;
-        }
-
-        .as_hit {
-            padding-top: 0.8rem;
-            padding-bottom: 0.9rem;
-        }
-
-        .step_num_text {
-            display: block;
-            height: 0.8rem;
-            width: 0.8rem;
-            line-height: 0.8rem;
-            border-radius: 50%;
-            text-align: center;
-            background: #ffffff;
-            font-size: 0.6rem;
-            border: 0.1rem solid #ffffff;
-        }
-
-        .step_wrap.on .step_num_text {
-            color: #468ed1;
-            border-color: #468ed1;
-        }
-
-        .step_wrap.on .step_on_line {
-            background: #468ed1;
-        }
-
-        .step_wrap.on .step_name {
-            color: #468ed1;
-        }
-
-        .step_on_line {
-            display: inline-block;
-            vertical-align: middle;
-            width: 3rem;
-            height: 0.2rem;
-            background: #ffffff;
-        }
-
-        .step_num_wrap {
-            display: inline-block;
-            vertical-align: middle;
-        }
-
-        .step_name {
-            padding-top: 0.4rem;
-            font-size: 0.6rem;
-            color: #ffffff;
-        }
-
-        .step_wrap:nth-child(1) .step_name, .step_wrap:nth-child(2) .step_name {
-            margin-left: -0.6rem;
-        }
-
-        .step_wrap:nth-child(3) .step_name {
-            margin-left: -1rem;
-        }
-
-        .step_wrap:nth-child(4) .step_name {
-            margin-left: -1.2rem;
-        }
-        .step_row{
-            margin-bottom: 0.4rem;
-        }
-        .row_name_b{
-            font-size: 0.8rem;
-        }
-        .row_name-intra{
-            font-size: 0.6rem;
-            color: #777777;
-        }
-        .row_name-intra input[type=radio]{
-           margin-right: 0.1rem;
-        }
-        .row_name-intra label{
-           margin-right: 0.4rem;
-        }
-        .row_name-intra label:last-child{
-            margin-right: 0;
-        }
-        .step_int_wrap{
+        .accordion {
             width: 100%;
-        }
-        .step_text_int{
-            border: 1px solid #c5c5c5;
-            height: 1.5rem;
-            width: 100%;
-            border-radius: 0.3rem;
-        }
-        .step_text_int::-webkit-input-placeholder{
-            padding-left: 2%;
-        }
-        .step_text_intra{
-            padding: 0 0.1rem;
-            margin-bottom: 0.4rem;
-            color: #777777;
-        }
-        .next_step_btn{
-            padding: 0.8rem 0;
-        }
-        .st_next{
-            display: inline-block;
-            vertical-align: middle;
-            line-height: 1.5rem;
-            height: 1.5rem;
-            background: #468ed1;
-            border-radius: 0.2rem;
-            width: 45%;
-            color: #ffffff;
-            font-size: 0.7rem;
-        }
-        .step_wrap2{
             display: none;
+            background: #FFF;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
         }
-        .step_wrap2:first-child{
+
+        .accordion .link {
+            cursor: pointer;
             display: block;
+            padding: 15px 15px 15px 5%;
+            color: #4D4D4D;
+            font-size: 14px;
+            font-weight: 700;
+            border-bottom: 1px solid #CCC;
+            position: relative;
+            -webkit-transition: all 0.4s ease;
+            -o-transition: all 0.4s ease;
+            transition: all 0.4s ease;
         }
-        .step1_wrap{
-            padding-top: 0.9rem;
+
+        .accordion li:last-child .link {
+            border-bottom: 0;
         }
-        .step_row .must{
-            font-style: normal;
-            padding-right: 0.1rem;
-            vertical-align: middle;
+
+        .accordion li i {
+            position: absolute;
+            top: 16px;
+            left: 12px;
+            font-size: 18px;
+            color: #595959;
+            -webkit-transition: all 0.4s ease;
+            -o-transition: all 0.4s ease;
+            transition: all 0.4s ease;
         }
-        .step_select{
-            border: 1px solid #c5c5c5;
-            height: 1.5rem;
-            width: 100%;
-            padding: 0 2%;
-            font-size: 0.6rem;
-            color: #626262;
-            -webkit-appearance: menulist;
-            border-radius: 0.3rem;
-            outline: none;
+
+        .accordion li i.icon-angle-down {
+            right: 12px;
+            left: auto;
+            font-size: 16px;
         }
-        .step_text_int2{
-            width: 96%;
-            padding:1% 2%;
-            height: 3.8rem;
-            border-radius: 0.2rem;
+
+        .accordion li.open .link {
+            color: #b63b4d;
         }
-        .work_ex{
-            width: 8rem;
-            height: 1.5rem;
-            outline: none;
-            -webkit-appearance: menulist;
-            padding: 0 0.3rem;
-            color: #468ed1;
-            border-radius: 0.3rem;
+
+        .accordion li.open i {
+            color: #b63b4d;
+        }
+
+        .accordion li.open i.icon-angle-down {
+            -webkit-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+            -o-transform: rotate(180deg);
+            transform: rotate(180deg);
+        }
+
+        /**
+         * Submenu
+         -----------------------------*/
+        .submenu {
+            display: none;
+            background: #444359;
+            font-size: 14px;
+        }
+
+        .submenu li {
+            border-bottom: 1px solid #4b4a5e;
+        }
+
+        .submenu a {
+            display: block;
+            text-decoration: none;
+            color: #d9d9d9;
+            padding: 12px;
+            padding-left: 42px;
+            -webkit-transition: all 0.25s ease;
+            -o-transition: all 0.25s ease;
+            transition: all 0.25s ease;
+        }
+
+        .submenu a:hover {
+            background: #b63b4d;
+            color: #FFF;
         }
     </style>
-
 </head>
-<body>
+<body ng-controller="abroad_view">
 <!--头部-->
 <section class="relative">
     <div class="bg_b header_nav pd_lr5 flex-container">
@@ -241,67 +174,63 @@
         <div class="step_wrap2 step1_wrap bg_f pd_lr5">
             <div class="step_row">
                 <div class="step_text_intra flex-container">
-                    <span class="row_name_b">GPA:</span>
-                    <div class="row_name-intra flex-container">
-                        <label class="flex-container-center" for="point"><input id="point" checked="checked" name="point" type="radio">四分制GPA成绩，如3.0 </label>
-                        <label class="flex-container-center" for="point2"><input id="point2" name="point" type="radio">平均成绩，如85</label>
-                    </div>
+                    <span class="row_name_b"><i class="light must">*</i>GPA:</span>
                 </div>
                 <div class="step_int_wrap">
-                    <input class="step_text_int" type="text">
+                    <input class="step_text_int" id="gpa" placeholder="2.5-4.0" type="text">
                 </div>
 
             </div>
             <div class="step_row">
                 <div class="step_text_intra flex-container">
-                    <span class="row_name_b">GMAT:</span>
+                    <span class="row_name_b"><i class="light must">*</i>GMAT:</span>
                 </div>
                 <div class="step_int_wrap">
-                    <input class="step_text_int" type="text">
+                    <input class="step_text_int" id="gmat" placeholder="400~780" type="text">
                 </div>
 
             </div>
             <div class="step_row">
                 <div class="step_text_intra flex-container">
-                    <span class="row_name_b">GRE:</span>
+                    <span class="row_name_b"><i class="light must">*</i>GRE:</span>
                 </div>
                 <div class="step_int_wrap">
-                    <input class="step_text_int" type="text">
+                    <input class="step_text_int" id="gre" placeholder="200~340" type="text">
                 </div>
             </div>
             <div class="step_row">
                 <div class="step_text_intra flex-container">
-                    <span class="row_name_b">TOEFL:</span>
+                    <span class="row_name_b"><i class="light must">*</i>TOEFL:</span>
                 </div>
                 <div class="step_int_wrap">
-                    <input class="step_text_int" type="text">
+                    <input class="step_text_int" id="toefl" placeholder="60~120" type="text">
                 </div>
             </div>
             <div class="step_row">
                 <div class="step_text_intra flex-container">
-                    <span class="row_name_b">IELTS:</span>
+                    <span class="row_name_b"><i class="light must">*</i>IELTS:</span>
                 </div>
                 <div class="step_int_wrap">
-                    <input class="step_text_int" type="text">
+                    <input class="step_text_int" id="ielts" placeholder="5.0~7.0" type="text">
                 </div>
             </div>
-            <div class="next_step_btn tm"><span class="st_next" data-index="1">下一步</span></div>
+            <div class="next_step_btn tm"><span class="st_next next_1" data-index="1">下一步</span></div>
         </div>
         <!--step2-->
         <div class="step_wrap2 bg_f pd_lr5" style="padding-top: 0.7rem;">
             <div class="step_row">
                 <div class="step_text_intra flex-container">
-                    <span class="row_name_b"><i class="light must">*</i>目前学历:</span>
+                    <span class="row_name_b">目前学历:</span>
                 </div>
                 <div class="step_int_wrap">
                     <select class="step_select" name="" id="s1">
                         <option value="0">未选择</option>
-                        <option value="0">初中</option>
-                        <option value="0">高中</option>
-                        <option value="0">专科</option>
-                        <option value="0">本科</option>
-                        <option value="0">硕士</option>
-                        <option value="0">博士</option>
+                        <option value="1">博士</option>
+                        <option value="2">硕士</option>
+                        <option value="3">本科</option>
+                        <option value="4">专科</option>
+                        <option value="5">高中</option>
+                        <option value="6">初中</option>
                     </select>
                 </div>
             </div>
@@ -311,7 +240,11 @@
                 </div>
                 <div class="step_int_wrap">
                     <select class="step_select" name="" id="s2">
-                        <option value="0">未选择</option>
+                        <option value="1">清北复交浙大</option>
+                        <option value="2">985</option>
+                        <option value="3">211</option>
+                        <option value="4">非211本科</option>
+                        <option value="5">专科</option>
                     </select>
                 </div>
             </div>
@@ -320,7 +253,7 @@
                     <span class="row_name_b"><i class="light must">*</i>详细填写学校名称:</span>
                 </div>
                 <div class="step_int_wrap">
-                    <input class="step_text_int" type="text">
+                    <input class="step_text_int" id="jd_school" type="text">
                 </div>
             </div>
             <div class="step_row">
@@ -328,12 +261,22 @@
                     <span class="row_name_b"><i class="light must">*</i>专业:</span>
                 </div>
                 <div class="step_int_wrap">
-                    <input class="step_text_int" type="text">
+                    <input class="step_text_int" data-id="" data-pid="" id="major_name" type="text">
+                    <ul id="accordion" class="accordion">
+                        <li ng-repeat="majorA in major">
+                            <div class="link">{{majorA.name}} <i class="icon-angle-down"></i></div>
+                            <ul class="submenu">
+                                <li ng-repeat="majorB in majorA.child">
+                                    <a class="major_name" href="javascript:;" data-id="{{majorB.id}}" data-pid="{{majorB.pid}}" >{{majorB.name}}</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
             </div>
             <div class="next_step_btn tm flex-container" style="padding: 2rem 0">
-                <span class="st_next" data-index="0">上一步</span>
-                <span class="st_next" data-index="2">下一步</span>
+                <span class="st_next pre_st" data-index="0">上一步</span>
+                <span class="st_next next_2" data-index="2">下一步</span>
             </div>
         </div>
         <!--step3-->
@@ -341,14 +284,16 @@
             <div class="step_row">
                 <div class="step_text_intra flex-container">
                     <span class="row_name_b">实习/工作经验:</span>
-                    <select class="work_ex" name="" id="">
-                        <option value="0">未选择</option>
-                        <option value="1">实习</option>
-                        <option value="2">工作</option>
+                    <select class="work_ex" name="" id="s3">
+                        <option value="1">国内四大</option>
+                        <option value="2">500强</option>
+                        <option value="3">外企</option>
+                        <option value="4">国企</option>
+                        <option value="5">私企</option>
                     </select>
                 </div>
                 <div class="step_int_wrap">
-                    <textarea class="step_text_int2" placeholder="请如实填写跟申请方向相关的工作经验，若没有完整工作经验，请填写相关实 习经验，每项描述不低于三十字........."></textarea>
+                    <textarea id="work_exp" class="step_text_int2" placeholder="请如实填写跟申请方向相关的工作经验，若没有完整工作经验，请填写相关实 习经验，每项描述不低于三十字........."></textarea>
                 </div>
             </div>
             <div class="step_row">
@@ -356,7 +301,7 @@
                     <span class="row_name_b">项目经验:</span>
                 </div>
                 <div class="step_int_wrap">
-                    <textarea class="step_text_int2" placeholder="请如实填写跟申请方向相关的项目经验，如比赛经历，商业项目，试验项目， 论文发表等。不少于30字若没有可不填。"></textarea>
+                    <textarea id="project_exp" class="step_text_int2" placeholder="请如实填写跟申请方向相关的项目经验，如比赛经历，商业项目，试验项目， 论文发表等。不少于30字若没有可不填。"></textarea>
                 </div>
             </div>
             <div class="step_row">
@@ -364,7 +309,7 @@
                     <span class="row_name_b">海外留学:</span>
                 </div>
                 <div class="step_int_wrap">
-                    <textarea class="step_text_int2" placeholder="请如实填写海外游学经验，如交换项目，海外实践课程等。若没有可不填。"></textarea>
+                    <textarea id="abroad_study" class="step_text_int2" placeholder="请如实填写海外游学经验，如交换项目，海外实践课程等。若没有可不填。"></textarea>
                 </div>
             </div>
             <div class="step_row">
@@ -372,7 +317,7 @@
                     <span class="row_name_b">公益活动:</span>
                 </div>
                 <div class="step_int_wrap">
-                    <textarea class="step_text_int2" placeholder="请如实填写所参与公益项目若没有可不填。"></textarea>
+                    <textarea id="gy_active" class="step_text_int2" placeholder="请如实填写所参与公益项目若没有可不填。"></textarea>
                 </div>
             </div>
             <div class="step_row">
@@ -380,29 +325,23 @@
                     <span class="row_name_b">获奖经历:</span>
                 </div>
                 <div class="step_int_wrap">
-                    <textarea class="step_text_int2" placeholder="请如实填写获奖经理，若没有可不填。"></textarea>
+                    <textarea id="hj_jl" class="step_text_int2" placeholder="请如实填写获奖经理，若没有可不填。"></textarea>
                 </div>
             </div>
             <div class="next_step_btn tm flex-container" style="padding: 2rem 0">
-                <span class="st_next" data-index="1">上一步</span>
-                <span class="st_next" data-index="3">下一步</span>
+                <span class="st_next pre_st" data-index="1">上一步</span>
+                <span class="st_next next_3" data-index="3">下一步</span>
             </div>
         </div>
         <!--step4-->
         <div class="step_wrap2 bg_f pd_lr5" style="padding-top: 0.7rem;">
             <div class="step_row">
                 <div class="step_text_intra flex-container">
-                    <span class="row_name_b"><i class="light must">*</i>目前学历:</span>
+                    <span class="row_name_b"><i class="light must">*</i>留学目的地:</span>
                 </div>
                 <div class="step_int_wrap">
-                    <select class="step_select" name="" id="s3">
-                        <option value="0">未选择</option>
-                        <option value="0">初中</option>
-                        <option value="0">高中</option>
-                        <option value="0">专科</option>
-                        <option value="0">本科</option>
-                        <option value="0">硕士</option>
-                        <option value="0">博士</option>
+                    <select class="step_select" name="" id="abroad_state">
+                        <option ng-repeat="country in country" value="{{country.id}}">{{country.name}}</option>
                     </select>
                 </div>
             </div>
@@ -411,11 +350,21 @@
                     <span class="row_name_b"><i class="light must">*</i>专业:</span>
                 </div>
                 <div class="step_int_wrap">
-                    <input class="step_text_int" type="text" placeholder="请填写你要申请的专业">
+                    <input class="step_text_int" data-id="" data-pid="" id="major_name2" type="text" placeholder="请填写你要申请的专业">
+                    <ul id="accordion2" class="accordion">
+                        <li ng-repeat="majorA in major">
+                            <div class="link">{{majorA.name}} <i class="icon-angle-down"></i></div>
+                            <ul class="submenu">
+                                <li ng-repeat="majorB in majorA.child">
+                                    <a class="major_name" href="javascript:;" data-id="{{majorB.id}}" data-pid="{{majorB.pid}}" >{{majorB.name}}</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
             </div>
             <div class="next_step_btn tm flex-container" style="padding: 2rem 0">
-                <span class="st_next" data-index="2">上一步</span>
+                <span class="st_next pre_st" data-index="2">上一步</span>
                 <span class="st_next st_tj">提交</span>
             </div>
         </div>
@@ -452,14 +401,4 @@
     </ul>
 </footer>
 </body>
-<script>
-    $(function(){
-        $('.next_step_btn span').not('.st_tj').click(function(){
-            var num=$(this).attr('data-index');
-            $('.step_wrap').eq(num).addClass("on").siblings('.step_wrap').removeClass("on");
-            $('.step_wrap2').eq(num).show().siblings('.step_wrap2').hide();
-            console.log(num);
-        });
-    })
-</script>
 </html>

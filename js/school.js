@@ -58,7 +58,7 @@ $(function () {
                         '<div class="clearfix"></div>' +
                         '<div class="bot-btn">' +
                         '<a href="mqqwpa://im/chat?chat_type=wpa&uin=1746295647&version=1&src_type=web&web_src=http://m.haishiit.com/">和顾问聊聊</a>' +
-                        '<a href="test.html">免费留学评估</a>' +
+                        '<a href="matching_test.html?id='+ b.id+'">录取几率评估</a>' +
                         '</div>' +
                         '</li>';
                     });
@@ -123,7 +123,7 @@ $(function () {
                             '<div class="clearfix"></div>' +
                             '<div class="bot-btn">' +
                             '<a href="mqqwpa://im/chat?chat_type=wpa&uin=1746295647&version=1&src_type=web&web_src=http://m.haishiit.com/">和顾问聊聊</a>' +
-                            '<a href="test.html">免费留学评估</a>' +
+                            '<a href="matching_test.html?id='+ b.id+'">录取几率评估</a>' +
                             '</div>' +
                             '</li>';
                     });
@@ -192,7 +192,7 @@ $(function () {
                             '<div class="clearfix"></div>' +
                             '<div class="bot-btn">' +
                             '<a href="mqqwpa://im/chat?chat_type=wpa&uin=1746295647&version=1&src_type=web&web_src=http://m.haishiit.com/">和顾问聊聊</a>' +
-                            '<a href="test.html">免费留学评估</a>' +
+                            '<a href="matching_test.html?id='+ b.id+'">录取几率评估</a>' +
                             '</div>' +
                             '</li>';
                     });
@@ -261,7 +261,7 @@ $(function () {
                             '<div class="clearfix"></div>' +
                             '<div class="bot-btn">' +
                             '<a href="mqqwpa://im/chat?chat_type=wpa&uin=1746295647&version=1&src_type=web&web_src=http://m.haishiit.com/">和顾问聊聊</a>' +
-                            '<a href="test.html">免费留学评估</a>' +
+                            '<a href="matching_test.html?id='+ b.id+'">录取几率评估</a>' +
                             '</div>' +
                             '</li>';
                     });
@@ -327,7 +327,7 @@ $(function () {
                             '<div class="clearfix"></div>' +
                             '<div class="bot-btn">' +
                             '<a href="mqqwpa://im/chat?chat_type=wpa&uin=1746295647&version=1&src_type=web&web_src=http://m.haishiit.com/">和顾问聊聊</a>' +
-                            '<a href="test.html">免费留学评估</a>' +
+                            '<a href="matching_test.html?id='+ b.id+'">录取几率评估</a>' +
                             '</div>' +
                             '</li>';
                     });
@@ -451,7 +451,7 @@ function selectVal(o) {
                         '<div class="clearfix"></div>' +
                         '<div class="bot-btn">' +
                         '<a href="mqqwpa://im/chat?chat_type=wpa&uin=1746295647&version=1&src_type=web&web_src=http://m.haishiit.com/">和顾问聊聊</a>' +
-                        '<a href="test.html">免费留学评估</a>' +
+                        '<a href="matching_test.html?id='+ b.id+'">录取几率评估</a>' +
                         '</div>' +
                         '</li>';
                 });

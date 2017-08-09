@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="myApp">
 <head>
     <meta charset="UTF-8">
     <meta name="keywords" content="">
@@ -26,97 +26,39 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/matching.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/swiper-3.3.1.min.css">
     <script src="js/jquery-1.12.2.min.js"></script>
     <script src="js/swiper-3.3.1.jquery.min.js"></script>
     <script src="js/common.js"></script>
     <script src="js/public.js"></script>
-    <title>攻略列表</title>
-    <style>
-        .school_rank_list_wrap{
-            padding: 0 0.5rem;
-        }
-        .school_rank_list_wrap li{
-            padding: 0.6rem 0;
-            border-bottom: 1px solid #dedede;
-        }
-        .school_rank_list_wrap li:last-child{
-            border-bottom: none;
-        }
-        .school_img{
-            width: 2.5rem;
-            height: 2.5rem;
-            overflow: hidden;
-        }
-        .school_img img{
-            width: 100%;
-            height: 100%;
-        }
-        .school_info{
-            width: 8.8rem;
-            padding-left: 0.3rem;
-        }
-        .school_ch_name{
-            font-size: 0.8rem;
-            color: #3c3b3b;
-        }
-        .school_en_name{
-            padding: 0.2rem 0;
-            font-size: 0.6rem;
-            color: #848484;
-        }
-        .school_gps{
-            font-size: 0.6rem;
-            color: #5a5a5a;
-        }
-        .admission_link{
-            display: block;
-            background: #468ed1;
-            padding: 0.1rem 0.3rem;
-            color: #ffffff;
-            font-size: 0.6rem;
-            border-radius: 0.2rem;
-        }
-        .rank_num{
-            font-size: 0.6rem;
-            margin-bottom: 0.4rem;
-        }
-        .search_int{
-            display: none;
-            padding: 0 0.4rem;
-            width: 11rem;
-            height: 1.3rem;
-            border: none;
-            color: #468ed1;
-            border-radius: 0.2rem;
-        }
-        .search_int::-webkit-input-placeholder{
-            color: #468ed1;
-        }
-    </style>
-
+    <script src="js/select_school.js"></script>
+    <script src="js/angular1.3.1.js"></script>
+    <title>热门学校</title>
 </head>
-<body>
+<body ng-controller="abroad_view">
 <!--头部-->
 <section class="relative">
-    <div class="bg_b header_nav pd_lr5 flex-container">
+    <div class="bg_b header_nav pd_lr5 flex-container box">
         <a href="javascript:history.go(-1);"><i class="icon-angle-left nav_icon color_f"></i></a>
-        <span class="color_f header_name">热门学校</span>
-        <input class="search_int" type="search" placeholder="请输入学校名称">
+        <span class="color_f header_name ">热门学校</span>
+        <form action="javascript:;" onsubmit="return false;" class="form_wrap">
+            <input id="myInput" class="search_int " type="search" placeholder="请输入学校名称">
+        </form>
         <span class="search_icon"><img src="images/icon_search.png" style="height: 0.9rem;" alt=""></span>
     </div>
 </section>
 <!--学校列表-->
 <section>
     <ul class="school_rank_list_wrap bg_f">
-        <li>
+        <li ng-repeat="item1 in items1">
             <div class="flex-container">
                 <div class="flex-container">
-                    <div class="school_img"><img src="images/school_img.png" alt=""></div>
+                    <div class="school_img"><img src="{{http2}}{{item1.image}}" alt=""></div>
                     <div class="school_info">
-                        <p class="school_ch_name ellipsis">普林斯顿大学</p>
-                        <p class="school_en_name ellipsis">Princeton University</p>
+                        <p class="school_ch_name ellipsis">{{item1.name}}</p>
+                        <p class="school_en_name ellipsis">{{item1.title}}</p>
                         <div class="school_gps">
                             <img style="height: 0.5rem;margin-right: 0.2rem;" src="images/icon-gps.png" alt="">
                             <span>所在地区：新泽西州</span>
@@ -124,103 +66,8 @@
                     </div>
                 </div>
                 <div class="tr">
-                    <p class="rank_num">排名：1</p>
-                    <a class="admission_link" href="#">录取几率测评</a>
-                </div>
-            </div>
-        </li>
-        <li>
-            <div class="flex-container">
-                <div class="flex-container">
-                    <div class="school_img"><img src="images/school_img.png" alt=""></div>
-                    <div class="school_info">
-                        <p class="school_ch_name ellipsis">普林斯顿大学</p>
-                        <p class="school_en_name ellipsis">Princeton University</p>
-                        <div class="school_gps">
-                            <img style="height: 0.5rem;margin-right: 0.2rem;" src="images/icon-gps.png" alt="">
-                            <span>所在地区：新泽西州</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="tr">
-                    <p class="rank_num">排名：1</p>
-                    <a class="admission_link" href="#">录取几率测评</a>
-                </div>
-            </div>
-        </li>
-        <li>
-            <div class="flex-container">
-                <div class="flex-container">
-                    <div class="school_img"><img src="images/school_img.png" alt=""></div>
-                    <div class="school_info">
-                        <p class="school_ch_name ellipsis">普林斯顿大学</p>
-                        <p class="school_en_name ellipsis">Princeton University</p>
-                        <div class="school_gps">
-                            <img style="height: 0.5rem;margin-right: 0.2rem;" src="images/icon-gps.png" alt="">
-                            <span>所在地区：新泽西州</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="tr">
-                    <p class="rank_num">排名：1</p>
-                    <a class="admission_link" href="#">录取几率测评</a>
-                </div>
-            </div>
-        </li>
-        <li>
-            <div class="flex-container">
-                <div class="flex-container">
-                    <div class="school_img"><img src="images/school_img.png" alt=""></div>
-                    <div class="school_info">
-                        <p class="school_ch_name ellipsis">普林斯顿大学</p>
-                        <p class="school_en_name ellipsis">Princeton University</p>
-                        <div class="school_gps">
-                            <img style="height: 0.5rem;margin-right: 0.2rem;" src="images/icon-gps.png" alt="">
-                            <span>所在地区：新泽西州</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="tr">
-                    <p class="rank_num">排名：1</p>
-                    <a class="admission_link" href="#">录取几率测评</a>
-                </div>
-            </div>
-        </li>
-        <li>
-            <div class="flex-container">
-                <div class="flex-container">
-                    <div class="school_img"><img src="images/school_img.png" alt=""></div>
-                    <div class="school_info">
-                        <p class="school_ch_name ellipsis">普林斯顿大学</p>
-                        <p class="school_en_name ellipsis">Princeton University</p>
-                        <div class="school_gps">
-                            <img style="height: 0.5rem;margin-right: 0.2rem;" src="images/icon-gps.png" alt="">
-                            <span>所在地区：新泽西州</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="tr">
-                    <p class="rank_num">排名：1</p>
-                    <a class="admission_link" href="#">录取几率测评</a>
-                </div>
-            </div>
-        </li>
-        <li>
-            <div class="flex-container">
-                <div class="flex-container">
-                    <div class="school_img"><img src="images/school_img.png" alt=""></div>
-                    <div class="school_info">
-                        <p class="school_ch_name ellipsis">普林斯顿大学</p>
-                        <p class="school_en_name ellipsis">Princeton University</p>
-                        <div class="school_gps">
-                            <img style="height: 0.5rem;margin-right: 0.2rem;" src="images/icon-gps.png" alt="">
-                            <span>所在地区：新泽西州</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="tr">
-                    <p class="rank_num">排名：1</p>
-                    <a class="admission_link" href="#">录取几率测评</a>
+                    <p class="rank_num">排名：{{item1.article}}</p>
+                    <a class="admission_link" href="matching_test.html?id={{item1.id}}">录取几率测评</a>
                 </div>
             </div>
         </li>
@@ -258,10 +105,57 @@
 </footer>
 </body>
 <script>
-    $(function(){
-        $('.search_icon').click(function(){
+    $(function () {
+        $('#myInput').bind('search', function () {
+            var school = $(this).val();
+            var page = 1;
+            $.ajax({
+                type: 'get',
+                url: 'http://test.school.gmatonline.cn/cn/wap-api/select-school',
+                data: {
+                    school: school,
+                    page: page
+                },
+                dataType: 'json',
+                success: function (data) {
+                    var str = '';
+                    if(data.data==''){
+                        alert("暂无当前数据！");
+                        return false;
+                    }else {
+                        $('.school_rank_list_wrap').empty();
+                        $(data.data).each(function (a, b) {
+                            str += '<li ng-repeat="item1 in items1">' +
+                                    '<div class="flex-container">' +
+                                    '<div class="flex-container">' +
+                                    '<div class="school_img"><img src="'+httpUrl2+''+ b.image+'" alt=""></div>' +
+                                    '<div class="school_info">' +
+                                    '<p class="school_ch_name ellipsis">'+ b.name+'</p>' +
+                                    '<p class="school_en_name ellipsis">'+ b.title+'</p>' +
+                                    '<div class="school_gps">' +
+                                    '<img style="height: 0.5rem;margin-right: 0.2rem;" src="images/icon-gps.png" alt="">' +
+                                    '<span>所在地区：' + b.place + '</span>' +
+                                    '</div>' +
+                                    '</div>' +
+                                    '</div>' +
+                                    '<div class="tr">' +
+                                    '<p class="rank_num">排名：'+ b.rank+'</p>' +
+                                    '<a class="admission_link" href="matching_test.html?id='+ b.id+'">录取几率测评</a>' +
+                                    '</div>' +
+                                    '</div>' +
+                                    '</li>';
+                        });
+                        $('.school_rank_list_wrap').append(str);
+                    }
+
+
+                }
+            })
+
+        });
+        $('.search_icon').click(function () {
             $('.header_name').hide();
-            $('.search_int').show();
+            $('.form_wrap').show();
         })
     })
 </script>

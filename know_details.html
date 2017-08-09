@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="myApp">
 <head>
     <meta charset="UTF-8">
     <meta name="keywords" content="">
@@ -32,14 +32,11 @@
     <script src="js/swiper-3.3.1.jquery.min.js"></script>
     <script src="js/common.js"></script>
     <script src="js/public.js"></script>
+    <script src="js/know_details.js"></script>
+    <script src="js/angular1.3.1.js"></script>
     <title>知识库详情</title>
-    <style>
-        .case_details_wrap{
-            padding: 0.5rem;
-        }
-    </style>
 </head>
-<body>
+<body ng-controller="abroad_view">
 <!--头部-->
 <section class="relative">
     <div class="bg_b header_nav pd_lr5 flex-container">
@@ -50,10 +47,16 @@
 </section>
 <!--详情内容-->
 <section>
-    <div class="case_details_wrap"></div>
+    <div class="bg_f pd_lr5">
+        <div class="dec_tit_wrap tm">
+            <h1>{{data.name}}</h1>
+            <p>来源：{{data.createTime}}</p>
+        </div>
+        <div class="de_content" ng-bind-html="contenttext"></div>
+    </div>
 </section>
 <!--备案信息-->
-<section class="cr_wrap back-w">
+<section class="cr_wrap">
     <div class="tm copyRight">©2017 gmatonline.cn All Rights Reserved 京ICP备15001182号-1<br>京公网安备11010802017681 免责声明</div>
 </section>
 <!--footer-->

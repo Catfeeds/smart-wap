@@ -38,7 +38,29 @@ $(function(){
         };
         $scope.$watch('toggle.now',function(){
             if($scope.toggle.now){
+                var tabsSwiper;
+                tabsSwiper = new Swiper('.swiper-container', {
+                    observer: true,
+                    observeParents: true,
+                    speed: 500,
+                    onSlideChangeStart: function () {
+                        $(".tabs .active").removeClass('active');
+                        $(".tabs span").eq(tabsSwiper.activeIndex).addClass('active');
+                    }
+                });
 
+
+                $(".tabs span").on('touchstart mousedown', function (e) {
+                    e.preventDefault();
+                    $(".tabs .active").removeClass('active');
+                    $(this).addClass('active');
+                    tabsSwiper.swipeTo($(this).index());
+
+                });
+
+                $(".tabs span").click(function (e) {
+                    e.preventDefault();
+                });
             }
         });
         $http({
@@ -51,6 +73,8 @@ $(function(){
                 contentid:contentid
             }
         }).success(function (data) {
+            $scope.http=httpUrl;
+            $scope.http2=httpUrl2;
             $scope.teacherT=data.data[0];
             $scope.caseList=data.caseList;
             $scope.answer=data.answer;

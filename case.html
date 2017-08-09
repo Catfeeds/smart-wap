@@ -148,7 +148,7 @@
     <div class="search_int_wrap flex-container">
         <img src="images/search-icon.png" style="height: 0.8rem;" alt="">
         <input class="search_int" type="search" placeholder="USC  UIUC  牛津大学">
-        <input class="search_btn" type="button" value="搜索">
+        <input class="search_btn" type="button" ng-click="search()" value="搜索">
     </div>
 </section>
 <!--广告位-->
@@ -165,7 +165,7 @@
     </div>
     <ul class="hotCase_list pd_lr75 bg_f">
         <li ng-repeat="item1 in items1">
-            <a href="case_details.html" class="flex-container">
+            <a href="case_details.html?id={{item1.id}}" class="flex-container">
                 <div class="case_1"><img src="{{http}}{{item1.image}}" alt=""></div>
                 <div class="case1_info">
                     <p class="case1_tit ellipsis">{{item1.name}}</p>
@@ -177,7 +177,7 @@
         </li>
 
     </ul>
-    <div class="tm bg_f" style="padding: 0.6rem 0;"><a class="more_case inm" href="case_list.html">查看更多案例</a></div>
+    <div class="tm bg_f" style="padding: 0.6rem 0;"><a class="more_case inm" href="case_list.html?page=1&type=0">查看更多案例</a></div>
 </section>
 <!--成功案例-->
 <section class="bg_f">
@@ -199,7 +199,7 @@
         <div class="suc_item">
             <ul class="suc_item_list">
                 <li ng-repeat="item2 in items2">
-                    <a href="#" class="flex-container">
+                    <a href="case_details.html?id={{item2.id}}" class="flex-container">
                         <div class="case_2"><img src="{{http}}{{item2.image}}" alt=""></div>
                         <div class="suc_info">
                             <p class="suc_name">{{item2.cnName}}</p>
@@ -212,12 +212,12 @@
                 </li>
 
             </ul>
-            <div class="tm bg_f" style="padding: 0.6rem 0;"><a class="more_case inm" href="http://smartapply.gmatonline.cn/cn/case.html">查看更多案例</a></div>
+            <div class="tm bg_f" style="padding: 0.6rem 0;"><a class="more_case inm" href="case_list.html?page=1&type=0">查看更多案例</a></div>
         </div>
         <div class="suc_item">
             <ul class="suc_item_list">
                 <li ng-repeat="item3 in items3">
-                    <a href="#" class="flex-container">
+                    <a href="case_details.html?id={{item3.id}}" class="flex-container">
                         <div class="case_2"><img src="{{http}}{{item3.image}}" alt=""></div>
                         <div class="suc_info">
                             <p class="suc_name">{{item3.cnName}}</p>
@@ -229,12 +229,12 @@
                     </a>
                 </li>
             </ul>
-            <div class="tm bg_f" style="padding: 0.6rem 0;"><a class="more_case inm" href="http://smartapply.gmatonline.cn/cn/case.html">查看更多案例</a></div>
+            <div class="tm bg_f" style="padding: 0.6rem 0;"><a class="more_case inm" href="case_list.html?page=1&type=0">查看更多案例</a></div>
         </div>
         <div class="suc_item">
             <ul class="suc_item_list">
                 <li ng-repeat="item4 in items4">
-                    <a href="#" class="flex-container">
+                    <a href="case_details.html?id={{item4.id}}" class="flex-container">
                         <div class="case_2"><img src="{{http}}{{item4.image}}" alt=""></div>
                         <div class="suc_info">
                             <p class="suc_name">{{item4.cnName}}</p>
@@ -246,12 +246,12 @@
                     </a>
                 </li>
             </ul>
-            <div class="tm bg_f" style="padding: 0.6rem 0;"><a class="more_case inm" href="http://smartapply.gmatonline.cn/cn/case.html">查看更多案例</a></div>
+            <div class="tm bg_f" style="padding: 0.6rem 0;"><a class="more_case inm" href="case_list.html?page=1&type=0">查看更多案例</a></div>
         </div>
         <div class="suc_item">
             <ul class="suc_item_list">
                 <li ng-repeat="item5 in items5">
-                    <a href="#" class="flex-container">
+                    <a href="case_details.html?id={{item5.id}}" class="flex-container">
                         <div class="case_2"><img src="{{http}}{{item5.image}}" alt=""></div>
                         <div class="suc_info">
                             <p class="suc_name">{{item5.cnName}}</p>
@@ -263,12 +263,12 @@
                     </a>
                 </li>
             </ul>
-            <div class="tm bg_f" style="padding: 0.6rem 0;"><a class="more_case inm" href="http://smartapply.gmatonline.cn/cn/case.html">查看更多案例</a></div>
+            <div class="tm bg_f" style="padding: 0.6rem 0;"><a class="more_case inm" href="case_list.html?page=1&type=0">查看更多案例</a></div>
         </div>
         <div class="suc_item">
             <ul class="suc_item_list">
                 <li ng-repeat="item6 in items6">
-                    <a href="#" class="flex-container">
+                    <a href="case_details.html?id={{item6.id}}" class="flex-container">
                         <div class="case_2"><img src="{{http}}{{item6.image}}" alt=""></div>
                         <div class="suc_info">
                             <p class="suc_name">{{item6.cnName}}</p>
@@ -280,7 +280,7 @@
                     </a>
                 </li>
             </ul>
-            <div class="tm bg_f" style="padding: 0.6rem 0;"><a class="more_case inm" href="case_list.html">查看更多案例</a></div>
+            <div class="tm bg_f" style="padding: 0.6rem 0;"><a class="more_case inm" href="case_list.html?page=1&type=0">查看更多案例</a></div>
         </div>
         </div>
     </div>

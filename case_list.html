@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="myApp">
 <head>
     <meta charset="UTF-8">
     <meta name="keywords" content="">
@@ -26,136 +26,44 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/case_list.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/swiper-3.3.1.min.css">
     <script src="js/jquery-1.12.2.min.js"></script>
     <script src="js/swiper-3.3.1.jquery.min.js"></script>
     <script src="js/common.js"></script>
     <script src="js/public.js"></script>
-    <title>案例列表</title>
-    <style>
-        .case_list_wrap{
-            padding-bottom: 0.5rem;
-        }
-        .case_list_wrap li {
-            background: #ffffff;
-            padding: 0.5rem;
-            margin-top: 0.5rem;
-        }
-        .case_list_wrap li .flex-container{
-            align-items: flex-start;
-        }
-
-        .case_img {
-            width: 5rem;
-            height: 4rem;
-            overflow: hidden;
-            outline: 1px solid #468ed1;
-        }
-
-        .case_img img {
-            width: 100%;
-            height: 100%;
-        }
-
-        .case_info {
-            width: 68%;
-        }
-
-        .case_tit {
-            color: #343434;
-            margin-bottom: 0.2rem;
-            text-align: justify;
-            font-size: 0.7rem;
-        }
-
-        .case_info_text {
-            font-size: 0.6rem;
-            line-height: 0.8rem;
-            height: 2.4rem;
-            text-align: justify;
-            color: #757575;
-        }
-
-        .case_list_wrap .show_detail {
-            display: inline-block;
-            vertical-align: middle;
-            font-size: 0.5rem;
-            color: #ffffff;
-            padding: 0.2rem 0.7rem;
-            background: #468ed1;
-            border-radius: 0.3rem;
-        }
-
-    </style>
+    <script src="js/case_list.js"></script>
+    <script src="js/angular1.3.1.js"></script>
+    <title>案例库</title>
 </head>
-<body>
+<body ng-controller="abroad_view">
 <!--头部-->
 <section class="relative">
     <div class="bg_b header_nav pd_lr5 flex-container">
-        <a href="#"><i class="icon-angle-left nav_icon color_f"></i></a>
-        <span class="color_f header_name">案例列表</span>
+        <a href="javascript:history.go(-1);"><i class="icon-angle-left nav_icon color_f"></i></a>
+        <span class="color_f header_name">案例库</span>
         <span></span>
     </div>
 </section>
 <!--案例列表-->
 <section>
     <ul class="case_list_wrap">
-        <li class="flex-container">
-            <a href="case_details.html">
+        <li ng-repeat="data in data">
+            <a href="case_details.html?id={{data.id}}">
                 <div class="flex-container">
-                    <div class="case_img"><img src="images/default.png" alt=""></div>
+                    <div class="case_img"><img src="{{http}}{{data.image}}" alt=""></div>
                     <div class="case_info">
-                        <p class="case_tit">USC南加大全美排名第一BA录取！</p>
-                        <p class="ellipsis-3 case_info_text">USC BA录取！本科吉林大学，信用管理专业，
-                            gpa3.6+。gmat700+，托福100+。一个银
-                            行，一个证券......
-                        </p>
+                        <p class="case_tit">{{data.name}}</p>
+                        <p class="ellipsis-3 case_info_text">{{data.answer}}</p>
                         <!--<div class="tr"><a class="show_detail" href="#">查看详情</a></div>-->
                     </div>
                 </div>
             </a>
-
         </li>
-        <li class="flex-container">
-            <a href="#">
-                <div class="flex-container">
-                    <div class="case_img"><img src="images/default.png" alt=""></div>
-                    <div class="case_info">
-                        <p class="case_tit">USC南加大全美排名第一BA录取！</p>
-                        <p class="ellipsis-3 case_info_text">USC BA录取！本科吉林大学，信用管理专业，
-                            gpa3.6+。gmat700+，托福100+。一个银
-                            行，一个证券......
-                        </p>
-                        <!--<div class="tr"><a class="show_detail" href="#">查看详情</a></div>-->
-                    </div>
-                </div>
-            </a>
 
-        </li>
-        <li class="flex-container">
-            <a href="#">
-                <div class="flex-container">
-                    <div class="case_img"><img src="images/default.png" alt=""></div>
-                    <div class="case_info">
-                        <p class="case_tit">USC南加大全美排名第一BA录取！</p>
-                        <p class="ellipsis-3 case_info_text">USC BA录取！本科吉林大学，信用管理专业，
-                            gpa3.6+。gmat700+，托福100+。一个银
-                            行，一个证券......
-                        </p>
-                        <!--<div class="tr"><a class="show_detail" href="#">查看详情</a></div>-->
-                    </div>
-                </div>
-            </a>
-
-        </li>
     </ul>
-    <ul class="pageSize">
-        <li class="on">1</li>
-        <li>2</li>
-        <li>3</li>
-        <li>4</li>
-    </ul>
+    <ul class="pageSize"  ng-bind-html="pageSize | trustHtml"></ul>
 </section>
 <!--备案信息-->
 <section class="cr_wrap">

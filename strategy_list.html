@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="myApp">
 <head>
     <meta charset="UTF-8">
     <meta name="keywords" content="">
@@ -26,166 +26,44 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/case_list.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/swiper-3.3.1.min.css">
     <script src="js/jquery-1.12.2.min.js"></script>
     <script src="js/swiper-3.3.1.jquery.min.js"></script>
     <script src="js/common.js"></script>
     <script src="js/public.js"></script>
-    <title>攻略列表</title>
-    <style>
-        .strategy_list_wrap li {
-            padding: 0.5rem;
-            background: #ffffff;
-            border-bottom: 2px solid #d5d5d5;
-        }
-        .strategy_img{
-            width: 5rem;
-            height: 4rem;
-            overflow: hidden;
-        }
-        .strategy_img img{
-            width: 100%;
-            height: 100%;
-        }
-        .strategy_info{
-            width: 69%;
-        }
-        .strategy_tit{
-            font-size: 0.65rem;
-            text-align: justify;
-        }
-        .strategy_info_text{
-            text-align: justify;
-            font-size: 0.5rem;
-            color: #777777;
-        }
-        .creatTime{
-            font-size: 0.45rem;
-            color: #afafaf;
-        }
-        .pageSize{
-            text-align: right;
-            padding:0.3rem 0.75rem 0.5rem;
-            background: #ffffff;
-        }
-        .pageSize li{
-            font-size: 0.6rem;
-            color: #468ed1;
-            background: #ffffff;
-            height: 1rem;
-            text-align: center;
-            line-height: 1rem;
-            padding: 0 0.3rem;
-            margin-right: 0.1rem;
-            display: inline-block;
-            vertical-align: middle;
-            border: 1px dashed #468ed1;
-        }
-        .pageSize li:last-child{
-            margin-right: 0;
-        }
-        .pageSize li.on{
-            color: #ffffff;
-            background: #468ed1;
-        }
-    </style>
+    <script src="js/strategy_list.js"></script>
+    <script src="js/angular1.3.1.js"></script>
+    <title>{{title.name}}</title>
 </head>
-<body>
+<body ng-controller="abroad_view">
 <!--头部-->
 <section class="relative">
     <div class="bg_b header_nav pd_lr5 flex-container">
         <a href="#"><i class="icon-angle-left nav_icon color_f"></i></a>
-        <span class="color_f header_name"> 留学国家</span>
+        <span class="color_f header_name">{{title.name}}</span>
         <span></span>
     </div>
 </section>
 <!--详情内容-->
 <section>
     <ul class="strategy_list_wrap">
-        <li class="flex-container">
-            <a href="case_details.html">
+        <li ng-repeat="data in data">
+            <a href="content_details.html?id={{data.id}}">
                 <div class="flex-container">
-                    <div class="strategy_img"><img src="images/test_img.png" alt=""></div>
+                    <div class="strategy_img"><img src="{{data.image | nullImg}}" alt=""></div>
                     <div class="strategy_info">
-                        <p class="strategy_tit ellipsis-2">TIMES排名 | 2017最新全球留学费用排行榜，最贵的不?</p>
-                        <p class="creatTime">2016.11.08</p>
-                        <p class="ellipsis-2 strategy_info_text">
-                            前不久，TIMES联合FAIRFX(旅行货币兑换公司)发布
-                            了最新的全球留学费用排行榜....
-                        </p>
-                    </div>
-                </div>
-            </a>
-        </li>
-        <li class="flex-container">
-            <a href="case_details.html">
-                <div class="flex-container">
-                    <div class="strategy_img"><img src="images/test_img.png" alt=""></div>
-                    <div class="strategy_info">
-                        <p class="strategy_tit ellipsis-2">TIMES排名 | 2017最新全球留学费用排行榜，最贵的不?</p>
-                        <p class="creatTime">2016.11.08</p>
-                        <p class="ellipsis-2 strategy_info_text">
-                            前不久，TIMES联合FAIRFX(旅行货币兑换公司)发布
-                            了最新的全球留学费用排行榜....
-                        </p>
-                    </div>
-                </div>
-            </a>
-        </li>
-        <li class="flex-container">
-            <a href="case_details.html">
-                <div class="flex-container">
-                    <div class="strategy_img"><img src="images/test_img.png" alt=""></div>
-                    <div class="strategy_info">
-                        <p class="strategy_tit ellipsis-2">TIMES排名 | 2017最新全球留学费用排行榜，最贵的不?</p>
-                        <p class="creatTime">2016.11.08</p>
-                        <p class="ellipsis-2 strategy_info_text">
-                            前不久，TIMES联合FAIRFX(旅行货币兑换公司)发布
-                            了最新的全球留学费用排行榜....
-                        </p>
-                    </div>
-                </div>
-            </a>
-        </li>
-        <li class="flex-container">
-            <a href="case_details.html">
-                <div class="flex-container">
-                    <div class="strategy_img"><img src="images/test_img.png" alt=""></div>
-                    <div class="strategy_info">
-                        <p class="strategy_tit ellipsis-2">TIMES排名 | 2017最新全球留学费用排行榜，最贵的不?</p>
-                        <p class="creatTime">2016.11.08</p>
-                        <p class="ellipsis-2 strategy_info_text">
-                            前不久，TIMES联合FAIRFX(旅行货币兑换公司)发布
-                            了最新的全球留学费用排行榜....
-                        </p>
-                    </div>
-                </div>
-            </a>
-        </li>
-        <li class="flex-container">
-            <a href="case_details.html">
-                <div class="flex-container">
-                    <div class="strategy_img"><img src="images/test_img.png" alt=""></div>
-                    <div class="strategy_info">
-                        <p class="strategy_tit ellipsis-2">TIMES排名 | 2017最新全球留学费用排行榜，最贵的不?</p>
-                        <p class="creatTime">2016.11.08</p>
-                        <p class="ellipsis-2 strategy_info_text">
-                            前不久，TIMES联合FAIRFX(旅行货币兑换公司)发布
-                            了最新的全球留学费用排行榜....
-                        </p>
+                        <p class="strategy_tit ellipsis-2">{{data.name}}</p>
+                        <p class="creatTime">{{data.createTime}}</p>
+                        <p class="ellipsis-2 strategy_info_text">{{data.answer}}</p>
                     </div>
                 </div>
             </a>
         </li>
 
     </ul>
-    <ul class="pageSize">
-        <li class="on">1</li>
-        <li>2</li>
-        <li>3</li>
-        <li>4</li>
-    </ul>
+    <ul class="pageSize" ng-bind-html="pageSize | trustHtml"></ul>
 </section>
 <!--备案信息-->
 <section class="cr_wrap">

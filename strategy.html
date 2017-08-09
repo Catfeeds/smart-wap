@@ -174,7 +174,7 @@
         <b>{{items5.name}}</b>
         <div class="plan-right">
             <ul>
-                <li><a href="#">More &gt;</a></li>
+                <li><a href="strategy_list.html?id={{items5.id}}&page=1">More &gt;</a></li>
             </ul>
         </div>
     </div>
@@ -196,10 +196,10 @@
         <b>{{items3.name}}</b>
         <div class="plan-right">
             <ul class="tab_item tabs">
-                <li class="part on" hidefocus="true">GMAT</li>
-                <li class="part" hidefocus="true">托福</li>
-                <li class="part" hidefocus="true">留学</li>
-                <li><a href="#">More &gt;</a></li>
+                <li class="part on" data-id="{{items3.data.child[0].id}}" hidefocus="true">GMAT</li>
+                <li class="part" data-id="{{items3.data.child[1].id}}" hidefocus="true">托福</li>
+                <li class="part" data-id="{{items3.data.child[2].id}}" hidefocus="true">留学</li>
+                <li class="list_more"><a href="javascript:;">More &gt;</a></li>
             </ul>
         </div>
     </div>
@@ -254,7 +254,7 @@
         <b>{{items4.name}}</b>
         <div class="plan-right">
             <ul>
-                <li><a href="#">More &gt;</a></li>
+                <li><a href="strategy_list.html?id={{items4.id}}&page=1">More &gt;</a></li>
             </ul>
         </div>
     </div>
@@ -276,7 +276,7 @@
         <b>{{items2.name}}</b>
         <div class="plan-right">
             <ul>
-                <li><a href="#">More &gt;</a></li>
+                <li><a href="strategy_list.html?id={{items2.id}}&page=1">More &gt;</a></li>
             </ul>
         </div>
     </div>
@@ -335,6 +335,10 @@
             paginationClickable: true,
             pagination: '.baner-page'
         });
+        $('.list_more').click(function(){
+            var id=$(this).parents(".tab_item").find("li.on").attr("data-id");
+            $(this).children('a').attr('href','strategy_list.html?id='+id+'&page=1');
+        })
 
     });//end
 

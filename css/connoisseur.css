@@ -7,7 +7,7 @@
 .country-left{
     width: 25%;
     float: left;
-    font-size: 1rem;
+    font-size: 0.7rem;
     margin-right: 2%;
 }
 .country-right{
@@ -24,7 +24,7 @@
     display: block;
     color: #434242;
     padding: 2px 0;
-    font-size: 0.9rem;
+    font-size: 0.7rem;
 }
 .country-right ul li.on a{
     color: #ffffff;
@@ -42,18 +42,19 @@
     margin: 0 auto;
 }
 .t-l-title label{
-    font-size: 0.9rem;
+    font-size: 0.8rem;
 }
 .t-l-title .choose-span.on{
     background-color: #478fd1;
     color: #ffffff;
+    font-size: 0.7rem;
     border-radius: 5px;
-    padding: 5px;
+    padding: 2px 5px;
 }
 .t-l-title span{
     color: #434343;
     margin-left: 10px;
-    font-size: 0.9rem;
+    font-size: 0.7rem;
 }
 .t-l-con{
     width: 90%;
@@ -83,7 +84,7 @@
     float: left;
 }
 .list-center .list-title{
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     font-weight: normal;
     position: relative;
 }
@@ -114,7 +115,7 @@
     color: #ffffff;
     background-color: #478fd1;
     border-radius: 5px;
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     padding: 2px 0;
 }
 .hotCounselor{
@@ -125,7 +126,7 @@
 }
 .com-title{
     width: 100%;
-    font-size: 1rem;
+    font-size: 0.7rem;
     padding-bottom: 2px;
     position: relative;
 }
@@ -160,12 +161,12 @@
 .in-swiper h4{
     font-weight: normal;
     color: #ffc402;
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     margin: 5px 0;
 }
 .in-swiper  p{
     color: #4e4e4e;
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     margin-bottom: 5px;
 }
 .in-swiper a{

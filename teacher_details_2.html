@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="title" content="">
+    <meta name="author" content="">
+    <meta name="Copyright" content="">
+    <!-- <meta name="description" content=""> -->
+    <!-- 让IE浏览器用最高级内核渲染页面 还有用 Chrome 框架的页面用webkit 内核
+    <!-- ================================================== -->
+    <meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge">
+    <!-- IOS6全屏 Chrome高版本全屏-->
+    <!-- ================================================== -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <!-- 让360双核浏览器用webkit内核渲染页面-->
+    <!-- ================================================== -->
+    <meta name="renderer" content="webkit">
+    <!-- Mobile Specific Metas
+   ================================================== -->
+    <!-- !!!注意 minimal-ui 是IOS7.1的新属性，最小化浏览器UI -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/teacher_details2.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/swiper-3.3.1.min.css">
+    <script src="js/jquery-1.12.2.min.js"></script>
+    <script src="js/swiper-3.3.1.jquery.min.js"></script>
+    <script src="js/idangerous.swiper.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/public.js"></script>
+    <script src="js/teacher-details.js"></script>
+    <script src="js/angular1.3.1.js"></script>
+    <title>老师详情</title>
+</head>
+<body ng-controller="abroad_view">
+<!--头部-->
+<section class="relative">
+    <div class="bg_b header_nav pd_lr5 flex-container">
+        <a href="#"><i class="icon-angle-left nav_icon color_f"></i></a>
+        <span class="color_f header_name">老师详情</span>
+        <span></span>
+    </div>
+</section>
+<!--老师介绍top-->
+<section>
+    <div class="flex-container teacher_top_wrap bg_f mg_b5">
+        <div class="teach_img"><img src="{{http}}{{teacherT.image}}" alt=""></div>
+        <div class="teacher_top_right">
+            <div class="flex-container teacher_name_wrap">
+                <div><span class="teacher_name">{{teacherT.name}}</span><span class="work-info">{{teacherT.alternatives}}</span></div>
+                <a class="zx_btn"
+                   href="mqqwpa://im/chat?chat_type=wpa&uin=1746295647&version=1&src_type=web&web_src=http://m.haishiit.com/">预约咨询</a>
+            </div>
+            <div class="teacher_tag"><span>{{teacherT.catName}}</span></div>
+            <ul class="flex-container-left success_num_wrap tm">
+                <li>
+                    <p class="success_num">{{teacherT.listeningFile}}份</p>
+                    <p class="success_name">获取录取<br>通知书</p>
+                </li>
+                <li>
+                    <p class="success_num">{{teacherT.cnName}}%</p>
+                    <p class="success_name">留学申请<br>成功率</p>
+                </li>
+                <li>
+                    <p class="success_num">{{teacherT.numbering}}分</p>
+                    <p class="success_name">学生印象<br>评分</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!--老师简介bt-->
+<section>
+    <div class="wrap">
+        <div class="tabs flex-container-center">
+            <span class="part active"><a href="#" hidefocus="true">顾问介绍 </a></span>
+            <span class="part"><a href="#" hidefocus="true">近期服务案例（7） </a></span>
+            <span class="part"><a href="#" hidefocus="true">TA的回答（1）</a></span>
+        </div>
+        <div class="swiper-container">
+            <div class="swiper-wrapper bg_f">
+                <div class="swiper-slide">
+                    <div class="slide_content tIntra" ng-bind-html="teacherT.answer | trustHtml"></div>
+                </div>
+                <div class="swiper-slide">
+                    <ul class="slide_content tCase_list">
+                        <li class="flex-container" ng-repeat="caseListT in caseList" is-over="toggle.now">
+                            <div class="tCase_img"><img src="{{http}}{{caseListT[0].image}}" alt=""></div>
+                            <div class="tCase_wrap">
+                                <p class="tCase_name">{{caseListT[0].name}}</p>
+                                <dl class="kh_info">
+                                    <dt>客户：{{caseListT[0].cnName}}</dt>
+                                    <dt>{{caseListT[0].listeningFile}}</dt>
+                                    <dt>毕业院校：{{caseListT[0].numbering}}</dt>
+                                    <dt>硬件条件：{{caseListT[0].sentenceNumber}}</dt>
+                                </dl>
+                                <p class="t_case_de" ng-bind-html="caseListT[0].duration | trustHtml"></p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="swiper-slide">
+                    <ul class="slide_content tAnswer_list">
+                        <li class="flex-container" ng-repeat="answerT in answer">
+                            <div class="tAnswer_img"><img src="{{answerT.image | nullImg}}" alt=""></div>
+                            <div class="tAnswer_wrap">
+                                <a href="qa-details.html?id={{answerT.pid}}">
+                                <p class="tAnswer_tit">{{answerT.question}}</p>
+                                <p class="tAnswer_time">{{answerT.addtime}}</p>
+                                <p class="tAnswer_de" ng-bind-html="answerT.content | trustHtml"></p>
+                                </a>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--备案信息-->
+<section class="cr_wrap">
+    <div class="tm copyRight">©2017 gmatonline.cn All Rights Reserved 京ICP备15001182号-1<br>京公网安备11010802017681 免责声明</div>
+</section>
+<!--footer-->
+<footer>
+    <ul class="ftnav_list flex-container">
+        <li>
+            <a href="index.html">
+                <div>
+                    <img src="images/icon_ft_1.png" style="height: 1.1rem" alt="">
+                    <span>首页</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="tel:4001816180">
+                <div>
+                    <img src="images/icon_ft_2.png" style="height: 1.1rem" alt="">
+                    <span>拨打电话</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="mqqwpa://im/chat?chat_type=wpa&uin=1746295647&version=1&src_type=web&web_src=http://m.haishiit.com/">
+                <div>
+                    <img src="images/icon_ft_3.png" style="height: 1.1rem" alt="">
+                    <span>在线咨询</span>
+                </div>
+            </a>
+        </li>
+    </ul>
+</footer>
+</body>
+<script>
+</script>
+</html>
