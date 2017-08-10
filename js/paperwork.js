@@ -76,7 +76,7 @@ function changeWshu(o){
                     '<div class="fl pt_info_wrap">'+
                     ' <p class="pt_tit ellipsis">'+data.data[i].name+'</p>'+
                     ' <p class="pt_de ellipsis-2">'+data.data[i].answer+'</p>'+
-                    '<a class="mall_btn inm tm" href="#">查看详情</a>'+
+                    '<a class="mall_btn inm tm" href="diy.html?id='+data.data[i].id+'">查看详情</a>'+
                     '</div>'+
                     '</a>'+
                     '</li>';

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="myApp">
 <head>
     <meta charset="UTF-8">
     <meta name="keywords" content="">
@@ -31,9 +31,12 @@
     <script src="js/jquery-1.12.2.min.js"></script>
     <script src="js/swiper-3.3.1.jquery.min.js"></script>
     <script src="js/common.js"></script>
+    <script src="js/public.js"></script>
+    <script src="js/background_ts.js"></script>
+    <script src="js/angular1.3.1.js"></script>
     <title>背景提升</title>
 </head>
-<body>
+<body ng-controller="abroad_view">
 <!--头部-->
 <section class="relative">
     <div class="bg_b header_nav pd_lr5 flex-container">
@@ -238,38 +241,33 @@
             <span class="big_tit">雷哥网背景提升资源</span>
         </div>
             <select class="zy_select" name="" id="">
-                <option value="0">国内实习</option>
-                <option value="0">国外实习</option>
-                <option value="0">海外就业</option>
-                <option value="0">国外游学</option>
-                <option value="0">科研实习</option>
-                <option value="0">项目比赛</option>
-                <option value="0">公益项目</option>
+                <option ng-repeat="category in category" value="{{$index}}">{{category.name}}</option>
             </select>
-
     </div>
-    <div class="clearfix xy_wrap pd_lr5">
-        <div class="zy_left fl">
-            <a href="#">
-                <img class="zy_img" src="images/zy_1.png" alt="">
-                <p class="tm zy_name">上海初级交易员项目<br>TSU@ Shanghai </p>
-            </a>
-        </div>
-        <ul class="zy_right fr">
-            <li>
+    <div class="xy_t">
+        <div ng-repeat="data in data" class="clearfix xy_wrap pd_lr5">
+            <div class="zy_left fl">
                 <a href="#">
-                    <img class="zy_img" src="images/zy_2.png" alt="">
-                    <p class="tm zy_name">2017香港基金管理实训<br>@ Hong Kong</p>
+                    <img class="zy_img" src="{{http}}{{data[0].image}}" alt="">
+                    <p class="tm zy_name">{{data[0].name}}</p>
                 </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img class="zy_img" src="images/zy_3.png" alt="">
-                    <p class="tm zy_name">香港对冲基金实训2017<br>年暑假项目</p>
-                </a>
-            </li>
-        </ul>
+            </div>
+            <ul class="zy_right fr">
+                <li>
+                    <a href="#">
+                        <img class="zy_img" src="{{http}}{{data[1].image}}" alt="">
+                        <p class="tm zy_name">{{data[1].name}}</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img class="zy_img" src="{{http}}{{data[2].image}}" alt="">
+                        <p class="tm zy_name">{{data[2].name}}</p>
+                    </a>
+                </li>
+            </ul>
 
+        </div>
     </div>
     <div class="tm" style="margin-bottom: 0.8rem;">
         <a class="sub1_href inm" href="#">项目咨询</a>
@@ -309,4 +307,12 @@
     </ul>
 </footer>
 </body>
+<script>
+    $(function(){
+        $('.zy_select').change(function(){
+            var num=$(this).val();
+            $('.xy_wrap').eq(num).slideDown().siblings(".xy_wrap").slideUp();
+        })
+    })
+</script>
 </html>

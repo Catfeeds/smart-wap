@@ -126,6 +126,10 @@
 }
 .xy_wrap{
     padding: 0.8rem 0.5rem;
+    display: none;
+}
+.xy_wrap:first-child{
+    display: block;
 }
 .zy_select{
     color: #fff;

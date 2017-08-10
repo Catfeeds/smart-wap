@@ -74,8 +74,13 @@ $(function () {
             }).success(function (data) {
                 $scope.http = httpUrl;
                 $scope.http2 = httpUrl2;
-                $scope.data=data.data.data;
-                $scope.pageSize=data.data.pageStr;
+                if(data.data.data=''){
+                    alert('暂无当前数据！');
+                }else {
+                    $scope.data=data.data.data;
+                    $scope.pageSize=data.data.pageStr;
+                }
+
             });
         }
 

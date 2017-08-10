@@ -3,9 +3,6 @@
  */
 $(function() {
     var Requests = GetRequests();
-    var id = Requests['id'];
-    var pid = Requests['tagId'];
-    var tagStr = Requests['tagStr'];
     //声明模块
     var myApp = angular.module("myApp", []);
     myApp.directive('isOver', function () {
@@ -41,7 +38,31 @@ $(function() {
             $scope.item5=data.school.school[4];
             $scope.item6=data.school.school[5];
         });
-
-
     }]);
+    $('.form_btn').click(function(){
+        var country=$('#country').val();
+        var major=$('#major').val();
+        var grade=$('#grade').val();
+        var phone=$('#phone').val();
+        var regexp=/^1[3|4|5|7|8][0-9]{9}$/;
+        if(regexp.test(phone)){
+            $.ajax({
+                url:httpUrl+'/cn/wap-api/programme',
+                dataType:'json',
+                type:'post',
+                data:{
+                    country:country,
+                    major:major,
+                    grade:grade,
+                    phone:phone
+                },
+                success:function(data){
+                    alert(data.message);
+                }
+            })
+        }else {
+            alert('请输入正确的手机号码！');
+        }
+
+    })
 });

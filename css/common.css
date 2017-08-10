@@ -304,19 +304,25 @@ body{
 
 /*footer*/
 .cr_wrap {
+    /*position: fixed;*/
+    /*width: 100%;*/
+    /*left: 0;*/
+    height: 2.6rem;
+    /*bottom: 2.4rem;*/
     padding: 0.5rem 0;
     background: #eeeeee;
     font-size: 0.5rem;
     color: #3c3c3c;
     line-height: 0.9rem;
 }
-/*footer{*/
-    /*position: fixed;*/
-    /*height: 2.4rem;*/
-    /*left: 0;*/
-    /*bottom: 0;*/
-    /*width: 100%;*/
-/*}*/
+footer{
+    position: fixed;
+    height: 2.4rem;
+    left: 0;
+    bottom: 0;
+    z-index: 999;
+    width: 100%;
+}
 .ftnav_list li {
     width: 33.3%;
     height: 2.4rem;
@@ -339,6 +345,7 @@ body{
 }
 body{
     background-color: #f0f0f0!important;
+    padding-bottom: 2.4rem;
 }
 .com-auto{
     width: 90%;
