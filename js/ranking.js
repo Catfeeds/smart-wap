@@ -134,7 +134,7 @@ function contentStr(type,year,pageNum,strF){
                 '<p class="ellipsis">'+data.data[i].title+'</p>'+
                 '</div>'+
                 '<div class="s-c-right">'+
-                '<a href="#">查看学校</a>'+
+                '<a href="school-detail.html?id='+data.data[i].alternatives+'">查看学校</a>'+
                 '<p class="ellipsis">查看人数:<span>3695</span>'+
                 '评论:<span>1671</span></p>'+
                 '</div>'+

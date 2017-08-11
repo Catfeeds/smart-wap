@@ -18,6 +18,18 @@ $(function() {
             }
         }
     });
+    myApp.filter('viewCount', function ($sce) {
+        return function (count) {
+            if(count==0){
+                return Math.ceil(Math.random()*10000);
+            }
+            else {
+
+                return count;
+            }
+
+        }
+    });
     //通过模块生成调用控制器
     myApp.controller("abroad_view",["$scope","$http","$sce",function($scope,$http,$sce){
         $http({

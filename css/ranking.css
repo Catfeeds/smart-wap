@@ -65,7 +65,7 @@
 .s-c-left{
     float: left;
     color: #ffffff;
-    font-size: 0.9rem;
+    font-size: 0.6rem;
     position: relative;
     background-color: #478fd1;
     border-radius: 5px;
@@ -86,7 +86,7 @@
     margin-top: 5px;
 }
 .s-c-center h4{
-   font-size: 0.8rem;
+   font-size: 0.7rem;
     font-weight: normal;
 }
 .s-c-center p{
@@ -101,7 +101,7 @@
 .s-c-right a{
     background-color: #478fd1;
     color: #ffffff;
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     padding: 2px 5px;
     border-radius: 5px;
 }
@@ -149,7 +149,7 @@
     margin-right: 5px;
 }
 .success-con ul li a{
-    font-size: 0.8rem;
+    font-size: 0.7rem;
 }
 .success-con>a{
     color: #478fd1;
