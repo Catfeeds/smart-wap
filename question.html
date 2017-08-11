@@ -142,47 +142,25 @@
         </ul>
     </div>
 </section>
-<!--向她提问-->
-<div class="ask-que">
-    <div class="a-q-title">
-        <img src="images/an-img/question-1.png" alt="问号图标"/>
-        <span>向她提问</span>
-    </div>
-    <div class="a-q-con">
-        <ul>
-            <li ng-repeat="item1 in items1">
-                <div class="q-con-left">
-                    <img src="{{http}}{{item1.information.image}}" />
-                </div>
-                <div class="q-con-right">
-                    <h4>{{item1.information.name}}</h4>
-                    <p>已回答{{item1.num}}个问题</p>
-                    <a href="#">向她提问</a>
-                </div>
-                <div class="clearfix"></div>
-            </li>
-        </ul>
-    </div>
-</div>
 <!--发现-->
 <div class="found">
-   <div class="found-title">
-       <div class="f-in-title">
-           <label>发现</label>
-           <ul>
-               <li class="active">
-                   <a href="javascript:;">推荐</a>
-               </li>
-               <li>
-                   <a href="javascript:;">最新</a>
-               </li>
-               <li>
-                   <a href="javascript:;">等待回复</a>
-               </li>
-           </ul>
-           <div class="clearfix"></div>
-       </div>
-   </div>
+    <div class="found-title">
+        <div class="f-in-title">
+            <label>发现</label>
+            <ul>
+                <li class="active">
+                    <a href="javascript:;">推荐</a>
+                </li>
+                <li>
+                    <a href="javascript:;">最新</a>
+                </li>
+                <li>
+                    <a href="javascript:;">等待回复</a>
+                </li>
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+    </div>
     <div class="f-in-con">
         <div class="com-auto">
             <ul>
@@ -268,6 +246,28 @@
                 </li>
             </ul>
         </div>
+    </div>
+</div>
+<!--向她提问-->
+<div class="ask-que">
+    <div class="a-q-title">
+        <img src="images/an-img/question-1.png" alt="问号图标"/>
+        <span>向她提问</span>
+    </div>
+    <div class="a-q-con">
+        <ul>
+            <li ng-repeat="item1 in items1">
+                <div class="q-con-left">
+                    <img src="{{http}}{{item1.information.image}}" />
+                </div>
+                <div class="q-con-right">
+                    <h4>{{item1.information.name}}</h4>
+                    <p>已回答{{item1.num}}个问题</p>
+                    <a href="http://p.qiao.baidu.com/im/index?siteid=7905926&ucid=18329536&cp=&cr=&cw=#close-back18">向她提问</a>
+                </div>
+                <div class="clearfix"></div>
+            </li>
+        </ul>
     </div>
 </div>
 <!--备案信息-->

@@ -76,7 +76,6 @@ body{
 .found{
     width: 100%;
     background-color: #ffffff;
-    margin-top: 10px;
 }
 .found-title{
     padding: 8px 0 10px 0;
@@ -104,7 +103,7 @@ body{
 }
 .f-in-title  ul li{
     float: left;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     margin-right: 5%;
 }
 .f-in-title  ul li:last-child{

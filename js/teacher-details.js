@@ -1,4 +1,4 @@
-$(function(){
+$(function () {
     var Requests = GetRequests();
     var contentid = Requests['contentid'];
     //声明模块
@@ -24,9 +24,9 @@ $(function(){
     });
     myApp.filter('nullImg', function () {
         return function (img) {
-            if(img){
-                return httpUrl+img;
-            }else {
+            if (img) {
+                return httpUrl + img;
+            } else {
                 return 'images/an-img/teacher-answer.png';
             }
         }
@@ -34,14 +34,12 @@ $(function(){
     //通过模块生成调用控制器
     myApp.controller("abroad_view", ["$scope", "$http", "$sce", function ($scope, $http, $sce) {
         $scope.toggle = {
-            now:false
+            now: false
         };
-        $scope.$watch('toggle.now',function(){
-            if($scope.toggle.now){
+        $scope.$watch('toggle.now', function () {
+            if ($scope.toggle.now) {
                 var tabsSwiper;
                 tabsSwiper = new Swiper('.swiper-container', {
-                    observer: true,
-                    observeParents: true,
                     speed: 500,
                     onSlideChangeStart: function () {
                         $(".tabs .active").removeClass('active');
@@ -55,6 +53,9 @@ $(function(){
                     $(".tabs .active").removeClass('active');
                     $(this).addClass('active');
                     tabsSwiper.swipeTo($(this).index());
+                    //swiper-slide-active
+                   var p_height=$('.swiper-slide-active .slide_content').height();
+
 
                 });
 
@@ -70,31 +71,34 @@ $(function(){
                 'Content-Type': 'application/x-www-form-urlencoded'
             },
             data: {
-                contentid:contentid
+                contentid: contentid
             }
         }).success(function (data) {
-            $scope.http=httpUrl;
-            $scope.http2=httpUrl2;
-            $scope.teacherT=data.data[0];
-            $scope.caseList=data.caseList;
-            $scope.answer=data.answer;
-            $scope.school=data.school;
+            $scope.http = httpUrl;
+            $scope.http2 = httpUrl2;
+            $scope.teacherT = data.data[0];
+            $scope.caseList = data.caseList;
+            $scope.answer = data.answer;
+            $scope.school = data.school;
+            $scope.caseCount = data.caseList.length;
+            $scope.answerCount = data.answer.length;
+            console.log(data.caseList.length, data.answer.length)
         });
 
     }]);
 });
 
-function seeMore(o){
-    var num=$(".answerBox ul li").length;
-    if($(o).html()=="加载更多"){
-        var nowHeight=$("#moreId ul").height();
+function seeMore(o) {
+    var num = $(".answerBox ul li").length;
+    if ($(o).html() == "加载更多") {
+        var nowHeight = $("#moreId ul").height();
         $("#moreId").animate({
-            height:nowHeight+34+"px"
+            height: nowHeight + 34 + "px"
         });
         $(o).html("收起");
-    }else{
+    } else {
         $("#moreId").animate({
-            height:230+"px"
+            height: 230 + "px"
         });
         $(o).html("加载更多");
     }

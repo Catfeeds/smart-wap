@@ -149,7 +149,8 @@
         <div class="country-right">
             <ul>
                 <li class="on" onclick="clickCountry(this)" data-sid=""><a href="#">全部</a></li>
-                <li ng-repeat="countryT in countrys" onclick="clickCountry(this)" data-sid="{{countryT.id}}"><a href="#">{{countryT.name}}</a></li>
+                <li ng-repeat="countryT in countrys" onclick="clickCountry(this)" data-sid="{{countryT.id}}"><a
+                        href="#">{{countryT.name}}</a></li>
             </ul>
         </div>
         <div class="clearfix"></div>
@@ -164,20 +165,22 @@
     <div class="t-l-con">
         <ul>
             <li ng-repeat="teacherT in teachers" is-over="toggle.now">
-                <div class="list-left">
-                    <img src="http://www.smartapply.cn{{teacherT.image}}" alt="老师头像"/>
-                </div>
-                <div class="list-center">
-                    <div class="list-title">
-                        <span>{{teacherT.name}}</span>
-                        <div class="r-tag">{{teacherT.source}}</div>
+                <a href="teacher_details_2.html?contentid={{teacherT.id}}">
+                    <div class="list-left">
+                        <img src="http://www.smartapply.cn{{teacherT.image}}" alt="老师头像"/>
                     </div>
-                    <p>{{teacherT.buyNum | nullAlter}}</p>
-                    <p>从业{{teacherT.age}}年</p>
-                </div>
+                    <div class="list-center">
+                        <div class="list-title">
+                            <span>{{teacherT.name}}</span>
+                            <div class="r-tag">{{teacherT.source}}</div>
+                        </div>
+                        <p>{{teacherT.buyNum | nullAlter}}</p>
+                        <p>从业{{teacherT.age}}年</p>
+                    </div>
+                </a>
                 <div class="list-right">
                     <p>已帮助<span>{{teacherT.students}}</span>位学生拿到录取</p>
-                    <a href="teacher_details_2.html?contentid={{teacherT.id}}">点击咨询</a>
+                    <a href="teacher_details_2.html?contentid={{teacherT.id}}">查看顾问</a>
                 </div>
                 <div class="clearfix"></div>
             </li>

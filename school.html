@@ -38,6 +38,37 @@
     <script src="js/common.js"></script>
     <script src="js/angular1.3.1.js"></script>
     <title>院校库</title>
+    <style>
+        .school_intra_wrap{
+            padding: 0.7rem 0.5rem 0.9rem;
+        }
+        .school_cn_name{
+            font-size: 0.8rem;
+            margin-top: 0;
+            margin-bottom: 0.2rem;
+        }
+        .school_en_name{
+            font-size: 0.6rem;
+            margin-bottom: 0.2rem;
+        }
+        .school_de{
+            font-size: 0.7rem;
+            text-align: justify;
+        }
+        .school_de p{
+            max-height: 2.7rem;
+            line-height: 0.9rem;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            word-break: break-all;
+            -webkit-line-clamp: 3;
+            overflow: hidden;
+        }
+        .banner a.active:link{
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body ng-controller="abroad_view">
 <!--头部-->
@@ -146,13 +177,21 @@
     </div>
 </section>
 <!--banner-->
-<section class="mg_b5" style="overflow: hidden;">
+<section class="mg_b5 bg_f" style="overflow: hidden;">
     <div class="swiper-container-1 banner-wrap relative">
         <ul class="swiper-wrapper">
-            <li class="swiper-slide banner"><a href="#"><img src="images/an-img/schools-banner.png" alt="banner"/></a>
+            <li class="swiper-slide banner" ng-repeat="banner in banner">
+                <a class="active" href="school-detail.html?id={{banner.id}}">
+                    <div>
+                        <div class="school_img"><img src="http://schools.smartapply.cn{{banner.duration}}" alt="banner"/></div>
+                        <div class="school_intra_wrap">
+                            <h1 class="school_cn_name">{{banner.name}}</h1>
+                            <p class="school_en_name">{{banner.title}}</p>
+                            <div class="school_de" ng-bind-html="banner.cnName | trustHtml"></div>
+                        </div>
+                    </div>
+                </a>
             </li>
-            <li class="swiper-slide banner" ng-repeat="banner in banner"><a href="#"><img
-                    src="http://schools.smartapply.cn{{banner.duration}}" alt="banner"/></a></li>
 
         </ul>
         <div class="baner-page swiper-pagination"></div>
@@ -184,17 +223,20 @@
                     data-toggle="dropdown">
                 <b class="ellipsis demId" data-demId="196">金融</b> <span class="caret"></span>
             </button>
-            <ul class="dropdown-menu" role="menu" id="stopUp" style="height:auto;max-height:none">
-                <li ng-repeat="major1 in major" onclick="selectDiff(this)">
-                    <a href="javascript:void(0);" data-stopPropagation="true" class="ellipsis" style="display: block;padding: 3px 0">&lt;&nbsp;&nbsp;{{major1.name}}</a>
-                    <div class="left-mask">
-                        <ul>
-                            <li ng-repeat="major2 in major1.child" data-mid="{{major2.id}}">{{major2.name}}</li>
-                        </ul>
-                    </div>
-                </li>
+            <div class="dropdown-menu" role="menu" id="stopUp" style="height:auto;max-height:none">
+                <ul  class="menu_1" style="overflow-y: auto;height: 167px;padding: 5px 0;" >
+                    <li ng-repeat="major1 in major" onclick="selectDiff(this)">
+                        <a href="javascript:void(0);" data-stopPropagation="true" class="ellipsis" style="display: block;padding: 3px 0;color: #2d2d2d;">&lt;&nbsp;&nbsp;{{major1.name}}</a>
+                        <div class="left-mask">
+                            <ul>
+                                <li ng-repeat="major2 in major1.child" data-mid="{{major2.id}}">{{major2.name}}</li>
+                            </ul>
+                        </div>
+                    </li>
 
-            </ul>
+                </ul>
+            </div>
+
         </div>
         <div class="bot-infoText">
             <ul>
