@@ -201,14 +201,14 @@
                 <ul>
                     <li ng-repeat="item in video.content">
                         <div class="thub-course">
-                            <img src="images/an-img/know-poster.png" alt="课程图片"/>
+                            <img src="{{item.image | nullImg}}" alt="课程图片"/>
                         </div>
                         <div class="video-info">
                             <h4 class="ellipsis-2">{{item.name}}</h4>
                             <div class="blue-font">
                                 <p>
-                                    <img src="{{http}}{{item.image}}" alt="icon"/>
-                                    <span>课程时长</span><br>
+                                    <img src="images/an-img/know-time.png" alt="icon"/>
+                                    <span style="vertical-align: middle;">课程时长</span><br>
                                     <span class="grey-font">{{item.duration}}</span>
                                 </p>
                                 <p>
@@ -232,7 +232,7 @@
 </div>
 <!--备案信息-->
 <section class="cr_wrap back-w">
-    <div class="tm copyRight">©2017 gmatonline.cn All Rights Reserved 京ICP备15001182号-1<br>京公网安备11010802017681 免责声明</div>
+    <div class="tm copyRight">©2017 smartapply.cn All Rights Reserved 京ICP备15001182号-1<br>京公网安备11010802017681 免责声明</div>
 </section>
 <!--footer-->
 <footer>

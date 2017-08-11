@@ -153,10 +153,10 @@
                 <li>{{data.title}}</li>
                 <li>所在地：{{data.alternatives}}</li>
                 <li>地理位置：{{data.answer}}</li>
-                <li>官网：<a href="{{data.listeningFile}}">{{data.listeningFile}}</a></li>
+                <li style="color: #0061a4;">官网：<a style="color: #0076c8;" href="{{data.listeningFile}}">{{data.listeningFile}}</a></li>
                 <li>学校排名&nbsp;{{data.article}}</li>
                 <li>
-                    <a href="matching_test.html?id={{data.id}}">学校录取测评</a>
+                    <a href="mqqwpa://im/chat?chat_type=wpa&uin=2949709934&version=1&src_type=web&web_src=http://m.haishiit.com/">学校录取测评</a>
                 </li>
             </ul>
         </div>
@@ -182,17 +182,17 @@
     <div class="com-auto">
         <div class="subject">
 
-            <div ng-repeat="majorT in major">
+            <div ng-repeat="majorT in major" ng-hide="majorT.content==''">
                 <div class="subject-t">
                     <img src="images/an-img/school-sanjiao.png" alt="三角形"/>
                     <span>{{majorT.name}}</span>
                 </div>
                 <div class="subject-ul">
                     <ul>
-                        <li ng-repeat="majorTin in major[$index].content">
+                        <li ng-repeat="majorTin in majorT.content">
                             <a href="school-major.html?id={{majorTin.id}}">
                                 <div>
-                                    <span>{{majorTin.name}}</span><br/>
+                                    <span class="ellipsis" style="display: block">{{majorTin.name}}</span>
                                     <span class="ellipsis" style="display: block">{{majorTin.title}}</span>
                                 </div>
                             </a>
@@ -299,7 +299,7 @@
 </div>
 <!--备案信息-->
 <section class="cr_wrap back-w">
-    <div class="tm copyRight">©2017 gmatonline.cn All Rights Reserved 京ICP备15001182号-1<br>京公网安备11010802017681 免责声明</div>
+    <div class="tm copyRight">©2017 smartapply.cn All Rights Reserved 京ICP备15001182号-1<br>京公网安备11010802017681 免责声明</div>
 </section>
 <!--footer-->
 <footer>

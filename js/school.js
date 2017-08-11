@@ -57,8 +57,8 @@ $(function () {
                         '</div>' +
                         '<div class="clearfix"></div>' +
                         '<div class="bot-btn">' +
-                        '<a href="mqqwpa://im/chat?chat_type=wpa&uin=1746295647&version=1&src_type=web&web_src=http://m.haishiit.com/">和顾问聊聊</a>' +
-                        '<a href="matching_test.html?id='+ b.id+'">学校录取测评</a>' +
+                        '<a href="mqqwpa://im/chat?chat_type=wpa&uin=2949709934&version=1&src_type=web&web_src=http://m.haishiit.com/">和顾问聊聊</a>' +
+                        '<a href="mqqwpa://im/chat?chat_type=wpa&uin=2949709934&version=1&src_type=web&web_src=http://m.haishiit.com/">学校录取测评</a>' +
                         '</div>' +
                         '</li>';
                     });
@@ -123,7 +123,7 @@ $(function () {
                             '<div class="clearfix"></div>' +
                             '<div class="bot-btn">' +
                             '<a href="mqqwpa://im/chat?chat_type=wpa&uin=1746295647&version=1&src_type=web&web_src=http://m.haishiit.com/">和顾问聊聊</a>' +
-                            '<a href="matching_test.html?id='+ b.id+'">学校录取测评</a>' +
+                            '<a href="mqqwpa://im/chat?chat_type=wpa&uin=2949709934&version=1&src_type=web&web_src=http://m.haishiit.com/">学校录取测评</a>' +
                             '</div>' +
                             '</li>';
                     });
@@ -192,7 +192,7 @@ $(function () {
                             '<div class="clearfix"></div>' +
                             '<div class="bot-btn">' +
                             '<a href="mqqwpa://im/chat?chat_type=wpa&uin=1746295647&version=1&src_type=web&web_src=http://m.haishiit.com/">和顾问聊聊</a>' +
-                            '<a href="matching_test.html?id='+ b.id+'">学校录取测评</a>' +
+                            '<a href="mqqwpa://im/chat?chat_type=wpa&uin=2949709934&version=1&src_type=web&web_src=http://m.haishiit.com/">学校录取测评</a>' +
                             '</div>' +
                             '</li>';
                     });
@@ -261,7 +261,7 @@ $(function () {
                             '<div class="clearfix"></div>' +
                             '<div class="bot-btn">' +
                             '<a href="mqqwpa://im/chat?chat_type=wpa&uin=1746295647&version=1&src_type=web&web_src=http://m.haishiit.com/">和顾问聊聊</a>' +
-                            '<a href="matching_test.html?id='+ b.id+'">学校录取测评</a>' +
+                            '<a href="mqqwpa://im/chat?chat_type=wpa&uin=2949709934&version=1&src_type=web&web_src=http://m.haishiit.com/">学校录取测评</a>' +
                             '</div>' +
                             '</li>';
                     });
@@ -327,7 +327,7 @@ $(function () {
                             '<div class="clearfix"></div>' +
                             '<div class="bot-btn">' +
                             '<a href="mqqwpa://im/chat?chat_type=wpa&uin=1746295647&version=1&src_type=web&web_src=http://m.haishiit.com/">和顾问聊聊</a>' +
-                            '<a href="matching_test.html?id='+ b.id+'">学校录取测评</a>' +
+                            '<a href="mqqwpa://im/chat?chat_type=wpa&uin=2949709934&version=1&src_type=web&web_src=http://m.haishiit.com/">学校录取测评</a>' +
                             '</div>' +
                             '</li>';
                     });
@@ -361,6 +361,18 @@ $(function () {
     myApp.filter('trustHtml', function ($sce) {
         return function (content) {
             return $sce.trustAsHtml(content);
+        }
+    });
+    myApp.filter('viewCount', function ($sce) {
+        return function (count) {
+            if(count==0){
+                return Math.ceil(Math.random()*10000);
+            }
+            else {
+
+                return count;
+            }
+
         }
     });
     //通过模块生成调用控制器
@@ -451,7 +463,7 @@ function selectVal(o) {
                         '<div class="clearfix"></div>' +
                         '<div class="bot-btn">' +
                         '<a href="mqqwpa://im/chat?chat_type=wpa&uin=1746295647&version=1&src_type=web&web_src=http://m.haishiit.com/">和顾问聊聊</a>' +
-                        '<a href="matching_test.html?id='+ b.id+'">学校录取测评</a>' +
+                        '<a href="mqqwpa://im/chat?chat_type=wpa&uin=2949709934&version=1&src_type=web&web_src=http://m.haishiit.com/">学校录取测评</a>' +
                         '</div>' +
                         '</li>';
                 });

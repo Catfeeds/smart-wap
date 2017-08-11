@@ -57,34 +57,35 @@ $(function () {
         var gre=$('#gre').val();
         var toefl=$('#toefl').val();
         var ielts=$('#ielts').val();
-        if(!gpa||!gmat||!gre||!toefl||!ielts){
-            alert("请注意必填项！");
-            return false;
+        if(!gpa){
+            alert("请注意必填项");
+
         }
         if(isNaN(gpa)||isNaN(gmat)||isNaN(gre)||isNaN(toefl)||isNaN(ielts)){
             alert('当前页只能输入数值！');
             return false;
         }
-        if (gpa<2.5||gpa>4){
-            alert('gpa数值填写范围为2.5-4.0！');
+        if (gpa<2||gpa>5){
+            alert('gpa数值填写范围为2.0-5.0！');
             return false;
         }
-        if (gmat<400||gmat>780){
-            alert('gmat数值填写范围为400-780！');
-            return false;
-        }
-        if (gre<200||gre>340){
-            alert('gre数值填写范围为200~340！');
-            return false;
-        }
-        if (toefl<60||toefl>120){
-            alert('toefl数值填写范围为60~120！');
-            return false;
-        }
-        if (ielts<5||ielts>7){
-            alert('ielts数值填写范围为5.0~7.0！');
-            return false;
-        }
+        //if (gmat<400||gmat>780){
+        //    alert('gmat数值填写范围为400-800！');
+        //    return false;
+        //}
+        //if (gre<200||gre>340){
+        //    alert('gre数值填写范围为200~340！');
+        //    return false;
+        //}
+        //if (toefl<60||toefl>120){
+        //    alert('toefl数值填写范围为60~120！');
+        //    return false;
+        //}
+        //if (ielts<5||ielts>7){
+        //    alert('ielts数值填写范围为5.0~9.0！');
+        //    return false;
+        //}
+
         var num = $(this).attr('data-index');
         $('.step_wrap').eq(num).addClass("on").siblings('.step_wrap').removeClass("on");
         $('.step_wrap2').eq(num).show().siblings('.step_wrap2').hide();

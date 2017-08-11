@@ -31,46 +31,65 @@ $(function () {
     });
     //加入购物车
     $('.cart_btn').click(function () {
-        var imgSrc = $('.course-img img').attr("src");
-        var spPrice = $('#sp_price').val();
-        var spName = $('#sp_name').val();
-        if (!sp_item) {//如果本地数据为空，存入数据；
-            sp_itemB[0].sp_id = id;
-            sp_itemB[0].count = 1;
-            sp_itemB[0].name = spName;
-            sp_itemB[0].src = imgSrc;
-            sp_itemB[0].price = spPrice;
-            localStorage.setItem("sp_item", JSON.stringify(sp_itemB));
-            location.href = 'settlement.html';
+        if (!uid) {
+            var r = confirm("您还未登录，是否跳转到登录页！");
+            if (r == true) {
+                location.href = 'login.html';
+            }
+            else {
+                return false;
+            }
+
         } else {
-            var arr = {
-                sp_id: '',
-                count: '',
-                name: '',
-                src: '',
-                price: ''
-            };
-            var test = $.parseJSON(sp_item);//如果不为空，取出数据；
-            $(test).each(function (a, b) {
-                if (b.sp_id == id) {
-                    alert("该商品已加入购物车!");
-                    remove(arr);
-                    return false;
-                } else {
-                    arr.sp_id=id;
-                    arr.count=1;
-                    arr.name=spName;
-                    arr.src=imgSrc;
-                    arr.price=spPrice;
-                }
+            var imgSrc = $('.course-img img').attr("src");
+            var spPrice = $('#sp_price').val();
+            var spName = $('#sp_name').val();
+            if (!sp_item) {//如果本地数据为空，存入数据；
+                sp_itemB[0].sp_id = id;
+                sp_itemB[0].count = 1;
+                sp_itemB[0].name = spName;
+                sp_itemB[0].src = imgSrc;
+                sp_itemB[0].price = spPrice;
+                localStorage.setItem("sp_item", JSON.stringify(sp_itemB));
+                location.href = 'settlement.html';
+            } else {
+                var arr = {
+                    sp_id: '',
+                    count: '',
+                    name: '',
+                    src: '',
+                    price: ''
+                };
+                var test = $.parseJSON(sp_item);//如果不为空，取出数据；
+                $(test).each(function (a, b) {
+                    if (b.sp_id == id) {
+                        var r = confirm("该商品已加入购物车，是否跳转到购物车！");
+                        if (r == true) {
+                            location.href = 'settlement.html';
+                            remove(arr);
+                        }
+                        else {
+                            remove(arr);
+                            return false;
+                        }
 
-            });
-            test.push(arr);
-            console.log(test);
-            localStorage.setItem("sp_item", JSON.stringify(test));
-            location.href = 'settlement.html';
+                    } else {
+                        arr.sp_id=id;
+                        arr.count=1;
+                        arr.name=spName;
+                        arr.src=imgSrc;
+                        arr.price=spPrice;
+                    }
 
+                });
+                test.push(arr);
+                console.log(test);
+                localStorage.setItem("sp_item", JSON.stringify(test));
+                location.href = 'settlement.html';
+
+            }
         }
+
 
     });
 //声明模块

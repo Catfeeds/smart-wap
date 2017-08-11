@@ -276,12 +276,12 @@
                         <img src="http://schools.smartapply.cn{{data.image}}" alt="学校图片"/>
                     </a>
                 </div>
-                <p class="ellipsis">已有{{data.viewCount}}人关注</p>
+                <p class="ellipsis">已有{{data.viewCount | viewCount}}人关注</p>
             </div>
             <div class="clearfix"></div>
             <div class="bot-btn">
                 <a href="mqqwpa://im/chat?chat_type=wpa&uin=1746295647&version=1&src_type=web&web_src=http://m.haishiit.com/">和顾问聊聊</a>
-                <a href="matching_test.html?id={{data.id}}">学校录取测评</a>
+                <a href="mqqwpa://im/chat?chat_type=wpa&uin=2949709934&version=1&src_type=web&web_src=http://m.haishiit.com/">学校录取测评</a>
             </div>
         </li>
 
@@ -335,7 +335,7 @@
 </div>
 <!--备案信息-->
 <section class="cr_wrap back-w">
-    <div class="tm copyRight">©2017 gmatonline.cn All Rights Reserved 京ICP备15001182号-1<br>京公网安备11010802017681 免责声明</div>
+    <div class="tm copyRight">©2017 smartapply.cn All Rights Reserved 京ICP备15001182号-1<br>京公网安备11010802017681 免责声明</div>
 </section>
 <!--footer-->
 <footer>
@@ -369,7 +369,7 @@
 </body>
 <script>
     var mySwiper = new Swiper('.swiper-container-1', {
-        loop: true,
+        loop: false,
         observer: true,
         autoplay: 2000,
         observeParents: true,

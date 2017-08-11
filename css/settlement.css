@@ -107,3 +107,6 @@
 .sp_check:checked {
     background-color: #468ed1;
 }
+.spList{
+    min-height: 20.3rem;
+}

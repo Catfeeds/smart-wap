@@ -24,6 +24,15 @@ $(function () {
             return $sce.trustAsHtml(content);
         }
     });
+    myApp.filter('nullImg', function () {
+        return function (img) {
+            if (img) {
+                return httpUrl + img;
+            } else {
+                return 'images/an-img/know-poster.png';
+            }
+        }
+    });
     //通过模块生成调用控制器
     myApp.controller("abroad_view", ["$scope", "$http", "$sce", function ($scope, $http, $sce) {
         $scope.toggle = {
