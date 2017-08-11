@@ -24,6 +24,15 @@ $(function () {
             return $sce.trustAsHtml(content);
         }
     });
+    myApp.filter('nullImg', function ($sce) {
+        return function (img) {
+            if (img) {
+                return httpUrl + img;
+            } else {
+                return 'images/default.png';
+            }
+        }
+    });
     //通过模块生成调用控制器
     myApp.controller("abroad_view", ["$scope", "$http", "$sce", function ($scope, $http, $sce) {
         $http({
@@ -38,7 +47,7 @@ $(function () {
         }).success(function (data) {
             $scope.http = httpUrl;
             $scope.http2 = httpUrl2;
-            $scope.items1 = data.data[0];
+            $scope.items1 = data.data;
             $scope.items2 = data.answer;
             $scope.items3 = data.adviser_rank;
         });

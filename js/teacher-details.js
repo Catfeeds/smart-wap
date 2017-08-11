@@ -54,7 +54,7 @@ $(function () {
                     $(this).addClass('active');
                     tabsSwiper.swipeTo($(this).index());
                     //swiper-slide-active
-                   var p_height=$('.swiper-slide-active .slide_content').height();
+                   //var p_height=$('.swiper-slide-active .slide_content').height();
 
 
                 });

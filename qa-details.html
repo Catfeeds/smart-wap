@@ -146,16 +146,15 @@
 <section class="mg_b5 bg_f">
     <div class="flex-container details_wrap">
         <div class="qa_details_left">
-            <div class="qa-img"><img src="{{items1.image}}" onerror="this.src='images/default.png'"></div>
-            <p class="ellipsis qd_name">{{items1.userName}}</p>
+            <div class="qa-img"><img src="{{items1.image | nullImg}}"></div>
+            <p class="ellipsis qd_name">{{items1.username}}</p>
         </div>
         <div class="qa_details_right">
             <div class="qa_details_content">
                 <span class="question_tag">问</span>
-               {{items1.question}}
+               <span>{{items1.question}}</span>
             </div>
             <div class="qa_time">{{items1.addTime}}</div>
-
         </div>
     </div>
 </section>
@@ -163,7 +162,7 @@
 <section class="mg_b5 bg_f">
     <div class="flex-container details_wrap" ng-repeat="item2 in items2">
         <div class="qa_details_left">
-            <div class="qa-img"><img src="{{http}}{{item2.adviser.image}}" onerror="this.src='images/default.png'"></div>
+            <div class="qa-img"><img src="{{item2.image | nullImg}}"></div>
             <p class="ellipsis qd_name">{{item2.username}}</p>
         </div>
         <div class="qa_details_right">
@@ -198,7 +197,7 @@
                     <p class="qa_num">已回答{{item3.num}}个问题</p>
                 </div>
                 <div class="tm">
-                    <a class="qa_btn inm" href="teacher-details.html">向她提问</a>
+                    <a class="qa_btn inm" href="teacher_details_2.html?contentid={{item3.information.id}}">向她提问</a>
                 </div>
             </div>
         </li>

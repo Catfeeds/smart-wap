@@ -58,7 +58,7 @@
 }
 
 .qa_details_right {
-    width: 71%;
+    width: 76%;
 }
 
 .qa_details_content {
@@ -105,6 +105,6 @@
 .share_list_wrap{
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: 2.4rem;
     width: 100%;
 }

@@ -79,9 +79,9 @@
                     <i class="icon-angle-right nav_crow_r"></i>
                 </a>
                 <dl class="nav_wrap2">
-                    <dt><a href="#">背景测评</a></dt>
+                    <!--<dt><a href="#">背景测评</a></dt>-->
                     <dt><a href="assessment.html">选校测评</a></dt>
-                    <dt><a href="matching_test.html">录取几率测评</a></dt>
+                    <dt><a href="matching_test.html">学校录取测评</a></dt>
                 </dl>
             </li>
             <li>
@@ -120,15 +120,6 @@
                     </div>
                 </a>
             </li>
-            <li>
-                <a href="#" class="flex-container">
-                    <div class="nav_wrap1 flex-container">
-                        <div class="nav_icon_header inm"><img src="images/nav_icon_9.png" alt=""></div>
-                        <span class="nav_tit_1">联系我们</span>
-                    </div>
-                </a>
-            </li>
-
         </ul>
     </div>
 </section>
@@ -156,15 +147,19 @@
     <div class="bg_f pd_lr5">
         <ul class="question_list">
             <li ng-repeat="question in question">
-                <span class="question_tag">问</span>
-                <div class="int question_text_wrap">
-                    <div class="question_name ellipsis">{{question.question}}</div>
-                    <div class="question_info">
-                        <span>{{question.addTime}}</span>
-                        <span><i class="icon-eye-open color_y"></i> 浏览次数：<strong class="color_y">{{question.browse}}次</strong></span>
+                <a href="qa-details.html?id={{question.id}}">
+                <div>
+                    <span class="question_tag">问</span>
+                    <div class="int question_text_wrap">
+                        <div class="question_name ellipsis">{{question.question}}</div>
+                        <div class="question_info">
+                            <span>{{question.addTime}}</span>
+                            <span><i class="icon-eye-open color_y"></i> 浏览次数：<strong class="color_y">{{question.browse}}次</strong></span>
+                        </div>
                     </div>
+                    <a class="question_btn inm" href="qa-details.html?id={{question.id}}">查看回答</a>
                 </div>
-                <a class="question_btn inm" href="qa-details.html?id={{question.id}}">查看回答</a>
+                </a>
             </li>
         </ul>
         <div class="tm question_btn2_wrap">
@@ -443,7 +438,7 @@
             </a>
         </li>
         <li>
-            <a href="mqqwpa://im/chat?chat_type=wpa&uin=1746295647&version=1&src_type=web&web_src=http://m.haishiit.com/">
+            <a href="http://p.qiao.baidu.com/im/index?siteid=7905926&ucid=18329536&cp=&cr=&cw=#close-back18">
                 <div>
                     <img src="images/icon_ft_3.png" style="height: 1.1rem" alt="">
                     <span>在线咨询</span>

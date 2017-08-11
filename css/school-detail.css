@@ -3,6 +3,8 @@ body{
 }
 .banner{
     width: 100%;
+    height: 8rem;
+    overflow: hidden;
 }
 .banner img{
     width: 100%;
@@ -20,16 +22,19 @@ body{
     text-indent: 2em;
 }
 .info-left{
-    width: 60%;
+    width: 78%;
     float: left;
     font-size: 0.7rem;
 }
 .info-left h4{
-    font-size:1rem;
+    font-size:0.8rem;
+    color: #0076c8;
+    margin-bottom: 0.2rem;
     font-weight: normal;
 }
 .info-left ul li{
     color: #565656;
+    font-size: 0.7rem;
 }
 .info-left ul li:last-child a{
     background-color: #478fd1;
@@ -40,8 +45,8 @@ body{
     margin-top: 10px;
 }
 .info-right{
-    width: 40%;
-    float: left;
+    width: 20%;
+    float: right;
 }
 .com-title{
     width: 100%;
@@ -72,7 +77,6 @@ body{
 }
 .subject-t{
     width: 50%;
-    margin-left: 11%;
     background-color: #478fd1;
     color: #ffffff;
     font-size: 0.7rem;
@@ -89,7 +93,6 @@ body{
 }
 .subject-ul{
    margin-top: 20px;
-    margin-left: 11%;
 }
 .subject-ul ul:after{
     content: '';
