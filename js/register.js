@@ -31,7 +31,7 @@ function registerSub(){
                     code:code_yz,
                     pass:password,
                     userName:username,
-                    source:2//1是gmat 2是托福
+                    source:3//1是gmat 2是托福 3是留学
                 },
                 //jsonp: "callback",//传递给请求处理程序或页面的，用以获得jsonp回调函数名的参数名(默认为:callback)
                 //jsonpCallback:"success_jsonpCallback",//自定义的jsonp回调函数名称，默认为jQuery自动生成的随机函数名
