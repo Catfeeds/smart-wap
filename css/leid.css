@@ -1,0 +1,77 @@
+.my_leid {
+    padding: 1rem 0 0.8rem;
+    background: #0596e1;
+}
+
+.my_1 {
+    width: 50%;
+    color: #ffffff;
+}
+
+.leid_num {
+    font-size: 2rem;
+}
+
+.leid_hint {
+    font-size: 0.9rem;
+}
+
+.leid_fq {
+    margin-right: 0.5rem;
+    font-size: 0.7rem;
+    background: #18a3e3;
+    padding: 0.4rem;
+    border-radius: 0.3rem;
+}
+
+.list_tab {
+    color: #777777;
+    padding: 0.1rem 0.5rem 0;
+    font-size: 0.7rem;
+    border-bottom: 1px solid #ebe9e9;
+}
+
+.list_tab span {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 1rem;
+    padding: 0.6rem 0.1rem;
+    border-bottom: 2px solid transparent;
+}
+
+.list_tab span.on {
+    color: #01a4e5;
+    border-color: #01a4e5;
+}
+
+.leid_table_wrap {
+    padding: 0.5rem 0.5rem 0;
+    min-height: 15rem;
+}
+
+.leid_table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.leid_table thead {
+    background: #ebe9e9;
+}
+
+.leid_table th {
+    font-weight: normal;
+    color: #333333;
+    width: 33.3%;
+    padding: 0.4rem 0.3rem;
+    font-size: 0.75rem;
+}
+
+.leid_table tbody tr {
+    border-bottom: 1px solid #ebe9e9;
+}
+
+.leid_table tbody td {
+    font-size: 0.7rem;
+    color: #777777;
+    padding: 0.6rem 0.3rem;
+}

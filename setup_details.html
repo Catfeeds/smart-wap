@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="title" content="">
+    <meta name="author" content="">
+    <meta name="Copyright" content="">
+    <!-- <meta name="description" content=""> -->
+    <!-- 让IE浏览器用最高级内核渲染页面 还有用 Chrome 框架的页面用webkit 内核
+    <!-- ================================================== -->
+    <meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge">
+    <!-- IOS6全屏 Chrome高版本全屏-->
+    <!-- ================================================== -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <!-- 让360双核浏览器用webkit内核渲染页面-->
+    <!-- ================================================== -->
+    <meta name="renderer" content="webkit">
+    <!-- Mobile Specific Metas
+   ================================================== -->
+    <!-- !!!注意 minimal-ui 是IOS7.1的新属性，最小化浏览器UI -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/setup_details.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/swiper-3.3.1.min.css">
+    <script src="js/jquery-1.12.2.min.js"></script>
+    <script src="js/swiper-3.3.1.jquery.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/public.js"></script>
+    <script src="js/setup_details.js"></script>
+    <script src="js/angular1.3.1.js"></script>
+    <title>机构详情</title>
+</head>
+<body ng-controller="abroad_view">
+<!--头部-->
+<section class="relative">
+    <div class="bg_b bg_b2 header_nav pd_lr5 flex-container">
+        <a href="javascript:history.go(-1)"><i class="icon-angle-left nav_icon color_f"></i></a>
+        <span class="header_name color_f">机构详情</span>
+        <span></span>
+    </div>
+</section>
+<!--机构介绍-->
+<section>
+    <div>
+        <ul class="setup_list">
+            <li>
+                <div class="flex-container setup_info_wrap">
+                    <div class="setup_img"><img src="{{data.image | nullImg}}" alt=""></div>
+                    <div class="setup_info">
+                        <div class="setup_tit_wrap">
+                            <span class="setup_name inm ellipsis">{{data.name}}</span><b class="setup_fg">|</b><span
+                                class="setup_lev">好评度：</span><img src="images/sort.png" style="height: 0.6rem" alt="">
+                        </div>
+                        <p class="setup_de ellipsis-2">{{data.description}}</p>
+                        <div>
+                            <a class="inm zx_link" href="#">免费预约中介顾问</a><span class="zx_num">（已有<b
+                                class="light2_b">{{data.viewCount}}</b>人咨询）</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+<!--标题-->
+<div class="common_tit2_wrap bg_f">
+    <p class="common_tit2">办理国家</p>
+</div>
+<!--办理国家-->
+<section class="bg_f country_wrap mg_b5">
+    <ul class="country flex-container-left">
+        <li ng-repeat="item in country">{{country[$index]}}</li>
+    </ul>
+</section>
+<!--标题-->
+<div class="common_tit2_wrap bg_f">
+    <p class="common_tit2">核心服务介绍</p>
+</div>
+<section class="service_info bg_f">
+    <div class="trustHtml" ng-bind-html="contenttext"></div>
+    <!--<table class="service_tab" border="1" cellspacing="0">-->
+        <!--<tr>-->
+            <!--<td class="service_name">留学申请</td>-->
+            <!--<td class="service_de">照顾客户每一个申请工作环节，包括出国考 试，申请手续，材料寄送，出国前准备等；</td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+            <!--<td class="service_name">咨询服务</td>-->
+            <!--<td class="service_de">最少有一名具备留学背景的教育分析师负责 规划客户留学方案；所有项目由高级合伙人 做最终负责人；文书、选校由专门从事该方 向申请</td>-->
+        <!--</tr>-->
+    <!--</table>-->
+</section>
+<!--标题-->
+<div class="common_tit2_wrap bg_f">
+    <p class="common_tit2">顾问推荐</p>
+</div>
+<!--顾问推荐-->
+<section class="recommend_wrap bg_f">
+    <ul class="recommend_list">
+        <li class="flex-container">
+            <div class="teacher_img"><img src="images/default.png" alt=""></div>
+            <div class="teacher_de_wrap">
+                <p class="teacher_name_wrap"><span class="teacher_name">Victoria</span><a class="inm zx_link" href="#">预约顾问</a>
+                </p>
+                <div class="teacher_de">
+                    主修英语专业，曾赴美交流访问，亲身游历哈佛 、MIT等常春藤名校，对中外文化差异和跨文化 交流有着深入的了解。为人热情，耐心细
+                </div>
+            </div>
+        </li>
+    </ul>
+</section>
+<!--标题-->
+<div class="common_tit2_wrap bg_f">
+    <p class="common_tit2">案例</p>
+</div>
+<!--案例-->
+<section class="set_case bg_f">
+    <div class="trustHtml" ng-bind-html="data.listeningFile | trustHtml"></div>
+    <!--<table class="case_tab" border="1" cellspacing="0">-->
+        <!--<thead class="tm">-->
+        <!--<tr>-->
+            <!--<th>录取情况</th>-->
+            <!--<th>学生背景</th>-->
+        <!--</tr>-->
+        <!--</thead>-->
+        <!--<tbody>-->
+        <!--<tr>-->
+            <!--<td>-->
+                <!--<div class="flex-container">-->
+                    <!--<div class="case_img"><img src="images/default.png" alt=""></div>-->
+                    <!--<div class="school_info tm">-->
+                        <!--<p class="school_name ellipsis">芝加哥大学</p>-->
+                        <!--<p class="school_major ellipsis">金融-硕士</p>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</td>-->
+            <!--<td>-->
+                <!--<div class="tr_wrap">-->
+                <!--<div class="tr_row"><span class="tr_name">客户：</span><span>xl</span></div>-->
+                <!--<div class="tr_row"><span class="tr_name">毕业院校：</span>四川大学</div>-->
+                <!--<div class="tr_row"><span class="tr_name">硬件条件：</span>GPA: 3.2+ IELTS: 7 GMAT: 710</div>-->
+                <!--</div>-->
+            <!--</td>-->
+        <!--</tr>-->
+        <!--</tbody>-->
+    <!--</table>-->
+</section>
+</body>
+</html>

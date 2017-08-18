@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="title" content="">
+    <meta name="author" content="">
+    <meta name="Copyright" content="">
+    <!-- <meta name="description" content=""> -->
+    <!-- 让IE浏览器用最高级内核渲染页面 还有用 Chrome 框架的页面用webkit 内核
+    <!-- ================================================== -->
+    <meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge">
+    <!-- IOS6全屏 Chrome高版本全屏-->
+    <!-- ================================================== -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <!-- 让360双核浏览器用webkit内核渲染页面-->
+    <!-- ================================================== -->
+    <meta name="renderer" content="webkit">
+    <!-- Mobile Specific Metas
+   ================================================== -->
+    <!-- !!!注意 minimal-ui 是IOS7.1的新属性，最小化浏览器UI -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/setup.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/swiper-3.3.1.min.css">
+    <script src="js/jquery-1.12.2.min.js"></script>
+    <script src="js/swiper-3.3.1.jquery.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/public.js"></script>
+    <script src="js/setup.js"></script>
+    <script src="js/angular1.3.1.js"></script>
+    <title>留学机构</title>
+</head>
+<body ng-controller="abroad_view">
+<!--头部-->
+<section class="relative">
+    <div class="bg_b bg_b2 header_nav pd_lr5 flex-container">
+        <a href="javascript:history.go(-1)"><i class="icon-angle-left nav_icon color_f"></i></a>
+        <span class="header_name color_f">留学机构</span>
+        <span></span>
+    </div>
+</section>
+<section class="ad"><img src="images/setup_banner.png" alt=""></section>
+<section>
+    <div class="list_tab bg_f mg_b5">
+        <span ng-click="sort(0)" class="on">综合</span>
+        <span ng-click="sort(1)">好评度</span>
+    </div>
+    <div>
+        <ul class="setup_list">
+            <li ng-repeat="data in data">
+
+                <div class="flex-container setup_info_wrap">
+                    <div class="setup_img">
+                        <a href="setup_details.html?id={{data.id}}"><img src="{{data.image | nullImg}}" alt=""></a>
+                    </div>
+                    <div class="setup_info">
+                        <div class="setup_tit_wrap">
+                            <span class="setup_name inm ellipsis">{{data.name}}</span><b class="setup_fg">|</b><span
+                                class="setup_lev">好评度：</span><img src="images/sort.png" style="height: 0.6rem" alt="">
+                        </div>
+                        <p class="setup_de ellipsis-2">{{data.description}}</p>
+                        <div>
+                            <a class="inm zx_link" href="#">免费预约中介顾问</a><span class="zx_num">（已有<b
+                                class="light2_b">{{data.viewCount}}</b>人咨询）</span>
+                        </div>
+                    </div>
+                </div>
+
+            </li>
+        </ul>
+    </div>
+</section>
+</body>
+</html>

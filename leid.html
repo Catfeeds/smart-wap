@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="title" content="">
+    <meta name="author" content="">
+    <meta name="Copyright" content="">
+    <!-- <meta name="description" content=""> -->
+    <!-- 让IE浏览器用最高级内核渲染页面 还有用 Chrome 框架的页面用webkit 内核
+    <!-- ================================================== -->
+    <meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge">
+    <!-- IOS6全屏 Chrome高版本全屏-->
+    <!-- ================================================== -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <!-- 让360双核浏览器用webkit内核渲染页面-->
+    <!-- ================================================== -->
+    <meta name="renderer" content="webkit">
+    <!-- Mobile Specific Metas
+   ================================================== -->
+    <!-- !!!注意 minimal-ui 是IOS7.1的新属性，最小化浏览器UI -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/swiper-3.3.1.min.css">
+    <link rel="stylesheet" href="css/leid.css">
+    <script src="js/jquery-1.12.2.min.js"></script>
+    <script src="js/swiper-3.3.1.jquery.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/public.js"></script>
+    <script src="js/leid.js"></script>
+    <script src="js/angular1.3.1.js"></script>
+    <title>我的雷豆</title>
+</head>
+<body ng-controller="abroad_view">
+<!--头部-->
+<section class="relative">
+    <div class="bg_b bg_b2 header_nav pd_lr5 flex-container">
+        <a href="javascript:history.go(-1)"><i class="icon-angle-left nav_icon color_f"></i></a>
+        <span class="header_name color_f">我的雷豆</span>
+        <span></span>
+    </div>
+</section>
+<!--我的雷豆-->
+<section class="my_leid">
+    <div class="flex-container pd_lr5">
+        <div class="tm my_1">
+            <p class="leid_num"></p>
+            <p class="leid_hint">可用雷豆</p>
+        </div>
+        <div class="my_1 tr">
+            <div class="leid_fq tl inm">
+                <p>如何使用雷豆?</p>
+                <p>如何获得雷豆?</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!--雷豆明细-->
+<section>
+    <div class="list_tab bg_f">
+        <span class="on" data-type="0">雷豆明细</span>
+        <span data-type="1">收入雷豆</span>
+        <span data-type="2">支出雷豆</span>
+    </div>
+    <div class="bg_f leid_table_wrap">
+        <table class="leid_table">
+            <thead>
+            <tr>
+                <th class="tl">来源/用途</th>
+                <th class="tm">雷豆变化</th>
+                <th class="tr">日期</th>
+            </tr>
+            </thead>
+            <tbody id="tab_content">
+            <!--<tr ng-repeat="data in data">-->
+                <!--<td class="tl">-->
+                    <!--<span>{{data.behavior}}</span></td>-->
+                <!--<td class="tm">-->
+                    <!--<span>-->
+                        <!--<b class="light" ng-show="data.type==1">+{{data.integral}}</b>-->
+                        <!--<b ng-show="data.type==2">-{{data.integral}}</b>-->
+                    <!--</span>-->
+                <!--</td>-->
+                <!--<td class="tr">-->
+                    <!--<span>{{data.createTime*1000 | date:'yyyy-MM-dd'}}</span>-->
+                <!--</td>-->
+            <!--</tr>-->
+            </tbody>
+        </table>
+        <!--<ul class="pageSize"  ng-hide="{{pageStr==''}}" ng-bind-html="pageStr | trustHtml"></ul>-->
+        <ul class="pageSize"></ul>
+    </div>
+</section>
+</body>
+</html>

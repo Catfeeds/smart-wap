@@ -1,0 +1,79 @@
+.list_tab{
+    color: #777777;
+    padding: 0.1rem 0.5rem 0;
+    font-size: 0.7rem;
+}
+.list_tab span{
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 1rem;
+    padding: 0.6rem 0.1rem;
+    border-bottom: 2px solid transparent;
+}
+.list_tab span.on{
+    color: #01a4e5;
+    border-color: #01a4e5;
+}
+.tab_item_wrap .tab_item:nth-child(1){
+    display: block;
+}
+.tab_item{
+    display: none;
+}
+.tab_item li{
+    padding: 0.5rem;
+    margin-bottom: 0.4rem;
+    background: #ffffff;
+}
+.order_time{
+    color: #777777;
+    font-size: 0.6rem;
+    margin-bottom: 0.7rem;
+}
+.sub_img{
+    width: 5.2rem;
+    height: 3.75rem;
+}
+.sub_img img{
+    width: 100%;
+    height: 100%;
+}
+.sub_name{
+    height: 1.3rem;
+    color: #333333;
+    font-size: 0.75rem;
+}
+.order_price{
+    font-size: 0.7rem;
+    color: #777777;
+    margin-bottom: 0.3rem;
+}
+.order_count{
+    padding-left: 0.4rem;
+}
+.order_info{
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+}
+.order_info_de{
+    width: 68%;
+}
+.order_handle{
+    font-size: 0.6rem;
+    color: #ffffff;
+}
+.order_handle a,.order_handle span{
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    background: #2cb1e5;
+    height: 1rem;
+    color: #ffffff;
+    border-radius: 5px;
+    line-height: 1rem;
+    padding: 0 0.4rem;
+    margin-left: 0.5rem;
+}
+.order_handle span{
+    background: #ff3a44;
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="title" content="">
+    <meta name="author" content="">
+    <meta name="Copyright" content="">
+    <!-- <meta name="description" content=""> -->
+    <!-- 让IE浏览器用最高级内核渲染页面 还有用 Chrome 框架的页面用webkit 内核
+    <!-- ================================================== -->
+    <meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge">
+    <!-- IOS6全屏 Chrome高版本全屏-->
+    <!-- ================================================== -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <!-- 让360双核浏览器用webkit内核渲染页面-->
+    <!-- ================================================== -->
+    <meta name="renderer" content="webkit">
+    <!-- Mobile Specific Metas
+   ================================================== -->
+    <!-- !!!注意 minimal-ui 是IOS7.1的新属性，最小化浏览器UI -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/order_list.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/swiper-3.3.1.min.css">
+    <script src="js/jquery-1.12.2.min.js"></script>
+    <script src="js/swiper-3.3.1.jquery.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/public.js"></script>
+    <script src="js/order_list.js"></script>
+    <script src="js/angular1.3.1.js"></script>
+    <title>我的订单</title>
+</head>
+<body ng-controller="abroad_view">
+<!--头部-->
+<section class="relative">
+    <div class="bg_b bg_b2 header_nav pd_lr5 flex-container">
+        <a href="javascript:history.go(-1)"><i class="icon-angle-left nav_icon color_f"></i></a>
+        <span class="header_name color_f">我的订单</span>
+        <span></span>
+    </div>
+</section>
+<!--订单列表-->
+<section class="order_list">
+    <div class="list_tab bg_f mg_b5">
+        <span  class="on" ng-click="tabChange('')">全部订单</span>
+        <span  ng-click="tabChange(2)">已付款</span>
+        <span  ng-click="tabChange(1)">待付款</span>
+    </div>
+    <div class="tab_item_wrap">
+        <ul class="tab_item">
+            <li ng-repeat="dataA in data">
+                <div class="order_time flex-container">
+                    <span>订单号：{{dataA.orderNumber}}</span>
+                    <span>{{dataA.createTime*1000 | date:'yyyy-MM-dd hh:mm:ss'}}</span>
+                </div>
+                <div class="flex-container order_info" ng-repeat="dataB in dataA.goods">
+                    <div class="sub_img"><img src="{{dataB.image | nullImg}}" alt=""></div>
+                    <div class="order_info_de">
+                        <p class="ellipsis-2 sub_name">{{dataB.contentName}}</p>
+                        <div class="order_price">
+                            <span class="light"><b style="font-weight: bold;">￥</b>{{dataB.price}}元</span>
+                            <span class="order_count">X{{dataB.num}}</span>
+                        </div>
+                        <div class="order_handle tr">
+                            <div ng-show="dataA.status==1">
+                                <a href="#">立即付款</a>
+                                <span>取消订单</span>
+                            </div>
+                            <div ng-show="dataA.status==3">
+                                <a href="#">查看详情</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <!--1未付3已付-->
+        <ul class="pageSize" ng-hide="{{pageStr==null}}" ng-bind-html="pageStr | trustHtml"></ul>
+    </div>
+</section>
+</body>
+</html>

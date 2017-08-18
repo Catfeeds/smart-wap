@@ -47,7 +47,7 @@
     </div>
 </section>
 <!--案例列表-->
-<section>
+<section style="padding-bottom: 3.5rem;">
     <ul class="case_list_wrap">
         <li ng-repeat="data in data">
             <a href="case_details.html?id={{data.id}}">
@@ -63,7 +63,7 @@
         </li>
 
     </ul>
-    <ul class="pageSize"  ng-bind-html="pageSize | trustHtml"></ul>
+    <ul class="pageSize" ng-hide="!pageSize"  ng-bind-html="pageSize | trustHtml"></ul>
 </section>
 <!--备案信息-->
 <section class="cr_wrap">

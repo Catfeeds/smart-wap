@@ -74,7 +74,7 @@ $(function () {
             }).success(function (data) {
                 $scope.http = httpUrl;
                 $scope.http2 = httpUrl2;
-                if(data.data.data=''){
+                if(data.data.data==''){
                     alert('暂无当前数据！');
                 }else {
                     $scope.data=data.data.data;

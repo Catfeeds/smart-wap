@@ -30,11 +30,23 @@ $(function() {
 
         }
     });
+    myApp.filter('nullImg', function ($sce) {
+        return function (img) {
+            if(!img){
+                return 'images/str_img.png';
+            }
+            else {
+
+                return httpUrl+img;
+            }
+
+        }
+    });
     //通过模块生成调用控制器
     myApp.controller("abroad_view",["$scope","$http","$sce",function($scope,$http,$sce){
         $http({
             method: 'get',
-            url: httpUrl+'/cn/wap-api/index',
+            url: httpUrl+'/cn/wap-api/index1',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded'
             }
@@ -42,13 +54,9 @@ $(function() {
             $scope.http = httpUrl;
             $scope.http2 = httpUrl2;
             $scope.question=data.question;
-            $scope.case=data.case;
-            $scope.item1=data.school.school[0];
-            $scope.item2=data.school.school[1];
-            $scope.item3=data.school.school[2];
-            $scope.item4=data.school.school[3];
-            $scope.item5=data.school.school[4];
-            $scope.item6=data.school.school[5];
+            $scope.majorHot=data.majorHot;
+            $scope.school=data.school;
+            $scope.raiders=data.raiders;
         });
     }]);
     $('.form_btn').click(function(){
