@@ -39,11 +39,7 @@
         #index{
             padding-bottom: 0;
         }
-        .header_nav {
-            background: rgba(44, 177, 229, 0.4);
-        }
-
-        .index_bg {
+        .ad_text {
             background: url("images/index_bg.png") no-repeat 0 0;
             background-size: cover;
         }
@@ -320,13 +316,42 @@
             background: url("images/hot_icon.png") no-repeat 0 center;
             background-size: 0.5rem;
         }
+        .other_link{
+            background: #ffffff;
+            padding: 0.5rem 0;
+        }
+        .other_link a{
+            color: #2cb1e5;
+            display: block;
+            font-size: 0.6rem;
+            padding: 0.2rem 0;
+            width: 3.5rem;
+            text-align: center;
+            margin: 0 0.5rem;
+            -webkit-border-radius: 0.1rem;
+            -moz-border-radius: 0.1rem;
+            border-radius: 0.1rem;
+            border: 1px solid #2cb1e5;
+        }
+        .other_link a.on{
+            color: #ffffff;
+            background: #2cb1e5;
+        }
+        .sc_n{
+            padding-top: 1.5rem;
+            width: 84.5%;
+            margin: auto;
+        }
+        .sc_n img{
+            width: 4.3rem;
+        }
     </style>
 </head>
 <body id="index" ng-controller="abroad_view">
 <!--头部-->
 <section class="relative index_bg mg_b5">
     <div>
-        <div class="header_nav pd_lr5 flex-container">
+        <div class="header_nav bg_b bg_b2 pd_lr5 flex-container">
             <i class="icon-list-ul nav_icon color_f"></i>
             <a href="index.html"><img src="images/logo_2.png" style="height: 1.4rem;" alt=""></a>
             <a class="user" href="login.html"><img src="images/user_center.png" style="height: 1.2rem;" alt=""></a>
@@ -335,7 +360,7 @@
         <div class="nav_wrap">
             <ul class="nav_list_item_1">
                 <li class="on">
-                    <a href="#" class="flex-container">
+                    <a href="index.html" class="flex-container">
                         <div class="nav_wrap1 flex-container">
                             <div class="nav_icon_header inm"><img src="images/nav_icon_1.png" alt=""></div>
                             <span class="nav_tit_1">首页</span>
@@ -409,10 +434,32 @@
                         </div>
                     </a>
                 </li>
+                <li>
+                    <a href="contact.html" class="flex-container">
+                        <div class="nav_wrap1 flex-container">
+                            <div class="nav_icon_header inm"><img src="images/nav_icon_9.png" alt=""></div>
+                            <span class="nav_tit_1">联系我们</span>
+                        </div>
+                    </a>
+                </li>
             </ul>
         </div>
     </div>
-    <div class="ad_text"><a href="assessment.html"><img src="images/index2_1.png" style="height:8.5rem;" alt=""></a></div>
+    <!--其他项目链接-->
+    <ul class="other_link flex-container-center">
+        <li><a class="on" href="http://m.smartapply.cn/">留学</a></li>
+        <li><a href="http://m.gmatonline.cn">GMAT</a></li>
+        <li><a href="http://m.toeflonline.cn/">TOEFL</a></li>
+        <li><a href="http://ielts.viplgw.cn">IELTS</a></li>
+    </ul>
+    <div class="ad_text">
+        <div><img src="images/sc_nt.png" style="height: 2.7rem;" alt=""></div>
+        <ul class="flex-container sc_n">
+            <li><a href="assessment.html"><img src="images/sc_n1.png" alt=""></a></li>
+            <li><a href="school.html"><img src="images/sc_n2.png" alt=""></a></li>
+            <li><a href="connoisseur.html"><img src="images/sc_n3.png" alt=""></a></li>
+        </ul>
+    </div>
 </section>
 <!--留学问答-->
 <section class="mg_b5 bg_f pd_lr5">
