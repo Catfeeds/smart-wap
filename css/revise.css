@@ -41,6 +41,9 @@
 .response_status{
     padding: 1rem 0;
 }
+.success_wrap,.fail_wrap{
+    display: none;
+}
 /*修改邮箱*/
 .email_list{
     padding: 0 0.5rem;

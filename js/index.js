@@ -3,6 +3,12 @@
  */
 $(function() {
     var Requests = GetRequests();
+    var uid = localStorage.getItem("uid");
+    if(!uid){
+        $('.user').attr('href','login.html')
+    }else {
+        $('.user').attr('href','user_center.html')
+    }
     //声明模块
     var myApp = angular.module("myApp", []);
     myApp.directive('isOver', function () {
