@@ -46,7 +46,9 @@ $(function () {
                 active:report_item.gong_yi,
                 price:report_item.huo_j,
                 destination:report_item.state,
-                major:report_item.major
+                major:report_item.major,
+                major_name:report_item.major_name,
+                major_name2:report_item.major_name2,
             },
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded'

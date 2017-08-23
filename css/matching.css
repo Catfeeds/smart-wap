@@ -475,6 +475,7 @@
 }
 .step_wrap2{
     display: none;
+    min-height: 18.5rem;
 }
 .step_wrap2:first-child{
     display: block;
@@ -533,4 +534,53 @@
     left: 0;
     top: 0.6rem;
     text-align: center;
+}
+/*背景测评*/
+.bg_test_wrap {
+    margin-top: -1px;
+    padding: 0 0.31rem 0.7rem 0.35rem;
+    background: #71d8ee;
+}
+.bg_step_3{
+    padding-top: 2.5rem;
+}
+
+.bg_wrap2 {
+    min-height: 15.37rem;
+    padding: 0.5rem 0.5rem 1.5rem;
+}
+.check_box{
+    width: auto;
+    padding-bottom: 0.3rem;
+    padding-left: 0.6rem;
+}
+.check_box label{
+    margin: 0.2rem 0;
+    display: inline-block;
+    vertical-align: middle;
+    width: 32%;
+    font-size: 0.7rem;
+    color: #777777;
+}
+.check_box label input[type=checkbox],.check_box span{
+    vertical-align: middle;
+}
+.suc_num{
+    font-size: 1.2rem;
+    color: #333333;
+    padding: 1.5rem 0;
+}
+.suc_num .color_b{
+    color: #70b8d9;
+}
+.suc_de{
+    color: #777777;
+    line-height: 1.2rem;
+    font-size: 0.75rem;
+}
+.bg_wrap2 .bg_step:first-child{
+    display: block;
+}
+.bg_step{
+    display: none;
 }

@@ -1,0 +1,64 @@
+/*专业解析详情*/
+.common_tit2_wrap {
+    color: #01a4e5;
+    font-size: 0.8rem;
+    padding: 0.3rem 0.5rem;
+}
+
+.common_tit2 {
+    line-height: 0.9rem;
+    font-size: 0.8rem;
+    padding-left: 0.4rem;
+    border-left: 0.2rem solid #01a4e5;
+}
+
+.major_banner {
+    padding: 0.5rem 0;
+    background: url("../images/mj_banner_bg.png") no-repeat 0 0;
+    background-size: 100% 100%;
+}
+
+.ch_name {
+    color: #ffffff;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.en_name {
+    padding: 0.4rem;
+    font-size: 0.7rem;
+    color: #ffffff;
+}
+
+.banner_handle {
+    width: 4rem;
+    height: 1rem;
+    margin: 0 0.7rem;
+    line-height: 0.75rem;
+    display: block;
+    border-radius: 0.5rem;
+    border: 1px solid #ffffff;
+}
+
+.banner_handle span {
+    font-size: 0.5rem;
+    color: #ffffff;
+    vertical-align: middle;
+}
+.major_text{
+    color: #777777;
+    text-align: justify;
+    font-size: 0.65rem;
+    line-height: 1rem;
+    padding: 0.3rem 0;
+}
+.relevant_school{
+    padding-bottom: 0.5rem;
+}
+.relevant_school a{
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 0.7rem;
+    color: #777777;
+    padding-right: 0.7rem;
+}

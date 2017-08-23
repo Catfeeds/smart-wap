@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="title" content="">
+    <meta name="author" content="">
+    <meta name="Copyright" content="">
+    <!-- <meta name="description" content=""> -->
+    <!-- 让IE浏览器用最高级内核渲染页面 还有用 Chrome 框架的页面用webkit 内核
+    <!-- ================================================== -->
+    <meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge">
+    <!-- IOS6全屏 Chrome高版本全屏-->
+    <!-- ================================================== -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <!-- 让360双核浏览器用webkit内核渲染页面-->
+    <!-- ================================================== -->
+    <meta name="renderer" content="webkit">
+    <!-- Mobile Specific Metas
+   ================================================== -->
+    <!-- !!!注意 minimal-ui 是IOS7.1的新属性，最小化浏览器UI -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/major_de.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/swiper-3.3.1.min.css">
+    <script src="js/jquery-1.12.2.min.js"></script>
+    <script src="js/swiper-3.3.1.jquery.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/public.js"></script>
+    <script src="js/major_de.js"></script>
+    <script src="js/angular1.3.1.js"></script>
+    <title>专业解析</title>
+    <style>
+        .de_table_wrap{
+            padding: 0.5rem;
+        }
+        .de_table{
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid #c9c9c9;
+        }
+        .de_table td{
+            padding: 0.5rem;
+        }
+        .de_name{
+            width: 25%;
+            text-align: center;
+            font-size: 0.7rem;
+            color: #333333;
+        }
+        .de_text{
+            width: 70%;
+            text-align: justify;
+            font-size: 0.6rem;
+            color: #777777;
+        }
+        .mj_sub{
+            color: #333333;
+            font-size: 0.7rem;
+        }
+        .mj_sub .mj_line{
+            display: inline-block;
+            vertical-align: middle;
+            border-bottom: 1px dashed #9c9c9c;
+        }
+        .de_intra{
+            padding: 0.4rem 0;
+            color: #777777;
+            font-size: 0.7rem;
+        }
+        .de_tag{
+            padding: 0.4rem 0;
+        }
+        .de_tag span{
+            display: inline-block;
+            vertical-align: middle;
+            border: 1px solid #cccccc;
+            padding: 0.2rem 0.5rem;
+            color: #777777;
+            font-size: 0.55rem;
+            margin: 0 0.3rem 0.3rem 0;
+        }
+    </style>
+</head>
+<body class="pd_b0 bg_f" ng-controller="abroad_view">
+<!--头部-->
+<section class="relative">
+    <div class="bg_b bg_b2 header_nav pd_lr5 flex-container">
+        <a href="javascript:history.go(-1)"><i class="icon-angle-left nav_icon color_f"></i></a>
+        <span class="header_name color_f">专业解析</span>
+        <span></span>
+    </div>
+</section>
+<section class="major_banner tm">
+    <h1 class="ch_name">{{data.name}}</h1>
+    <p class="en_name ellipsis">{{data.title}}</p>
+    <div class="flex-container-center">
+        <div class="banner_handle">
+            <img src="images/like_mj_1.png" style="height: 0.6rem;" alt="">
+            <span>点赞(10)</span>
+        </div>
+        <a class="banner_handle" href="#">
+            <img src="images/sound.png" style="height: 0.6rem;" alt="">
+            <span>在线咨询</span>
+        </a>
+    </div>
+
+</section>
+<!--标题-->
+<div class="common_tit2_wrap bg_f">
+    <p class="common_tit2">专业详情</p>
+</div>
+<section class="de_table_wrap">
+    <table class="de_table" border="1" cellspacing="0">
+        <tr>
+            <td class="de_name">开设学位</td>
+            <td class="de_text">{{data.answer}}</td>
+        </tr>
+        <tr>
+            <td class="de_name">就业方向</td>
+            <td class="de_text">{{data.alternatives}}</td>
+        </tr>
+        <tr>
+            <td class="de_name">从事职业</td>
+            <td class="de_text">{{data.article}}</td>
+        </tr>
+        <tr>
+            <td class="de_name">相关证书</td>
+            <td class="de_text">{{data.listeningFile}}</td>
+        </tr>
+        <tr>
+            <td class="de_name">相关排名</td>
+            <td class="de_text">{{data.cnName}}</td>
+        </tr>
+    </table>
+</section>
+<!--标题-->
+<div class="common_tit2_wrap bg_f">
+    <p class="common_tit2">专业解释</p>
+</div>
+<section class="bg_f pd_lr5">
+    <div class="major_text">{{data.numbering}}</div>
+</section>
+<!--标题-->
+<div class="common_tit2_wrap bg_f">
+    <p class="common_tit2">适合申请人背景</p>
+</div>
+<section class="bg_f pd_lr5">
+    <div class="major_text">{{data.sentenceNumber}}</div>
+</section>
+<!--标题-->
+<div class="common_tit2_wrap bg_f">
+    <p class="common_tit2">相关院校</p>
+</div>
+<section class="bg_f pd_lr5">
+    <div class="relevant_school">
+        <a ng-repeat="schoolA in school" class="hot" href="#">
+            <span>{{school[$index]}}</span>
+            <img ng-hide="$index>0" src="images/hot_icon.png" style="height: 0.5rem" alt="">
+        </a>
+        <!--<a class="hot" href="#">-->
+            <!--<span>芝加哥大学</span>-->
+            <!--<img src="images/hot_icon.png" style="height: 0.5rem" alt="">-->
+        <!--</a>-->
+        <!--<a class="hot" href="#">-->
+            <!--<span>芝加哥大学</span>-->
+            <!--<img src="images/hot_icon.png" style="height: 0.5rem" alt="">-->
+        <!--</a>-->
+    </div>
+</section>
+<!--标题-->
+<div class="common_tit2_wrap bg_f">
+    <p class="common_tit2">专业开设课程及课程方向</p>
+</div>
+<section class="de_table_wrap">
+    <!--课程方向-->
+    <div class="mj_sub"><span>课程方向</span><i style="width: 84%;" class="mj_line"></i></div>
+    <div class="de_intra">{{data.problemComplement}}</div>
+    <!--专业开设课程-->
+    <div class="mj_sub"><span>专业开设课程</span><i style="width: 76%;" class="mj_line"></i></div>
+    <div class="de_tag">
+        <span ng-repeat="trainerA in trainer">{{trainer[$index]}}</span>
+    </div>
+</section>
+</body>
+</html>

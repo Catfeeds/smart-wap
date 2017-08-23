@@ -1,0 +1,89 @@
+/*修改密码*/
+.pwd_wrap {
+    padding: 0.5rem;
+}
+
+.row {
+    margin-bottom: 0.5rem;
+}
+
+.save {
+    background: #2cb1e5;
+    color: #ffffff;
+    font-size: 0.75rem;
+    width: 8.5rem;
+    height: 1.8rem;
+    text-align: center;
+    line-height: 1.8rem;
+    margin: 1rem auto;
+    -webkit-border-radius: 0.2rem;
+    -moz-border-radius: 0.2rem;
+    border-radius: 0.2rem;
+}
+.jump_hint{
+    color: #333333;
+    line-height: 1.6rem;
+    font-size: 0.9rem;
+}
+.return_wrap{
+    padding-top: 1rem;
+}
+.return{
+    color: #ffffff;
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+    padding: 0 1.6rem;
+    background: #2cb1e5;
+    -webkit-border-radius: 0.2rem;
+    -moz-border-radius: 0.2rem;
+    border-radius: 0.2rem;
+}
+.response_status{
+    padding: 1rem 0;
+}
+/*修改邮箱*/
+.email_list{
+    padding: 0 0.5rem;
+}
+.email_list li{
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #ebe9e9;
+}
+.email_list li:last-child{
+    border-bottom: none;
+}
+.email_list .menu_name{
+    color: #646464;
+    font-size: 0.8rem;
+}
+.email_list .userInfo_response{
+    font-size: 0.75rem;
+    color: #a2a2a2;
+}
+/*修改信息*/
+.tj-btn{
+    background: #2cb1e5;
+    color: #ffffff;
+    font-size: 0.75rem;
+    border-radius: 0.3rem;
+    padding: 0.6rem 0;
+    text-align: center;
+    width: 80%;
+    margin: auto;
+}
+.revise_content{
+    resize: none;
+    height: 8rem;
+    width: 100%;
+    outline: none;
+    border: none;
+}
+.revise_content::-webkit-input-placeholder{
+    font-size: 0.75rem;
+    color: #777777;
+}
+.revise_val{
+    background: #ffffff;
+    padding: 0.5rem;
+    margin-bottom: 0.8rem;
+}

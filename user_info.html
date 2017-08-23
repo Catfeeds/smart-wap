@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="title" content="">
+    <meta name="author" content="">
+    <meta name="Copyright" content="">
+    <!-- <meta name="description" content=""> -->
+    <!-- 让IE浏览器用最高级内核渲染页面 还有用 Chrome 框架的页面用webkit 内核
+    <!-- ================================================== -->
+    <meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge">
+    <!-- IOS6全屏 Chrome高版本全屏-->
+    <!-- ================================================== -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <!-- 让360双核浏览器用webkit内核渲染页面-->
+    <!-- ================================================== -->
+    <meta name="renderer" content="webkit">
+    <!-- Mobile Specific Metas
+   ================================================== -->
+    <!-- !!!注意 minimal-ui 是IOS7.1的新属性，最小化浏览器UI -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/user_center.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/swiper-3.3.1.min.css">
+    <script src="js/jquery-1.12.2.min.js"></script>
+    <script src="js/swiper-3.3.1.jquery.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/public.js"></script>
+    <script src="js/angular1.3.1.js"></script>
+    <title>个人资料</title>
+</head>
+<body>
+<!--头部-->
+<section class="relative">
+    <div class="bg_b bg_b2 header_nav pd_lr5 flex-container">
+        <a href="javascript:history.go(-1)"><i class="icon-angle-left nav_icon color_f"></i></a>
+        <span class="header_name color_f">个人资料</span>
+        <span></span>
+    </div>
+</section>
+<section class="mg_b5 bg_f">
+    <ul class="menu_list">
+        <li>
+            <input class="hide_file" type="file" accept="image/*">
+            <div class="flex-container">
+                <div class="menu_name">头像</div>
+                <div>
+                    <div class="user_img inm">
+                        <img src="images/default.png" alt="">
+                    </div>
+                    <i class="icon-angle-right menu_enter"></i>
+                </div>
+            </div>
+        </li>
+        <li>
+            <a href="revise.html?name=昵称">
+                <div class="flex-container">
+                    <div class="menu_name">昵称</div>
+                    <div>
+                        <span class="menu_name" style="font-size: 0.75rem;">用户名</span>
+                        <i class="icon-angle-right menu_enter"></i>
+                    </div>
+                </div>
+            </a>
+        </li>
+    </ul>
+</section>
+<section class="mg_b5 bg_f">
+    <ul class="menu_list">
+        <li>
+            <a href="revise.html?name=学校">
+                <div class="flex-container">
+                    <div class="menu_name">学校</div>
+                    <div>
+                        <span class="menu_name no_enter">未填写</span>
+                        <i class="icon-angle-right menu_enter"></i>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="revise.html?name=专业">
+                <div class="flex-container">
+                    <div class="menu_name">专业</div>
+                    <div>
+                        <span class="menu_name no_enter">未填写</span>
+                        <i class="icon-angle-right menu_enter"></i>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="revise.html?name=年级">
+                <div class="flex-container">
+                    <div class="menu_name">年级</div>
+                    <div>
+                        <span class="menu_name no_enter">未填写</span>
+                        <i class="icon-angle-right menu_enter"></i>
+                    </div>
+                </div>
+            </a>
+        </li>
+    </ul>
+</section>
+<section class="bg_f">
+    <ul class="menu_list">
+        <li>
+            <a href="revise.html?name=电话">
+                <div class="flex-container">
+                    <div class="menu_name">电话</div>
+                    <div>
+                        <span class="menu_name">18880002233</span>
+                        <i class="icon-angle-right menu_enter"></i>
+                    </div>
+                </div>
+            </a>
+        </li>
+    </ul>
+</section>
+<section class="pd_lr5 bg_f save_wrap">
+    <!--获取验证码-->
+    <div class="code_wrap flex-container-center">
+        <input id="code_val" type="text" placeholder="请输入验证码">
+        <input id="code_btn" type="button" value="获取验证码">
+    </div>
+    <div class="save">保存</div>
+</section>
+</body>
+</html>

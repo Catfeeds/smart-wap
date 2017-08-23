@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="title" content="">
+    <meta name="author" content="">
+    <meta name="Copyright" content="">
+    <!-- <meta name="description" content=""> -->
+    <!-- 让IE浏览器用最高级内核渲染页面 还有用 Chrome 框架的页面用webkit 内核
+    <!-- ================================================== -->
+    <meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge">
+    <!-- IOS6全屏 Chrome高版本全屏-->
+    <!-- ================================================== -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <!-- 让360双核浏览器用webkit内核渲染页面-->
+    <!-- ================================================== -->
+    <meta name="renderer" content="webkit">
+    <!-- Mobile Specific Metas
+   ================================================== -->
+    <!-- !!!注意 minimal-ui 是IOS7.1的新属性，最小化浏览器UI -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/matching.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/swiper-3.3.1.min.css">
+    <script src="js/jquery-1.12.2.min.js"></script>
+    <script src="js/swiper-3.3.1.jquery.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/public.js"></script>
+    <script src="js/bg_test.js"></script>
+    <script src="js/angular1.3.1.js"></script>
+    <title>留学背景测评</title>
+</head>
+<body>
+<!--头部-->
+<section class="relative">
+    <div class="bg_b header_nav pd_lr5 flex-container">
+        <a href="javascript:history.go(-1)"><i class="icon-angle-left nav_icon color_f"></i></a>
+        <span class="header_name color_f">留学背景测评</span>
+        <span></span>
+    </div>
+</section>
+<div class="ad"><img src="images/smart_top.png" alt=""></div>
+<section class="bg_test_wrap">
+    <div class="bg_f bg_wrap2">
+        <!--step_1-->
+        <div class="bg_step_1 bg_step">
+            <div class="step_row">
+                <div class="step_text_intra flex-container">
+                    <span class="row_name_b"><i class="must light">*</i>计划出国时间:</span>
+                </div>
+                <div class="step_int_wrap">
+                    <input class="step_text_int" id="time" type="text">
+                </div>
+            </div>
+            <div class="step_row">
+                <div class="step_text_intra flex-container">
+                    <span class="row_name_b"><i class="must light">*</i>意向国家:</span>
+                </div>
+                <div class="step_int_wrap">
+                    <input class="step_text_int" id="country" type="text">
+                </div>
+            </div>
+            <div class="step_row">
+                <div class="step_text_intra flex-container">
+                    <span class="row_name_b"><i class="must light">*</i>意向专业:</span>
+                </div>
+                <div class="step_int_wrap">
+                    <input class="step_text_int" id="major"  type="text">
+                </div>
+            </div>
+            <div class="step_row">
+                <div class="step_text_intra flex-container">
+                    <span class="row_name_b">是否参加过以下考试:</span>
+                    <div class="row_name-intra flex-container-left">
+                        <label class="flex-container-center" for="point"><input id="point" rel="yes" onclick="radioChange(this)" checked="checked" name="test" type="radio">是</label>
+                        <label class="flex-container-center" for="point2"><input id="point2" onclick="radioChange(this)" name="test" type="radio">否</label>
+                    </div>
+                </div>
+                <div class="step_int_wrap">
+                    <input class="step_text_int" id="gmat" placeholder="GMAT" style="margin-bottom: 0.5rem;" type="text">
+                    <input class="step_text_int" id="toefl" placeholder="托  福" style="margin-bottom: 0.5rem;" type="text">
+                    <input class="step_text_int" id="ielts" placeholder="雅  思" style="margin-bottom: 0.5rem;" type="text">
+                </div>
+            </div>
+            <div class="step_row">
+                <div class="step_text_intra flex-container">
+                    <span class="row_name_b"><i class="must light">*</i>是否有实习经历:</span>
+                    <div class="row_name-intra flex-container-left">
+                        <label class="flex-container-center" for="point3"><input id="point3" rel="yes" checked="checked" onclick="radioChange(this)" name="exp" type="radio">是</label>
+                        <label class="flex-container-center" for="point4"><input id="point4" onclick="radioChange(this)" name="exp" type="radio">否</label>
+                    </div>
+                </div>
+                <div class="step_int_wrap">
+                    <textarea id="work_exp" class="step_text_int2"></textarea>
+                </div>
+            </div>
+            <div class="next_step_btn tm"><span class="st_next next_1" data-index="1">下一步</span></div>
+        </div>
+        <!--step_2-->
+        <div class="bg_step_2 bg_step">
+            <div class="step_row">
+                <div class="step_text_intra flex-container" style="margin-bottom: 0;">
+                    <span class="row_name_b"><i class="must light">*</i>你最关心的问题:</span>
+                </div>
+                <div class="step_int_wrap flex-container-left check_box">
+                    <label class="flex-container-center" for="point">
+                        <input id="qs_1" name="care_qs" value="服务流程" type="checkbox">
+                        <span>服务流程</span>
+                    </label>
+                    <label class="flex-container-center" for="point">
+                        <input id="qs_2" name="care_qs" value="出国考试课程" type="checkbox">
+                        <span>出国考试课程</span>
+                    </label>
+                    <label class="flex-container-center" for="point">
+                        <input id="qs_3" name="care_qs" value="选校定位" type="checkbox">
+                        <span>选校定位</span>
+                    </label>
+                    <label class="flex-container-center" for="point">
+                        <input id="qs_4" name="care_qs" value="申请步骤" type="checkbox">
+                        <span>申请步骤</span>
+                    </label>
+                    <label class="flex-container-center" for="point">
+                        <input id="qs_5" name="care_qs" value="申请费用" type="checkbox">
+                        <span>申请费用</span>
+                    </label>
+                    <label class="flex-container-center" for="point">
+                        <input id="qs_6" name="care_qs" value="奖学金" type="checkbox">
+                        <span>奖学金</span>
+                    </label>
+                    <label class="flex-container-center" for="point">
+                        <input id="qs_7" name="care_qs" value="推荐顾问" type="checkbox">
+                        <span>推荐顾问</span>
+                    </label>
+                    <label class="flex-container-center" for="point">
+                        <input id="qs_8" name="care_qs" value="其他" type="checkbox">
+                        <span>其他</span>
+                    </label>
+                </div>
+            </div>
+            <div class="step_row">
+                <div class="step_text_intra flex-container">
+                    <span class="row_name_b">请补充您想了解的问题:</span>
+
+                </div>
+                <div class="step_int_wrap">
+                    <textarea id="buchong" class="step_text_int2"></textarea>
+                </div>
+            </div>
+            <div class="step_row">
+                <div class="step_text_intra flex-container">
+                    <span class="row_name_b"><i class="must light">*</i>您的姓名:</span>
+                </div>
+                <div class="step_int_wrap">
+                    <input class="step_text_int" id="n-name" type="text">
+                </div>
+            </div>
+            <div class="step_row">
+                <div class="step_text_intra flex-container">
+                    <span class="row_name_b"><i class="must light">*</i>您的电话:</span>
+                </div>
+                <div class="step_int_wrap">
+                    <input class="step_text_int" id="n-phone" type="text">
+                </div>
+            </div>
+            <div class="step_row">
+                <div class="step_text_intra flex-container">
+                    <span class="row_name_b"><i class="must light">*</i>QQ/微信:</span>
+                </div>
+                <div class="step_int_wrap">
+                    <input class="step_text_int" id="n-wechat" type="text">
+                </div>
+            </div>
+            <div class="next_step_btn tm flex-container" style="padding: 2rem 0">
+                <span class="st_next pre_st" data-index="0">上一步</span>
+                <span class="st_next st_tj">提交</span>
+            </div>
+        </div>
+        <!--提交成功-->
+        <div class="bg_step_3 bg_step tm">
+            <div><img style="height: 2.3rem;" src="images/success_img.png" alt=""></div>
+            <p class="suc_num">已有<b class="color_b">1000+</b>位同学得到了帮助</p>
+            <p class="suc_de">亲爱的同学，雷哥网已为你安排了资深顾问。<br>1个工作日内与你取得联系，解决你申请问题！</p>
+        </div>
+
+    </div>
+</section>
+<!--footer-->
+<footer>
+    <ul class="ftnav_list flex-container">
+        <li>
+            <a href="index.html">
+                <div>
+                    <img src="images/icon_ft_1.png" style="height: 1.1rem" alt="">
+                    <span>首页</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="tel:4001816180">
+                <div>
+                    <img src="images/icon_ft_2.png" style="height: 1.1rem" alt="">
+                    <span>拨打电话</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="http://p.qiao.baidu.com/im/index?siteid=7905926&ucid=18329536&cp=&cr=&cw=#close-back18">
+                <div>
+                    <img src="images/icon_ft_3.png" style="height: 1.1rem" alt="">
+                    <span>在线咨询</span>
+                </div>
+            </a>
+        </li>
+    </ul>
+</footer>
+</body>
+</html>

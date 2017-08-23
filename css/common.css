@@ -1,6 +1,3 @@
-body{
-    background: #eeeeee;
-}
 .bg_b {
     background: #468ed1;
 }
@@ -352,8 +349,11 @@ footer{
     background-color: #ffffff;
 }
 body{
-    background-color: #f0f0f0!important;
+    background-color: #f0f0f0;
     padding-bottom: 2.4rem;
+}
+.pd_b0{
+    padding-bottom: 0;
 }
 .com-auto{
     width: 90%;
@@ -455,4 +455,62 @@ body{
 .de_content table{
     width: 100%!important;
     word-break: break-all;
+}
+/*个人中心*/
+.code_wrap input{
+    border: none;
+    outline: none;
+}
+.code_wrap #code_val{
+    width: 60.2%;
+    border: 1px solid #b5b5b5;
+    border-right: none;
+    padding: 0 0.2rem;
+    color: #646464;
+    height: 1.7rem;
+    border-bottom-left-radius: 0.2rem;
+    -webkit-border-bottom-left-radius: 0.2rem;
+    border-top-left-radius: 0.2rem;
+    -webkit-border-top-left-radius: 0.2rem;
+}
+.code_wrap #code_btn{
+    width: 37%;
+    /*margin-left: -0.5rem;*/
+    border: 1px solid #2cb1e5;
+    border-bottom-right-radius: 0.2rem;
+    -webkit-border-bottom-right-radius: 0.2rem;
+    border-top-right-radius: 0.2rem;
+    -webkit-border-top-right-radius: 0.2rem;
+    background: #2cb1e5;
+    color: #ffffff;
+    height: 1.8rem;
+    font-size: 0.75rem;
+}
+.user_int {
+    outline: none;
+    height: 2.2rem;
+    width: 97%;
+    padding-left: 3%;
+    -webkit-border-radius: 0.2rem;
+    -moz-border-radius: 0.2rem;
+    border-radius: 0.2rem;
+    border: 1px solid #cccccc;
+}
+.save{
+    background: #2cb1e5;
+    color: #ffffff;
+    font-size: 0.75rem;
+    width: 8.5rem;
+    height: 1.8rem;
+    text-align: center;
+    line-height: 1.8rem;
+    margin: 1rem auto;
+    -webkit-border-radius: 0.2rem;
+    -moz-border-radius: 0.2rem;
+    border-radius: 0.2rem;
+}
+.save_wrap{
+    padding-top: 0.8rem;
+    padding-bottom: 0.4rem;
+    overflow: hidden;
 }
