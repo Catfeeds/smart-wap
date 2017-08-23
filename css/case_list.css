@@ -1,4 +1,7 @@
 /*case_list*/
+body{
+    padding-bottom: 6rem;
+}
 .case_list_wrap {
     padding-bottom: 0.5rem;
 }

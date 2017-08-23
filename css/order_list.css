@@ -78,3 +78,32 @@
 .order_handle span{
     background: #ff3a44;
 }
+/*公共分页*/
+.pageSize {
+    text-align: center;
+    padding: 0.3rem 0.75rem 0.5rem;
+    background: #ffffff;
+}
+
+.pageSize li {
+    font-size: 0.6rem;
+    color: #468ed1;
+    background: #ffffff;
+    height: 1rem;
+    text-align: center;
+    line-height: 1rem;
+    padding: 0 0.3rem;
+    margin-right: 0.2rem;
+    display: inline-block;
+    vertical-align: middle;
+    border: 1px dashed #468ed1;
+}
+
+.pageSize li:last-child {
+    margin-right: 0;
+}
+
+.pageSize li.on {
+    color: #ffffff;
+    background: #468ed1;
+}
