@@ -3,7 +3,12 @@
  */
 $(function () {
     var Requests = GetRequests();
+    var uid = localStorage.getItem('uid');
     var report_item = $.parseJSON(sessionStorage.getItem('matching_item'));
+    if(!uid){
+        alert("请先登录！");
+        location.href='login.html'
+    }
     console.log(report_item);
     //声明模块
     var myApp = angular.module("myApp", []);
@@ -29,26 +34,10 @@ $(function () {
     myApp.controller("abroad_view", ["$scope", "$http", "$sce", function ($scope, $http, $sce) {
         $http({
             method: 'post',
-            url: 'http://test.school.gmatonline.cn/cn/wap-api/school-choice',
+            url: httpUrl+'/cn/wap-api/school-result',
+            //url: 'http://www.smartapply.cn/cn/wap-api/odds-storage',
             data: {
-                result_gpa:report_item.gpa,
-                result_gmat:report_item.gmat,
-                result_gre:report_item.gre,
-                result_toefl:report_item.toefl,
-                result_ielts:report_item.ielts,
-                school:report_item.school_rank,
-                major_top:report_item.school_major,
-                school_major:report_item.major_top,
-                work:report_item.work_where,
-                live:report_item.work_exp,
-                project:report_item.item_exp,
-                studyTour:report_item.you_xue,
-                active:report_item.gong_yi,
-                price:report_item.huo_j,
-                destination:report_item.state,
-                major:report_item.major,
-                major_name:report_item.major_name,
-                major_name2:report_item.major_name2,
+                uid:uid
             },
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded'
@@ -57,10 +46,10 @@ $(function () {
             $scope.http = httpUrl;
             $scope.http2 = httpUrl2;
             $scope.score=data.score;
-            if(data.res==''){
+            if(data.data==''){
                 alert("暂无当前数据，您可以重新选择留学专业！")
             }else {
-                $scope.res=data.res;
+                $scope.res=data.data;
             }
 
         });

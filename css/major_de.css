@@ -14,6 +14,7 @@
 
 .major_banner {
     padding: 0.5rem 0;
+    margin-bottom: 0.4rem;
     background: url("../images/mj_banner_bg.png") no-repeat 0 0;
     background-size: 100% 100%;
 }
@@ -61,4 +62,54 @@
     font-size: 0.7rem;
     color: #777777;
     padding-right: 0.7rem;
+}
+/*解析详情*/
+.de_table_wrap{
+    padding: 0.5rem;
+}
+.de_table{
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #c9c9c9;
+}
+.de_table td{
+    padding: 0.5rem;
+}
+.de_name{
+    width: 25%;
+    text-align: center;
+    font-size: 0.7rem;
+    color: #333333;
+}
+.de_text{
+    width: 70%;
+    text-align: justify;
+    font-size: 0.6rem;
+    color: #777777;
+}
+.mj_sub{
+    color: #333333;
+    font-size: 0.7rem;
+}
+.mj_sub .mj_line{
+    display: inline-block;
+    vertical-align: middle;
+    border-bottom: 1px dashed #9c9c9c;
+}
+.de_intra{
+    padding: 0.4rem 0;
+    color: #777777;
+    font-size: 0.7rem;
+}
+.de_tag{
+    padding: 0.4rem 0;
+}
+.de_tag span{
+    display: inline-block;
+    vertical-align: middle;
+    border: 1px solid #cccccc;
+    padding: 0.2rem 0.5rem;
+    color: #777777;
+    font-size: 0.55rem;
+    margin: 0 0.3rem 0.3rem 0;
 }

@@ -4,6 +4,7 @@
 $(function () {
     var Requests = GetRequests();
     var id = Requests['id'];
+    var uid = localStorage.getItem('uid');
     //        手风琴效果
     $(document).on('click', '.link', function (even) {
         var ev = even || window.event;
@@ -128,39 +129,21 @@ $(function () {
         var gpa = $('#gpa').val();
         var gmat = $('#gmat').val();
         var toefl = $('#toefl').val();
-        var xl = $('#s1').val();
-        var school_rank = $('#s2').val();
-        var major_top = $('#major_name').attr('data-id');
-        var school_major = $('#major_name').attr('data-pid');
-        var work_where = [[0, $('#s3').val()]];
-        var work_exp = [$('#work_exp').val()];
-        var item_exp = [$('#project_exp').val()];
-        var you_xue = [$('#abroad_study').val()];
-        var gong_yi = [$('#gy_active').val()];
-        var huo_j = [$('#hj_jl').val()];
-        var state = $('#abroad_state').val();
-        var major = $('#major_name2').attr('data-id');
-        var major_name=$('#major_name').val();
-        var major_name2=$('#major_name2').val();
-        var item = {
-            gpa: '',
-            gmat: '',
-            toefl: '',
-            xl: '',
-            school_rank: '',
-            major_top: '',
-            school_major: '',
-            work_where: '',
-            work_exp: '',
-            item_exp: '',
-            you_xue: '',
-            gong_yi: '',
-            huo_j: '',
-            state: '',
-            major: '',
-            major_name:'',
-            major_name2:''
-        };
+        var xl = $('#s1').val();//目前学历
+        var school_rank = $('#s2').val();//学校等级
+        var schoolName=$('#jd_school').val();//目前学校名称
+        var major_top = $('#major_name').attr('data-id');//目前专业 id
+        var school_major = $('#major_name').attr('data-pid');//目前专业PID
+        var work_where = [[0, $('#s3').val()]];//实习地等级
+        var work_exp = [$('#work_exp').val()];//工作经验
+        var item_exp = [$('#project_exp').val()];//项目经验
+        var you_xue = [$('#abroad_study').val()];//游学经历
+        var gong_yi = [$('#gy_active').val()];//公益经历
+        var huo_j = [$('#hj_jl').val()];//获奖经历
+        var state = $('#abroad_state').val();//留学目的地
+        var major = $('#major_name2').attr('data-id');//需要申请的专业ID
+        var major_name=$('#major_name').val();//目前专业名
+        var major_name2=$('#major_name2').val();//申请专业名
         if (!$('#major_name2').val()) {
             alert('请选择正确的专业名称！');
             return false;
@@ -169,27 +152,41 @@ $(function () {
             alert('请选择正确的专业名称！');
             return false;
         } else {
-            item = {
-                gpa: gpa,
-                gmat: gmat,
-                toefl: toefl,
-                xl: xl,
-                school_rank: school_rank,
-                major_top: major_top,
-                school_major: school_major,
-                work_where: work_where,
-                work_exp: work_exp,
-                item_exp: item_exp,
-                you_xue: you_xue,
-                gong_yi: gong_yi,
-                huo_j: huo_j,
-                state: state,
-                major: major,
-                major_name:major_name,
-                major_name2:major_name2
-            };
-            sessionStorage.setItem('matching_item', JSON.stringify(item));
-            location.href = 'matching_report.html';
+            $.ajax({
+                type: 'post',
+                url: httpUrl+'/cn/wap-api/school-storage',
+                data: {
+                    uid:uid,
+                    result_gpa:gpa,
+                    result_gmat:gmat,
+                    result_toefl:toefl,
+                    education:xl,//目前学历
+                    school:school_rank,//就读院校等级
+                    schoolName:schoolName,//目前学校名称
+                    major_name1:major_name,//当前专业名
+                    major_top:school_major,//专业方向(id)
+                    school_major:major_top,//详细专业(id)
+                    work:work_where,//实习地等级
+                    live:work_exp,//工作经验
+                    project:item_exp,//项目经验
+                    studyTour:you_xue,//游学经历
+                    active:gong_yi,//公益经历
+                    price:huo_j,//获奖经历
+                    destination:state,//申请国家
+                    major:major,//申请专业id
+                    major_name2:major_name2//申请专业名
+                },
+                dataType: 'json',
+                success:function(data){
+                    if(data.code=1){
+                        location.href = 'matching_report.html';
+                    }else {
+                        alert(data.message);
+                    }
+
+                }
+            })
+
         }
     });
     //声明模块

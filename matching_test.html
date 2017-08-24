@@ -5,8 +5,8 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="title" content="">
-    <meta name="author" content="">
-    <meta name="Copyright" content="">
+
+
     <!-- <meta name="description" content=""> -->
     <!-- 让IE浏览器用最高级内核渲染页面 还有用 Chrome 框架的页面用webkit 内核
     <!-- ================================================== -->
@@ -25,7 +25,7 @@
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/main.css">
+
     <link rel="stylesheet" href="css/matching.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/swiper-3.3.1.min.css">
@@ -46,6 +46,8 @@
         <span class="search_icon"></span>
     </div>
 </section>
+<input type="hidden" id="sc_rank" value="{{data.article}}">
+<input type="hidden" id="country" value="{{country}}">
 <!--学校列表-->
 <section>
     <ul class="school_rank_list_wrap bg_f mg_b5">
@@ -55,7 +57,7 @@
                     <div class="flex-container">
                         <div class="school_img"><img src="images/school_img.png" alt=""></div>
                         <div class="school_info">
-                            <p class="school_ch_name ellipsis">{{data.name}}</p>
+                            <p class="school_ch_name ellipsis" id="sq_name">{{data.name}}</p>
                             <p class="school_en_name ellipsis">{{data.title}}</p>
                             <div class="school_gps">
                                 <img style="height: 0.5rem;margin-right: 0.2rem;" src="images/icon-gps.png" alt="">
@@ -96,7 +98,7 @@
                         <span class="row_name_b"><i class="must light">*</i>GPA:</span>
                     </div>
                     <div class="step_int_wrap">
-                        <input class="step_text_int" id="gpa" placeholder="2.0~5.0/50~100" type="text">
+                        <input class="step_text_int" id="gpa" placeholder="2.5~4.0/50~100" type="text">
                     </div>
 
                 </div>
@@ -161,12 +163,20 @@
                 </div>
                 <div class="step_row">
                     <div class="step_text_intra flex-container">
-                        <span class="row_name_b"><i class="light must">*</i>专业:</span>
+                        <span class="row_name_b"><i class="light must">*</i>申请专业:</span>
                     </div>
                     <div class="step_int_wrap">
                         <select class="step_select" name="" id="s3">
                             <option ng-repeat="major in major" value="{{major.id}}">{{major.name}}</option>
                         </select>
+                    </div>
+                </div>
+                <div class="step_row">
+                    <div class="step_text_intra flex-container">
+                        <span class="row_name_b"><i class="light must">*</i>目前专业:</span>
+                    </div>
+                    <div class="step_int_wrap">
+                        <input class="step_text_int" id="c_major" type="text">
                     </div>
                 </div>
                 <div class="next_step_btn tm flex-container" style="padding: 2rem 0">

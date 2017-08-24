@@ -313,3 +313,32 @@
 .s-page ul li a img{
     height: 15px;
 }
+.school_intra_wrap{
+    padding: 0.7rem 0.5rem 0.9rem;
+}
+.school_cn_name{
+    font-size: 0.8rem;
+    margin-top: 0;
+    margin-bottom: 0.2rem;
+}
+.school_en_name{
+    font-size: 0.6rem;
+    margin-bottom: 0.2rem;
+}
+.school_de{
+    font-size: 0.7rem;
+    text-align: justify;
+}
+.school_de p{
+    max-height: 2.7rem;
+    line-height: 0.9rem;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+.banner a.active:link{
+    text-decoration: none;
+}

@@ -5,6 +5,10 @@ $(function () {
     var Requests = GetRequests();
     var id = Requests['id'];
     var uid = localStorage.getItem('uid');
+    if(!uid){
+        alert("请先登录！");
+        location.href='login.html'
+    }
     //声明模块
     var myApp = angular.module("myApp", []);
     myApp.directive('isOver', function () {
@@ -46,6 +50,7 @@ $(function () {
                 $scope.http2 = httpUrl2;
                 $scope.data = data.data;
                 $scope.major = data.major;
+                $scope.country = data.country;
             });
         }
 
@@ -128,24 +133,34 @@ $(function () {
         var gpa = $('#gpa').val();
         var gmat = $('#gmat').val();
         var toefl = $('#toefl').val();
-        var education = $('#s1').val();
-        var school = $('#s2').val();
-        var school_name = $('#school').val();
-        var major = $('#s3').val();
-        if ((education==0)||(school==0)||(!school_name)) {
+        var country=$('#country').val();//隐藏框 申请院校国家
+        var sq_name=$('#sq_name').html();//隐藏框 申请的学校名称
+        var sc_rank=$('#sc_rank').val();//隐藏框 申请院校排名
+        var education = $('#s1').val();//目前学历
+        var school = $('#s2').val();//学校等级
+        var school_name = $('#school').val();//当前就读学校名称
+        var major = $('#s3').val();//申请专业
+        var c_major = $('#c_major').val();//目前专业
+        if ((education==0)||(school==0)||(!school_name)||(!c_major)) {
             alert("请注意必填项！");
             return false;
         } else {
             $.ajax({
                 type: 'post',
-                url: httpUrl + '/cn/api/odds-result',
+                url: httpUrl + '/cn/wap-api/odds-storage',
                 data: {
+                    uid:uid,
                     gpa: gpa,
                     gmat: gmat,
                     toefl: toefl,
+                    country:country,
+                    schoolName:sq_name,
+                    schoolRank:sc_rank,
+                    attendSchool:school_name,
                     education: education,
                     school: school,
-                    major: major
+                    major: major,
+                    c_major:c_major
                 },
                 dataType: 'json',
                 success: function (data) {

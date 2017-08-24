@@ -5,8 +5,8 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="title" content="">
-    <meta name="author" content="">
-    <meta name="Copyright" content="">
+
+
     <!-- <meta name="description" content=""> -->
     <!-- 让IE浏览器用最高级内核渲染页面 还有用 Chrome 框架的页面用webkit 内核
     <!-- ================================================== -->
@@ -25,7 +25,7 @@
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/main.css">
+
     <link rel="stylesheet" href="css/diy.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/swiper-3.3.1.min.css">
@@ -175,8 +175,8 @@
     <div class="wrap">
         <div class="tabs">
             <span class="part active"><a href="#" hidefocus="true" >全部({{data2.article}})</a></span>
-            <span class="part"><a href="#" hidefocus="true">好评(1)</a></span>
-            <span class="part"><a href="#" hidefocus="true">中评(0)</a></span>
+            <span class="part"><a href="#" hidefocus="true">好评({{g_reply}})</a></span>
+            <span class="part"><a href="#" hidefocus="true">中评({{m_reply}})</a></span>
             <span class="part"><a href="#" hidefocus="true">差评(0)</a></span>
         </div>
 
@@ -201,13 +201,13 @@
                 <div class="swiper-slide">
                     <div class="content-slide">
                       <ul>
-                          <li>
+                          <li ng-repeat="reply in reply" ng-hide="$last&&{{m_reply}}!=0">
                               <div class="evaluate-left">
-                                  <img src="images/an-img/diy-headimg.png" alt="用户头像"/>
+                                  <img src="{{http}}{{reply.image}}" alt="用户头像"/>
                               </div>
                               <div class="evaluate-right">
-                                  <p>梦想不只是想想，我要行动了。</p>
-                                  <span>2016.4.17</span>
+                                  <p>{{reply.content}}</p>
+                                  <span>{{reply.time}}</span>
                               </div>
                               <div class="clearfix"></div>
                           </li>
@@ -217,15 +217,13 @@
                 <div class="swiper-slide">
                     <div class="content-slide">
                         <ul>
-
-
-                            <li>
+                            <li ng-repeat="reply in reply" ng-show="$last&&{{m_reply}}!=0">
                                 <div class="evaluate-left">
-                                    <img src="images/an-img/diy-headimg.png" alt="用户头像"/>
+                                    <img src="{{http}}{{reply.image}}" alt="用户头像"/>
                                 </div>
                                 <div class="evaluate-right">
-                                    <p>梦想不只是想想，我要行动了。</p>
-                                    <span>2016.4.17</span>
+                                    <p>{{reply.content}}</p>
+                                    <span>{{reply.time}}</span>
                                 </div>
                                 <div class="clearfix"></div>
                             </li>
@@ -234,18 +232,7 @@
                 </div>
                 <div class="swiper-slide">
                     <div class="content-slide">
-                        <ul>
-                            <li>
-                                <div class="evaluate-left">
-                                    <img src="images/an-img/diy-headimg.png" alt="用户头像"/>
-                                </div>
-                                <div class="evaluate-right">
-                                    <p>梦想不只是想想，我要行动了。</p>
-                                    <span>2016.4.17</span>
-                                </div>
-                                <div class="clearfix"></div>
-                            </li>
-                        </ul>
+                        <ul></ul>
                     </div>
                 </div>
             </div>

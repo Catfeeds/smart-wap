@@ -19,7 +19,7 @@ function registerSub(){
         alert("两次密码输入不一致，请重新输入！");
         return false;
     }else{
-        if(username && phone && password && code_yz && repass){
+        if(phone && password && code_yz && repass){
             $.ajax({
                 type : "post",
                 url : "http://login.gmatonline.cn/cn/wap-api/register",

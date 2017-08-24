@@ -71,7 +71,7 @@ function changeWshu(o){
             $("#wenshu").html("");
             for(var i=0;i<data.data.length;i++){
                 str+='<li ng-repeat="wenshuT in wenshu">'+
-                    '<a href="#">'+
+                    '<a href="diy.html?id='+data.data[i].id+'">'+
                     '<div class="pt_img fl"><img src="http://www.smartapply.cn'+data.data[i].image+'" alt=""></div>'+
                     '<div class="fl pt_info_wrap">'+
                     ' <p class="pt_tit ellipsis">'+data.data[i].name+'</p>'+

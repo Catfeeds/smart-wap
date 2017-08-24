@@ -161,6 +161,13 @@ $(function () {
             $scope.data = data.data;
             $scope.data2 = data.commodity[0];
             $scope.reply = data.comment;
+            if($scope.reply.length>1){
+                $scope.g_reply=$scope.reply.length-1;
+                $scope.m_reply=1;
+            }else {
+                $scope.g_reply=$scope.reply.length;
+                $scope.m_reply=0
+            }//中评数
             $scope.contenttext = $sce.trustAsHtml(escape2Html(data.data.detailed.replace(regExp, 'http://www.smartapply.cn/files')));
 
 
