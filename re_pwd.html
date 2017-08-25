@@ -5,8 +5,6 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="title" content="">
-
-
     <!-- <meta name="description" content=""> -->
     <!-- 让IE浏览器用最高级内核渲染页面 还有用 Chrome 框架的页面用webkit 内核
     <!-- ================================================== -->
@@ -26,10 +24,12 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/revise.css">
+    <link rel="stylesheet" href="css/Validform.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/swiper-3.3.1.min.css">
     <script src="js/jquery-1.12.2.min.js"></script>
     <script src="js/swiper-3.3.1.jquery.min.js"></script>
+    <script src="js/Validform_v5.3.2_min.js"></script>
     <script src="js/common.js"></script>
     <script src="js/public.js"></script>
     <script src="js/angular1.3.1.js"></script>
@@ -45,11 +45,11 @@
     </div>
 </section>
 <!--修改输入-->
-<section class="pwd_wrap bg_f">
+<section class="pwd_wrap bg_f reg-form">
     <div class="row"><input class="user_int" type="text" id="old_pwd" placeholder="输入当前密码"></div>
-    <div class="row"><input class="user_int" type="text" id="new_pwd" placeholder="输入新密码"></div>
-    <div class="row"><input class="user_int" type="text" id="confirm_pwd" placeholder="确认信密码"></div>
-    <div class="save">保存</div>
+    <div class="row"><input class="user_int" type="text" id="new_pwd" placeholder="请输入新密码(支持数字和大小写字母)" name="new_pwd" datatype="*6-20" nullmsg="请填写密码！"></div>
+    <div class="row"><input class="user_int" type="text" id="confirm_pwd" placeholder="确认信密码" name="confirm_pwd" datatype="*6-20" recheck="new_pwd" nullmsg="请确认密码！"></div>
+    <div class="save" id="save">保存</div>
 </section>
 <!--修改成功-->
 <section class="tm success_wrap">
@@ -70,4 +70,34 @@
     <div class="return_wrap"><a class="inm return" href="#">立即返回</a></div>
 </section>
 </body>
+<script>
+    $(".reg-form").Validform({
+        btnSubmit:"#save",
+        showAllError:true,
+        tiptype:3
+    });
+    $(function(){
+        var uid = localStorage.getItem('uid');
+        var oldPass=$('#old_pwd').val();
+        var newPass=$('#new_pwd').val();
+        $('#save').click(function(){
+            $.ajax({
+                type:'post',
+                url:httpUrl + '/cn/wap-api/update-pass',
+                data:{
+                    uid:uid,
+                    oldPass:oldPass,
+                    pass:newPass
+                },
+                dataType:'json',
+                success:function(data){
+                    alert(data.message);
+                    if(data.code=1){
+                        location.href='user_center.html';
+                    }
+                }
+            })
+        })
+    })
+</script>
 </html>

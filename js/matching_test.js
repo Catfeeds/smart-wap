@@ -136,12 +136,12 @@ $(function () {
         var country=$('#country').val();//隐藏框 申请院校国家
         var sq_name=$('#sq_name').html();//隐藏框 申请的学校名称
         var sc_rank=$('#sc_rank').val();//隐藏框 申请院校排名
-        var education = $('#s1').val();//目前学历
+        var education = $('#s1 option:selected').text();//目前学历
         var school = $('#s2').val();//学校等级
         var school_name = $('#school').val();//当前就读学校名称
         var major = $('#s3').val();//申请专业
         var c_major = $('#c_major').val();//目前专业
-        if ((education==0)||(school==0)||(!school_name)||(!c_major)) {
+        if ((education=='未选择')||(school==0)||(!school_name)||(!c_major)) {
             alert("请注意必填项！");
             return false;
         } else {

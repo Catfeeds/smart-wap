@@ -25,7 +25,6 @@ var httpUrl2 = "http://schools.smartapply.cn";
 })(document, window);
 
 $(function () {
-
     $('.nav_icon').click(function (e) {
         e.stopPropagation();
         if ($(this).hasClass("nav_active")) {

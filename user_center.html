@@ -143,7 +143,7 @@
                 <div class="flex-container flex-wrap">
                     <div class="flex-container-left menu_left">
                         <div class="menu_icon"><img src="images/updata_icon.png" alt=""></div>
-                        <span class="menu_name">上传头像</span>
+                        <span class="menu_name">退出</span>
                     </div>
                     <i class="icon-angle-right menu_enter"></i>
                 </div>
@@ -152,4 +152,17 @@
     </ul>
 </section>
 </body>
+<script>
+    $(function(){
+        var uid = localStorage.getItem("uid");
+        var userInfo = $.parseJSON(localStorage.getItem('userInfo'));
+        if(!uid){
+            alert("请先登录");
+            location.href='login.html';
+        }else {
+            $('.username').html(userInfo.username);
+        }
+
+    });
+</script>
 </html>

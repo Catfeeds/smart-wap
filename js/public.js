@@ -230,6 +230,7 @@ function subLogin(name,pass){
                 localStorage.setItem('nickname',data.nickname);
                 localStorage.setItem('userName',data.username);
                 localStorage.setItem('uid',data.uid);
+                localStorage.setItem("userInfo", JSON.stringify(data));
                 //托福
                 $.ajax({
                     type : "post",

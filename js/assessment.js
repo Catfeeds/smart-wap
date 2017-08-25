@@ -129,7 +129,7 @@ $(function () {
         var gpa = $('#gpa').val();
         var gmat = $('#gmat').val();
         var toefl = $('#toefl').val();
-        var xl = $('#s1').val();//目前学历
+        var xl = $('#s1 option:selected').text();//目前学历
         var school_rank = $('#s2').val();//学校等级
         var schoolName=$('#jd_school').val();//目前学校名称
         var major_top = $('#major_name').attr('data-id');//目前专业 id
