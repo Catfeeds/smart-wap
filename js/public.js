@@ -214,6 +214,7 @@ function delCookie(name)
 //登录
 
 function subLogin(name,pass){
+    console.log(name,pass)
     var username=$(name).val();
     var password=$(pass).val();
     $.ajax({
@@ -289,7 +290,7 @@ function subLogin(name,pass){
                 });
 
                 setTimeout(function(){
-                    // location.href="index.html";
+                    location.href="index.html";
                 },1500);
             }else{
                 alert(data.message);
