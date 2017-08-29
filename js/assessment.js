@@ -5,6 +5,10 @@ $(function () {
     var Requests = GetRequests();
     var id = Requests['id'];
     var uid = localStorage.getItem('uid');
+    if(!uid){
+        alert('请先登录！');
+        location.href='login.html';
+    }
     //        手风琴效果
     $(document).on('click', '.link', function (even) {
         var ev = even || window.event;

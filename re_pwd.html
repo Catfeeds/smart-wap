@@ -43,6 +43,7 @@
         <span class="header_name color_f">修改密码</span>
         <span></span>
     </div>
+
 </section>
 <!--修改输入-->
 <section class="pwd_wrap bg_f reg-form">
@@ -78,9 +79,9 @@
     });
     $(function(){
         var uid = localStorage.getItem('uid');
-        var oldPass=$('#old_pwd').val();
-        var newPass=$('#new_pwd').val();
         $('#save').click(function(){
+            var oldPass=$('#old_pwd').val();
+            var newPass=$('#new_pwd').val();
             $.ajax({
                 type:'post',
                 url:httpUrl + '/cn/wap-api/update-pass',

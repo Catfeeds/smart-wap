@@ -140,6 +140,7 @@ $(function () {
         var school = $('#s2').val();//学校等级
         var school_name = $('#school').val();//当前就读学校名称
         var major = $('#s3').val();//申请专业
+        var major_name = $('#s3 option:selected').text();//申请专业
         var c_major = $('#c_major').val();//目前专业
         if ((education=='未选择')||(school==0)||(!school_name)||(!c_major)) {
             alert("请注意必填项！");
@@ -159,8 +160,8 @@ $(function () {
                     attendSchool:school_name,
                     education: education,
                     school: school,
-                    major: major,
-                    c_major:c_major
+                    major: c_major,
+                    majorName: major_name,
                 },
                 dataType: 'json',
                 success: function (data) {

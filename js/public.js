@@ -289,7 +289,7 @@ function subLogin(name,pass){
                 });
 
                 setTimeout(function(){
-                    location.href="index.html";
+                    // location.href="index.html";
                 },1500);
             }else{
                 alert(data.message);

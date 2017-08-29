@@ -72,7 +72,7 @@
             <a href="#">
                 <div class="flex-container flex-wrap">
                     <div class="flex-container-left menu_left">
-                        <div class="menu_icon"><img src="images/order_icon.png" alt=""></div>
+                        <div class="menu_icon"><img src="images/qa_icon.png" alt=""></div>
                         <span class="menu_name">我的问答</span>
                     </div>
                     <i class="icon-angle-right menu_enter"></i>
@@ -139,10 +139,10 @@
             </a>
         </li>
         <li>
-            <a href="user_info.html">
+            <a href="javascript:void (0);" onclick="ext()">
                 <div class="flex-container flex-wrap">
                     <div class="flex-container-left menu_left">
-                        <div class="menu_icon"><img src="images/updata_icon.png" alt=""></div>
+                        <div class="menu_icon"><img src="images/ext_icon.png" alt=""></div>
                         <span class="menu_name">退出</span>
                     </div>
                     <i class="icon-angle-right menu_enter"></i>
@@ -162,7 +162,17 @@
         }else {
             $('.username').html(userInfo.username);
         }
-
     });
+    function ext () {
+        localStorage.removeItem("uid");
+        localStorage.removeItem("nickname");
+        localStorage.removeItem("userName");
+        localStorage.removeItem("userInfo");
+        localStorage.removeItem("sp_itemA");
+        localStorage.removeItem("sp_item");
+        localStorage.removeItem("major_val");
+        localStorage.removeItem("school_val");
+        alert('退出成功');location.href='index.html';
+    }
 </script>
 </html>

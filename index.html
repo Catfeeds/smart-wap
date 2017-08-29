@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="keywords" content="英国留学,澳洲留学,美国留学,出国留学,留学文书,雷哥网，雷哥培训">
-    <meta name="description" content="雷哥网，成立于2012年，提供大数据驱动下的国际教育O＋O服务。雷哥网通过PC、WAP和APP等互联网平台和工具，通过院校库、案例库和录取条件库等建立选校模型，为客户的留学申请精准定位，提供个性化留学选校与申请服务，并以雷哥网学习中心提供留学与出国英语辅导线下服务，二者相辅相成。">
+    <meta name="description"
+          content="雷哥网，成立于2012年，提供大数据驱动下的国际教育O＋O服务。雷哥网通过PC、WAP和APP等互联网平台和工具，通过院校库、案例库和录取条件库等建立选校模型，为客户的留学申请精准定位，提供个性化留学选校与申请服务，并以雷哥网学习中心提供留学与出国英语辅导线下服务，二者相辅相成。">
     <meta name="title" content="美国留学|英国留学|澳洲留学|留学文书-雷哥网留学申请智能服务平台">
     <!-- <meta name="description" content=""> -->
     <!-- 让IE浏览器用最高级内核渲染页面 还有用 Chrome 框架的页面用webkit 内核
@@ -33,15 +34,39 @@
     <script src="js/index.js"></script>
     <script type="text/javascript" src="js/angular1.3.1.js"></script>
     <title>首页</title>
+    <style>
+        .ncon {
+            margin-bottom: 0.4rem;
+        }
+
+        .ncon img {
+            width: 2rem;
+        }
+
+        .ncon_name {
+            font-size: 0.55rem;
+            color: #333333;
+        }
+
+        .nav_select_list {
+            padding: 0.8rem 0.5rem 0.4rem;
+        }
+
+        .nav_select_list li {
+            width: 16.6%;
+            margin-bottom: 0.8rem;
+            align-items: flex-start;
+        }
+    </style>
 </head>
 <body id="index" ng-controller="abroad_view">
 <!--头部-->
 <section class="relative index_bg mg_b5">
     <div>
-        <div class="header_nav bg_b bg_b2 pd_lr5 flex-container">
-            <i class="icon-list-ul nav_icon color_f"></i>
-            <a href="index.html"><img src="images/logo_2.png" style="height: 1.4rem;" alt=""></a>
-            <a class="user" href="login.html"><img src="images/user_center.png" style="height: 1.2rem;" alt=""></a>
+        <div class="header_nav bg_b bg_b2 pd_lr5 flex-container-center" style="height: auto;padding: 0.2rem;">
+            <!--<i class="icon-list-ul nav_icon color_f"></i>-->
+            <a href="index.html"><img src="images/logo_2.png" style="height: 2.3rem;" alt=""></a>
+            <!--<span></span>-->
         </div>
         <!--导航栏列表-->
         <div class="nav_wrap">
@@ -133,11 +158,115 @@
         </div>
     </div>
     <!--其他项目链接-->
-    <ul class="other_link flex-container-center">
-        <li><a class="on" href="http://m.smartapply.cn/">留学</a></li>
-        <li><a href="http://m.gmatonline.cn">GMAT</a></li>
-        <li><a href="http://m.toeflonline.cn/">TOEFL</a></li>
-        <li><a href="http://ielts.viplgw.cn">IELTS</a></li>
+    <div class="pd_lr5 bg_f">
+        <ul class="other_link flex-container">
+            <li><a class="on" href="http://m.smartapply.cn/">留学</a></li>
+            <li><a href="http://m.gmatonline.cn">GMAT</a></li>
+            <li><a href="http://m.toeflonline.cn/">TOEFL</a></li>
+            <li><a href="http://ielts.viplgw.cn">IELTS</a></li>
+            <li><a class="user" href="login.html"><img src="images/user_center.png" style="height: 1.2rem;" alt=""></a>
+            </li>
+        </ul>
+    </div>
+    <!--导航列表-->
+    <ul class="nav_select_list bg_f flex-container">
+        <li>
+            <a href="school.html">
+                <div class="ncon_wrap tm">
+                    <div class="ncon"><img src="images/ncon_1.png" alt=""></div>
+                    <p class="ncon_name">院校查询</p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="major_list.html">
+                <div class="ncon_wrap tm">
+                    <div class="ncon"><img src="images/ncon_2.png" alt=""></div>
+                    <p class="ncon_name">专业解析</p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="ranking.html">
+                <div class="ncon_wrap tm">
+                    <div class="ncon"><img src="images/ncon_3.png" alt=""></div>
+                    <p class="ncon_name">大学排名</p>
+                </div>
+            </a>
+        </li>
+
+        <li>
+            <a href="school.html">
+                <div class="ncon_wrap tm">
+                    <div class="ncon"><img src="images/ncon_7.png" alt=""></div>
+                    <p class="ncon_name">录取测评</p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="assessment.html">
+                <div class="ncon_wrap tm">
+                    <div class="ncon"><img src="images/ncon_8.png" alt=""></div>
+                    <p class="ncon_name">选校测评</p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="bg_test.html">
+                <div class="ncon_wrap tm">
+                    <div class="ncon"><img src="images/ncon_9.png" alt=""></div>
+                    <p class="ncon_name">背景测评</p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="know.html">
+                <div class="ncon_wrap tm">
+                    <div class="ncon"><img src="images/ncon_4.png" alt=""></div>
+                    <p class="ncon_name">知识库</p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="question.html">
+                <div class="ncon_wrap tm">
+                    <div class="ncon"><img src="images/ncon_5.png" alt=""></div>
+                    <p class="ncon_name">申请问答</p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="connoisseur.html">
+                <div class="ncon_wrap tm">
+                    <div class="ncon"><img src="images/ncon_6.png" alt=""></div>
+                    <p class="ncon_name">顾问推荐</p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="setup.html">
+                <div class="ncon_wrap tm">
+                    <div class="ncon"><img src="images/ncon_10.png" alt=""></div>
+                    <p class="ncon_name">机构</p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="case.html">
+                <div class="ncon_wrap tm">
+                    <div class="ncon"><img src="images/ncon_11.png" alt=""></div>
+                    <p class="ncon_name">案例</p>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="mall.html">
+                <div class="ncon_wrap tm">
+                    <div class="ncon"><img src="images/ncon_12.png" alt=""></div>
+                    <p class="ncon_name">申请</p>
+                </div>
+            </a>
+        </li>
     </ul>
     <div class="ad_text">
         <div><img src="images/sc_nt.png" style="height: 2.7rem;" alt=""></div>
@@ -160,12 +289,7 @@
             <p class="question_name2"><a href="qa-details.html?id={{question.id}}">{{question.question}}</a></p>
             <div class="flex-container question_info2">
                 <span>{{question.addTime}}</span>
-                <div>
-                    <span>回答数量：{{question.answerCount}}</span>
-                    <span class="jg">|</span>
-                    <a class="answer_link" href="int_question.html">我要提问</a>
-
-                </div>
+                <span>回答数量：{{question.answerCount}}</span>
             </div>
         </li>
     </ul>
@@ -233,49 +357,82 @@
     </ul>
 </section>
 <!--专业项目-->
-<section class="mg_b5 bg_f pd_lr5">
+<section class="mg_b5 bg_f">
     <div class="idnex2_tit_wrap flex-container">
         <span></span>
         <span class="section_name">最热名校专业项目</span>
         <a class="index2_more" href="#">MORE</a>
     </div>
-    <ul class="hot_list2 flex-container">
+    <ul class="hot_list2 flex-container bg_f">
         <li>
-            <a class="flex-container" href="school-major.html?id={{majorHot[0].major[0].id}}">
-                <div class="mj_img"><img src="images/hot_mj_1.png" alt=""></div>
-                <div class="hot_name">
-                    <p class="tm mj_t1 ellipsis">{{majorHot[0].major[0].direction}}</p>
-                    <p class="tm mj_t2 ellipsis">{{majorHot[0].name}}</p>
+            <a href="school-major.html?id={{majorHot[0].major[0].id}}">
+                <div class="flex-container xg_de_wrap">
+                    <div class="mj_img"><img src="images/hot_mj_1.png" alt=""></div>
+                    <div class="hot_name">
+                        <p class="mj_t1 ellipsis"><span class="mj_t2">{{majorHot[0].major[0].direction}}</span>(MS in
+                            Finance)</p>
+                        <p class="mj_de">金融专业是以融通货币和货币资金的经济活动为 研究对象，具体研究个、机构、政府如何获取...</p>
+                    </div>
+                </div>
+                <div class="xg_wrap">
+                    <b class="xg_sc">相关院校：</b>
+                    <div class="inm xg_sc_name"><img src="images/hot_icon.png" style="height: 0.7rem" alt=""><span>波士顿学院</span></div>
+                    <div class="inm xg_sc_name"><span>波士顿学院</span></div>
                 </div>
             </a>
         </li>
         <li>
-            <a class="flex-container" href="school-major.html?id={{majorHot[1].major[0].id}}">
-                <div class="mj_img"><img src="images/hot_mj_2.png" alt=""></div>
-                <div class="hot_name">
-                    <p class="tm mj_t1 ellipsis">{{majorHot[1].major[0].direction}}</p>
-                    <p class="tm mj_t2 ellipsis">{{majorHot[1].name}}</p>
+            <a href="school-major.html?id={{majorHot[0].major[0].id}}">
+                <div class="flex-container xg_de_wrap">
+                    <div class="mj_img"><img src="images/hot_mj_2.png" alt=""></div>
+                    <div class="hot_name">
+                        <p class="mj_t1 ellipsis"><span class="mj_t2">{{majorHot[0].major[0].direction}}</span>(MS in
+                            Finance)</p>
+                        <p class="mj_de">金融专业是以融通货币和货币资金的经济活动为 研究对象，具体研究个、机构、政府如何获取...</p>
+                    </div>
+                </div>
+                <div class="xg_wrap">
+                    <b class="xg_sc">相关院校：</b>
+                    <div class="inm xg_sc_name"><img src="images/hot_icon.png" style="height: 0.7rem" alt=""><span>波士顿学院</span></div>
+                    <div class="inm xg_sc_name"><span>波士顿学院</span></div>
                 </div>
             </a>
         </li>
         <li>
-            <a class="flex-container" href="school-major.html?id={{majorHot[2].major[0].id}}">
-                <div class="mj_img"><img src="images/hot_mj_3.png" alt=""></div>
-                <div class="hot_name">
-                    <p class="tm mj_t1 ellipsis">{{majorHot[2].major[0].direction}}</p>
-                    <p class="tm mj_t2 ellipsis">{{majorHot[2].name}}</p>
+            <a href="school-major.html?id={{majorHot[0].major[0].id}}">
+                <div class="flex-container xg_de_wrap">
+                    <div class="mj_img"><img src="images/hot_mj_3.png" alt=""></div>
+                    <div class="hot_name">
+                        <p class="mj_t1 ellipsis"><span class="mj_t2">{{majorHot[0].major[0].direction}}</span>(MS in
+                            Finance)</p>
+                        <p class="mj_de">金融专业是以融通货币和货币资金的经济活动为 研究对象，具体研究个、机构、政府如何获取...</p>
+                    </div>
+                </div>
+                <div class="xg_wrap">
+                    <b class="xg_sc">相关院校：</b>
+                    <div class="inm xg_sc_name"><img src="images/hot_icon.png" style="height: 0.7rem" alt=""><span>波士顿学院</span></div>
+                    <div class="inm xg_sc_name"><span>波士顿学院</span></div>
                 </div>
             </a>
         </li>
         <li>
-            <a class="flex-container" href="school-major.html?id={{majorHot[3].major[0].id}}">
-                <div class="mj_img"><img src="images/hot_mj_4.png" alt=""></div>
-                <div class="hot_name">
-                    <p class="tm mj_t1 ellipsis">{{majorHot[3].major[0].direction}}</p>
-                    <p class="tm mj_t2 ellipsis">{{majorHot[3].name}}</p>
+            <a href="school-major.html?id={{majorHot[0].major[0].id}}">
+                <div class="flex-container xg_de_wrap">
+                    <div class="mj_img"><img src="images/hot_mj_4.png" alt=""></div>
+                    <div class="hot_name">
+                        <p class="mj_t1 ellipsis"><span class="mj_t2">{{majorHot[0].major[0].direction}}</span>(MS in
+                            Finance)</p>
+                        <p class="mj_de">金融专业是以融通货币和货币资金的经济活动为 研究对象，具体研究个、机构、政府如何获取...</p>
+                    </div>
+                </div>
+                <div class="xg_wrap">
+                    <b class="xg_sc">相关院校：</b>
+                    <div class="inm xg_sc_name"><img src="images/hot_icon.png" style="height: 0.7rem" alt=""><span>波士顿学院</span></div>
+                    <div class="inm xg_sc_name"><span>波士顿学院</span></div>
                 </div>
             </a>
         </li>
+
     </ul>
 </section>
 <!--留学攻略-->

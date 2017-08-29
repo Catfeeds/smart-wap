@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="myApp">
 <head>
     <meta charset="UTF-8">
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="title" content="">
-
-
     <!-- <meta name="description" content=""> -->
     <!-- 让IE浏览器用最高级内核渲染页面 还有用 Chrome 框架的页面用webkit 内核
     <!-- ================================================== -->
@@ -32,10 +30,11 @@
     <script src="js/swiper-3.3.1.jquery.min.js"></script>
     <script src="js/common.js"></script>
     <script src="js/public.js"></script>
+    <script src="js/my_report.js"></script>
     <script src="js/angular1.3.1.js"></script>
     <title>我的录取报告</title>
 </head>
-<body class="pd_b0">
+<body class="pd_b0" ng-controller="abroad_view">
 <!--头部-->
 <section class="relative">
     <div class="bg_b bg_b2 header_nav pd_lr5 flex-container">
@@ -46,25 +45,14 @@
 </section>
 <section>
     <ul class="report_list">
-        <li>
-            <div class="school_info flex-container">
-                <p>大学：芝加哥大学</p>
-                <p class="tr">专业: 工商管理</p>
+        <li ng-repeat="data in data">
+            <div class="school_info">
+                <p class="ellipsis">大学：{{data.school}}</p>
+                <!--<p class="tr">专业: 工商管理</p>-->
             </div>
             <div class="report_record flex-container">
-                <span class="report_sort">分数：75分</span>
-                <span class="report_time">2017.8.21 10:10:20</span>
-                <a class="report_link_de inm" href="#">查看详情</a>
-            </div>
-        </li>
-        <li>
-            <div class="school_info flex-container">
-                <p>大学：芝加哥大学</p>
-                <p class="tr">专业: 工商管理</p>
-            </div>
-            <div class="report_record flex-container">
-                <span class="report_sort">分数：75分</span>
-                <span class="report_time">2017.8.21 10:10:20</span>
+                <span class="report_sort">分数：{{data.score}}分</span>
+                <span class="report_time">{{data.createTime*1000 | date:'yyyy-MM-dd hh:mm:ss'}}</span>
                 <a class="report_link_de inm" href="#">查看详情</a>
             </div>
         </li>

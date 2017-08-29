@@ -1,5 +1,5 @@
 .bg_b {
-    background: #468ed1;
+    background: #2cb1e5;
 }
 .bg_b.bg_b2{
     background: #2cb1e5;
@@ -36,6 +36,7 @@
 }
 
 .bg_g {
+    /*background: #2cb1e5;*/
     background: #98bc36;
 }
 .bg_g2{
@@ -161,7 +162,8 @@
 
 .nav_list_item_1 {
     width: 8.4rem;
-    background: #468ed1;
+    /*background: #468ed1;*/
+    background: #2cb1e5;
 }
 
 .nav_list_item_1 li {
@@ -172,7 +174,9 @@
 }
 
 .nav_list_item_1 li.on {
-    background: #3480c6;
+    /*background: #3480c6;*/
+    background: #269bc8;
+    /*background: #2cb1e5;*/
 }
 
 .nav_wrap {
@@ -192,7 +196,8 @@
     text-align: center;
     padding: 0 0.5rem;
     position: absolute;
-    background: #3480c6;
+    /*background: #3480c6;*/
+    background: #269bc8;
 }
 
 .nav_wrap2 dt {
@@ -333,7 +338,8 @@ footer{
     height: 2.4rem;
     line-height: 2.4rem;
     text-align: center;
-    background: #468ed1;
+    /*background: #468ed1;*/
+    background: #2cb1e5;
 }
 
 .ftnav_list li.on {

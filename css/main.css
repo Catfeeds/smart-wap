@@ -12,7 +12,7 @@
 }
 
 .idnex2_tit_wrap {
-    padding: 0.4rem 0;
+    padding: 0.4rem 0.5rem;
 }
 
 .index2_more {
@@ -26,14 +26,14 @@
 }
 
 .question_name2 {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     color: #333333;
     margin-bottom: 0.4rem;
 }
 
 .question_info2 {
     color: #777777;
-    font-size: 0.6rem;
+    font-size: 0.7rem;
 }
 
 .jg {
@@ -246,58 +246,82 @@
     outline: none;
 }
 
-.hot_list2 {
-    padding-top: 0.5rem;
-}
+/*.hot_list2 {*/
+    /*padding-top: 0.5rem;*/
+/*}*/
 
 .hot_list2 li {
-    width: 49%;
-    margin-bottom: 0.5rem;
+   background: #f7f7f7;
+    margin-bottom: 0.4rem;
+    padding: 0.5rem 0.5rem 0.3rem;
 }
 
 .mj_img {
-    width: 4rem;
+    width: 3rem;
 }
 
 .hot_name {
-    width: 4.5rem;
+    width: 78%;
 }
 
 .mj_t1 {
-    color: #01a4e5;
-    font-size: 0.7rem;
-    font-weight: bold;
-    margin-bottom: 0.2rem;
-    padding-left: 0.5rem;
-}
-
-.mj_t2 {
-    color: #c96c24;
+    color: #777777;
     font-size: 0.6rem;
-    padding-left: 0.5rem;
-    background: url("../images/hot_icon.png") no-repeat 0 center;
-    background-size: 0.5rem;
+    /*margin-bottom: 0.2rem;*/
+    /*padding-left: 0.5rem;*/
+}
+.mj_de{
+    color: #777777;
+    padding-top: 0.2rem;
+    font-size: 0.65rem;
+    text-align: justify;
+}
+.xg_wrap{
+    font-size: 0.65rem;
+    color: #444444;
+    vertical-align: baseline;
+}
+.xg_de_wrap{
+    padding-bottom: 0.3rem;
+}
+.xg_sc{
+    font-size: 0.75rem;
+    font-weight: bold;
+    vertical-align: middle;
+}
+.xg_sc_name{
+    margin-right: 0.8rem;
+}
+.xg_sc_name img{
+    vertical-align: sub;
+   margin-right: 0.2rem;
+}
+.mj_t2 {
+    color: #01a4e5;
+    font-size: 0.75rem;
+    vertical-align: baseline;
+    padding-right: 0.2rem;
 }
 .other_link{
-    background: #ffffff;
-    padding: 0.5rem 0;
+    border-bottom: 1px solid #cccccc;
+}
+.other_link li{
+    width: 20%;
+    margin-bottom: -0.12rem;
 }
 .other_link a{
-    color: #2cb1e5;
     display: block;
-    font-size: 0.6rem;
-    padding: 0.2rem 0;
-    width: 3.5rem;
+    font-size: 0.75rem;
+    /*width: 100%;*/
     text-align: center;
-    margin: 0 0.5rem;
-    -webkit-border-radius: 0.1rem;
-    -moz-border-radius: 0.1rem;
-    border-radius: 0.1rem;
-    border: 1px solid #2cb1e5;
+    color: #333333;
+    padding: 0.5rem 0;
+    border-bottom: 2px solid transparent;
+
 }
 .other_link a.on{
-    color: #ffffff;
-    background: #2cb1e5;
+    color: #2cb1e5;
+   border-bottom: 2px solid #2cb1e5;
 }
 .sc_n{
     padding-top: 1.5rem;
