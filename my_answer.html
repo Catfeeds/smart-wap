@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="myApp">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="keywords" content="">
@@ -23,42 +23,66 @@
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/my_test.css">
+    <link rel="stylesheet" href="css/qa_common.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/swiper-3.3.1.min.css">
     <script src="js/jquery-1.12.2.min.js"></script>
     <script src="js/swiper-3.3.1.jquery.min.js"></script>
     <script src="js/common.js"></script>
     <script src="js/public.js"></script>
-    <script src="js/my_report.js"></script>
     <script src="js/angular1.3.1.js"></script>
-    <title>我的录取报告</title>
+    <title>我的回答</title>
+    <style>
+        #my_answer{
+            padding-top: 0.7rem;
+        }
+        #my_answer .ques_name{
+            margin-bottom: 0.3rem;
+        }
+        #my_answer .ques_de{
+            margin-bottom: 0.5rem;
+        }
+        #my_answer .save{
+            width: 5rem;
+            height: 1.5rem;
+            line-height: 1.5rem;
+        }
+        .intAnswer_wrap{
+            padding: 0.4rem;
+            height: 10rem;
+            border-radius: 0.4rem;
+            border: 1px solid #b8b8b8;
+        }
+        #answer{
+            width: 100%;
+            resize: none;
+            outline: none;
+            border: none;
+            height: 100%;
+            color: #2cb1e5;
+            font-size: 0.7rem;
+        }
+    </style>
 </head>
-<body class="pd_b0" ng-controller="abroad_view">
+<body class="pd_b0 bg_f">
 <!--头部-->
 <section class="relative">
     <div class="bg_b bg_b2 header_nav pd_lr5 flex-container">
-        <a href="javascript:history.go(-1)"><i class="icon-angle-left nav_icon color_f"></i></a>
-        <span class="header_name color_f">我的录取报告</span>
+        <a href="JavaScript:history.go(-1)"><i class="icon-angle-left nav_icon color_f"></i></a>
+        <span class="header_name color_f">我的回答</span>
         <span></span>
     </div>
 </section>
-<section>
-    <ul class="report_list">
-        <li ng-repeat="data in data">
-            <div ng-show="oj_type==2" class="school_info flex-container">
-                <p  class="ellipsis">大学：{{data.school | nullData}}</p>
-                <p  class="ellipsis">专业：{{data.major}}</p>
-            </div>
-            <div class="report_record flex-container">
-                <span ng-show="oj_type==1" class="report_sort">分数：{{data.score}}分</span>
-                <span ng-show="oj_type==2" class="report_sort">分数：{{data.percent}}%</span>
-                <span class="report_time">{{data.createTime*1000 | date:'yyyy-MM-dd hh:mm:ss'}}</span>
-                <a ng-show="oj_type==1" class="report_link_de inm" href="matching_report.html?id={{data.id}}">查看详情</a>
-                <a ng-show="oj_type==2" class="report_link_de inm" href="matching_report2.html?id={{data.id}}">查看详情</a>
-            </div>
-        </li>
-    </ul>
+<!--填写回答-->
+<section class="pd_lr5">
+    <div id="my_answer">
+        <h1 class="ques_name">申请美国商科研究生到底考GRE还是GMAT？</h1>
+        <p class="ques_de">申请美国研究生到底选择GRE还是GMAT呢？申请美国研究生到底选择GRE还是GMAT呢申请美国研究生到底选择GRE还是GMAT呢申请美国研究生到底选择GRE还是GMAT呢</p>
+        <div class="intAnswer_wrap">
+            <textarea id="answer" autofocus placeholder="请写下你的回答"></textarea>
+        </div>
+        <div class="tr"><span class="save inm">提交</span></div>
+    </div>
 </section>
 </body>
 </html>

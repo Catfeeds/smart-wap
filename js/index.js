@@ -5,9 +5,9 @@ $(function() {
     var Requests = GetRequests();
     var uid = localStorage.getItem("uid");
     if(!uid){
-        $('.user').attr('href','login.html')
+        $('#user').attr('href','login.html')
     }else {
-        $('.user').attr('href','user_center.html')
+        $('#user').attr('href','user_center.html')
     }
     //声明模块
     var myApp = angular.module("myApp", []);
@@ -63,6 +63,13 @@ $(function() {
             $scope.majorHot=data.majorHot;
             $scope.school=data.school;
             $scope.raiders=data.raiders;
+            $scope.scArr=[];
+            var regExp = new RegExp("、|,", 'g');
+           angular.forEach($scope.majorHot,function (e,k) {
+               $scope.xg_sc=$scope.majorHot[k].duration.split(regExp);
+               $scope.scArr.push($scope.xg_sc);
+           });
+
         });
     }]);
     $('.form_btn').click(function(){

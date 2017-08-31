@@ -138,16 +138,17 @@ $(function () {
         var schoolName=$('#jd_school').val();//目前学校名称
         var major_top = $('#major_name').attr('data-id');//目前专业 id
         var school_major = $('#major_name').attr('data-pid');//目前专业PID
-        var work_where = [[0, $('#s3').val()]];//实习地等级
-        var work_exp = [$('#work_exp').val()];//工作经验
-        var item_exp = [$('#project_exp').val()];//项目经验
-        var you_xue = [$('#abroad_study').val()];//游学经历
-        var gong_yi = [$('#gy_active').val()];//公益经历
-        var huo_j = [$('#hj_jl').val()];//获奖经历
+        var work_where =$('#s3').val();//实习地等级
+        var work_exp = $('#work_exp').val();//工作经验
+        var item_exp = $('#project_exp').val();//项目经验
+        var you_xue = $('#abroad_study').val();//游学经历
+        var gong_yi = $('#gy_active').val();//公益经历
+        var huo_j = $('#hj_jl').val();//获奖经历
         var state = $('#abroad_state').val();//留学目的地
         var major = $('#major_name2').attr('data-id');//需要申请的专业ID
         var major_name=$('#major_name').val();//目前专业名
         var major_name2=$('#major_name2').val();//申请专业名
+        console.log(work_exp)
         if (!$('#major_name2').val()) {
             alert('请选择正确的专业名称！');
             return false;
@@ -183,7 +184,7 @@ $(function () {
                 dataType: 'json',
                 success:function(data){
                     if(data.code=1){
-                        location.href = 'matching_report.html';
+                        // location.href = 'matching_report.html';
                     }else {
                         alert(data.message);
                     }

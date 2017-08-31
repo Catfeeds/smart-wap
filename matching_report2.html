@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="description" content=""> -->
+    <!-- 让IE浏览器用最高级内核渲染页面 还有用 Chrome 框架的页面用webkit 内核
+    <!-- ================================================== -->
+    <meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge">
+    <!-- IOS6全屏 Chrome高版本全屏-->
+    <!-- ================================================== -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <!-- 让360双核浏览器用webkit内核渲染页面-->
+    <!-- ================================================== -->
+    <meta name="renderer" content="webkit">
+    <!-- Mobile Specific Metas
+   ================================================== -->
+    <!-- !!!注意 minimal-ui 是IOS7.1的新属性，最小化浏览器UI -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/matching.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/swiper-3.3.1.min.css">
+    <script src="js/jquery-1.12.2.min.js"></script>
+    <script src="js/swiper-3.3.1.jquery.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/public.js"></script>
+    <script src="js/matching_report2.js"></script>
+    <script src="js/angular1.3.1.js"></script>
+    <title>学校录取报告</title>
+</head>
+<body class="bg_f" ng-controller="abroad_view">
+<!--头部-->
+<section class="relative">
+    <div class="bg_b bg_b2 header_nav pd_lr5 flex-container">
+        <a href="javascript:history.go(-1)"><i class="icon-angle-left nav_icon color_f"></i></a>
+        <span class="header_name color_f">我的录取报告</span>
+        <span></span>
+    </div>
+</section>
+<!--提交成功弹窗-->
+<section class="success_model suc_md2" style="display: block;top: 2.2rem;background: #fff;">
+    <div class="success_wrap" style="top: 40%;">
+        <div class="tm"><img src="images/cr_1.png" style="height: 3rem;" alt=""></div>
+        <p class="test_sort tm">
+            <span class="str_sort">93</span>分
+            <img class="star_bg" src="images/star_bg.png" style="height: 6rem;" alt="">
+        </p>
+        <p class="test_pass tm">已超过<strong class="bfb_sort">70%</strong>的测试者！</p>
+        <p class="test_hit"><strong class="light">*</strong>此报告匹配标准以近5年留学录取成功大数据作为技术支撑并不能百分之百代表实际录取结果，仅供参考。</p>
+        <!--<div class="tm"><a class="link_index" href="index.html">返回首页</a></div>-->
+        <div class="jc_bg">
+            <img src="images/jc_1.png" style="height: 0.9rem;width: 100%;" alt="">
+        </div>
+    </div>
+</section>
+<!--footer-->
+<footer>
+    <ul class="ftnav_list flex-container">
+        <li>
+            <a href="index.html">
+                <div>
+                    <img src="images/icon_ft_1.png" style="height: 1.1rem" alt="">
+                    <span>首页</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="tel:4001816180">
+                <div>
+                    <img src="images/icon_ft_2.png" style="height: 1.1rem" alt="">
+                    <span>拨打电话</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="http://p.qiao.baidu.com/im/index?siteid=7905926&ucid=18329536&cp=&cr=&cw=#close-back18">
+                <div>
+                    <img src="images/icon_ft_3.png" style="height: 1.1rem" alt="">
+                    <span>在线咨询</span>
+                </div>
+            </a>
+        </li>
+    </ul>
+</footer>
+</body>
+</html>

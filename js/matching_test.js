@@ -172,26 +172,37 @@ $(function () {
                         $('.pro_inner').stop(true).animate({"width": "100%"}, 200, function () {
                             $('.jd_num').html('100%');
                         });
-                        $('.success_model').fadeIn();
-                        $('.str_sort').html(data.data);
-                        if (data.data < 50) {
-                            $('.bfb_sort').html("40%");
-                        }
-                        if (data.data < 60 && data.data > 50) {
-                            $('.bfb_sort').html("50%");
-                        }
-                        if (data.data < 70 && data.data > 60) {
-                            $('.bfb_sort').html("60%");
-                        }
-                        if (data.data < 80 && data.data > 70) {
-                            $('.bfb_sort').html("70%");
-                        }
-                        if (data.data < 90 && data.data > 80) {
-                            $('.bfb_sort').html("80%");
-                        }
-                        if (data.data < 99 && data.data > 90) {
-                            $('.bfb_sort').html("89%");
-                        }
+                        $.ajax({
+                            type: 'post',
+                            url: httpUrl + '/cn/wap-api/odds-result',
+                            data: {
+                                uid: uid
+                            },
+                            dataType: 'json',
+                            success: function (data) {
+                                $('.success_model').fadeIn();
+                                $('.str_sort').html(data.data.percent);
+                                if (data.data.percent < 50) {
+                                    $('.bfb_sort').html("40%");
+                                }
+                                if (data.data.percent < 60 && data.data.percent > 50) {
+                                    $('.bfb_sort').html("50%");
+                                }
+                                if (data.data.percent < 70 && data.data.percent > 60) {
+                                    $('.bfb_sort').html("60%");
+                                }
+                                if (data.data.percent < 80 && data.data.percent > 70) {
+                                    $('.bfb_sort').html("70%");
+                                }
+                                if (data.data.percent < 90 && data.data.percent > 80) {
+                                    $('.bfb_sort').html("80%");
+                                }
+                                if (data.data.percent < 99 && data.data.percent > 90) {
+                                    $('.bfb_sort').html("89%");
+                                }
+                            }
+
+                        })
                     }
                 }
             })

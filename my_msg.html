@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="title" content="">
+    <!-- <meta name="description" content=""> -->
+    <!-- 让IE浏览器用最高级内核渲染页面 还有用 Chrome 框架的页面用webkit 内核
+    <!-- ================================================== -->
+    <meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge">
+    <!-- IOS6全屏 Chrome高版本全屏-->
+    <!-- ================================================== -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <!-- 让360双核浏览器用webkit内核渲染页面-->
+    <!-- ================================================== -->
+    <meta name="renderer" content="webkit">
+    <!-- Mobile Specific Metas
+   ================================================== -->
+    <!-- !!!注意 minimal-ui 是IOS7.1的新属性，最小化浏览器UI -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/swiper-3.3.1.min.css">
+    <script src="js/jquery-1.12.2.min.js"></script>
+    <script src="js/swiper-3.3.1.jquery.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/public.js"></script>
+    <script src="js/angular1.3.1.js"></script>
+    <title>我的消息</title>
+    <style>
+        .msg_list {
+            padding: 0 0.5rem;
+        }
+
+        .msg_list li {
+            color: #777777;
+            font-size: 0.7rem;
+            padding: 0.7rem 0;
+            border-bottom: 1px solid #e9e7e7;
+        }
+
+        .msg_time {
+            padding-right: 0.3rem;
+            font-size: 0.6rem;
+        }
+
+        .color_show {
+            color: #2cb1e5;
+        }
+        .msg_lr{
+            width: 50%;
+        }
+        .reply_user{
+            padding-right: 0.1rem;
+            max-width: 5rem;
+        }
+    </style>
+</head>
+<body class="pd_b0" style="background: #f3f3f3;">
+<!--头部-->
+<section class="relative">
+    <div class="bg_b bg_b2 header_nav pd_lr5 flex-container">
+        <a href="my_qa.html"><i class="icon-angle-left nav_icon color_f"></i></a>
+        <span class="header_name color_f">我的消息</span>
+        <span></span>
+    </div>
+</section>
+<!--消息列表-->
+<section>
+    <ul class="msg_list">
+        <li>
+            <a href="#">
+                <div class="flex-container">
+                    <div class="msg_lr">
+                        <!--<b class="reply_index inm">1</b>-->
+                        <span class="color_show reply_user ellipsis inm">用户1</span>
+                        <span>回复了&nbsp;你</span>
+                    </div>
+                    <div class="msg_lr tr">
+                        <span class="msg_time">2017.8.23  16：24</span>
+                        <b class="color_show">查看</b>
+                    </div>
+                </div>
+            </a>
+        </li><li>
+            <a href="#">
+                <div class="flex-container">
+                    <div class="msg_lr">
+                        <!--<b class="reply_index inm">2</b>-->
+                        <span class="color_show reply_user ellipsis inm">用户用222</span>
+                        <span>回复了&nbsp;你</span>
+                    </div>
+                    <div class="msg_lr tr">
+                        <span class="msg_time">2017.8.23  16：24</span>
+                        <b class="color_show">查看</b>
+                    </div>
+                </div>
+            </a>
+        </li>
+    </ul>
+</section>
+</body>
+</html>

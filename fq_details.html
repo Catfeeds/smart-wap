@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="title" content="">
+    <!-- <meta name="description" content=""> -->
+    <!-- 让IE浏览器用最高级内核渲染页面 还有用 Chrome 框架的页面用webkit 内核
+    <!-- ================================================== -->
+    <meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge">
+    <!-- IOS6全屏 Chrome高版本全屏-->
+    <!-- ================================================== -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <!-- 让360双核浏览器用webkit内核渲染页面-->
+    <!-- ================================================== -->
+    <meta name="renderer" content="webkit">
+    <!-- Mobile Specific Metas
+   ================================================== -->
+    <!-- !!!注意 minimal-ui 是IOS7.1的新属性，最小化浏览器UI -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/qa_common.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/swiper-3.3.1.min.css">
+    <script src="js/jquery-1.12.2.min.js"></script>
+    <script src="js/swiper-3.3.1.jquery.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/public.js"></script>
+    <script src="js/angular1.3.1.js"></script>
+    <title>问答详情</title>
+    <style>
+        .answer_list{
+            padding: 0 0.5rem;
+        }
+        .answer_list li{
+            padding: 0.5rem 0 0.2rem;
+            border-bottom: 1px solid #cfcfcf;
+        }
+        .answer_name{
+            font-size: 0.6rem;
+            color: #555555;
+        }
+        .answer_time{
+            padding-left: 0.4rem;
+            font-size: 0.55rem;
+            color: #777777;
+        }
+        .ans_de{
+            padding: 0.3rem 0;
+            font-size: 0.7rem;
+            color: #333333;
+        }
+        .replyData_wrap{
+            font-size: 0.7rem;
+            color: #777777;
+            padding-bottom: 0.3rem;
+        }
+        .replyData_wrap b.rep_num{
+            padding-left: 0.2rem;
+            vertical-align: middle;
+        }
+        .rep_num.on{
+            color: #ff3335;
+        }
+        .replyData_wrap .rep_row{
+            padding-left: 1rem;
+        }
+        .reply_list{
+            padding: 0.4rem 0 0;
+        }
+        .reply_list dt{
+            font-size: 0.7rem;
+            color: #323232;
+            margin-bottom: 0.4rem;
+        }
+        .rep_2{
+            color: #777777;
+        }
+        .show_more{
+            padding: 0.3rem 0;
+            font-size: 0.7rem;
+            color: #333333;
+            background: #eeeeee;
+        }
+    </style>
+</head>
+<body class="pd_b0">
+<!--头部-->
+<section class="relative">
+    <div class="bg_b bg_b2 header_nav pd_lr5 flex-container">
+        <a href="JavaScript:history.go(-1)"><i class="icon-angle-left nav_icon color_f"></i></a>
+        <span class="header_name color_f">问题详情</span>
+        <span></span>
+    </div>
+</section>
+<!--详情列表-->
+<section>
+    <div class="ques_wrap bg_f mg_b5">
+        <h1 class="ques_name">申请美国商科研究生到底考GRE还是GMAT？</h1>
+        <p class="ques_de">申请美国研究生到底选择GRE还是GMAT呢？这是很 多学员比较惑的问题，那雷哥网这边给大家带来一些 参考意见。</p>
+        <div class="tag_list">
+            <i class="icon-tag"></i>
+            <span>留学申请</span>
+        </div>
+        <div class="push_info flex-container">
+            <div class="flex-container-left">
+                <div class="answer_img"><img src="images/default.png" alt=""></div>
+                <span class="user_color username">用户名</span>
+                <span>2017.07.11</span>
+            </div>
+            <div>关注度：102<b class="fg_line">|</b>2人回答</div>
+        </div>
+        <div class="tr ans_btn_wrap"><a href="#"><img class="ans_btn" src="images/ans_btn.png" alt=""></a></div>
+    </div>
+    <!--回答列表-->
+    <ul class="answer_list bg_f">
+        <li>
+            <div>
+                <div class="flex-container-left answer_info">
+                    <div class="answer_img"><img src="images/default.png" alt=""></div>
+                    <span class="answer_name">用户名</span>
+                    <span class="answer_time">2017.07.11</span>
+                </div>
+                <div class="ans_de">申请美国研究生到底选择GRE还是GMAT呢？这是很多学 员比较困惑的问题，那雷哥网这边给大家带来一些参考意 见，希望能够帮助大</div>
+                <div class="replyData_wrap tr">
+                    <span class="rep_row"><img src="images/reply_icon.png" style="height: 0.6rem" alt=""><b class="rep_num">0</b></span>
+                    <span class="rep_row dj_btn"><img class="rep_icon" src="images/icon_dj.png" style="height: 0.6rem" alt=""><b class="rep_num dj_num">0</b></span>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div>
+                <div class="flex-container-left answer_info">
+                    <div class="answer_img"><img src="images/default.png" alt=""></div>
+                    <span class="answer_name">用户名</span>
+                    <span class="answer_time">2017.07.11</span>
+                </div>
+                <div class="ans_de">申请美国研究生到底选择GRE还是GMAT呢？这是很多学 员比较困惑的问题，那雷哥网这边给大家带来一些参考意 见，希望能够帮助大</div>
+                <div class="replyData_wrap tr">
+                    <span class="rep_row"><img src="images/reply_icon.png" style="height: 0.6rem" alt=""><b class="rep_num">0</b></span>
+                    <span class="rep_row dj_btn"><img class="rep_icon" src="images/icon_dj.png" style="height: 0.6rem" alt=""><b class="rep_num dj_num">0</b></span>
+                </div>
+                <!--用户评论-->
+                <dl class="reply_list">
+                   <dt>
+                       <span class="user_color">路人1号：</span>
+                       <span class="rep_content">大概就是这样子大概就是这样子大概就是这样子大概就是这样子大概就是这样子大概就是这样子大概就是这样子</span>
+                       <span class="answer_time">2017.07.11</span>
+                   </dt>
+                    <dt>
+                       <span class="user_color">路人1号</span>
+                        <span class="rep_2">回复</span>
+                        <span class="user_color">路人1：</span>
+                       <span class="rep_content">大概就是这样子大概就是这样子大概就是这样子大概就是这样子大概就是这样子大概就是这样子</span>
+                       <span class="answer_time">2017.07.11</span>
+                   </dt>
+                </dl>
+                <div class="show_more tm">点击查看更多</div>
+            </div>
+        </li>
+    </ul>
+</section>
+</body>
+<script>
+    $(function () {
+        $('.dj_btn').click(function () {
+            var num=parseInt($(this).find('.dj_num').html());
+            if($(this).hasClass('on')){
+                $(this).removeClass('on');
+                $(this).find('.dj_num').html(num-1);
+                $(this).find('.rep_icon').attr('src','images/icon_dj.png');
+            }else {
+                $(this).addClass('on');
+                $(this).find('.dj_num').html(num+1);
+                $(this).find('.rep_icon').attr('src','images/dj2_icon.png');
+            }
+            $('.dj_num').toggleClass('on');
+
+        })
+    })
+</script>
+</html>

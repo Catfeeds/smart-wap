@@ -59,9 +59,9 @@
     color: #2cb1e5;
     border-bottom: 1px dashed #d4d2d2;
 }
-/*.school_info p{*/
-    /*width: 50%;*/
-/*}*/
+.school_info p{
+    width: 50%;
+}
 .report_sort{
     font-size: 0.7rem;
     color: #333333;

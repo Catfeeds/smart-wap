@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="title" content="">
+    <!-- <meta name="description" content=""> -->
+    <!-- 让IE浏览器用最高级内核渲染页面 还有用 Chrome 框架的页面用webkit 内核
+    <!-- ================================================== -->
+    <meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge">
+    <!-- IOS6全屏 Chrome高版本全屏-->
+    <!-- ================================================== -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <!-- 让360双核浏览器用webkit内核渲染页面-->
+    <!-- ================================================== -->
+    <meta name="renderer" content="webkit">
+    <!-- Mobile Specific Metas
+   ================================================== -->
+    <!-- !!!注意 minimal-ui 是IOS7.1的新属性，最小化浏览器UI -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/swiper-3.3.1.min.css">
+    <script src="js/jquery-1.12.2.min.js"></script>
+    <script src="js/swiper-3.3.1.jquery.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/public.js"></script>
+    <script src="js/angular1.3.1.js"></script>
+    <title>我的问答</title>
+    <style>
+        .msg_num{
+            right: 0;
+            top: 0.2rem;
+            border-radius: 50%;
+            width: 0.2rem;
+            height: 0.2rem;
+            background: #ff0000;
+        }
+        .qa_list{
+            padding: 0 0.5rem;
+        }
+        .qa_list li{
+            padding: 0.6rem 0;
+            border-bottom: 1px solid #cfcfcf;
+        }
+        .qa_name{
+            color: #333333;
+            font-weight: normal;
+            font-size: 0.8rem;
+            line-height: 1.1rem;
+            height: 2.2rem;
+            margin-bottom: 0.2rem;
+        }
+        .qa_de{
+            font-size: 0.7rem;
+            color: #777777;
+        }
+        .tag_list,.ans_info{
+            color: #888888;
+            font-size: 0.6rem;
+        }
+        .tag_list {
+            padding: 0.4rem 0;
+        }
+        .tag_list span{
+            padding-left: 0.3rem;
+        }
+    </style>
+</head>
+<body class="pd_b0">
+<!--头部-->
+<section class="relative">
+    <div class="bg_b bg_b2 header_nav pd_lr5 flex-container">
+        <a href="user_center.html"><i class="icon-angle-left nav_icon color_f"></i></a>
+        <span class="header_name color_f">我的问答</span>
+        <a href="my_msg.html" class="msg_hint relative">
+            <img src="images/msg_icon.png" style="height: 0.95rem;" alt="">
+            <b class="msg_num ani"></b>
+        </a>
+    </div>
+</section>
+<!--我的问答列表-->
+<section>
+    <ul class="qa_list">
+        <li>
+            <a href="#">
+                <div>
+                    <h1 class="qa_name ellipsis-2">研究生想去英国读，想问下你们中介有没有合作 之类的研究生想去英国读，想问下你们中介有...？</h1>
+                    <p class="qa_de">申请美国研究生到底选择GRE还是GMAT呢？这是...</p>
+                </div>
+                <div class="tag_list">
+                    <i class="icon-tag"></i>
+                    <span>留学生活</span>
+                    <span>留学生活</span>
+                    <span>留学生活</span>
+                    <span>留学生活</span>
+                </div>
+                <div class="ans_info flex-container">
+                    <span>2017.07.11</span>
+                    <span> 1人回答</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <div>
+                    <h1 class="qa_name ellipsis-2">研究生想去英国读，想问下你们中介有没有合作 之类的研究生想去英国读，想问下你们中介有...？</h1>
+                    <p class="qa_de">申请美国研究生到底选择GRE还是GMAT呢？这是...</p>
+                </div>
+                <div class="tag_list">
+                    <i class="icon-tag"></i>
+                    <span>留学生活</span>
+                    <span>留学生活</span>
+                    <span>留学生活</span>
+                    <span>留学生活</span>
+                </div>
+                <div class="ans_info flex-container">
+                    <span>2017.07.11</span>
+                    <span> 1人回答</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <div>
+                    <h1 class="qa_name ellipsis-2">研究生想去英国读，想问下你们中介有没有合作 之类的研究生想去英国读，想问下你们中介有...？</h1>
+                    <p class="qa_de">申请美国研究生到底选择GRE还是GMAT呢？这是...</p>
+                </div>
+                <div class="tag_list">
+                    <i class="icon-tag"></i>
+                    <span>留学生活</span>
+                    <span>留学生活</span>
+                    <span>留学生活</span>
+                    <span>留学生活</span>
+                </div>
+                <div class="ans_info flex-container">
+                    <span>2017.07.11</span>
+                    <span> 1人回答</span>
+                </div>
+            </a>
+        </li>
+    </ul>
+</section>
+</body>
+</html>

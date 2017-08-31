@@ -3,6 +3,7 @@
  */
 $(function () {
     var Requests = GetRequests();
+    var id = Requests['id'];
     var uid = localStorage.getItem('uid');
     var report_item = $.parseJSON(sessionStorage.getItem('matching_item'));
     if(!uid){
@@ -37,7 +38,8 @@ $(function () {
             url: httpUrl+'/cn/wap-api/school-result',
             //url: 'http://www.smartapply.cn/cn/wap-api/odds-storage',
             data: {
-                uid:uid
+                uid:uid,
+                id:id
             },
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded'

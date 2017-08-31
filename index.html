@@ -164,7 +164,7 @@
             <li><a href="http://m.gmatonline.cn">GMAT</a></li>
             <li><a href="http://m.toeflonline.cn/">TOEFL</a></li>
             <li><a href="http://ielts.viplgw.cn">IELTS</a></li>
-            <li><a class="user" href="login.html"><img src="images/user_center.png" style="height: 1.2rem;" alt=""></a>
+            <li><a id="user" href="login.html"><img src="images/user_center.png" style="height: 1.2rem;" alt=""></a>
             </li>
         </ul>
     </div>
@@ -364,75 +364,24 @@
         <a class="index2_more" href="#">MORE</a>
     </div>
     <ul class="hot_list2 flex-container bg_f">
-        <li>
-            <a href="school-major.html?id={{majorHot[0].major[0].id}}">
-                <div class="flex-container xg_de_wrap">
-                    <div class="mj_img"><img src="images/hot_mj_1.png" alt=""></div>
-                    <div class="hot_name">
-                        <p class="mj_t1 ellipsis"><span class="mj_t2">{{majorHot[0].major[0].direction}}</span>(MS in
-                            Finance)</p>
-                        <p class="mj_de">金融专业是以融通货币和货币资金的经济活动为 研究对象，具体研究个、机构、政府如何获取...</p>
+        <li ng-repeat="major in majorHot" ng-if="$index<4">
+            <a href="major_de.html?id={{major.id}}">
+                <div class="de_test_wrap">
+                    <div class="flex-container xg_de_wrap">
+                        <div class="mj_img"><img src="images/hot_mj_{{$index+1}}.png" alt=""></div>
+                        <div class="hot_name">
+                            <p class="mj_t1 ellipsis"><span class="mj_t2">{{major.name}}</span>({{major.title}})</p>
+                            <p class="mj_de ellipsis-2">{{major.numbering}}</p>
+                        </div>
+                    </div>
+                    <div class="xg_wrap ellipsis">
+                        <b class="xg_sc">相关院校：</b>
+                        <div ng-repeat="xg_scT in scArr[$index]"  class="inm xg_sc_name"><img ng-show="$index==0" src="images/hot_icon.png" style="height: 0.7rem" alt=""><span>{{xg_scT}}</span></div>
                     </div>
                 </div>
-                <div class="xg_wrap">
-                    <b class="xg_sc">相关院校：</b>
-                    <div class="inm xg_sc_name"><img src="images/hot_icon.png" style="height: 0.7rem" alt=""><span>波士顿学院</span></div>
-                    <div class="inm xg_sc_name"><span>波士顿学院</span></div>
-                </div>
-            </a>
-        </li>
-        <li>
-            <a href="school-major.html?id={{majorHot[0].major[0].id}}">
-                <div class="flex-container xg_de_wrap">
-                    <div class="mj_img"><img src="images/hot_mj_2.png" alt=""></div>
-                    <div class="hot_name">
-                        <p class="mj_t1 ellipsis"><span class="mj_t2">{{majorHot[0].major[0].direction}}</span>(MS in
-                            Finance)</p>
-                        <p class="mj_de">金融专业是以融通货币和货币资金的经济活动为 研究对象，具体研究个、机构、政府如何获取...</p>
-                    </div>
-                </div>
-                <div class="xg_wrap">
-                    <b class="xg_sc">相关院校：</b>
-                    <div class="inm xg_sc_name"><img src="images/hot_icon.png" style="height: 0.7rem" alt=""><span>波士顿学院</span></div>
-                    <div class="inm xg_sc_name"><span>波士顿学院</span></div>
-                </div>
-            </a>
-        </li>
-        <li>
-            <a href="school-major.html?id={{majorHot[0].major[0].id}}">
-                <div class="flex-container xg_de_wrap">
-                    <div class="mj_img"><img src="images/hot_mj_3.png" alt=""></div>
-                    <div class="hot_name">
-                        <p class="mj_t1 ellipsis"><span class="mj_t2">{{majorHot[0].major[0].direction}}</span>(MS in
-                            Finance)</p>
-                        <p class="mj_de">金融专业是以融通货币和货币资金的经济活动为 研究对象，具体研究个、机构、政府如何获取...</p>
-                    </div>
-                </div>
-                <div class="xg_wrap">
-                    <b class="xg_sc">相关院校：</b>
-                    <div class="inm xg_sc_name"><img src="images/hot_icon.png" style="height: 0.7rem" alt=""><span>波士顿学院</span></div>
-                    <div class="inm xg_sc_name"><span>波士顿学院</span></div>
-                </div>
-            </a>
-        </li>
-        <li>
-            <a href="school-major.html?id={{majorHot[0].major[0].id}}">
-                <div class="flex-container xg_de_wrap">
-                    <div class="mj_img"><img src="images/hot_mj_4.png" alt=""></div>
-                    <div class="hot_name">
-                        <p class="mj_t1 ellipsis"><span class="mj_t2">{{majorHot[0].major[0].direction}}</span>(MS in
-                            Finance)</p>
-                        <p class="mj_de">金融专业是以融通货币和货币资金的经济活动为 研究对象，具体研究个、机构、政府如何获取...</p>
-                    </div>
-                </div>
-                <div class="xg_wrap">
-                    <b class="xg_sc">相关院校：</b>
-                    <div class="inm xg_sc_name"><img src="images/hot_icon.png" style="height: 0.7rem" alt=""><span>波士顿学院</span></div>
-                    <div class="inm xg_sc_name"><span>波士顿学院</span></div>
-                </div>
-            </a>
-        </li>
 
+            </a>
+        </li>
     </ul>
 </section>
 <!--留学攻略-->

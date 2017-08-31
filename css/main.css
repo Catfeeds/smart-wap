@@ -253,6 +253,9 @@
 .hot_list2 li {
    background: #f7f7f7;
     margin-bottom: 0.4rem;
+    width:100%;
+}
+.hot_list2 li .de_test_wrap{
     padding: 0.5rem 0.5rem 0.3rem;
 }
 
