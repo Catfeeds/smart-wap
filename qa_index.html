@@ -33,12 +33,13 @@
     <script src="js/angular1.3.1.js"></script>
     <title>问答首页</title>
     <style>
-        .qa_index li{
+        .qa_index li {
             padding: 0.5rem 0;
             border-bottom: 1px solid #cfcfcf;
         }
+
         /*.qa_index li:last-child{*/
-            /*border-bottom: none;*/
+        /*border-bottom: none;*/
         /*}*/
         #topNav {
             width: 100%;
@@ -46,27 +47,31 @@
             font-size: 0.75rem;
             color: #333333;
             padding: 0.7rem 0 0.5rem;
-            border-bottom:1px solid #cfcfcf;
+            border-bottom: 1px solid #cfcfcf;
         }
+
         #topNav .swiper-slide {
-            letter-spacing:2px;
-            width:26%;
+            letter-spacing: 2px;
+            width: 26%;
             padding-left: 0.3rem;
             padding-right: 0.5rem;
-            text-align:left;
+            text-align: left;
             display: inline-block;
             vertical-align: middle;
         }
-        #topNav .swiper-slide:nth-child(1){
-           width: 16%;
+
+        #topNav .swiper-slide:nth-child(1) {
+            width: 16%;
         }
-        #topNav .swiper-slide span{
-            transition:all .3s ease;
-            display:block;
+
+        #topNav .swiper-slide span {
+            transition: all .3s ease;
+            display: block;
         }
-        #topNav .active span{
-            transform:scale(1.05);
-            color:#2cb1e5;
+
+        #topNav .active span {
+            transform: scale(1.05);
+            color: #2cb1e5;
         }
     </style>
 </head>
@@ -94,7 +99,8 @@
         </div>
     </div>
     <ul class="qa_index">
-            <li>
+        <li>
+            <a href="fq_details.html">
                 <div>
                     <h1 class="ques_name">申请美国商科研究生到底考GRE还是GMAT？</h1>
                     <p class="ques_de">申请美国研究生到底选择GRE还是GMAT呢？这是很 多学员比较惑的问题，那雷哥网这边给大家带来一些 参考意见。</p>
@@ -111,7 +117,8 @@
                         <div>关注度：102<b class="fg_line">|</b>2人回答</div>
                     </div>
                 </div>
-            </li>
+            </a>
+        </li>
         <li>
             <div>
                 <h1 class="ques_name">申请美国商科研究生到底考GRE还是GMAT？</h1>
@@ -163,11 +170,11 @@
     maxTranslate = mySwiper.maxTranslate();
     maxWidth = -maxTranslate + swiperWidth / 2;
 
-    $(".swiper-container").on('touchstart', function(e) {
+    $(".swiper-container").on('touchstart', function (e) {
         e.preventDefault()
     });
 
-    mySwiper.on('tap', function(swiper, e) {
+    mySwiper.on('tap', function (swiper, e) {
 
 //	e.preventDefault()
         slide = swiper.slides[swiper.clickedIndex];
