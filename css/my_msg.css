@@ -1,0 +1,26 @@
+.msg_list {
+    padding: 0 0.5rem;
+}
+
+.msg_list li {
+    color: #777777;
+    font-size: 0.7rem;
+    padding: 0.7rem 0;
+    border-bottom: 1px solid #e9e7e7;
+}
+
+.msg_time {
+    padding-right: 0.3rem;
+    font-size: 0.6rem;
+}
+
+.color_show {
+    color: #2cb1e5;
+}
+.msg_lr{
+    width: 50%;
+}
+.reply_user{
+    padding-right: 0.1rem;
+    max-width: 5rem;
+}

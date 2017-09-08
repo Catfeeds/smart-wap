@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="myApp">
 <head>
     <meta charset="UTF-8">
     <meta name="keywords" content="">
@@ -30,17 +30,105 @@
     <script src="js/swiper-3.3.1.jquery.min.js"></script>
     <script src="js/common.js"></script>
     <script src="js/public.js"></script>
+    <script src="js/tw_index.js"></script>
     <script src="js/angular1.3.1.js"></script>
     <title>提问</title>
 </head>
-<body>
-<!--头部-->
-<section class="relative">
-    <div class="bg_b bg_b2 header_nav pd_lr5 flex-container">
-        <a href="JavaScript:history.go(-1)"><i class="icon-angle-left nav_icon color_f"></i></a>
-        <span style="padding-left: 1rem;" class="header_name color_f">问答</span>
-        <a href="my_answer.html"><img src="images/tw_icon.png" style="height: 0.8rem;" alt=""></a>
+<body class="pd_b0" ng-controller="abroad_view">
+<div id="tw_index">
+    <!--头部-->
+    <section class="relative">
+        <div class="bg_b bg_b2 header_nav pd_lr5 flex-container">
+            <a href="JavaScript:history.go(-1)"><i class="icon-angle-left nav_icon color_f"></i></a>
+            <span style="padding-left: 1rem;" class="header_name color_f">提问</span>
+            <span></span>
+        </div>
+    </section>
+    <!--提问内容-->
+    <section class="tw_index">
+        <div class="pd_lr5 bg_f mg_b5">
+            <p class="tw_tit_name">问题（必填）</p>
+            <textarea id="question_tit" autofocus placeholder="请描述你的问题"></textarea>
+        </div>
+        <div class="pd_lr5 bg_f mg_b5">
+            <p class="tw_tit_name">问题补充（选填）</p>
+            <textarea id="question_de" placeholder="请补充你的问题"></textarea>
+        </div>
+        <div class="pd_lr5 bg_f mg_b5">
+            <p class="tw_tit_name">选择标签：</p>
+            <ul class="tag_sel flex-container-left">
+                <!--<li class="on">留学申请</li>-->
+                <!--<li>留学生活</li>-->
+                <!--<li>留学院校</li>-->
+                <!--<li>学科专业</li>-->
+                <!--<li>背景提升</li>-->
+                <!--<li>语言备考</li>-->
+                <!--<li>文书写作</li>-->
+                <li ng-class="$index==0 ? 'on' : '' " tag-id="{{tag.id}}" ng-repeat="tag in data.tags">{{tag.name}}</li>
+            </ul>
+            <div class="sel_wrap">
+                <b class="tw_tit_name yq_name mgb_none fl" style="padding-top: 0">邀请回答：</b>
+                <!--<div class="inviter_name_wrap">-->
+                    <!--<span class="teacher_name">Sunny</span>-->
+                <!--</div>-->
+                <em class="sel_teacher inm fl"><i style="padding-right: 0.2rem">选择导师</i><i
+                        class="icon-angle-right"></i></em>
+            </div>
+        </div>
+        <div class="save">提交</div>
+    </section>
+</div>
+<!--邀请回答-->
+<section class="invitation_model">
+    <div class="model_wrap">
+        <!--头部-->
+        <section class="relative">
+            <div class="bg_b bg_b2 header_nav pd_lr5 flex-container">
+                <span class="yes_invit"><i style="font-size: 1.2rem;" class="icon-angle-left color_f"></i></span>
+                <span style="padding-left: 1rem;" class="header_name color_f">邀请回答</span>
+                <span class="yes_invit"><img src="images/icon_ok.png" style="height: 0.7rem;" alt=""></span>
+            </div>
+        </section>
+        <!--邀请列表-->
+        <ul class="invit_list pd_lr5">
+            <li ng-repeat="teach in data.adviser">
+                <div class="flex-container">
+                    <div class="flex-container-left invit_left">
+                        <div class="inviter_img"><img src="{{teach.information.image | nullImg}}" alt=""></div>
+                        <div class="inviter_info_wrap">
+                            <p class="inviter_name ellipsis">{{teach.information.name}}</p>
+                            <p class="answer_num">已回答<b>{{teach.num}}</b>个回答</p>
+                        </div>
+                    </div>
+                    <div class="check_container">
+                        <span>
+                            <input type="checkbox" class="inputCheck" check-id="{{teach.information.id}}" id="checkbox{{$index}}">
+                            <label for="checkbox{{$index}}"></label>
+                        </span>
+                    </div>
+                </div>
+            </li>
+            <!--<li>-->
+                <!--<div class="flex-container">-->
+                    <!--<div class="flex-container-left invit_left">-->
+                        <!--<div class="inviter_img"><img src="images/default.png" alt=""></div>-->
+                        <!--<div class="inviter_info_wrap">-->
+                            <!--<p class="inviter_name ellipsis">SunnySunnySunnySunnySunnySunnySunnySunnySunnySunny</p>-->
+                            <!--<p class="answer_num">已回答<b>56</b>个回答</p>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="check_container">-->
+                        <!--<span>-->
+                            <!--<input type="checkbox" class="inputCheck" id="checkbox2">-->
+                            <!--<label for="checkbox2"></label>-->
+                        <!--</span>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</li>-->
+        </ul>
     </div>
+
 </section>
+
 </body>
 </html>

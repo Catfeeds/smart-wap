@@ -34,30 +34,6 @@
     <script src="js/index.js"></script>
     <script type="text/javascript" src="js/angular1.3.1.js"></script>
     <title>首页</title>
-    <style>
-        .ncon {
-            margin-bottom: 0.4rem;
-        }
-
-        .ncon img {
-            width: 2rem;
-        }
-
-        .ncon_name {
-            font-size: 0.55rem;
-            color: #333333;
-        }
-
-        .nav_select_list {
-            padding: 0.8rem 0.5rem 0.4rem;
-        }
-
-        .nav_select_list li {
-            width: 16.6%;
-            margin-bottom: 0.8rem;
-            align-items: flex-start;
-        }
-    </style>
 </head>
 <body id="index" ng-controller="abroad_view">
 <!--头部-->
@@ -119,7 +95,7 @@
                         <i class="icon-angle-right nav_crow_r"></i>
                     </a>
                     <dl class="nav_wrap2">
-                        <dt><a href="question.html">申请问答</a></dt>
+                        <dt><a href="qa_index.html">申请问答</a></dt>
                         <dt><a href="connoisseur.html">顾问推荐</a></dt>
                     </dl>
                 </li>
@@ -228,7 +204,7 @@
             </a>
         </li>
         <li>
-            <a href="question.html">
+            <a href="qa_index.html">
                 <div class="ncon_wrap tm">
                     <div class="ncon"><img src="images/ncon_5.png" alt=""></div>
                     <p class="ncon_name">申请问答</p>
@@ -282,11 +258,11 @@
     <div class="idnex2_tit_wrap flex-container">
         <span></span>
         <span class="section_name">最热留学问答</span>
-        <a class="index2_more" href="question.html">MORE</a>
+        <a class="index2_more" href="qa_index.html">MORE</a>
     </div>
     <ul class="question_list2">
         <li ng-repeat="question in question">
-            <p class="question_name2"><a href="qa-details.html?id={{question.id}}">{{question.question}}</a></p>
+            <p class="question_name2"><a href="fq_details.html?id={{question.id}}">{{question.question}}</a></p>
             <div class="flex-container question_info2">
                 <span>{{question.addTime}}</span>
                 <span>回答数量：{{question.answerCount}}</span>

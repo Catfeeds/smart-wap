@@ -26,54 +26,14 @@
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/swiper-3.3.1.min.css">
     <link rel="stylesheet" href="css/qa_common.css">
+    <link rel="stylesheet" href="css/qa_index.css">
     <script src="js/jquery-1.12.2.min.js"></script>
     <script src="js/swiper-3.3.1.jquery.min.js"></script>
     <script src="js/common.js"></script>
     <script src="js/public.js"></script>
+    <script src="js/qa_index.js"></script>
     <script src="js/angular1.3.1.js"></script>
     <title>问答首页</title>
-    <style>
-        .qa_index li {
-            padding: 0.5rem 0;
-            border-bottom: 1px solid #cfcfcf;
-        }
-
-        /*.qa_index li:last-child{*/
-        /*border-bottom: none;*/
-        /*}*/
-        #topNav {
-            width: 100%;
-            overflow: hidden;
-            font-size: 0.75rem;
-            color: #333333;
-            padding: 0.7rem 0 0.5rem;
-            border-bottom: 1px solid #cfcfcf;
-        }
-
-        #topNav .swiper-slide {
-            letter-spacing: 2px;
-            width: 26%;
-            padding-left: 0.3rem;
-            padding-right: 0.5rem;
-            text-align: left;
-            display: inline-block;
-            vertical-align: middle;
-        }
-
-        #topNav .swiper-slide:nth-child(1) {
-            width: 16%;
-        }
-
-        #topNav .swiper-slide span {
-            transition: all .3s ease;
-            display: block;
-        }
-
-        #topNav .active span {
-            transform: scale(1.05);
-            color: #2cb1e5;
-        }
-    </style>
 </head>
 <body class="pd_b0 bg_f">
 <!--头部-->
@@ -81,126 +41,47 @@
     <div class="bg_b bg_b2 header_nav pd_lr5 flex-container">
         <a href="JavaScript:history.go(-1)"><i class="icon-angle-left nav_icon color_f"></i></a>
         <span style="padding-left: 1rem;" class="header_name color_f">问答</span>
-        <a href="my_answer.html"><img src="images/tw_icon.png" style="height: 0.8rem;" alt=""></a>
+        <a href="tw_index.html"><img src="images/tw_icon.png" style="height: 0.8rem;" alt=""></a>
     </div>
 </section>
 <!--问答列表-->
 <section class="pd_lr5">
     <div id="topNav" class="swiper-container">
         <div class="swiper-wrapper">
-            <div class="swiper-slide active"><span>全部</span></div>
-            <div class="swiper-slide"><span>背景提升</span></div>
-            <div class="swiper-slide"><span>留学生活</span></div>
-            <div class="swiper-slide"><span>留学申请</span></div>
-            <div class="swiper-slide"><span>留学院校</span></div>
-            <div class="swiper-slide"><span>学科专业</span></div>
-            <div class="swiper-slide"><span>语言备考</span></div>
-            <div class="swiper-slide"><span>文书写作</span></div>
+            <!--<div class="swiper-slide active" ng-click="showData(tag.id,1,20)"><span>全部</span></div>-->
+            <!--<div class="swiper-slide"><span>背景提升</span></div>-->
+            <!--<div class="swiper-slide"><span>留学生活</span></div>-->
+            <!--<div class="swiper-slide"><span>留学申请</span></div>-->
+            <!--<div class="swiper-slide"><span>留学院校</span></div>-->
+            <!--<div class="swiper-slide"><span>学科专业</span></div>-->
+            <!--<div class="swiper-slide"><span>语言备考</span></div>-->
+            <!--<div class="swiper-slide"><span>文书写作</span></div>-->
+            <!--<div class="swiper-slide" ng-click="showData(tag.id,1,20)" ng-repeat="tag in tagList" is-over="toggle.now"><span>{{tag.name}}</span></div>-->
         </div>
     </div>
     <ul class="qa_index">
-        <li>
-            <a href="fq_details.html">
-                <div>
-                    <h1 class="ques_name">申请美国商科研究生到底考GRE还是GMAT？</h1>
-                    <p class="ques_de">申请美国研究生到底选择GRE还是GMAT呢？这是很 多学员比较惑的问题，那雷哥网这边给大家带来一些 参考意见。</p>
-                    <div class="tag_list">
-                        <i class="icon-tag"></i>
-                        <span>留学申请</span>
-                    </div>
-                    <div class="push_info flex-container">
-                        <div class="flex-container-left">
-                            <div class="answer_img"><img src="images/default.png" alt=""></div>
-                            <span class="user_color username">用户名</span>
-                            <span>2017.07.11</span>
-                        </div>
-                        <div>关注度：102<b class="fg_line">|</b>2人回答</div>
-                    </div>
-                </div>
-            </a>
-        </li>
-        <li>
-            <div>
-                <h1 class="ques_name">申请美国商科研究生到底考GRE还是GMAT？</h1>
-                <p class="ques_de">申请美国研究生到底选择GRE还是GMAT呢？这是很 多学员比较惑的问题，那雷哥网这边给大家带来一些 参考意见。</p>
-                <div class="tag_list">
-                    <i class="icon-tag"></i>
-                    <span>留学申请</span>
-                </div>
-                <div class="push_info flex-container">
-                    <div class="flex-container-left">
-                        <div class="answer_img"><img src="images/default.png" alt=""></div>
-                        <span class="user_color username">用户名</span>
-                        <span>2017.07.11</span>
-                    </div>
-                    <div>关注度：102<b class="fg_line">|</b>2人回答</div>
-                </div>
-            </div>
-        </li>
-        <li>
-            <div>
-                <h1 class="ques_name">申请美国商科研究生到底考GRE还是GMAT？</h1>
-                <p class="ques_de">申请美国研究生到底选择GRE还是GMAT呢？这是很 多学员比较惑的问题，那雷哥网这边给大家带来一些 参考意见。</p>
-                <div class="tag_list">
-                    <i class="icon-tag"></i>
-                    <span>留学申请</span>
-                </div>
-                <div class="push_info flex-container">
-                    <div class="flex-container-left">
-                        <div class="answer_img"><img src="images/default.png" alt=""></div>
-                        <span class="user_color username">用户名</span>
-                        <span>2017.07.11</span>
-                    </div>
-                    <div>关注度：102<b class="fg_line">|</b>2人回答</div>
-                </div>
-            </div>
-        </li>
+        <!--<li ng-repeat="dataA in data">-->
+            <!--<a href="fq_details.html?id={{dataA.id}}">-->
+                <!--<div>-->
+                    <!--<h1 class="ques_name">{{dataA.question}}</h1>-->
+                    <!--<p class="ques_de">{{dataA.content}}</p>-->
+                    <!--<div class="tag_list">-->
+                        <!--<i class="icon-tag"></i>-->
+                        <!--<span ng-repeat="tag in dataA.tags">{{tag.name}}</span>-->
+                    <!--</div>-->
+                    <!--<div class="push_info flex-container">-->
+                        <!--<div class="flex-container-left">-->
+                            <!--<div class="answer_img"><img src="images/default.png" alt=""></div>-->
+                            <!--<span class="user_color username inm ellipsis">{{dataA.nickname}}</span>-->
+                            <!--<span>{{dataA.addTime}}</span>-->
+                        <!--</div>-->
+                        <!--<div>关注度：{{dataA.browse}}<b class="fg_line">|</b>{{dataA.follow}}人回答</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</a>-->
+        <!--</li>-->
     </ul>
+    <ul class="pageSize"></ul>
 </section>
 </body>
-<script type="text/javascript">
-    var mySwiper = new Swiper('#topNav', {
-        freeMode: true,
-        freeModeMomentumRatio: 0.5,
-        slidesPerView: 'auto',
-
-    });
-
-    swiperWidth = mySwiper.container[0].clientWidth;
-    maxTranslate = mySwiper.maxTranslate();
-    maxWidth = -maxTranslate + swiperWidth / 2;
-
-    $(".swiper-container").on('touchstart', function (e) {
-        e.preventDefault()
-    });
-
-    mySwiper.on('tap', function (swiper, e) {
-
-//	e.preventDefault()
-        slide = swiper.slides[swiper.clickedIndex];
-        slideLeft = slide.offsetLeft;
-        slideWidth = slide.clientWidth;
-        slideCenter = slideLeft + slideWidth / 2;
-        // 被点击slide的中心点
-
-        mySwiper.setWrapperTransition(300);
-
-        if (slideCenter < swiperWidth / 2) {
-
-            mySwiper.setWrapperTranslate(0)
-
-        } else if (slideCenter > maxWidth) {
-            mySwiper.setWrapperTranslate(maxTranslate)
-
-        } else {
-            nowTlanslate = slideCenter - swiperWidth / 2;
-            mySwiper.setWrapperTranslate(-nowTlanslate)
-        }
-
-        $("#topNav  .active").removeClass('active');
-
-        $("#topNav .swiper-slide").eq(swiper.clickedIndex).addClass('active');
-
-    })
-</script>
 </html>

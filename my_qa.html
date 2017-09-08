@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="myApp">
 <head>
     <meta charset="UTF-8">
     <meta name="keywords" content="">
@@ -23,55 +23,18 @@
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/my_qa.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/swiper-3.3.1.min.css">
     <script src="js/jquery-1.12.2.min.js"></script>
     <script src="js/swiper-3.3.1.jquery.min.js"></script>
     <script src="js/common.js"></script>
     <script src="js/public.js"></script>
+    <script src="js/my_qa.js"></script>
     <script src="js/angular1.3.1.js"></script>
     <title>我的问答</title>
-    <style>
-        .msg_num{
-            right: 0;
-            top: 0.2rem;
-            border-radius: 50%;
-            width: 0.2rem;
-            height: 0.2rem;
-            background: #ff0000;
-        }
-        .qa_list{
-            padding: 0 0.5rem;
-        }
-        .qa_list li{
-            padding: 0.6rem 0;
-            border-bottom: 1px solid #cfcfcf;
-        }
-        .qa_name{
-            color: #333333;
-            font-weight: normal;
-            font-size: 0.8rem;
-            line-height: 1.1rem;
-            height: 2.2rem;
-            margin-bottom: 0.2rem;
-        }
-        .qa_de{
-            font-size: 0.7rem;
-            color: #777777;
-        }
-        .tag_list,.ans_info{
-            color: #888888;
-            font-size: 0.6rem;
-        }
-        .tag_list {
-            padding: 0.4rem 0;
-        }
-        .tag_list span{
-            padding-left: 0.3rem;
-        }
-    </style>
 </head>
-<body class="pd_b0">
+<body class="pd_b0" ng-controller="abroad_view">
 <!--头部-->
 <section class="relative">
     <div class="bg_b bg_b2 header_nav pd_lr5 flex-container">
@@ -86,11 +49,11 @@
 <!--我的问答列表-->
 <section>
     <ul class="qa_list">
-        <li>
-            <a href="fq_details.html">
+        <li ng-repeat="data in data">
+            <a href="fq_details.html?id={{data.id}}">
                 <div>
-                    <h1 class="qa_name ellipsis-2">研究生想去英国读，想问下你们中介有没有合作 之类的研究生想去英国读，想问下你们中介有...？</h1>
-                    <p class="qa_de">申请美国研究生到底选择GRE还是GMAT呢？这是...</p>
+                    <h1 class="qa_name ellipsis-2">{{data.question}}</h1>
+                    <p class="qa_de">{{data.content}}</p>
                 </div>
                 <div class="tag_list">
                     <i class="icon-tag"></i>
@@ -100,49 +63,31 @@
                     <span>留学生活</span>
                 </div>
                 <div class="ans_info flex-container">
-                    <span>2017.07.11</span>
-                    <span> 1人回答</span>
+                    <span>{{data.addTime}}</span>
+                    <span> {{data.answerNum}}人回答</span>
                 </div>
             </a>
         </li>
-        <li>
-            <a href="#">
-                <div>
-                    <h1 class="qa_name ellipsis-2">研究生想去英国读，想问下你们中介有没有合作 之类的研究生想去英国读，想问下你们中介有...？</h1>
-                    <p class="qa_de">申请美国研究生到底选择GRE还是GMAT呢？这是...</p>
-                </div>
-                <div class="tag_list">
-                    <i class="icon-tag"></i>
-                    <span>留学生活</span>
-                    <span>留学生活</span>
-                    <span>留学生活</span>
-                    <span>留学生活</span>
-                </div>
-                <div class="ans_info flex-container">
-                    <span>2017.07.11</span>
-                    <span> 1人回答</span>
-                </div>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <div>
-                    <h1 class="qa_name ellipsis-2">研究生想去英国读，想问下你们中介有没有合作 之类的研究生想去英国读，想问下你们中介有...？</h1>
-                    <p class="qa_de">申请美国研究生到底选择GRE还是GMAT呢？这是...</p>
-                </div>
-                <div class="tag_list">
-                    <i class="icon-tag"></i>
-                    <span>留学生活</span>
-                    <span>留学生活</span>
-                    <span>留学生活</span>
-                    <span>留学生活</span>
-                </div>
-                <div class="ans_info flex-container">
-                    <span>2017.07.11</span>
-                    <span> 1人回答</span>
-                </div>
-            </a>
-        </li>
+        <!--<li>-->
+            <!--<a href="fq_details.html">-->
+                <!--<div>-->
+                    <!--<h1 class="qa_name ellipsis-2">研究生想去英国读，想问下你们中介有没有合作 之类的研究生想去英国读，想问下你们中介有...？</h1>-->
+                    <!--<p class="qa_de">申请美国研究生到底选择GRE还是GMAT呢？这是...</p>-->
+                <!--</div>-->
+                <!--<div class="tag_list">-->
+                    <!--<i class="icon-tag"></i>-->
+                    <!--<span>留学生活</span>-->
+                    <!--<span>留学生活</span>-->
+                    <!--<span>留学生活</span>-->
+                    <!--<span>留学生活</span>-->
+                <!--</div>-->
+                <!--<div class="ans_info flex-container">-->
+                    <!--<span>2017.07.11</span>-->
+                    <!--<span> 1人回答</span>-->
+                <!--</div>-->
+            <!--</a>-->
+        <!--</li>-->
+
     </ul>
 </section>
 </body>

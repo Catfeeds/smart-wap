@@ -1,0 +1,37 @@
+.msg_num{
+    right: 0;
+    top: 0.2rem;
+    border-radius: 50%;
+    width: 0.2rem;
+    height: 0.2rem;
+    background: #ff0000;
+}
+.qa_list{
+    padding: 0 0.5rem;
+}
+.qa_list li{
+    padding: 0.6rem 0;
+    border-bottom: 1px solid #cfcfcf;
+}
+.qa_name{
+    color: #333333;
+    font-weight: normal;
+    font-size: 0.8rem;
+    line-height: 1.1rem;
+    height: 2.2rem;
+    margin-bottom: 0.2rem;
+}
+.qa_de{
+    font-size: 0.7rem;
+    color: #777777;
+}
+.tag_list,.ans_info{
+    color: #888888;
+    font-size: 0.6rem;
+}
+.tag_list {
+    padding: 0.4rem 0;
+}
+.tag_list span{
+    padding-left: 0.3rem;
+}

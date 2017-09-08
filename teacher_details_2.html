@@ -107,7 +107,7 @@
                         <li class="flex-container" ng-repeat="answerT in answer">
                             <div class="tAnswer_img"><img src="{{answerT.image | nullImg}}" alt=""></div>
                             <div class="tAnswer_wrap">
-                                <a href="qa-details.html?id={{answerT.pid}}">
+                                <a href="fq_details.html?id={{answerT.pid}}">
                                 <p class="tAnswer_tit">{{answerT.question}}</p>
                                 <p class="tAnswer_time">{{answerT.addtime}}</p>
                                 <p class="tAnswer_de" ng-bind-html="answerT.content | trustHtml"></p>

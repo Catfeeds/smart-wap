@@ -1,0 +1,64 @@
+.qa_index li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #cfcfcf;
+}
+#topNav {
+    width: 100%;
+    overflow: hidden;
+    font-size: 0.75rem;
+    color: #333333;
+    padding: 0.7rem 0 0.5rem;
+    border-bottom: 1px solid #cfcfcf;
+}
+
+#topNav .swiper-slide {
+    letter-spacing: 2px;
+    width: 25%;
+    padding-left: 0.3rem;
+    padding-right: 0.5rem;
+    text-align: left;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#topNav .swiper-slide:nth-child(1) {
+    width: 16%;
+}
+
+#topNav .swiper-slide span {
+    transition: all .3s ease;
+    display: block;
+}
+
+#topNav .active span {
+    transform: scale(1.05);
+    color: #2cb1e5;
+}
+/*公共分页*/
+.pageSize {
+    padding: 0.3rem 0.75rem 0.5rem;
+    background: #ffffff;
+}
+
+.pageSize li {
+    font-size: 0.6rem;
+    color: #468ed1;
+    background: #ffffff;
+    height: 1rem;
+    text-align: center;
+    line-height: 1rem;
+    padding: 0 0.3rem;
+    margin-right: 0.2rem;
+    display: inline-block;
+    vertical-align: middle;
+    border: 1px dashed #468ed1;
+}
+
+.pageSize li:last-child {
+    margin-right: 0;
+}
+
+.pageSize li.on {
+    color: #ffffff;
+    background: #468ed1;
+}

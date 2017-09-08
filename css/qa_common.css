@@ -42,6 +42,7 @@
 
 .username {
     padding-right: 0.2rem;
+    max-width: 4.5rem;
 }
 
 .ans_btn {

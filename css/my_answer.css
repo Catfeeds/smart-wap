@@ -1,0 +1,29 @@
+#my_answer{
+    padding-top: 0.7rem;
+}
+#my_answer .ques_name{
+    margin-bottom: 0.3rem;
+}
+#my_answer .ques_de{
+    margin-bottom: 0.5rem;
+}
+#my_answer .save{
+    width: 5rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
+}
+.intAnswer_wrap{
+    padding: 0.4rem;
+    height: 10rem;
+    border-radius: 0.4rem;
+    border: 1px solid #b8b8b8;
+}
+#answer{
+    width: 100%;
+    resize: none;
+    outline: none;
+    border: none;
+    height: 100%;
+    color: #2cb1e5;
+    font-size: 0.7rem;
+}

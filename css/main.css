@@ -339,3 +339,25 @@
 #user{
     line-height: 0.6rem;
 }
+.ncon {
+    margin-bottom: 0.4rem;
+}
+
+.ncon img {
+    width: 2rem;
+}
+
+.ncon_name {
+    font-size: 0.55rem;
+    color: #333333;
+}
+
+.nav_select_list {
+    padding: 0.8rem 0.5rem 0.4rem;
+}
+
+.nav_select_list li {
+    width: 16.6%;
+    margin-bottom: 0.8rem;
+    align-items: flex-start;
+}

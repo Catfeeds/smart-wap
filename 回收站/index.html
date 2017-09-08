@@ -93,7 +93,7 @@
                     <i class="icon-angle-right nav_crow_r"></i>
                 </a>
                 <dl class="nav_wrap2">
-                    <dt><a href="../question.html">申请问答</a></dt>
+                    <dt><a href="question.html">申请问答</a></dt>
                     <dt><a href="../connoisseur.html">顾问推荐</a></dt>
                 </dl>
             </li>
@@ -140,12 +140,12 @@
             <span class="big_tit">留学Q&A，职业导师在线解答</span>
             <span class="small_tit"></span>
         </div>
-        <a class="more" href="../question.html">more></a>
+        <a class="more" href="question.html">more></a>
     </div>
     <div class="bg_f pd_lr5">
         <ul class="question_list">
             <li ng-repeat="question in question">
-                <a href="../qa-details.html?id={{question.id}}">
+                <a href="../fq_details.html?id={{question.id}}">
                 <div>
                     <span class="question_tag">问</span>
                     <div class="int question_text_wrap">
@@ -155,7 +155,7 @@
                             <span><i class="icon-eye-open color_y"></i> 浏览次数：<strong class="color_y">{{question.browse}}次</strong></span>
                         </div>
                     </div>
-                    <a class="question_btn inm" href="../qa-details.html?id={{question.id}}">查看回答</a>
+                    <a class="question_btn inm" href="../fq_details.html?id={{question.id}}">查看回答</a>
                 </div>
                 </a>
             </li>
