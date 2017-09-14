@@ -47,11 +47,13 @@ $(function () {
         }).success(function (data) {
             $scope.http = httpUrl;
             $scope.http2 = httpUrl2;
-            $scope.score=data.score;
-            if(data.data==''){
+            $scope.score=data.data.score;
+            $scope.info=data.score;
+            $scope.user=data.user;
+            if(data.data.res==''){
                 alert("暂无当前数据，您可以重新选择留学专业！")
             }else {
-                $scope.res=data.data;
+                $scope.res=data.data.res;
             }
 
         });

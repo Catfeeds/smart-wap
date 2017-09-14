@@ -5,6 +5,7 @@
     width: 0.2rem;
     height: 0.2rem;
     background: #ff0000;
+    display: none;
 }
 .qa_list{
     padding: 0 0.5rem;

@@ -184,7 +184,7 @@ $(function () {
                 dataType: 'json',
                 success:function(data){
                     if(data.code=1){
-                        // location.href = 'matching_report.html';
+                        location.href = 'matching_report.html';
                     }else {
                         alert(data.message);
                     }

@@ -46,33 +46,65 @@
         <span class="search_icon"></span>
     </div>
 </section>
+<!--申请的院校排名-->
 <input type="hidden" id="sc_rank" value="{{data.article}}">
+<!--申请的院校国家-->
 <input type="hidden" id="country" value="{{country}}">
+<!--申请的院校名称-->
+<input type="hidden" id="sq_name2" value="{{data.name}}">
+<!--申请的院校ID-->
+<input type="hidden" id="step1_id" value="{{data.id}}">
 <!--学校列表-->
 <section>
-    <ul class="school_rank_list_wrap bg_f mg_b5">
-        <li>
-            <a href="#">
-                <div class="flex-container">
-                    <div class="flex-container">
-                        <div class="school_img"><img src="images/school_img.png" alt=""></div>
-                        <div class="school_info">
-                            <p class="school_ch_name ellipsis" id="sq_name">{{data.name}}</p>
-                            <p class="school_en_name ellipsis">{{data.title}}</p>
-                            <div class="school_gps">
-                                <img style="height: 0.5rem;margin-right: 0.2rem;" src="images/icon-gps.png" alt="">
-                                <span>所在地区：{{data.alternatives}}</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="view_num">
-                        <p>查看人数：<span class="color_b">{{data.viewCount}}</span></p>
-                        <p>评论：<span class="color_b">暂无</span></p>
+    <div class="bg_f mg_b5">
+        <div class="sel_search_wrap">
+            <div>
+                <p class="sel-name"><b class="light">*</b>院校搜索</p>
+                <div class="sel_row_wrap src_wrap relative">
+                    <input type="text" class="sel_sc_name fl" id="sr_sc" value="{{data.name}}" placeholder="请输入学校名称">
+                    <span class="sel_xl ani sel_btn sel_1"><img src="images/sel_c1.png" style="height: 0.9rem;" alt=""></span>
+                    <div class="sr_wrap ani">
+                        <ul class="sr_list"></ul>
                     </div>
                 </div>
-            </a>
-        </li>
-    </ul>
+            </div>
+            <div>
+                <p class="sel-name"><b class="light">*</b>专业选择</p>
+                <div class="sel_row_wrap relative">
+                    <select name="" class="fl" id="sel_sc">
+                        <option ng-repeat="major in major" value="{{major.id}}">{{major.name}}</option>
+                    </select>
+                    <span class="sel_xl ani sel_btn sel_2" style="line-height: 1.5rem;"><img src="images/sel_c2.png"
+                                                                                       style="width: 0.8rem;"
+                                                                                       alt=""></span>
+                </div>
+            </div>
+        </div>
+        <!--<ul class="school_rank_list_wrap bg_f">-->
+            <!--<li>-->
+                <!--<a href="#">-->
+                    <!--<div class="flex-container">-->
+                        <!--<div class="flex-container">-->
+                            <!--<div class="school_img"><img src="images/school_img.png" alt=""></div>-->
+                            <!--<div class="school_info">-->
+                                <!--<p class="school_ch_name ellipsis" id="sq_name">{{data.name}}</p>-->
+                                <!--<p class="school_en_name ellipsis">{{data.title}}</p>-->
+                                <!--<div class="school_gps">-->
+                                    <!--<img style="height: 0.5rem;margin-right: 0.2rem;" src="images/icon-gps.png" alt="">-->
+                                    <!--<span>所在地区：{{data.alternatives}}</span>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="view_num">-->
+                            <!--<p>查看人数：<span class="color_b">{{data.viewCount}}</span></p>-->
+                            <!--<p>评论：<span class="color_b">暂无</span></p>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</a>-->
+            <!--</li>-->
+        <!--</ul>-->
+    </div>
+
     <div>
         <div class="tm bg_f mc_step_tit_wrap">
             <div class="pro_centum_wrap tl">
@@ -161,16 +193,16 @@
                         <input class="step_text_int" id="school" type="text">
                     </div>
                 </div>
-                <div class="step_row">
-                    <div class="step_text_intra flex-container">
-                        <span class="row_name_b"><i class="light must">*</i>申请专业:</span>
-                    </div>
-                    <div class="step_int_wrap">
-                        <select class="step_select" name="" id="s3">
-                            <option ng-repeat="major in major" value="{{major.id}}">{{major.name}}</option>
-                        </select>
-                    </div>
-                </div>
+                <!--<div class="step_row">-->
+                    <!--<div class="step_text_intra flex-container">-->
+                        <!--<span class="row_name_b"><i class="light must">*</i>申请专业:</span>-->
+                    <!--</div>-->
+                    <!--<div class="step_int_wrap">-->
+                        <!--<select class="step_select" name="" id="s3">-->
+                            <!--<option ng-repeat="major in major" value="{{major.id}}">{{major.name}}</option>-->
+                        <!--</select>-->
+                    <!--</div>-->
+                <!--</div>-->
                 <div class="step_row">
                     <div class="step_text_intra flex-container">
                         <span class="row_name_b"><i class="light must">*</i>目前专业:</span>
@@ -181,8 +213,54 @@
                 </div>
                 <div class="next_step_btn tm flex-container" style="padding: 2rem 0">
                     <span class="st_next prev_step" data-index="0">上一步</span>
-                    <span class="st_next st_tj" >提交</span>
+                    <span class="st_next next_2" data-index="2">下一步</span>
                 </div>
+            </div>
+            <!--step3-->
+            <div class="step_wrap2 bg_f pd_lr5">
+                <div class="tm" style="padding: 0.5rem;">
+                    <p class="dx-tit">你是否具备以下背景条件？</p>
+                    <p class="dx-bz">备注：请勾选以下已参加过的内容（可多选）</p>
+                </div>
+                <div class="contain">
+                    <label for="checkbox1">
+                        <input type="checkbox" value="1" class="inputCheck" id="checkbox1">
+                        <span class="label_name">500强/四大实习（工作）经验</span>
+                    </label>
+                    <label for="checkbox2">
+                        <input type="checkbox" value="1" class="inputCheck" id="checkbox2">
+                        <span class="label_name">外企实习（工作）经验</span>
+                    </label>
+                    <label for="checkbox3">
+                        <input type="checkbox" value="1" class="inputCheck" id="checkbox3">
+                        <span class="label_name">国企实习（工作）经验</span>
+                    </label>
+                    <label for="checkbox4">
+                        <input type="checkbox" value="1" class="inputCheck" id="checkbox4">
+                        <span class="label_name">私企实习（工作）经验</span>
+                    </label>
+                    <label for="checkbox5">
+                        <input type="checkbox" value="1" class="inputCheck" id="checkbox5">
+                        <span class="label_name">相关专业项目比赛经验</span>
+                    </label>
+                    <label for="checkbox6">
+                        <input type="checkbox" value="1" class="inputCheck" id="checkbox6">
+                        <span class="label_name">海外游学经验</span>
+                    </label>
+                    <label for="checkbox7">
+                        <input type="checkbox" value="1" class="inputCheck" id="checkbox7">
+                        <span class="label_name">公益活动</span>
+                    </label>
+                    <label for="checkbox8">
+                        <input type="checkbox" value="1" class="inputCheck" id="checkbox8">
+                        <span class="label_name">获奖经历</span>
+                    </label>
+                </div>
+                <div class="next_step_btn tm flex-container">
+                    <span class="st_next prev_step" data-index="1">上一步</span>
+                    <span class="st_next st_tj">提交</span>
+                </div>
+                <!--<div class="next_step_btn tm"><span class="st_next st_tj" data-index="1">提交</span></div>-->
             </div>
         </div>
     </div>

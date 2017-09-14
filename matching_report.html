@@ -5,8 +5,6 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="title" content="">
-
-
     <!-- <meta name="description" content=""> -->
     <!-- 让IE浏览器用最高级内核渲染页面 还有用 Chrome 框架的页面用webkit 内核
     <!-- ================================================== -->
@@ -25,7 +23,6 @@
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/common.css">
-
     <link rel="stylesheet" href="css/matching.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/swiper-3.3.1.min.css">
@@ -46,56 +43,131 @@
         <span class="search_icon"><img src="images/share_icon.png" style="height: 1rem;" alt=""></span>
     </div>
 </section>
-<!--学校列表-->
+
 <section>
-    <div class="bg_f pd_lr5" style="padding-bottom: 0.4rem;overflow: hidden;">
-        <div class="tm">
-            <div class="score_tit">你的得分</div>
+    <div class="bg_f" style="overflow: hidden;padding:1rem 0.5rem;">
+        <div class="tm" style="border: 0.7rem solid #005c79;border-radius: 0.4rem;padding: 0.7rem 0 0.3rem">
+            <p class="score_tit2">
+                <b ng-show="user.nickname" class="username">{{user.nickname}}</b>
+                <b ng-hide="user.nickname" class="username">{{user.userName}}</b>
+                <span>,你的得分</span>
+            </p>
+            <!--<div class="score_tit">你的得分</div>-->
             <div class="inm score_num relative">
-                <img src="images/hh_bg.png" style="width: 2.6rem;" alt="">
+                <img src="images/hh_bg.png" style="height: 3.3rem;" alt="">
                 <span>{{score}}</span>
+                <!--<span >90</span>-->
+            </div>
+            <p class="score_tit2" style="font-size: 0.8rem;">以下是你智能选校报告</p>
+            <div class="flex-container-center">
+                <img src="images/lb_icon.png" style="height: 2rem;margin-right: 0.3rem;margin-top: -1rem;" alt="">
+                <ul class="report_gk">
+                    <li>
+                        <span class="color_b">●</span>
+                        <div class="gk_text">此报告未考虑文书质量与面试质量</div>
+                    </li>
+                    <li>
+                        <span class="color_b">●</span>
+                        <div class="gk_text">用户须填写实际情况，保证结果的准确性</div>
+                    </li>
+                    <li>
+                        <span class="color_b">●</span>
+                        <div class="gk_text">此报告匹配标准以近5年留学录取成果 大数据作为技术支撑，并不能百分百代 表实际录取结果，仅供参考</div>
+                    </li>
+                </ul>
             </div>
         </div>
-        <div class="flex-container" style="padding: 0.9rem 0 0.5rem">
-            <img src="images/lb_icon.png" style="height: 3rem;" alt="">
-            <ul class="report_gk">
-                <li>
-                    <span class="color_b">●</span>
-                    <div class="gk_text">此报告未考虑文书质量与面试质量</div>
-                </li>
-                <li>
-                    <span class="color_b">●</span>
-                    <div class="gk_text">用户须填写实际情况，保证结果的准确性</div>
-                </li>
-                <li>
-                    <span class="color_b">●</span>
-                    <div class="gk_text">此报告匹配标准以近5年留学录取成果 大数据作为技术支撑，并不能百分百代 表实际录取结果，仅供参考</div>
-                </li>
-            </ul>
-        </div>
-        <div class="gk_2 color_b">根据你填写的内容，系统评估你可以申请的学校有</div>
+
+        <!--<div class="gk_2 color_b">根据你填写的内容，系统评估你可以申请的学校有</div>-->
     </div>
-    <ul class="school_rank_list_wrap bg_f">
-        <li ng-repeat="res in res">
-            <a href="school-detail.html?id={{res.id}}">
-                <div class="flex-container">
-                    <div class="flex-container">
-                        <div class="school_img"><img src="{{http2}}{{res.image}}" alt=""></div>
-                        <div class="school_info">
-                            <p class="school_ch_name ellipsis">{{res.name}}</p>
-                            <p class="school_en_name ellipsis">{{res.title}}</p>
-                            <div class="school_gps">
-                                <img style="height: 0.5rem;margin-right: 0.2rem;" src="images/icon-gps.png" alt="">
-                                <span>所在地区：{{res.place}}</span>
-                            </div>
-                        </div>
-                    </div>
-                    <i class="icon-angle-right color_b"></i>
-                </div>
-            </a>
+</section>
+<section>
+    <div class="re_tit">背景条件分析</div>
+</section>
+<!--背景分析-->
+<div class="pd_lr5 bg_f sh_index_wrap">
+    <ul class="qs_list">
+        <li ng-if="info.school">
+            <div class="flex-container">
+                <div ng-show="info.school.type==1" class="qs_q on">优势</div>
+                <div ng-hide="info.school.type==1" class="qs_q">劣势</div>
+                <div class="qs_info"><b>院校背景：</b>{{info.school.name}}院校，打败了<b>{{info.school.num}}</b>位测评者</div>
+            </div>
+        </li>
+        <li ng-if="info.gpa">
+            <div class="flex-container">
+                <div ng-show="info.gpa.type==1" class="qs_q on">优势</div>
+                <div ng-hide="info.gpa.type==1" class="qs_q">劣势</div>
+                <div class="qs_info"><b>GPA：</b>{{info.gpa.score}}，打败了<b>{{info.gpa.num}}</b>位测评者</div>
+            </div>
+        </li>
+        <li ng-if="info.gmat">
+            <div class="flex-container">
+                <div ng-show="info.gmat.type==1" class="qs_q on">优势</div>
+                <div ng-hide="info.gmat.type==1" class="qs_q">劣势</div>
+                <div class="qs_info"><b>GMAT：</b>{{info.gmat.score}}，打败了<b>{{info.gmat.num}}</b>位测评者</div>
+            </div>
+        </li>
+        <li ng-if="info.toefl">
+            <div class="flex-container">
+                <div ng-show="info.toefl.type==1" class="qs_q on">优势</div>
+                <div ng-hide="info.toefl.type==1" class="qs_q">劣势</div>
+                <div class="qs_info"><b>TOEFL：</b>{{info.toefl.score}}，打败了<b>{{info.toefl.num}}</b>位测评者</div>
+            </div>
+        </li>
+        <li ng-if="info.work">
+            <div class="flex-container">
+                <div ng-show="info.work.type==1" class="qs_q on">优势</div>
+                <div ng-hide="info.work.type==1" class="qs_q">劣势</div>
+                <div class="qs_info"><b>个人经历：</b>进入{{info.work.name}}实习，打败了<b>{{info.work.num}}</b>位测评者</div>
+            </div>
         </li>
     </ul>
+    <div class="tm sh_wrap">
+        <p class="sh_tit">你的背景条件符合</p>
+        <p ng-show="res" class="sh_num" >{{res.length}}+</p>
+        <p ng-hide="res" class="sh_num" >0+</p>
+        <p style="color: #777777;font-size: 0.8rem;">所院校的申请要求</p>
+        <div class="sh_handle">
+            <!-- JiaThis Button BEGIN -->
+            <div class="jiathis_style_24x24">
+
+                <span class="relative" style="margin-right: 3rem;">
+                    <a style="opacity: 0;width: 100%;height: 100%;" class="jiathis_button_tsina ani"></a>
+                    <img src="images/wb_icon.png" style="height: 0.6rem;margin-right: 0.2rem" alt="">炫耀一下
+                </span>
+                <a href="assessment.html">重新评估</a>
+            </div>
+            <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+            <!-- JiaThis Button END -->
+
+        </div>
+    </div>
+</div>
+<!--学校列表-->
+<section>
+    <div class="re_tit">以下是你的选校报告</div>
 </section>
+<ul class="school_rank_list_wrap bg_f">
+    <li ng-repeat="res in res">
+        <a href="school-detail.html?id={{res.id}}">
+            <div class="flex-container">
+                <div class="flex-container">
+                    <div class="school_img"><img src="{{http2}}{{res.image}}" alt=""></div>
+                    <div class="school_info">
+                        <p class="school_ch_name ellipsis">{{res.name}}</p>
+                        <p class="school_en_name ellipsis">{{res.title}}</p>
+                        <div class="school_gps">
+                            <img style="height: 0.5rem;margin-right: 0.2rem;" src="images/icon-gps.png" alt="">
+                            <span>所在地区：{{res.place}}</span>
+                        </div>
+                    </div>
+                </div>
+                <i class="icon-angle-right color_b"></i>
+            </div>
+        </a>
+    </li>
+</ul>
 <!--footer-->
 <footer>
     <ul class="ftnav_list flex-container">
