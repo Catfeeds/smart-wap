@@ -63,6 +63,10 @@
 .trustHtml{
     font-size: 0.65rem;
 }
+.icon-angle-left{
+    font-size: 1.2rem;
+}
+
 .box{
 
     display: -webkit-flex;  /* 新版本语法: Chrome 21+ */

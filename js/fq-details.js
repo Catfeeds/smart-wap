@@ -1,8 +1,19 @@
 $(function () {
     var Requests = GetRequests();
     var id = Requests['id'];
+    var url_type = Requests['url_type'];
     var seeId = Requests['seeId'];
     var uid=localStorage.getItem('uid');
+    // 返回按钮
+    if (url_type==1){
+        $(".return").click(function(){
+            location.href='my_qa.html';
+        })
+    }else {
+        $(".return").click(function(){
+            location.href='qa_index.html';
+        })
+    }
     //        评论页面切换
     $(document).on('click','.en_reply',function () {
        if(!uid){
