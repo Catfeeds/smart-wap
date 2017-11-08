@@ -374,3 +374,41 @@
     color: #ffffff;
     background: #01a4e5;
 }
+.rightFixed{
+    position: fixed;
+    right: 0;
+    top: 30%;
+    z-index: 1100;
+}
+.rightFixed ul li{
+    width: 20px;
+    font-size: 0.8em;
+    line-height: 15px;
+    text-align: center;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+.rightFixed ul li a{
+    width: 100%;
+    height: 100%;
+    font-size: 0.8em;
+    display: block;
+    color: white;
+    padding: 5px 0;
+}
+.rightFixed ul li:first-child{
+    background: #93cf69;
+    margin-bottom: 10px;
+}
+.rightFixed ul li:last-child{
+    background: #f49d6f;
+}
+.topImg{
+    width: 100%;
+    border-bottom: 1px rgba(255, 255, 255, 0.2) solid;
+    padding-bottom: 3px;
+    margin-bottom: 3px;
+}
+.topImg img{
+    width: 60%;
+}
