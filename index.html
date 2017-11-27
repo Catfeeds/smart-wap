@@ -301,9 +301,9 @@
         <span class="section_name">最热留学院校</span>
         <a class="index2_more" href="school.html">MORE</a>
     </div>
-    <ul class="school_list2 flex-container">
+    <ul class="school_list2 flex-container tm">
         <li ng-repeat="school in school" ng-hide="{{$index+1}}>4">
-            <img src="{{http2}}{{school.duration}}" alt="">
+            <img src="{{http2}}{{school.image}}" alt="">
             <a href="school-detail.html?id={{school.id}}">
                 <div class="school_info tm">
                     <p class="sc_p1 ellipsis">[ {{school.name}} ]</p>
