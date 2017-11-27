@@ -1,0 +1,390 @@
+.ws_name {
+    color: #333333;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding-bottom: 0.1rem;
+    border-bottom: 1px solid #272727;
+}
+
+.ws_de {
+    color: #444444;
+    font-size: 0.7rem;
+    padding: 0.3rem 0;
+}
+
+.ed_btn {
+    width: 2.6rem;
+    height: 0.75rem;
+    color: #ffffff;
+    font-family: '宋体';
+    background: #525252;
+    font-size: 0.45rem;
+    border-radius: 0.3rem;
+}
+
+.ws_img {
+    width: 8rem;
+    height: 5.5rem;
+    overflow: hidden;
+    margin-right: 0.8rem;
+}
+
+.ws_img img {
+    width: 100%;
+    height: 100%;
+}
+
+.ws_de_wrap {
+    width: 7.5rem;
+}
+
+.tj_list li {
+    padding: 0.9rem 0.5rem;
+    background: #b6d2ed;
+    border-radius: 0.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.link_ws {
+    align-items: flex-start;
+}
+
+#topNav {
+    width: 100%;
+    overflow: hidden;
+    font-size: 0.75rem;
+    color: #333333;
+    padding: 0.7rem 0 0.5rem;
+    border-bottom: 1px solid #cfcfcf;
+}
+
+#topNav .swiper-slide {
+    letter-spacing: 2px;
+    width: 25%;
+    padding-left: 0.3rem;
+    padding-right: 0.5rem;
+    text-align: left;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#topNav .swiper-slide:nth-child(1) {
+    width: 16%;
+}
+
+#topNav .swiper-slide span {
+    transition: all .3s ease;
+    display: block;
+    text-align: center;
+}
+
+#topNav .active span {
+    transform: scale(1.05);
+    color: #2cb1e5;
+}
+
+.benk_tit_wrap {
+    padding: 0.7rem 0;
+    align-items: flex-end;
+}
+
+.benkTit {
+    color: #01a4e5;
+    font-size: 0.9rem;
+}
+
+.benk_more {
+    font-size: 0.4rem;
+    color: #777777;
+}
+
+.tag_benk {
+    width: 3.5rem;
+    height: 0.9rem;
+    margin-right: 0.1rem;
+    background: url("../images/tag_benk.png") no-repeat;
+}
+
+.tag_yx {
+    background-position: -70px 0;
+}
+
+.tag_fy {
+
+    background-position: 0 0;
+}
+
+.tag_tj {
+    background-position: -142px 0;
+}
+
+.benk_data_name {
+    color: #333333;
+    font-size: 0.8rem;
+}
+
+.benk_data_name span {
+    vertical-align: middle;
+}
+
+.benk_data_time {
+    padding-top: 0.3rem;
+    color: #777777;
+    font-size: 0.6rem;
+}
+
+.benk_list {
+    padding: 0.5rem 0;
+}
+
+.benk_list li {
+    padding: 0.5rem 0 0.3rem;
+    border-bottom: 1px solid #d2d1d1;
+}
+
+.benk_list li:last-child {
+    border-bottom: none;
+}
+
+.benk_de {
+    padding: 0.3rem 0;
+    color: #777777;
+    font-size: 0.7rem;
+}
+
+.list_check span {
+    display: inline-block;
+    vertical-align: middle;
+    color: #333333;
+    font-size: 0.8rem;
+    padding: 0.4rem 0;
+    margin: 0 0.5rem;
+    border-bottom: 0.1rem solid transparent;
+}
+
+.list_check span.on {
+    color: #01a4e5;
+    border-color: #01a4e5;
+}
+
+.checkImg {
+    width: 4.75rem;
+    height: 3.8rem;
+    overflow: hidden;
+}
+
+.checkImg img {
+    width: 100%;
+    height: 100%;
+}
+
+.check_de {
+    color: #333333;
+    font-size: 0.8rem;
+    margin-bottom: 0.3rem;
+}
+
+.check_info {
+    width: 71%;
+}
+
+.check_time {
+    color: #777777;
+    font-size: 0.7rem;
+}
+
+.check_flex {
+    align-items: flex-start;
+}
+
+.checkItem li {
+    margin-bottom: 0.5rem;
+}
+
+.benk_erm_hint {
+    color: #2daee2;
+    font-size: 0.8rem;
+    margin-bottom: 0.7rem;
+}
+
+.checkItem {
+    padding: 1rem 0 0.6rem;
+}
+
+.ws_xs {
+    background: url("../images/ws_bg1.png") no-repeat 0 0;
+    background-size: 100%;
+
+}
+
+.ws_bt {
+    font-size: 1rem;
+    color: #ffffff;
+    width: 50%;
+    padding: 0.25rem 0;
+    border-bottom: 0.1rem solid #ffffff;
+}
+
+.xs_img {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.xs_img img {
+    width: 100%;
+    height: 100%;
+}
+
+.xs_text {
+    font-size: 0.6rem;
+    line-height: 0.75rem;
+    color: #fefefe;
+    padding-bottom: 0.4rem;
+}
+
+.xs_school {
+    color: #fefefe;
+    font-size: 0.4rem;
+}
+
+.xs_text_wrap {
+    width: 73%;
+}
+
+.xs_list {
+    padding: 0.25rem 0.5rem;
+}
+
+.xs_list li {
+    border-radius: 0.25rem;
+    padding: 0.5rem 0.25rem 0.5rem 0.4rem;
+    background: #444272;
+    margin-bottom: 0.5rem;
+}
+
+.tj_item1 {
+    height: 12.75rem;
+    background: url("../images/ws_tbg_1.png") no-repeat 0 0;
+    background-size: 100%;
+}
+
+.tj_item2 {
+    height: 9.6rem;
+    background: url("../images/ws_tbg_2.png") no-repeat 0 0;
+    background-size: 100%;
+}
+
+.tj_item3 {
+    height: 12.75rem;
+    background: url("../images/ws_tbg_3.png") no-repeat 0 0;
+    background-size: 100%;
+}
+
+.tws_name {
+    font-size: 1rem;
+    color: #272727;
+    margin-bottom: 0.9rem;
+}
+
+.tws_img {
+    width: 8rem;
+    height: 5.5rem;
+    overflow: hidden;
+}
+
+.tws_img img {
+    width: 100%;
+    height: 100%;
+}
+
+.tws_info {
+    width: 6.3rem;
+
+}
+
+.tws_btn {
+    width: 3.4rem;
+    height: 1rem;
+    line-height: 1rem;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 0.4rem;
+    background: #525252;
+    font-size: 0.6rem;
+}
+
+.tws_info_text {
+    color: #444444;
+    font-size: 0.7rem;
+    line-height: 0.9rem;
+    height: 2.7rem;
+    margin-bottom: 1rem;
+}
+
+.tws_data {
+    width: 15rem;
+}
+
+.tws_data .flex-container {
+    align-items: flex-start;
+}
+
+.tws_line {
+    line-height: 0;
+    margin-bottom: 0.3rem;
+}
+
+.tj_btn_more {
+    font-size: 0.8rem;
+    background: #ffffff;
+    height: 1.3rem;
+    width: 5.9rem;
+    text-align: center;
+    line-height: 1.3rem;
+    border-radius: 0.55rem;
+    margin: 1.8rem auto 0;
+}
+
+.tj_btn_more a {
+    display: block;
+    color: #333333;
+}
+
+.bdy_price {
+    background: #0c89a2;
+}
+
+.bp_b1 {
+    padding: 0.6rem 0;
+    background: url("../images/bdy_bm1.png") no-repeat 0 0;
+    background-size: 100%;
+}
+
+.bp1_text {
+    font-size: 0.8rem;
+    color: #ffffff;
+
+}
+
+.bp1_text_wrap {
+    height: 2rem;
+    width: 14.4rem;
+    line-height: 2rem;
+    border-radius: 0.2rem;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.bdy_bm {
+    padding-top: 0.9rem;
+    background: url("../images/bdy_b1.png") no-repeat 0 0;
+    background-size: 100%;
+}
+
+.bdy_b_info {
+    padding: 0.75rem 0;
+    margin-bottom: 1.5rem;
+    background: rgba(134, 132, 132, 0.3);
+}
