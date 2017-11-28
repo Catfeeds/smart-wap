@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="myApp">
 <head>
     <meta charset="UTF-8">
     <meta name="keywords" content="">
@@ -29,9 +29,12 @@
     <script src="js/jquery-1.12.2.min.js"></script>
     <script src="js/swiper-3.3.1.jquery.min.js"></script>
     <script src="js/common.js"></script>
+    <script src="js/public.js"></script>
+    <script src="js/ws_index.js"></script>
+    <script src="js/angular1.3.1.js"></script>
     <title>文书</title>
 </head>
-<body class="pd_b0">
+<body class="pd_b0" ng-controller="abroad_view">
 <!--头部-->
 <section class="relative">
     <div class="bg_b header_nav pd_lr5 flex-container">
@@ -50,49 +53,56 @@
             <p class="ws_bt tr">文书推荐</p>
         </div>
         <div class="clearfix" style="padding-top: 1.4rem;">
-            <div class="tws_data fr">
-                <p class="tr tws_name ellipsis" style="padding-right: 0.7rem;">MBA高端文书</p>
-                <div class="flex-container ">
-                    <div class="tws_img"><img src="images/test_img.png" alt=""></div>
-                    <div class="tws_info">
-                        <div class="tr tws_line"><img src="images/tws_line.png" style="width: 5.03rem;" alt=""></div>
-                        <p class="ellipsis-3 tws_info_text">雷哥网文书编辑专 家团队帮助您综合 定位分析，深...</p>
-                        <div class="tm"><span class="tws_btn inm">查看详情</span></div>
+            <a href="diy.html?id={{ws[0].id}}">
+                <div class="tws_data fr">
+                    <p class="tr tws_name ellipsis" style="padding-right: 0.7rem;">{{ws[0].name}}</p>
+                    <div class="flex-container ">
+                        <div class="tws_img"><img src="http://www.smartapply.cn{{ws[0].image}}" alt=""></div>
+                        <div class="tws_info">
+                            <div class="tr tws_line"><img src="images/tws_line.png" style="width: 5.03rem;" alt="">
+                            </div>
+                            <p class="ellipsis-3 tws_info_text">{{ws[0].answer}}</p>
+                            <div class="tm"><span class="tws_btn inm">查看详情</span></div>
+                        </div>
                     </div>
-                </div>
 
-            </div>
+                </div>
+            </a>
         </div>
     </div>
     <div class="tj_item2">
         <div class="clearfix" style="padding-top: 1.3rem;">
-            <div class="tws_data">
-                <p class="tl tws_name" style="padding-left: 0.7rem;">美国TOP50名校高端文书</p>
-                <div class="flex-container ">
-                    <div class="tws_info">
-                        <div class="tr tws_line"><img src="images/tws_line.png" style="width: 5.03rem;" alt=""></div>
-                        <p class="ellipsis-3 tws_info_text">雷哥网文书编辑专 家团队帮助您综合 定位分析，深...</p>
-                        <div class="tm"><span class="tws_btn inm">查看详情</span></div>
+            <a href="diy.html?id={{ws[1].id}}">
+                <div class="tws_data">
+                    <p class="tl tws_name" style="padding-left: 0.7rem;">{{ws[1].name}}</p>
+                    <div class="flex-container ">
+                        <div class="tws_info">
+                            <div class="tr tws_line"><img src="images/tws_line.png" style="width: 5.03rem;" alt="">
+                            </div>
+                            <p class="ellipsis-3 tws_info_text">{{ws[1].answer}}</p>
+                            <div class="tm"><span class="tws_btn inm">查看详情</span></div>
+                        </div>
+                        <div class="tws_img"><img src="http://www.smartapply.cn{{ws[1].image}}" alt=""></div>
                     </div>
-                    <div class="tws_img"><img src="images/test_img.png" alt=""></div>
                 </div>
-
-            </div>
+            </a>
         </div>
     </div>
     <div class="tj_item3">
         <div class="clearfix" style="padding-top: 1.3rem;">
+            <a href="diy.html?id={{ws[2].id}}">
             <div class="tws_data fr">
-                <p class="tr tws_name ellipsis" style="padding-right: 0.7rem;">美国TOP20名校高端文书</p>
+                <p class="tr tws_name ellipsis" style="padding-right: 0.7rem;">{{ws[2].name}}</p>
                 <div class="flex-container ">
-                    <div class="tws_img"><img src="images/test_img.png" alt=""></div>
+                    <div class="tws_img"><img src="http://www.smartapply.cn{{ws[2].image}}" alt=""></div>
                     <div class="tws_info">
                         <div class="tr tws_line"><img src="images/tws_line.png" style="width: 5.03rem;" alt=""></div>
-                        <p class="ellipsis-3 tws_info_text">雷哥网文书编辑专 家团队帮助您综合 定位分析，深...</p>
+                        <p class="ellipsis-3 tws_info_text">{{ws[2].answer}}</p>
                         <div class="tm"><span class="tws_btn inm">查看详情</span></div>
                     </div>
                 </div>
             </div>
+            </a>
         </div>
         <div class="tm tj_btn_more"><a href="paperwork_tj.html">查看更多</a></div>
     </div>
@@ -104,49 +114,37 @@
     <ul class="xs_list">
         <li>
             <div class="flex-container">
-            <div class="xs_img"><img src="images/test_img.png" alt=""></div>
-            <div class="xs_text_wrap">
-                <p class="xs_text">雷哥网留学的文书老师很负责人，我是属于经历
-                    虽然比较多但是自己不知道怎么串起来的那种，
-                    就会显得文书有点乱，但最后文书老师把我的经
-                    历很好的串联，润色，文书质量很好，我很满意。</p>
-                <p class="tr xs_school">Case Western Reserve University</p>
-            </div>
-            </div>
-        </li>
-        <li>
-            <div class="flex-container">
-                <div class="xs_img"><img src="images/test_img.png" alt=""></div>
+                <div class="xs_img"><img src="http://www.smartapply.cn/cn/images/wenshu/wenshu-touxiang01.png" alt=""></div>
                 <div class="xs_text_wrap">
-                    <p class="xs_text">雷哥网留学的文书老师很负责人，我是属于经历
-                        虽然比较多但是自己不知道怎么串起来的那种，
-                        就会显得文书有点乱，但最后文书老师把我的经
-                        历很好的串联，润色，文书质量很好，我很满意。</p>
+                    <p class="xs_text">雷哥留学网的文书老师很负责，我是属于经历虽然比较多但是自己不知道怎么串起来的那种， 就会显得文书有点乱，但最后文书老师把我的经历很好的串联，润色， 文书质量很好，我很满意。</p>
                     <p class="tr xs_school">Case Western Reserve University</p>
                 </div>
             </div>
         </li>
         <li>
             <div class="flex-container">
-                <div class="xs_img"><img src="images/test_img.png" alt=""></div>
+                <div class="xs_img"><img src="http://www.smartapply.cn/cn/images/wenshu/wenshu-student.png" alt=""></div>
                 <div class="xs_text_wrap">
-                    <p class="xs_text">雷哥网留学的文书老师很负责人，我是属于经历
-                        虽然比较多但是自己不知道怎么串起来的那种，
-                        就会显得文书有点乱，但最后文书老师把我的经
-                        历很好的串联，润色，文书质量很好，我很满意。</p>
-                    <p class="tr xs_school">Case Western Reserve University</p>
+                    <p class="xs_text">都说世界名校难申请，但在留学的世界里没有铁定的定律。我的成绩在申请中不是很有的优势，但文书老师帮我写了一份很好的文书。在文书创作过程中，老师挖取了我在校内的金融应用比赛经历及半年的金融工作经验， 进行着重包装，加大这些在申请中软性背景的优势。最后我拿到了亚洲金融第2的新大的录取，真的是太开心了，非常感谢文书老师的帮忙。</p>
+                    <p class="tr xs_school">National University of Singapore</p>
                 </div>
             </div>
         </li>
         <li>
             <div class="flex-container">
-                <div class="xs_img"><img src="images/test_img.png" alt=""></div>
+                <div class="xs_img"><img src="http://www.smartapply.cn/cn/images/wenshu/wenshu-touxiang02.png" alt=""></div>
                 <div class="xs_text_wrap">
-                    <p class="xs_text">雷哥网留学的文书老师很负责人，我是属于经历
-                        虽然比较多但是自己不知道怎么串起来的那种，
-                        就会显得文书有点乱，但最后文书老师把我的经
-                        历很好的串联，润色，文书质量很好，我很满意。</p>
-                    <p class="tr xs_school">Case Western Reserve University</p>
+                    <p class="xs_text">我是西南财经大学保险会计专业的，我的实习经验倒是挺丰富的，参加过渣打银行的融课，mcm建模大赛等等，这些经历在文书老师的重点包装下， 我顺利取得加拿大麦克马斯特大学的offer， 奖学金3000加元，并且获得coop提供的6个月带薪实习名额，老师很厉害，很负责。</p>
+                    <p class="tr xs_school">McMaster University奖学金3000加元</p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="flex-container">
+                <div class="xs_img"><img src="http://www.smartapply.cn/cn/images/wenshu/wenshu-touxiang04.png" alt=""></div>
+                <div class="xs_text_wrap">
+                    <p class="xs_text">在搜雷哥网留学的时候几乎没有任何负面消息，然后有打听了之前在雷哥网做过的同学，大家评价都还是不错的。 结果也是没有让我失望， 文书写的非常好，我有拿给我国外的老师看觉的写的是真心不错。 所以能拿到剑桥的录取，我个人觉的自己背景好很重要，优秀的文书也是功不可没。</p>
+                    <p class="tr xs_school">University of Cambridge</p>
                 </div>
             </div>
         </li>

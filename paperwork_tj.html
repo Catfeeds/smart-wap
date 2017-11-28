@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="myApp">
 <head>
     <meta charset="UTF-8">
     <meta name="keywords" content="">
@@ -30,9 +30,11 @@
     <script src="js/swiper-3.3.1.jquery.min.js"></script>
     <script src="js/common.js"></script>
     <script src="js/public.js"></script>
+    <script src="js/ws_tj.js"></script>
+    <script src="js/angular1.3.1.js"></script>
     <title>文书推荐</title>
 </head>
-<body style="background: #5293d5;">
+<body class="pd_b0" style="background: #5293d5;" ng-controller="abroad_view">
 <!--头部-->
 <section class="relative">
     <div class="bg_b header_nav pd_lr5 flex-container">
@@ -41,57 +43,21 @@
         <span></span>
     </div>
 </section>
-<section style="padding: 0.7rem 0.5rem;">
+<input type="hidden" id="page" value="{{countPage}}">
+<section class="tj_body" data-page="2" style="padding: 0.7rem 0.5rem;">
     <ul class="tj_list">
-        <li>
+        <li ng-repeat="wenshuT in wenshu">
             <div>
-                <a class="flex-container-left link_ws" href="#" target="_blank">
-                <div class="ws_img"><img src="images/test_img.png" alt=""></div>
+                <a class="flex-container-left link_ws" href="diy.html?id={{wenshuT.id}}">
+                <div class="ws_img"><img src="http://www.smartapply.cn{{wenshuT.image}}" alt=""></div>
                 <div class="ws_de_wrap">
-                    <p class="ellipsis-2 ws_name">美国TOP50名校高端文书</p>
-                    <p class="ellipsis-3 ws_de">雷哥网文书编辑专家团队帮助您综合定位分析，深...</p>
-                    <div class="tr"><span class="ed_btn inm tm">查看详情</span></div>
+                    <p class="ellipsis-2 ws_name">{{wenshuT.name}}</p>
+                    <p class="ellipsis-3 ws_de">{{wenshuT.answer}}</p>
+                    <div class="tr ed_wrap_btn"><span class="ed_btn inm tm">查看详情</span></div>
                 </div>
                 </a>
             </div>
         </li>
-        <li>
-            <div>
-                <a class="flex-container-left link_ws" href="#" target="_blank">
-                    <div class="ws_img"><img src="images/test_img.png" alt=""></div>
-                    <div class="ws_de_wrap">
-                        <p class="ellipsis-2 ws_name">美国TOP50名校高端文书</p>
-                        <p class="ellipsis-3 ws_de">雷哥网文书编辑专家团队帮助您综合定位分析，深...</p>
-                        <div class="tr"><span class="ed_btn inm tm">查看详情</span></div>
-                    </div>
-                </a>
-            </div>
-        </li>
-        <li>
-            <div>
-                <a class="flex-container-left link_ws" href="#" target="_blank">
-                    <div class="ws_img"><img src="images/test_img.png" alt=""></div>
-                    <div class="ws_de_wrap">
-                        <p class="ellipsis-2 ws_name">美国TOP50名校高端文书</p>
-                        <p class="ellipsis-3 ws_de">雷哥网文书编辑专家团队帮助您综合定位分析，深...</p>
-                        <div class="tr"><span class="ed_btn inm tm">查看详情</span></div>
-                    </div>
-                </a>
-            </div>
-        </li>
-        <li>
-            <div>
-                <a class="flex-container-left link_ws" href="#" target="_blank">
-                    <div class="ws_img"><img src="images/test_img.png" alt=""></div>
-                    <div class="ws_de_wrap">
-                        <p class="ellipsis-2 ws_name">美国TOP50名校高端文书</p>
-                        <p class="ellipsis-3 ws_de">雷哥网文书编辑专家团队帮助您综合定位分析，深...</p>
-                        <div class="tr"><span class="ed_btn inm tm">查看详情</span></div>
-                    </div>
-                </a>
-            </div>
-        </li>
-
     </ul>
 </section>
 

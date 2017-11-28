@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="myApp">
 <head>
     <meta charset="UTF-8">
     <meta name="keywords" content="">
@@ -30,9 +30,11 @@
     <script src="js/swiper-3.3.1.jquery.min.js"></script>
     <script src="js/common.js"></script>
     <script src="js/public.js"></script>
+    <script src="js/bk_smart.js"></script>
+    <script src="js/angular1.3.1.js"></script>
     <title>本科留学</title>
 </head>
-<body class="pd_b0">
+<body class="pd_b0" ng-controller="abroad_view">
 <!--头部-->
 <section class="relative">
     <div class="bg_b header_nav pd_lr5 flex-container">
@@ -45,7 +47,7 @@
     <div class="benk_tit_wrap flex-container">
         <span style="width: 2rem;"></span>
         <span class="benkTit">本科资讯</span>
-        <a class="benk_more" href="#" target="_blank">MORE</a>
+        <a class="benk_more" href="#">MORE</a>
     </div>
     <div id="topNav" class="swiper-container">
         <div class="swiper-wrapper">
@@ -58,38 +60,199 @@
             <!--<div class="swiper-slide" ng-click="showData(tag.id,1,20)" ng-repeat="tag in tagList" is-over="toggle.now"><span>{{tag.name}}</span></div>-->
         </div>
     </div>
-    <ul class="benk_list">
-        <li>
-            <div class="benk_data_name">
-                <span class="inm tag_benk tag_yx"></span>
-                <span>美国本科留学如何选择专业？</span>
-            </div>
-            <div class="benk_data_time flex-container">
-                <span>2017-07-05 10:01:16</span>
-                <span>关注:201</span>
-            </div>
-        </li>
-        <li>
-            <div class="benk_data_name">
-                <span class="inm tag_benk tag_fy"></span>
-                <span>美国本科留学费用最低的五所大学有 哪些？</span>
-            </div>
-            <div class="benk_data_time flex-container">
-                <span>2017-07-05 10:01:16</span>
-                <span>关注:201</span>
-            </div>
-        </li>
-        <li>
-            <div class="benk_data_name">
-                <span class="inm tag_benk tag_tj"></span>
-                <span>美国本科留学费用最低的五所大学有 哪些？</span>
-            </div>
-            <div class="benk_data_time flex-container">
-                <span>2017-07-05 10:01:16</span>
-                <span>关注:201</span>
-            </div>
-        </li>
-    </ul>
+    <div class="benk_wrap_list">
+        <ul class="benk_list">
+            <li ng-repeat="usa in info.info_m_a">
+                <a href="benk_details.html?id={{usa.id}}">
+                    <div class="benk_data_name">
+                        <span class="inm tag_benk tag_yx"></span>
+                        <span>{{usa.name}}</span>
+                    </div>
+                    <div class="benk_data_time flex-container">
+                        <span>{{usa.createTime}}</span>
+                        <!--<span>关注:201</span>-->
+                    </div>
+                </a>
+            </li>
+            <li ng-repeat="usa in info.info_m_b">
+                <a href="benk_details.html?id={{usa.id}}">
+                    <div class="benk_data_name">
+                        <span class="inm tag_benk tag_fy"></span>
+                        <span>{{usa.name}}</span>
+                    </div>
+                    <div class="benk_data_time flex-container">
+                        <span>{{usa.createTime}}</span>
+                        <!--<span>关注:201</span>-->
+                    </div>
+                </a>
+            </li>
+            <li ng-repeat="usa in info.info_m_c">
+                <a href="benk_details.html?id={{usa.id}}">
+                    <div class="benk_data_name">
+                        <span class="inm tag_benk tag_tj"></span>
+                        <span>{{usa.name}}</span>
+                    </div>
+                    <div class="benk_data_time flex-container">
+                        <span>{{usa.createTime}}</span>
+                        <!--<span>关注:201</span>-->
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <ul class="benk_list">
+            <li ng-repeat="usc in info.info_y_a">
+                <a href="benk_details.html?id={{usc.id}}">
+                    <div class="benk_data_name">
+                        <span class="inm tag_benk tag_yx"></span>
+                        <span>{{usc.name}}</span>
+                    </div>
+                    <div class="benk_data_time flex-container">
+                        <span>{{usc.createTime}}</span>
+                        <!--<span>关注:201</span>-->
+                    </div>
+                </a>
+            </li>
+            <li ng-repeat="usc in info.info_y_b">
+                <a href="benk_details.html?id={{usc.id}}">
+                    <div class="benk_data_name">
+                        <span class="inm tag_benk tag_fy"></span>
+                        <span>{{usc.name}}</span>
+                    </div>
+                    <div class="benk_data_time flex-container">
+                        <span>{{usc.createTime}}</span>
+                        <!--<span>关注:201</span>-->
+                    </div>
+                </a>
+            </li>
+            <li ng-repeat="usc in info.info_y_c">
+                <a href="benk_details.html?id={{usc.id}}">
+                    <div class="benk_data_name">
+                        <span class="inm tag_benk tag_tj"></span>
+                        <span>{{usc.name}}</span>
+                    </div>
+                    <div class="benk_data_time flex-container">
+                        <span>{{usc.createTime}}</span>
+                        <!--<span>关注:201</span>-->
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <ul class="benk_list">
+            <li ng-repeat="aus in info.info_o_a">
+                <a href="benk_details.html?id={{aus.id}}">
+                    <div class="benk_data_name">
+                        <span class="inm tag_benk tag_yx"></span>
+                        <span>{{aus.name}}</span>
+                    </div>
+                    <div class="benk_data_time flex-container">
+                        <span>{{aus.createTime}}</span>
+                        <!--<span>关注:201</span>-->
+                    </div>
+                </a>
+            </li>
+            <li ng-repeat="aus in info.info_o_b">
+                <a href="benk_details.html?id={{aus.id}}">
+                    <div class="benk_data_name">
+                        <span class="inm tag_benk tag_fy"></span>
+                        <span>{{aus.name}}</span>
+                    </div>
+                    <div class="benk_data_time flex-container">
+                        <span>{{aus.createTime}}</span>
+                        <!--<span>关注:201</span>-->
+                    </div>
+                </a>
+            </li>
+            <li ng-repeat="aus in info.info_o_c">
+                <a href="benk_details.html?id={{aus.id}}">
+                    <div class="benk_data_name">
+                        <span class="inm tag_benk tag_tj"></span>
+                        <span>{{aus.name}}</span>
+                    </div>
+                    <div class="benk_data_time flex-container">
+                        <span>{{aus.createTime}}</span>
+                        <!--<span>关注:201</span>-->
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <ul class="benk_list">
+            <li ng-repeat="hk in info.info_xg_a">
+                <a href="benk_details.html?id={{hk.id}}">
+                    <div class="benk_data_name">
+                        <span class="inm tag_benk tag_yx"></span>
+                        <span>{{hk.name}}</span>
+                    </div>
+                    <div class="benk_data_time flex-container">
+                        <span>{{hk.createTime}}</span>
+                        <!--<span>关注:201</span>-->
+                    </div>
+                </a>
+            </li>
+            <li ng-repeat="hk in info.info_xg_b">
+                <a href="benk_details.html?id={{hk.id}}">
+                    <div class="benk_data_name">
+                        <span class="inm tag_benk tag_fy"></span>
+                        <span>{{hk.name}}</span>
+                    </div>
+                    <div class="benk_data_time flex-container">
+                        <span>{{hk.createTime}}</span>
+                        <!--<span>关注:201</span>-->
+                    </div>
+                </a>
+            </li>
+            <li ng-repeat="hk in info.info_xg_c">
+                <a href="benk_details.html?id={{hk.id}}">
+                    <div class="benk_data_name">
+                        <span class="inm tag_benk tag_tj"></span>
+                        <span>{{hk.name}}</span>
+                    </div>
+                    <div class="benk_data_time flex-container">
+                        <span>{{hk.createTime}}</span>
+                        <!--<span>关注:201</span>-->
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <ul class="benk_list">
+            <li ng-repeat="sg in info.info_p_a">
+                <a href="benk_details.html?id={{sg.id}}">
+                    <div class="benk_data_name">
+                        <span class="inm tag_benk tag_yx"></span>
+                        <span>{{sg.name}}</span>
+                    </div>
+                    <div class="benk_data_time flex-container">
+                        <span>{{sg.createTime}}</span>
+                        <!--<span>关注:201</span>-->
+                    </div>
+                </a>
+            </li>
+            <li ng-repeat="sg in info.info_p_b">
+                <a href="benk_details.html?id={{sg.id}}">
+                    <div class="benk_data_name">
+                        <span class="inm tag_benk tag_fy"></span>
+                        <span>{{sg.name}}</span>
+                    </div>
+                    <div class="benk_data_time flex-container">
+                        <span>{{sg.createTime}}</span>
+                        <!--<span>关注:201</span>-->
+                    </div>
+                </a>
+            </li>
+            <li ng-repeat="sg in info.info_p_c">
+                <a href="benk_details.html?id={{sg.id}}">
+                    <div class="benk_data_name">
+                        <span class="inm tag_benk tag_tj"></span>
+                        <span>{{sg.name}}</span>
+                    </div>
+                    <div class="benk_data_time flex-container">
+                        <span>{{sg.createTime}}</span>
+                        <!--<span>关注:201</span>-->
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+
 </section>
 <section class="pd_lr5 bg_f mg_b5">
     <div class="benk_tit_wrap flex-container">
@@ -98,27 +261,18 @@
         <span></span>
     </div>
     <ul class="benk_list">
-        <li>
-            <div class="benk_data_name">
-                <img class="bk_fire" src="images/benk_hot.png" alt="">
-                <span>SAT考试和ACT考试的区别？</span>
-            </div>
-            <p class="benk_de">在美国，各大学都会建议申请者参加SAT或ACT考试，大 学也会根据SAT或ACT成绩来评判学生的学习情况和智...</p>
-            <div class="benk_data_time flex-container">
-                <span>2017-07-05 10:01:16</span>
-                <span>关注:201</span>
-            </div>
-        </li>
-        <li>
-            <div class="benk_data_name">
-                <img class="bk_fire" src="images/benk_hot.png" alt="">
-                <span>SAT考试和ACT考试的区别？</span>
-            </div>
-            <p class="benk_de">在美国，各大学都会建议申请者参加SAT或ACT考试，大 学也会根据SAT或ACT成绩来评判学生的学习情况和智...</p>
-            <div class="benk_data_time flex-container">
-                <span>2017-07-05 10:01:16</span>
-                <span>关注:201</span>
-            </div>
+        <li ng-repeat="sat in sat">
+            <a href="benk_details.html?id={{sat.id}}">
+                <div class="benk_data_name">
+                    <img class="bk_fire" src="images/benk_hot.png" alt="">
+                    <span>{{sat.name}}</span>
+                </div>
+                <p class="benk_de ellipsis-2">{{sat.answer}}</p>
+                <div class="benk_data_time flex-container">
+                    <span>{{sat.article}}</span>
+                    <!--<span>关注:201</span>-->
+                </div>
+            </a>
         </li>
     </ul>
 </section>
@@ -133,23 +287,36 @@
         <span>公益活动</span>
         <span>专业学术</span>
     </div>
-    <div>
+    <div class="checkItem_wrap">
         <ul class="checkItem">
-            <li>
-                <a class="flex-container check_flex" href="#" target="_blank">
+            <li ng-repeat="tc in active.techang">
+                <a class="flex-container check_flex" href="benk_details.html?id={{tc.id}}">
                     <div class="checkImg"><img src="images/test_img.png" alt=""></div>
                     <div class="check_info">
-                        <p class="check_de ellipsis-2">他们6月就开始申请了，为啥你要拖到9月去？</p>
-                        <p class="tr check_time">2017-07-05 10:01:16</p>
+                        <p class="check_de ellipsis-2">{{tc.name}}</p>
+                        <p class="tr check_time">{{tc.createTime}}</p>
                     </div>
                 </a>
             </li>
-            <li>
-                <a class="flex-container check_flex" href="#" target="_blank">
+        </ul>
+        <ul class="checkItem">
+            <li ng-repeat="gy in active.gongyi">
+                <a class="flex-container check_flex" href="benk_details.html?id={{gy.id}}">
                     <div class="checkImg"><img src="images/test_img.png" alt=""></div>
                     <div class="check_info">
-                        <p class="check_de ellipsis-2">他们6月就开始申请了，为啥你要拖到9月去？</p>
-                        <p class="tr check_time">2017-07-05 10:01:16</p>
+                        <p class="check_de ellipsis-2">{{gy.name}}</p>
+                        <p class="tr check_time">{{gy.createTime}}</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <ul class="checkItem">
+            <li ng-repeat="ys in active.zhuanye">
+                <a class="flex-container check_flex" href="benk_details.html?id={{ys.id}}">
+                    <div class="checkImg"><img src="images/test_img.png" alt=""></div>
+                    <div class="check_info">
+                        <p class="check_de ellipsis-2">{{ys.name}}</p>
+                        <p class="tr check_time">{{ys.createTime}}</p>
                     </div>
                 </a>
             </li>
@@ -181,8 +348,8 @@
                 slideWidth = slide.clientWidth;
                 slideCenter = slideLeft + slideWidth / 2;
                 // 被点击slide的中心点
-
                 mySwiper.setWrapperTransition(300);
+                console.log()
 
                 if (slideCenter < swiperWidth / 2) {
 
@@ -202,7 +369,9 @@
             onClick: function (e, k) {
                 var _this = new Object(k.path[0]);
                 var tagId = $(_this).attr('tag-id');
-                contentStr(1, tagId);
+                var num = mySwiper.clickedIndex;
+                $('.benk_wrap_list .benk_list').eq(num).fadeIn().siblings('ul.benk_list').hide();
+
 
             }
         });
