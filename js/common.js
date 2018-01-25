@@ -93,5 +93,19 @@ $(function () {
         return result;
     }
 });
+function jumpShop(){
+    var u = navigator.userAgent;
+    var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+    var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+    //alert('是否是Android：'+isAndroid);
+    //alert('是否是iOS：'+isiOS);
+    if(isAndroid){//安卓版还未出来，等发布后需要修改以下链接到安卓商店
+        location.href="https://itunes.apple.com/cn/app/%E9%9B%B7%E5%93%A5%E9%80%89%E6%A0%A1/id1271275068?mt=8";
+    }else if(isiOS){
+        location.href="https://itunes.apple.com/cn/app/%E9%9B%B7%E5%93%A5%E9%80%89%E6%A0%A1/id1271275068?mt=8";
+    }else{
+        location.href="https://itunes.apple.com/cn/app/%E9%9B%B7%E5%93%A5%E9%80%89%E6%A0%A1/id1271275068?mt=8";
+    }
+}
 
 

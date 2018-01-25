@@ -497,3 +497,40 @@ body{
     padding-bottom: 0.4rem;
     overflow: hidden;
 }
+/*底部固定栏*/
+.footer-fixed{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #35a0d1;
+    padding: 0.3rem 0 0.2rem 0;
+}
+.footer-fixed ul:after{
+    content: '';
+    height: 0;
+    display: block;
+    overflow: hidden;
+    clear: both;
+}
+.footer-fixed ul li{
+    width: 25%;
+    float: left;
+    text-align: center;
+}
+.footer-fixed ul li a{
+    width: 100%;
+    color: #c2e7f8;
+    display: block;
+    font-size: 0.75rem;
+    border-right: 1px #b2d7e8 solid;
+}
+.footer-fixed ul li:last-child a{
+    border-right: none;
+}
+.footer-fixed ul li a img{
+    height: 1.2rem;
+}
+.footer-fixed ul li a p{
+    margin-top: 0.2rem;
+}
