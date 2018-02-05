@@ -328,6 +328,7 @@
     font-size: 0.5rem;
     color: #3c3c3c;
     line-height: 0.9rem;
+    padding-bottom: 60px;
 }
 footer{
     position: fixed;
